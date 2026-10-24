@@ -1,0 +1,200 @@
+/* Today in AK: "Aurora Night" palette (events/moodboard.md A) + "Midnight Sun Kitchen" for food trucks (B).
+   Fonts: Montserrat (headlines) + Inter (details), self-hosted, SIL OFL. */
+@font-face{font-family:"Montserrat";src:url(fonts/montserrat.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Inter";src:url(fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--navy:#0D1626;--navy2:#08101C;--card:#162238;--line:#283854;--green:#5EF2B5;--white:#F4F6FA;--gray:#96A4BC;--faint:#5C6A84;--ember:#FFB86B;--teal:#40C4D6;--violet:#8C6EE6;
+--mustard:#F2B33D;--chili:#E8562A;--cream:#FFF4E0;--esp:#2B1A12;--ketchup:#C8302B;--yel:#FFCD29;--paper:#FCFAF3;--ink:#161616}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--navy);color:var(--white);font:400 16px/1.5 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--green)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
+.mark{font:800 14px/1 Montserrat;letter-spacing:.32em;display:inline-flex;align-items:center;gap:9px}
+.mark i{width:9px;height:9px;border-radius:50%;background:var(--green);display:inline-block}
+/* hero */
+.hero{padding:26px 0 30px;background:
+ radial-gradient(120% 60% at 15% 0%,rgba(94,242,181,.22),transparent 60%),
+ radial-gradient(90% 50% at 90% 10%,rgba(140,110,230,.20),transparent 60%),
+ radial-gradient(80% 40% at 50% 30%,rgba(64,196,214,.12),transparent 70%),
+ linear-gradient(180deg,#0D1626,#08101C)}
+.brandrow{display:flex;justify-content:space-between;align-items:center}
+.handle{color:var(--gray);text-decoration:none;font-weight:600;font-size:14px}
+.kicker{color:var(--green);font:700 13px/1 Inter;letter-spacing:.18em;text-transform:uppercase;margin:40px 0 10px}
+.hero h1{font-weight:800;font-size:clamp(34px,10vw,60px);line-height:1.02;letter-spacing:-.01em}
+.range{font:300 22px/1.2 Montserrat;color:var(--green);margin:12px 0 4px}
+.regions{color:var(--gray);margin:0 0 20px;font-size:15px}
+.btn{display:block;text-align:center;background:var(--green);color:var(--navy);font:800 16px/1 Montserrat;padding:16px 18px;border-radius:14px;text-decoration:none}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:16px -20px 0;padding:0 20px 4px;scrollbar-width:none}
+.chips a{flex:none;color:var(--white);text-decoration:none;border:1px solid var(--line);background:rgba(22,34,56,.7);border-radius:99px;padding:9px 14px;font-weight:600;font-size:14px}
+.updated{color:var(--faint);font-size:12.5px;margin:16px 0 0}
+/* sections */
+.sec{padding:44px 20px}
+.sec.wrap{padding-left:20px;padding-right:20px}
+.eyebrow{color:var(--green);font:700 12px/1 Inter;letter-spacing:.18em;text-transform:uppercase;margin:0 0 8px}
+.sec h2{font-weight:800;font-size:clamp(30px,8vw,44px);line-height:1.05;margin-bottom:12px}
+.sec h3{font-weight:700;font-size:19px;margin:28px 0 12px}
+.lede{color:var(--gray);margin:0 0 18px}
+.pill{display:inline-block;border-radius:99px;padding:4px 11px;font:600 13px/1.3 Inter;background:#22324E;color:var(--white);white-space:nowrap}
+.pill.when{background:var(--green);color:var(--navy);font-weight:700}
+.pill.cat{background:transparent;border:1px solid var(--line);color:var(--gray);text-transform:uppercase;font-size:11.5px;letter-spacing:.05em;padding:4px 10px}
+.pill.age{background:transparent;border:1.5px solid var(--ember);color:var(--ember);font-weight:700}
+.pill.drive{background:transparent;border:1.5px solid var(--ember);color:var(--ember);text-transform:uppercase;font-size:11.5px;letter-spacing:.04em}
+.pill.ghost{background:transparent;border:1px solid var(--line);color:var(--faint)}
+.day{position:sticky;top:0;z-index:2;background:var(--navy);padding:12px 0 8px;margin:18px 0 4px;font:800 15px/1 Montserrat;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:10px 0}
+.card.drive-card{border-color:rgba(255,184,107,.7)}
+.pills{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.card h4{font-size:19px;font-weight:700;line-height:1.25;margin:10px 0 4px}
+.where{color:var(--gray);margin:0;font-size:14.5px}.where b{color:var(--white);font-weight:600}
+.note{color:var(--faint);font-size:13.5px;margin:3px 0 0}
+.meta{margin-top:10px}
+.more{margin-left:auto;font-weight:600;font-size:14px;text-decoration:none}
+.sub{margin-top:30px}
+.simple{list-style:none;margin:0;padding:0}
+.simple li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:8px 0}
+.simple li b{display:block;font-family:Montserrat;font-weight:700}
+.simple li span{color:var(--gray);font-size:14px}
+.simple li a{font-size:14px;font-weight:600;text-decoration:none}
+.cal li b{color:var(--green);font-family:Inter;font-weight:700;font-size:14px}
+/* food trucks */
+.trucks{background:var(--mustard);color:var(--esp);background-image:repeating-conic-gradient(from 0deg at 110% 105%,rgba(232,86,42,.10) 0 9deg,transparent 9deg 20deg)}
+.trucks .eyebrow{color:var(--esp)}
+.trucks h2{color:var(--chili);text-transform:uppercase;font-weight:900;text-shadow:4px 4px 0 var(--esp);letter-spacing:-.01em;font-size:clamp(38px,11vw,64px);line-height:.95}
+.ticket{display:inline-block;background:var(--cream);color:var(--esp);font:800 18px/1 Montserrat;padding:12px 18px;border-radius:12px;border-left:6px dotted var(--mustard);margin:6px 0 14px}
+.warn{background:var(--cream);border-radius:12px;padding:10px 14px;font-size:14px;font-weight:600;margin:0 0 16px}
+.area{background:var(--cream);border-radius:16px;margin:10px 0;overflow:hidden}
+.area summary{cursor:pointer;list-style:none;padding:14px 16px;font:800 18px/1.2 Montserrat;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center}
+.area summary::-webkit-details-marker,.grp summary::-webkit-details-marker{display:none}
+.area summary span{font:600 13px Inter;text-transform:none;color:#7a6457}
+.area summary::after,.grp summary::after{content:"+";font:700 22px/1 Inter;margin-left:10px}
+.area[open] summary::after,.grp[open] summary::after{content:"–"}
+.area summary span{margin-left:auto}
+.area ul{list-style:none;margin:0;padding:0 16px 12px}
+.tday{font:800 12.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--chili);padding:12px 0 6px;border-top:2px dashed rgba(43,26,18,.18)}
+.tday:first-child{border-top:0;padding-top:2px}
+.stop{display:flex;gap:12px;padding:6px 0}
+.hrs{flex:none;width:92px;font:700 13.5px/1.35 Inter}
+.tk b{font-family:Montserrat;font-weight:800}.tk i{display:block;font-style:normal;color:#6e5649;font-size:14px}
+.tk small{display:block;color:#6e5649;font-size:13px}
+/* aurora */
+.aurora{position:relative}
+.fc{border-radius:18px;padding:16px;margin:4px 0 16px;background:linear-gradient(135deg,rgba(94,242,181,.16),rgba(140,110,230,.18));border:1px solid var(--line)}
+.fc .fchead{margin:0 0 10px;color:var(--white);font:800 17px/1.2 Montserrat}
+.fclinks{display:flex;flex-direction:column;gap:8px}
+.fclinks a{display:block;background:rgba(13,22,38,.6);border-radius:12px;padding:12px 14px;font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+.samplebadge{display:inline-block;background:var(--ember);color:var(--navy);font:800 11.5px/1 Inter;letter-spacing:.08em;padding:6px 9px;border-radius:6px}
+.fcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 4px}
+.fcgrid div{background:rgba(13,22,38,.6);border-radius:12px;padding:10px}
+.fcgrid small{display:block;color:var(--gray);font-size:12px}.fcgrid b{font:800 24px Montserrat}
+.fc p{margin:6px 0 0;color:var(--gray);font-size:14px}
+.spots{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.spots li{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:14px;padding:12px 16px}
+.spots b{font:800 18px Montserrat;display:block}.spots small{color:var(--green);font-size:13px;display:block}.spots span{color:var(--gray);font-size:14.5px}
+.tips{color:var(--gray);padding-left:20px;margin:0}.tips li{margin:4px 0}
+/* guides */
+.gh{font-size:21px!important}
+.gpart h4{font:800 16px Montserrat;letter-spacing:.06em;text-transform:uppercase;margin:18px 0 8px;color:var(--green)}
+.gpart h4 span{color:var(--gray);font:500 13px Inter;letter-spacing:0;text-transform:none;margin-left:6px}
+.grp{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:8px 0}
+.grp summary{cursor:pointer;list-style:none;padding:12px 16px;font:700 16px Montserrat;display:flex;align-items:center}
+.grp summary span{margin-left:auto;color:var(--gray);font:600 13px Inter}
+.az{list-style:none;margin:0;padding:0 16px 10px}
+.az li{padding:9px 0;border-top:1px solid var(--line)}
+.az b{font-weight:700}.az .h{color:var(--green);font-size:13px}
+.az small{display:block;color:var(--faint);font-size:12.5px}.az span:last-child{color:var(--gray);font-size:14px}
+.flag{display:inline-block;font:700 10.5px/1 Inter;letter-spacing:.06em;text-transform:uppercase;border-radius:5px;padding:3px 6px;margin-left:6px;vertical-align:2px}
+.flag.gf{background:var(--green);color:var(--navy)}.flag.seas{background:#E8C547;color:var(--navy)}
+.receipts{display:grid;gap:18px}
+.receipt{background:var(--paper);color:var(--ink);border-radius:4px;padding:18px 18px 22px;font-family:ui-monospace,"DejaVu Sans Mono",Menlo,monospace;
+ -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%}
+.receipt h4{font:800 22px Montserrat;text-transform:uppercase;text-align:center;color:var(--ink)}
+.rnote{text-align:center;font-size:12px;margin:4px 0 10px;color:#6e6a62;border-bottom:2px dashed #bbb;padding-bottom:10px}
+.receipt ul{list-style:none;margin:0;padding:0}
+.receipt li{padding:9px 0;border-bottom:1px dashed #ccc}
+.receipt .nm{font-size:15px;text-transform:uppercase}.receipt .h{font-size:12px;color:#6e6a62}
+.receipt small{display:block;color:#6e6a62;font-size:12px;margin-bottom:3px}
+.ln{display:flex;align-items:baseline;gap:6px;font-size:13.5px}.ln .dots{flex:1;border-bottom:1px dotted #999}
+.ln b{color:#E23428}
+.receipt em{display:block;font-size:12px;color:#6e6a62;margin-top:2px}
+/* signup */
+.signup{background:linear-gradient(135deg,#13304A,#1C2350);border:1px solid var(--line);border-radius:22px;padding:24px 20px}
+.fake{display:flex;flex-direction:column;gap:10px;margin:14px 0 8px}
+.fake input{font:16px Inter;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--navy2);color:var(--gray)}
+.fake button{font:800 16px Montserrat;padding:14px;border:0;border-radius:12px;background:var(--green);color:var(--navy);opacity:.55}
+.fine{color:var(--faint);font-size:13px}
+/* footer */
+.foot{border-top:1px solid var(--line);padding:30px 0 50px;background:var(--navy2);color:var(--gray);font-size:15px}
+.foot b{color:var(--white)}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{border:1px solid var(--line);padding:9px 14px;border-radius:99px;text-decoration:none;font-weight:600}
+.ph{background:rgba(255,184,107,.15);color:var(--ember);border:1px dashed var(--ember);border-radius:6px;padding:1px 6px;font-weight:600}
+@media (min-width:900px){
+ .wrap{max-width:1040px}
+ .btn{display:inline-block}
+ .chips{margin:18px 0 0;padding:0}
+ .daygrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+ .daygrid .card{margin:0}
+ .trucks .wrap{columns:2;column-gap:16px}
+ .trucks .wrap>*:not(.area){column-span:all}
+ .area{break-inside:avoid;display:inline-block;width:100%}
+ .spots{grid-template-columns:repeat(3,1fr)}
+ .receipts{grid-template-columns:1fr 1fr}
+ .gparts{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+}
+
+/* 404 */
+.nf{min-height:100vh;display:flex;align-items:center}
+.nf h1{font-weight:800;font-size:clamp(34px,9vw,56px);line-height:1.05;margin:18px 0 12px}
+.nf p{color:var(--gray);margin:0 0 22px}
+
+/* events: category sections + search/filters (assets/events.js) */
+[hidden]{display:none!important}
+.catnav{margin:0 -20px 6px}
+.catnav a span,.chip span{color:var(--gray);font-weight:500;margin-left:2px}
+.finder{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;margin:4px 0 8px}
+.lbl{display:block;font:700 13px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin:0 0 8px}
+.searchrow{display:flex;gap:8px}
+.searchrow input{flex:1;min-width:0;font:16px Inter;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--navy2);color:var(--white)}
+.searchrow input::placeholder{color:var(--faint)}
+.clear{font:700 14px Inter;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--white);cursor:pointer}
+.catchips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 0}
+.chip{font:600 14px/1.2 Inter;color:var(--white);background:rgba(13,22,38,.6);border:1px solid var(--line);border-radius:99px;padding:8px 13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--navy)}
+.chip[aria-pressed="true"] span{color:var(--navy)}
+.extras{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin:12px 0 0;font-size:14px;color:var(--gray)}
+.extras label{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.extras select{font:15px Inter;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--navy2);color:var(--white);max-width:100%}
+.extras .chk input{width:18px;height:18px;accent-color:var(--green)}
+.count{margin:10px 0 0;color:var(--gray);font-size:13.5px}
+.finder :focus-visible,.catnav a:focus-visible,.nomatch button:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.nomatch{background:var(--card);border:1px dashed var(--line);border-radius:16px;padding:16px;margin:14px 0;text-align:center}
+.nomatch p{margin:0 0 10px;color:var(--gray)}.nomatch b{color:var(--white)}
+.evsec{margin:26px 0 0;scroll-margin-top:8px}
+.sech{display:flex;align-items:baseline;gap:10px;font:800 16px/1.2 Montserrat!important;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin:0 0 4px!important;padding:8px 0 6px;border-bottom:2px solid var(--line)}
+.sech .n{font:600 13px Inter;letter-spacing:0;color:var(--gray)}
+@media (min-width:900px){
+ .catnav{margin:0 0 6px}
+ .evgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+ .evgrid .card{margin:0}
+}
+@media (max-width:599px){
+ .catchips{gap:6px}
+ .chip{font-size:13.5px;padding:7px 11px}
+}
+
+/* whole event card is the tap target: one real <a class="more"> stretched over the card (works without JS) */
+#events .card.ev,#events li.run{position:relative;cursor:pointer;transition:border-color .15s,background-color .15s,transform .1s}
+#events .more{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 16px;margin-left:auto;border-radius:12px;
+ border:1.5px solid var(--green);background:rgba(94,242,181,.12);color:var(--green);font:700 15px/1 Inter;text-decoration:none;white-space:nowrap}
+#events .more::after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:1}
+#events .card.ev .more::after{border-radius:16px}#events li.run .more::after{border-radius:14px}
+#events li.run .more{margin-top:8px}
+#events li.run{display:flex;flex-direction:column}
+#events li.run .more{align-self:flex-start;margin-left:0}
+#events .card.ev:hover,#events li.run:hover{border-color:var(--green);background-color:#1B2A45}
+#events .card.ev:hover .more,#events li.run:hover .more{background:var(--green);color:var(--navy)}
+#events .card.ev:active,#events li.run:active{transform:scale(.99)}
+#events .more:focus-visible{outline:none}
+#events .more:focus-visible::after{outline:3px solid var(--green);outline-offset:3px}
+#events .card.ev:has(.more:focus-visible),#events li.run:has(.more:focus-visible){border-color:var(--green)}
