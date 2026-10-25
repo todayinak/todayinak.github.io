@@ -198,3 +198,8 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
 #events .more:focus-visible{outline:none}
 #events .more:focus-visible::after{outline:3px solid var(--green);outline-offset:3px}
 #events .card.ev:has(.more:focus-visible),#events li.run:has(.more:focus-visible){border-color:var(--green)}
+/* live "Today" labels (assets/events.js, Alaska time) */
+.pill.when .wd.rel{font-weight:800}
+.card.ev.is-today{border-color:rgba(94,242,181,.55);box-shadow:0 0 0 1px rgba(94,242,181,.18) inset}
+.tday.firstvis{border-top:0;padding-top:2px}
+.area .tdone{margin:0;padding:0 16px 14px;font-size:14px;font-weight:600;color:#6e5649}
