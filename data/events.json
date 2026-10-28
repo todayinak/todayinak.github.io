@@ -1,26 +1,8 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-28",
  "timezone_note": "All times are Alaska time (AKDT through Sat Oct 31, AKST from Sun Nov 1).",
  "disclaimer": "Details can change. Check with the organizer before you go.",
  "events": [
-  {
-   "id": "2026-10-23-alaskas-wild-icons-winter-tour",
-   "date": "2026-10-23",
-   "time": "12:30 PM",
-   "title": "Alaska's Wild Icons Winter Tour",
-   "category": "Family & Outdoors",
-   "venue": "Alaska Zoo, 4731 O'Malley Rd",
-   "town": "Anchorage",
-   "price": "$50 ages 3+, 2 & under free",
-   "ages": "Ages not listed",
-   "extra_dates": [
-    "2026-10-26"
-   ],
-   "start": "12:30",
-   "end": "14:00",
-   "note": "12:30–2 PM, outdoors, max 12 people. Mondays & Fridays through March",
-   "url": "https://www.alaskazoo.org/event-calendar/2026/10/23/alaskas-wild-icons-winter-tour"
-  },
   {
    "id": "2026-10-23-misery-cyranos-theatre-company",
    "date": "2026-10-23",
@@ -38,124 +20,6 @@
    "start": "19:00",
    "note": "Also Sun Oct 25 at 3 PM. Runs through Sun Nov 1. Mature language and violence.",
    "url": "https://www.centertix.com/events/misery"
-  },
-  {
-   "id": "2026-10-26-anchorage-restaurant-week",
-   "date": "2026-10-26",
-   "time": "Hours vary by restaurant",
-   "title": "Anchorage Restaurant Week",
-   "category": "Food & Drink",
-   "venue": "Participating restaurants citywide",
-   "town": "Anchorage",
-   "price": "No ticket needed",
-   "ages": "All ages",
-   "start": "11:00",
-   "note": "Runs through Thu Oct 29 and supports Food Bank of Alaska.",
-   "url": "https://foodbankofalaska.org/anchorage-restaurant-week"
-  },
-  {
-   "id": "2026-10-26-the-great-pumpkin-patch",
-   "date": "2026-10-26",
-   "time": "11 AM",
-   "title": "The Great Pumpkin Patch",
-   "category": "Seasonal",
-   "venue": "49th State Brewing @ The Rail, 721 Depot Dr",
-   "town": "Anchorage",
-   "price": "Price not listed",
-   "ages": "Ages not listed",
-   "start": "11:00",
-   "end": "22:00",
-   "note": "Daily through Mon Nov 2. Dog-friendly beer garden.",
-   "url": "https://www.49thstatebrewing.com/series/the-great-pumpkin-patch/"
-  },
-  {
-   "id": "2026-10-26-fright-night-manor-haunted-house",
-   "date": "2026-10-26",
-   "time": "6 PM",
-   "title": "Fright Night Manor Haunted House",
-   "category": "Seasonal",
-   "venue": "Midtown Mall, Unit 133, 600 E Northern Lights Blvd",
-   "town": "Anchorage",
-   "price": "$20 at the door",
-   "ages": "Ages not listed",
-   "start": "18:00",
-   "end": "21:00",
-   "note": "Includes 3D glasses. Open nightly through Sun Nov 1.",
-   "url": "https://midtownmall.com/frightnight/"
-  },
-  {
-   "id": "2026-10-26-karaoke-monday",
-   "date": "2026-10-26",
-   "time": "6 PM",
-   "title": "Karaoke Monday",
-   "category": "Nightlife",
-   "venue": "Odd Man Rush Brewing, 10930 Mausel St",
-   "town": "Eagle River",
-   "price": "Free",
-   "ages": "Ages not listed (brewery tasting room)",
-   "start": "18:00",
-   "end": "21:00",
-   "url": "https://www.oddmanrushbrewing.com/events"
-  },
-  {
-   "id": "2026-10-26-monday-jazz-jam-alaska-jazz-workshop",
-   "date": "2026-10-26",
-   "time": "6:30 PM",
-   "title": "Monday Jazz Jam (Alaska Jazz Workshop)",
-   "category": "Music",
-   "venue": "Fire Island Rustic Bakeshop, K St Market, 718 K St",
-   "town": "Anchorage",
-   "price": "$5 suggested donation",
-   "ages": "Ages not listed",
-   "start": "18:30",
-   "end": "21:30",
-   "note": "Open jam hosted by Nick Petumenos & Friends.",
-   "url": "https://akjazzworkshop.org/calendar/"
-  },
-  {
-   "id": "2026-10-27-bear-tooth-tuesday-trivia-geeks-who-drink",
-   "date": "2026-10-27",
-   "time": "7 PM",
-   "title": "Bear Tooth Tuesday Trivia (Geeks Who Drink)",
-   "category": "Nightlife",
-   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
-   "town": "Anchorage",
-   "price": "Free",
-   "ages": "All ages",
-   "start": "19:00",
-   "end": "21:00",
-   "note": "Doors 6:30 PM.",
-   "url": "https://www.beartoothak.com/live-events"
-  },
-  {
-   "id": "2026-10-27-brews-brains-trivia-season-finale",
-   "date": "2026-10-27",
-   "time": "7 PM",
-   "title": "Brews + Brains Trivia (season finale)",
-   "category": "Nightlife",
-   "venue": "Girdwood Brewing, 2700 Alyeska Hwy",
-   "town": "Girdwood",
-   "price": "Free",
-   "ages": "Ages not listed (brewery tasting room)",
-   "start": "19:00",
-   "end": "21:00",
-   "note": "Final week. Teams up to 4.",
-   "url": "https://girdwoodbrewing.com/event/brews-brains-trivia/"
-  },
-  {
-   "id": "2026-10-27-msp-films-the-way-out-hatcher-pass-avalanche-center-benefit",
-   "date": "2026-10-27",
-   "time": "7 PM",
-   "title": "MSP Films: The Way Out (Hatcher Pass Avalanche Center benefit)",
-   "category": "Arts & Talks",
-   "venue": "The Glenn Massay Theater, 8295 E College Dr",
-   "town": "Palmer",
-   "price": "$23.18",
-   "ages": "All ages",
-   "start": "19:00",
-   "end": "21:00",
-   "note": "Ski film premiere night. Doors 6 PM.",
-   "url": "https://www.eventbrite.com/e/msp-films-the-way-out-fundraiser-for-hatcher-pass-avalanche-center-tickets-2002834659381"
   },
   {
    "id": "2026-10-28-family-storytime",
@@ -194,8 +58,9 @@
    "price": "Free",
    "ages": "All ages",
    "start": "14:00",
+   "end": "15:00",
    "note": "Caldecott Medal-winning Tlingit author/illustrator.",
-   "url": "https://allevents.in/anchorage/michaela-goade-visits-lousssac-library/200030736874845"
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
   },
   {
    "id": "2026-10-28-a-great-horned-owl-visits",
@@ -208,7 +73,38 @@
    "price": "Free",
    "ages": "All ages",
    "start": "15:00",
-   "url": "https://www.anchoragelibrary.org/"
+   "end": "16:00",
+   "note": "Meet Archimedes the great horned owl and learn about Alaska owls.",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
+   "id": "2026-10-28-craft-movie-night-practical-magic-1998",
+   "date": "2026-10-28",
+   "time": "6 PM",
+   "title": "Craft Movie Night: Practical Magic (1998)",
+   "category": "Arts & Talks",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "note": "Bring your knitting or crochet; brighter house lights. Rated PG-13.",
+   "url": "https://beartooththeatre.filmbot.com/movies/craft-movie-night-practical-magic-1998/"
+  },
+  {
+   "id": "2026-10-28-fright-night-manor-haunted-house",
+   "date": "2026-10-28",
+   "time": "6 PM",
+   "title": "Fright Night Manor Haunted House",
+   "category": "Seasonal",
+   "venue": "Midtown Mall, Unit 133, 600 E Northern Lights Blvd",
+   "town": "Anchorage",
+   "price": "$20 at the door",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "21:00",
+   "note": "Includes 3D glasses. Open nightly through Sun Nov 1.",
+   "url": "https://midtownmall.com/frightnight/"
   },
   {
    "id": "2026-10-28-geeks-who-drink-trivia",
@@ -505,5 +401,5 @@
   }
  ],
  "through": "2026-11-07",
- "last_verified": "2026-10-25"
+ "last_verified": "2026-10-27"
 }
