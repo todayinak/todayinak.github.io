@@ -49,7 +49,7 @@
       done = document.getElementById('evdone'), from = document.getElementById('evfrom'),
       chips = hasFinder ? [].slice.call(finder.querySelectorAll('.chip')) : [], secs = [].slice.call(document.querySelectorAll('.evsec')),
       cards = [].slice.call(document.querySelectorAll('#events .card.ev')), runs = [].slice.call(document.querySelectorAll('#events li.run')),
-      items = cards.concat(runs), running = document.getElementById('running'), jump = document.querySelector('.catnav'), cat = '';
+      items = cards.concat(runs), running = document.getElementById('running'), jump = document.querySelector('.catnav'), cat = '', whenToday = false, todayISO = '';
   var dayOpts = day ? [].slice.call(day.options).filter(function (o) { return o.value; }) : [];
   dayOpts.forEach(function (o) { o._label = o.textContent; });
   cards.forEach(function (el, i) {
@@ -98,10 +98,21 @@
       o.hidden = o.disabled = past;
       o.textContent = o.value === today ? 'Today (' + o._label + ')' : o.value === tomorrow ? 'Tomorrow (' + o._label + ')' : o._label;
     });
-    // category counts (chips + jump links) only count what's still coming up
+    todayISO = today;
+    // category + Today counts (chips + jump links) only count what's still coming up
     var live = cards.filter(function (c) { return !c._past; });
     chips.forEach(function (c) {
-      var s = c.getAttribute('data-sec'), n = live.filter(function (x) { return !s || x.getAttribute('data-sec') === s; }).length, sp = c.querySelector('span');
+      var sp = c.querySelector('span');
+      if (c.getAttribute('data-when') === 'today') {
+        var nToday = items.filter(function (x) {
+          return !x._past && (' ' + (x.getAttribute('data-days') || '') + ' ').indexOf(' ' + today + ' ') > -1;
+        }).length;
+        if (sp) sp.textContent = nToday;
+        c.hidden = nToday === 0;
+        if (nToday === 0) whenToday = false;
+        return;
+      }
+      var s = c.getAttribute('data-sec'), n = live.filter(function (x) { return !s || x.getAttribute('data-sec') === s; }).length;
       if (sp) sp.textContent = n;
       c.hidden = !!s && n === 0;
       if (s && n === 0 && cat === s) cat = '';
@@ -169,7 +180,8 @@
       var on = saved.hasOwnProperty(el._id);
       h.setAttribute('aria-pressed', String(on));
       h.setAttribute('aria-label', (on ? 'Saved: ' : 'Save: ') + el._title);
-      h.title = on ? 'Saved (tap to remove)' : 'Save this event';
+      h.title = on ? 'Saved — tap to remove' : 'Save this event';
+      var lab = h.querySelector('.alabel'); if (lab) lab.textContent = on ? 'Saved' : 'Save';
     });
     if (savedN) savedN.textContent = n;
     if (savedLinkN) savedLinkN.textContent = n;
@@ -260,9 +272,11 @@
     share: '<path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>',
     cal: '<rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/>'
   };
-  function btn(cls, icon, label) {
-    var b = document.createElement('button'); b.type = 'button'; b.className = 'act ' + cls; b.setAttribute('aria-label', label); b.title = label;
-    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICON[icon] + '</svg>'; return b;
+  function btn(cls, icon, text, aria) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'act ' + cls;
+    b.setAttribute('aria-label', aria); b.title = aria;
+    b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICON[icon] + '</svg><span class="alabel">' + text + '</span>';
+    return b;
   }
   function enhanceCards() {
     cards.forEach(function (el) {
@@ -272,7 +286,9 @@
       el._url = more ? more.href : SITE; el._price = pr ? pr.textContent : '';
       var w = el.querySelector('.pill.when'); el._time = w ? w.textContent.replace(el._wdText, '').replace(/^\s*·\s*/, '') : '';
       var box = document.createElement('div'); box.className = 'acts';
-      var sb = btn('share', 'share', 'Share: ' + el._title), cb = btn('cal', 'cal', 'Add to calendar: ' + el._title), hb = btn('heart', 'heart', 'Save: ' + el._title);
+      var hb = btn('heart', 'heart', 'Save', 'Save: ' + el._title);
+      var sb = btn('share', 'share', 'Share', 'Share: ' + el._title);
+      var cb = btn('cal', 'cal', 'Cal', 'Add to calendar: ' + el._title);
       hb.setAttribute('aria-pressed', 'false'); el._heart = hb;
       sb.addEventListener('click', function () {
         var when = (el._next ? label(el._next) : el._wdText) + (el._time ? ' · ' + el._time : '');
@@ -280,9 +296,11 @@
       });
       cb.addEventListener('click', function () { download(el); });
       hb.addEventListener('click', function () { toggleSaved(el); });
-      box.appendChild(sb); box.appendChild(cb); box.appendChild(hb);
-      var top = el.querySelector('.pills'); if (top) top.classList.add('toprow');
-      el.appendChild(box); el.classList.add('has-acts');   // after the details link in tab order; placed top-right by CSS
+      box.appendChild(hb); box.appendChild(sb); box.appendChild(cb);
+      var meta = el.querySelector('.pills.meta');
+      if (meta && more) meta.insertBefore(box, more);   // Save / Share / Cal sit next to Event details
+      else el.appendChild(box);
+      el.classList.add('has-acts');
     });
   }
   // Shared event links (todayinak.github.io/#ev-<id>) scroll to that card and give it a short glow
@@ -336,6 +354,7 @@
     items.forEach(function (el) {
       if (!el._past) total++;
       var ok = !el._past && (!cat || el.getAttribute('data-sec') === cat) &&
+               (!whenToday || (' ' + (el.getAttribute('data-days') || '') + ' ').indexOf(' ' + todayISO + ' ') > -1) &&
                (!d || (' ' + el.getAttribute('data-days') + ' ').indexOf(' ' + d + ' ') > -1) &&
                (!a || el.getAttribute('data-age') === a) &&
                (!f || el.hasAttribute('data-free')) &&
@@ -350,9 +369,13 @@
     });
     if (running) running.hidden = !running.querySelector('li.run:not([hidden])');
     if (!hasFinder) { if (done) done.hidden = total !== 0; return; }
-    chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.getAttribute('data-sec') === cat)); });
-    var active = cat || words.length || d || a || f || sv;
-    count.textContent = sv && !(cat || words.length || d || a || f) ? (shown === 1 ? '1 saved event' : shown + ' saved events')
+    chips.forEach(function (c) {
+      if (c.getAttribute('data-when') === 'today') c.setAttribute('aria-pressed', String(whenToday));
+      else if (c.getAttribute('data-sec') === '') c.setAttribute('aria-pressed', String(cat === '' && !whenToday));
+      else c.setAttribute('aria-pressed', String(c.getAttribute('data-sec') === cat));
+    });
+    var active = cat || whenToday || words.length || d || a || f || sv;
+    count.textContent = sv && !(cat || whenToday || words.length || d || a || f) ? (shown === 1 ? '1 saved event' : shown + ' saved events')
                       : active ? (shown === 1 ? '1 listing matches' : shown + ' listings match') + ' (of ' + total + ')'
                                : (total === 0 ? '' : total === 1 ? 'Showing 1 upcoming listing' : 'Showing all ' + total + ' upcoming listings');
     if (done) done.hidden = total !== 0;
@@ -365,19 +388,30 @@
   function tick() { if (akNow() !== lastKey) refresh(); }
 
   if (hasFinder) {
-    var reset = function () { q.value = ''; day.value = ''; age.value = ''; free.checked = false; cat = ''; savedView = false; apply(); };
+    var reset = function () { q.value = ''; day.value = ''; age.value = ''; free.checked = false; cat = ''; whenToday = false; savedView = false; apply(); };
     chips.forEach(function (c) {
-      c.addEventListener('click', function () { var s = c.getAttribute('data-sec'); cat = (s === cat && s !== '') ? '' : s; apply(); });
+      c.addEventListener('click', function () {
+        if (c.getAttribute('data-when') === 'today') {
+          whenToday = !whenToday;
+          if (whenToday && day) day.value = '';   // avoid Today chip fighting the Day dropdown
+          apply(); return;
+        }
+        var s = c.getAttribute('data-sec');
+        if (s === '') { cat = ''; whenToday = false; apply(); return; }   // All clears category + Today
+        cat = (s === cat) ? '' : s; apply();
+      });
     });
     q.addEventListener('input', apply);
     q.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') { q.value = ''; apply(); } });
-    [day, age, free].forEach(function (el) { el.addEventListener('change', apply); });
+    day.addEventListener('change', function () { whenToday = false; apply(); });
+    [age, free].forEach(function (el) { el.addEventListener('change', apply); });
     document.getElementById('evclear').addEventListener('click', function () { q.value = ''; apply(); q.focus(); });
     document.getElementById('evreset').addEventListener('click', function () { reset(); q.focus(); });
     // Links like todayinak.github.io/#cat-comedy open with that category selected
     var fromHash = function () {
       var m = /^#cat-([a-z]+)$/.exec(location.hash);
-      if (m && chips.some(function (c) { return c.getAttribute('data-sec') === m[1] && !c.hidden; })) { cat = m[1]; apply(); }
+      if (m && chips.some(function (c) { return c.getAttribute('data-sec') === m[1] && !c.hidden; })) { cat = m[1]; whenToday = false; apply(); }
+      if (location.hash === '#today') { whenToday = true; if (day) day.value = ''; savedView = false; apply(); finder.scrollIntoView(); }
       if (location.hash === '#saved') { setSavedView(true); finder.scrollIntoView(); }
     };
     window.addEventListener('hashchange', fromHash);
