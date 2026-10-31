@@ -32,13 +32,15 @@
 <header class="hero">
   <div class="wrap">
     <div class="brandrow"><span class="mark"><i></i>TODAY IN AK</span><a class="handle" href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">@todayinak</a></div>
+    <p class="dial" id="dial" hidden><span class="dtemp" id="dialtemp" hidden title="Current temperature in Anchorage"></span><span class="dsep" id="dialsep" hidden aria-hidden="true">·</span><span class="dmoon" id="dialmoon"></span></p>
     <p class="kicker">This week in Alaska</p>
     <h1>Your Alaska weekend, planned.</h1>
     <p class="range">Wed Oct 28 – Tue Nov 3</p>
     <p class="regions">Anchorage · Mat-Su · Eagle River · Girdwood</p>
     <a class="btn" href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Follow @todayinak on Instagram</a>
+    <button type="button" class="btn btn2" id="invite" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>Invite a friend</button>
     <nav class="chips" aria-label="Sections">
-      <a href="#events">Events</a><a href="#trucks">Food trucks</a><a href="#aurora">Aurora</a><a href="#guides">Guides</a><a href="#email">Weekly email</a>
+      <a href="#saved" class="savedlink" id="savedlink" hidden>♥ Saved <span id="savedlinkn">0</span></a><a href="#events">Events</a><a href="#trucks">Food trucks</a><a href="#aurora">Aurora</a><a href="#guides">Guides</a><a href="#email">Weekly email</a>
     </nav>
     <p class="updated">Updated Wed Oct 28, 2026 · All times are Alaska time (AKDT through Sat Oct 31, AKST from Sun Nov 1).</p>
   </div>
@@ -58,99 +60,101 @@
       <label>Day <select id="evday"><option value="">Any day</option><option value="2026-10-23">Fri Oct 23</option><option value="2026-10-24">Sat Oct 24</option><option value="2026-10-28">Wed Oct 28</option><option value="2026-10-29">Thu Oct 29</option><option value="2026-10-30">Fri Oct 30</option><option value="2026-10-31">Sat Oct 31</option><option value="2026-11-01">Sun Nov 1</option><option value="2026-11-04">Wed Nov 4</option><option value="2026-11-05">Thu Nov 5</option><option value="2026-11-06">Fri Nov 6</option><option value="2026-11-07">Sat Nov 7</option></select></label>
       <label>Ages <select id="evage"><option value="">Any ages</option><option value="all">All ages</option><option value="adult">18+ and 21+ only</option></select></label>
       <label class="chk"><input type="checkbox" id="evfree"> Free only</label>
+      <button type="button" class="savedbtn" id="evsaved" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.4 2.5h1.8c.8-1.3 2.3-2.5 4.4-2.5 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21z"/></svg>My saved events <span id="evsavedn">0</span></button>
     </div>
     <p class="count" id="evcount" aria-live="polite" aria-atomic="true"></p>
   </div>
   <div class="nomatch" id="evdone" hidden><p><b>That's a wrap for this week's listings.</b> New events every Thursday. Follow @todayinak for the next batch.</p></div>
+  <div class="nomatch" id="evnosaved" hidden><p><b>No saved events yet.</b> Tap the heart on any event to keep it here. Saved on this device only, no account needed.</p><button type="button" class="clear" id="evsavedoff">Show all events</button></div>
   <div class="nomatch" id="evnone" hidden><p><b>No events match.</b> Try another word, day or category.</p><button type="button" class="clear" id="evreset">Clear filters</button></div>
   <section class="evsec" id="cat-music" data-sec="music" aria-labelledby="h-music">
 <h3 class="sech" id="h-music">Live music <span class="n">15</span></h3>
 <div class="evgrid">
-<article class="card ev" data-sec="music" data-days="2026-10-28" data-age="other" data-free="1" data-start="18:30" data-end="21:30">
+<article class="card ev" id="ev-2026-10-28-live-music-at-crimson-jared-woods-and-collin-wade" data-id="2026-10-28-live-music-at-crimson-jared-woods-and-collin-wade" data-sec="music" data-days="2026-10-28" data-age="other" data-free="1" data-start="18:30" data-end="21:30">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 6:30 PM</span></div>
   <h4>Live Music at Crimson: Jared Woods &amp; Collin Wade</h4>
   <p class="where">Crimson, 239 W 4th Ave · <b>Anchorage</b></p><p class="note">Reservations encouraged.</p>
   <div class="pills meta"><span class="pill">No cover</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://anchoragepress.com/events/live-music-at-crimson-jared-woods-collin-wade-2026-10-28/" rel="noopener" target="_blank" aria-label="Event details: Live Music at Crimson: Jared Woods &amp; Collin Wade (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-28" data-age="other" data-free="1" data-start="18:30" data-end="20:30">
+<article class="card ev" id="ev-2026-10-28-wednesday-music-series-will-balcoa-finale" data-id="2026-10-28-wednesday-music-series-will-balcoa-finale" data-sec="music" data-days="2026-10-28" data-age="other" data-free="1" data-start="18:30" data-end="20:30">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 6:30 PM</span></div>
   <h4>Wednesday Music Series: Will Balcoa (finale)</h4>
   <p class="where">Girdwood Brewing, 2700 Alyeska Hwy · <b>Girdwood</b></p><p class="note">Indie folk-rock; last show of the series.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://girdwoodbrewing.com/event/wednesday-music-series/" rel="noopener" target="_blank" aria-label="Event details: Wednesday Music Series: Will Balcoa (finale) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev drive-card" data-sec="music" data-days="2026-10-28" data-age="adult" data-free="1" data-start="20:00">
+<article class="card ev drive-card" id="ev-2026-10-28-fairview-inn-open-mic" data-id="2026-10-28-fairview-inn-open-mic" data-sec="music" data-days="2026-10-28" data-age="adult" data-free="1" data-start="20:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 8 PM</span><span class="pill drive">Worth the drive</span></div>
   <h4>Fairview Inn Open Mic</h4>
   <p class="where">Fairview Inn, 101 N Main St · <b>Talkeetna</b></p><p class="note">Historic bar; 21+.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill age">21+</span><a class="more" href="https://alaskamusic.live/" rel="noopener" target="_blank" aria-label="Event details: Fairview Inn Open Mic (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-29" data-age="other" data-start="18:30" data-end="22:30">
+<article class="card ev" id="ev-2026-10-29-pierre-bidondo" data-id="2026-10-29-pierre-bidondo" data-sec="music" data-days="2026-10-29" data-age="other" data-start="18:30" data-end="22:30">
   <div class="pills"><span class="pill when"><span class="wd">Thu Oct 29</span> · 6:30 PM</span></div>
   <h4>Pierre Bidondo</h4>
   <p class="where">The Peanut Farm, 5227 Old Seward Hwy · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">No cover listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://anchoragepress.com/events/live-music-with-pierre-bidondo-the-peanut-farm-2026-10-29/" rel="noopener" target="_blank" aria-label="Event details: Pierre Bidondo (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-29" data-age="all" data-free="1" data-start="19:00">
+<article class="card ev" id="ev-2026-10-29-live-performance-rosie-rush" data-id="2026-10-29-live-performance-rosie-rush" data-sec="music" data-days="2026-10-29" data-age="all" data-free="1" data-start="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Thu Oct 29</span> · 7 PM</span></div>
   <h4>Live Performance: Rosie Rush</h4>
   <p class="where">Anchorage Museum Atrium, 625 C St · <b>Anchorage</b></p><p class="note">Songs from her new EP, Evelyn. Doors 6:15 PM; use the 7th Ave entrance.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragemuseum.org/visit/calendar/event-details/?id=7lg6sjj5jnvi5fqh7ltb05piq4" rel="noopener" target="_blank" aria-label="Event details: Live Performance: Rosie Rush (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-30" data-age="all" data-free="1" data-start="17:00" data-end="20:00">
+<article class="card ev" id="ev-2026-10-30-open-mic-night-at-refuge-coffee" data-id="2026-10-30-open-mic-night-at-refuge-coffee" data-sec="music" data-days="2026-10-30" data-age="all" data-free="1" data-start="17:00" data-end="20:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 5 PM</span></div>
   <h4>Open Mic Night at Refuge Coffee</h4>
   <p class="where">Refuge Coffee Collab, 3309 Spenard Rd · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.refugecoffeeak.com/events/open-mic-night-5yk55" rel="noopener" target="_blank" aria-label="Event details: Open Mic Night at Refuge Coffee (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-30" data-age="all" data-free="1" data-start="18:00" data-end="20:00">
+<article class="card ev" id="ev-2026-10-30-open-mic-at-organic-oasis" data-id="2026-10-30-open-mic-at-organic-oasis" data-sec="music" data-days="2026-10-30" data-age="all" data-free="1" data-start="18:00" data-end="20:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 6 PM</span></div>
   <h4>Open Mic at Organic Oasis</h4>
   <p class="where">Organic Oasis, 2610 Spenard Rd · <b>Anchorage</b></p><p class="note">Acoustic open mic.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://anchoragepress.com/events/open-mic-organic-oasis-2026-10-30/" rel="noopener" target="_blank" aria-label="Event details: Open Mic at Organic Oasis (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-30" data-age="other" data-free="1" data-start="18:30" data-end="20:30">
+<article class="card ev" id="ev-2026-10-30-solo-steve-norwood" data-id="2026-10-30-solo-steve-norwood" data-sec="music" data-days="2026-10-30" data-age="other" data-free="1" data-start="18:30" data-end="20:30">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 6:30 PM</span></div>
   <h4>Solo Steve Norwood</h4>
   <p class="where">Turnagain Brewing, 7920 King St · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">No cover</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.turnagainbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Solo Steve Norwood (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-30" data-age="other" data-start="19:00" data-end="22:00">
+<article class="card ev" id="ev-2026-10-30-jerry-wessling-band-halloween-show" data-id="2026-10-30-jerry-wessling-band-halloween-show" data-sec="music" data-days="2026-10-30" data-age="other" data-start="19:00" data-end="22:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 7 PM</span></div>
   <h4>Jerry Wessling Band Halloween show</h4>
   <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p><p class="note">Halloween weekend show and costume party.</p>
   <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Jerry Wessling Band Halloween show (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-30" data-age="other" data-start="19:30" data-end="21:20">
+<article class="card ev" id="ev-2026-10-30-bandits-on-the-run" data-id="2026-10-30-bandits-on-the-run" data-sec="music" data-days="2026-10-30" data-age="other" data-start="19:30" data-end="21:20">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 7:30 PM</span></div>
   <h4>Bandits on the Run</h4>
   <p class="where">Discovery Theatre, Alaska Center for the Performing Arts, 621 W 6th Ave · <b>Anchorage</b></p><p class="note">Brooklyn indie-folk trio presented by Anchorage Concert Association. About 110 minutes.</p>
   <div class="pills meta"><span class="pill">From $49.50</span><span class="pill">Ages 6+</span><a class="more" href="https://centertix.com/events/bandits-on-the-run" rel="noopener" target="_blank" aria-label="Event details: Bandits on the Run (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-30" data-age="adult" data-start="20:00">
+<article class="card ev" id="ev-2026-10-30-zombies-night-out-iron-maiden-tribute" data-id="2026-10-30-zombies-night-out-iron-maiden-tribute" data-sec="music" data-days="2026-10-30" data-age="adult" data-start="20:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 8 PM (doors 7 PM)</span></div>
   <h4>Zombies Night Out: Iron Maiden tribute</h4>
   <p class="where">The Aurora Room, 415 E St · <b>Anchorage</b></p><p class="note">Doors 7 PM. Strangers in a Strange Land (Iron Maiden tribute) at 8 PM; zombie costume contest 10 PM; Vintage Retro 10:30 PM–1:30 AM.</p>
   <div class="pills meta"><span class="pill">See ticket page</span><span class="pill age">21+</span><a class="more" href="https://www.ericksonevents.com/zombies-night-out-10302026-anchorage/" rel="noopener" target="_blank" aria-label="Event details: Zombies Night Out: Iron Maiden tribute (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev drive-card" data-sec="music" data-days="2026-10-30" data-age="adult" data-start="22:00" data-end="23:59">
+<article class="card ev drive-card" id="ev-2026-10-30-young-dubliners-halloween-night-at-the-sitz" data-id="2026-10-30-young-dubliners-halloween-night-at-the-sitz" data-sec="music" data-days="2026-10-30" data-age="adult" data-start="22:00" data-end="23:59">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 10 PM (doors 9 PM)</span><span class="pill drive">Worth the drive</span></div>
   <h4>Young Dubliners Halloween Night at the Sitz</h4>
   <p class="where">Sitzmark Bar &amp; Grill, 194 Olympic Mountain Loop · <b>Girdwood</b></p><p class="note">Doors 9 PM, show 10 PM. Costumes encouraged.</p>
   <div class="pills meta"><span class="pill">Ticketed (see Visit Girdwood)</span><span class="pill age">21+</span><a class="more" href="https://www.visitgirdwood.com/events/live-at-the-sitz-2" rel="noopener" target="_blank" aria-label="Event details: Young Dubliners Halloween Night at the Sitz (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-31" data-age="other" data-start="19:00" data-end="23:00">
+<article class="card ev" id="ev-2026-10-31-halloween-party-with-wiley-post-and-good-company" data-id="2026-10-31-halloween-party-with-wiley-post-and-good-company" data-sec="music" data-days="2026-10-31" data-age="other" data-start="19:00" data-end="23:00">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 7 PM</span></div>
   <h4>Halloween Party with Wiley Post &amp; Good Company</h4>
   <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p>
   <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Halloween Party with Wiley Post &amp; Good Company (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="music" data-days="2026-10-31" data-age="other" data-start="20:00" data-end="22:00">
+<article class="card ev" id="ev-2026-10-31-rogues-and-wenches-at-humpys" data-id="2026-10-31-rogues-and-wenches-at-humpys" data-sec="music" data-days="2026-10-31" data-age="other" data-start="20:00" data-end="22:00">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 8 PM</span></div>
   <h4>Rogues and Wenches at Humpy&#x27;s</h4>
   <p class="where">Humpy&#x27;s Great Alaskan Alehouse, 610 W 6th Ave · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://alaskamusic.live/shows/2026-10-31-rogues-and-wenches-at-humpys-great-alaskan-alehouse" rel="noopener" target="_blank" aria-label="Event details: Rogues and Wenches at Humpy&#x27;s (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev drive-card" data-sec="music" data-days="2026-10-31" data-age="other" data-start="20:00">
+<article class="card ev drive-card" id="ev-2026-10-31-young-dubliners-halloween-night-talkeetna" data-id="2026-10-31-young-dubliners-halloween-night-talkeetna" data-sec="music" data-days="2026-10-31" data-age="other" data-start="20:00">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 8 PM</span><span class="pill drive">Worth the drive</span></div>
   <h4>Young Dubliners Halloween Night (Talkeetna)</h4>
   <p class="where">Sheldon Community Arts Hangar, 22249 S D St · <b>Talkeetna</b></p><p class="note">Celtic rock; costumes welcome.</p>
@@ -160,31 +164,31 @@
 <section class="evsec" id="cat-comedy" data-sec="comedy" aria-labelledby="h-comedy">
 <h3 class="sech" id="h-comedy">Comedy <span class="n">5</span></h3>
 <div class="evgrid">
-<article class="card ev" data-sec="comedy" data-days="2026-10-28" data-age="adult" data-free="1" data-start="19:00" data-end="22:00">
+<article class="card ev" id="ev-2026-10-28-koots-comedy-open-mic" data-id="2026-10-28-koots-comedy-open-mic" data-sec="comedy" data-days="2026-10-28" data-age="adult" data-free="1" data-start="19:00" data-end="22:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 7 PM</span></div>
   <h4>Koot&#x27;s Comedy Open Mic</h4>
   <p class="where">Koot&#x27;s (Swing Bar), 2435 Spenard Rd · <b>Anchorage</b></p><p class="note">7–10 PM, every Wednesday</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill age">21+</span><a class="more" href="https://anchoragepress.com/events/weekly/" rel="noopener" target="_blank" aria-label="Event details: Koot&#x27;s Comedy Open Mic (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="comedy" data-days="2026-10-29" data-age="adult" data-free="1" data-start="19:00" data-end="21:00">
+<article class="card ev" id="ev-2026-10-29-ghoul-dinner-halloween-comedy-showcase" data-id="2026-10-29-ghoul-dinner-halloween-comedy-showcase" data-sec="comedy" data-days="2026-10-29" data-age="adult" data-free="1" data-start="19:00" data-end="21:00">
   <div class="pills"><span class="pill when"><span class="wd">Thu Oct 29</span> · 7 PM</span></div>
   <h4>Ghoul Dinner: Halloween comedy showcase</h4>
   <p class="where">The Whale&#x27;s Tail, Hotel Captain Cook, 939 W 5th Ave · <b>Anchorage</b></p><p class="note">7–9 PM. Lineup TBA</p>
   <div class="pills meta"><span class="pill">Free (tips)</span><span class="pill age">21+</span><a class="more" href="https://www.rubberptarmigan.com/events/ghoul-dinner-the-whales-tail" rel="noopener" target="_blank" aria-label="Event details: Ghoul Dinner: Halloween comedy showcase (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="comedy" data-days="2026-10-31" data-age="all" data-start="18:00" data-end="21:30">
+<article class="card ev" id="ev-2026-10-31-halloween-improv-comedysportz-scared-scriptless" data-id="2026-10-31-halloween-improv-comedysportz-scared-scriptless" data-sec="comedy" data-days="2026-10-31" data-age="all" data-start="18:00" data-end="21:30">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 6 PM &amp; 8 PM</span></div>
   <h4>Halloween improv: ComedySportz + Scared Scriptless</h4>
   <p class="where">The Nave, 3502 Spenard Rd · <b>Anchorage</b></p><p class="note">ComedySportz (all ages) 6 PM doors 5:30; Scared Scriptless (adult themes likely) 8 PM doors 7:30. Under 18 need an adult for the late show. Costumes encouraged.</p>
   <div class="pills meta"><span class="pill">ComedySportz see site; Scared Scriptless $18–$20; combo $28–$30</span><span class="pill">All ages</span><a class="more" href="https://lastfrontierevents.com/events/scared-scriptless-improv-feat-comedysportz-at-the-nave-on-halloween" rel="noopener" target="_blank" aria-label="Event details: Halloween improv: ComedySportz + Scared Scriptless (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="comedy" data-days="2026-11-05" data-age="adult" data-start="19:30">
+<article class="card ev" id="ev-2026-11-05-jason-mewes-diary-of-a-manchild" data-id="2026-11-05-jason-mewes-diary-of-a-manchild" data-sec="comedy" data-days="2026-11-05" data-age="adult" data-start="19:30">
   <div class="pills"><span class="pill when"><span class="wd">Thu Nov 5</span> · 7:30 PM</span></div>
   <h4>Jason Mewes: Diary of a Manchild</h4>
   <p class="where">Everett&#x27;s at Mat-Su Resort, 1850 E Bogard Rd · <b>Wasilla</b></p><p class="note">Doors 1 hour before</p>
   <div class="pills meta"><span class="pill">See ticket page</span><span class="pill age">18+</span><a class="more" href="https://www.ericksonevents.com/jason-mewes-11052026-wasilla/" rel="noopener" target="_blank" aria-label="Event details: Jason Mewes: Diary of a Manchild (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="comedy" data-days="2026-11-06 2026-11-07" data-age="adult" data-start="19:00">
+<article class="card ev" id="ev-2026-11-06-jason-mewes" data-id="2026-11-06-jason-mewes" data-sec="comedy" data-days="2026-11-06 2026-11-07" data-age="adult" data-start="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 7 PM &amp; 9 PM</span></div>
   <h4>Jason Mewes</h4>
   <p class="where">The Aurora Room, 415 E St · <b>Anchorage</b></p><p class="note">Also Sat Nov 7, 7 &amp; 9 PM</p>
@@ -194,37 +198,37 @@
 <section class="evsec" id="cat-stage" data-sec="stage" aria-labelledby="h-stage">
 <h3 class="sech" id="h-stage">Theater, arts &amp; talks <span class="n">6</span></h3>
 <div class="evgrid">
-<article class="card ev" data-sec="stage" data-days="2026-10-23 2026-10-24 2026-10-29" data-age="other" data-start="19:00">
+<article class="card ev" id="ev-2026-10-23-misery-cyranos-theatre-company" data-id="2026-10-23-misery-cyranos-theatre-company" data-sec="stage" data-days="2026-10-23 2026-10-24 2026-10-29" data-age="other" data-start="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 23</span> · 7 PM &amp; Sun 3 PM</span><span class="pill cat">Theater</span></div>
   <h4>Misery (Cyrano&#x27;s Theatre Company)</h4>
   <p class="where">Cyrano&#x27;s Theatre Building, 3800 DeBarr Rd · <b>Anchorage</b></p><p class="note">Also Sun Oct 25 at 3 PM. Runs through Sun Nov 1. Mature language and violence.</p>
   <div class="pills meta"><span class="pill">From $35</span><span class="pill">Ages 14+</span><a class="more" href="https://www.centertix.com/events/misery" rel="noopener" target="_blank" aria-label="Event details: Misery (Cyrano&#x27;s Theatre Company) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="stage" data-days="2026-10-28" data-age="all" data-free="1" data-start="14:00" data-end="15:00">
+<article class="card ev" id="ev-2026-10-28-michaela-goade-at-loussac-library" data-id="2026-10-28-michaela-goade-at-loussac-library" data-sec="stage" data-days="2026-10-28" data-age="all" data-free="1" data-start="14:00" data-end="15:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 2 PM</span><span class="pill cat">Arts &amp; Talks</span></div>
   <h4>Michaela Goade at Loussac Library</h4>
   <p class="where">Z. J. Loussac Library, 3600 Denali St · <b>Anchorage</b></p><p class="note">Caldecott Medal-winning Tlingit author/illustrator.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/" rel="noopener" target="_blank" aria-label="Event details: Michaela Goade at Loussac Library (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="stage" data-days="2026-10-28" data-age="other" data-start="18:00">
+<article class="card ev" id="ev-2026-10-28-craft-movie-night-practical-magic-1998" data-id="2026-10-28-craft-movie-night-practical-magic-1998" data-sec="stage" data-days="2026-10-28" data-age="other" data-start="18:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 6 PM</span><span class="pill cat">Arts &amp; Talks</span></div>
   <h4>Craft Movie Night: Practical Magic (1998)</h4>
   <p class="where">Bear Tooth Theatrepub, 1230 W 27th Ave · <b>Anchorage</b></p><p class="note">Bring your knitting or crochet; brighter house lights. Rated PG-13.</p>
   <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://beartooththeatre.filmbot.com/movies/craft-movie-night-practical-magic-1998/" rel="noopener" target="_blank" aria-label="Event details: Craft Movie Night: Practical Magic (1998) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="stage" data-days="2026-10-29" data-age="adult" data-start="19:00" data-end="21:00">
+<article class="card ev" id="ev-2026-10-29-the-rocky-horror-show-mad-myrnas" data-id="2026-10-29-the-rocky-horror-show-mad-myrnas" data-sec="stage" data-days="2026-10-29" data-age="adult" data-start="19:00" data-end="21:00">
   <div class="pills"><span class="pill when"><span class="wd">Thu Oct 29</span> · 7 PM</span><span class="pill cat">Theater</span></div>
   <h4>The Rocky Horror Show (Mad Myrna&#x27;s)</h4>
   <p class="where">Mad Myrna&#x27;s, 530 E 5th Ave · <b>Anchorage</b></p><p class="note">Sold out on Eventbrite as of Oct 22. Risqué cult musical; 21+ venue.</p>
   <div class="pills meta"><span class="pill">Sold out ($44.52–$49.87)</span><span class="pill age">21+</span><a class="more" href="https://www.eventbrite.com/e/mad-myrnas-presents-richard-obriens-the-rocky-horror-show-tickets-1998756362084" rel="noopener" target="_blank" aria-label="Event details: The Rocky Horror Show (Mad Myrna&#x27;s) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="stage" data-days="2026-10-30 2026-10-31" data-age="other" data-start="19:00">
+<article class="card ev" id="ev-2026-10-30-misery-cyranos-theatre-company-closing-weekend" data-id="2026-10-30-misery-cyranos-theatre-company-closing-weekend" data-sec="stage" data-days="2026-10-30 2026-10-31" data-age="other" data-start="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 7 PM</span><span class="pill cat">Theater</span></div>
   <h4>Misery (Cyrano&#x27;s Theatre Company) — closing weekend</h4>
   <p class="where">Cyrano&#x27;s Theatre Building, 3800 DeBarr Rd · <b>Anchorage</b></p><p class="note">Stephen King thriller. Sat Oct 31 has live captioning. Closing matinee Sun Nov 1 at 3 PM (separate listing). Mature language and violence.</p>
   <div class="pills meta"><span class="pill">From $35</span><span class="pill">Ages 14+</span><a class="more" href="https://centertix.com/events/misery" rel="noopener" target="_blank" aria-label="Event details: Misery (Cyrano&#x27;s Theatre Company) — closing weekend (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="stage" data-days="2026-11-01" data-age="other" data-start="15:00">
+<article class="card ev" id="ev-2026-11-01-misery-cyranos-closing-matinee" data-id="2026-11-01-misery-cyranos-closing-matinee" data-sec="stage" data-days="2026-11-01" data-age="other" data-start="15:00">
   <div class="pills"><span class="pill when"><span class="wd">Sun Nov 1</span> · 3 PM</span><span class="pill cat">Theater</span></div>
   <h4>Misery (Cyrano&#x27;s) closing matinee</h4>
   <p class="where">Cyrano&#x27;s Theatre Building, 3800 DeBarr Rd · <b>Anchorage</b></p>
@@ -234,133 +238,133 @@
 <section class="evsec" id="cat-family" data-sec="family" aria-labelledby="h-family">
 <h3 class="sech" id="h-family">Family &amp; outdoors <span class="n">22</span></h3>
 <div class="evgrid">
-<article class="card ev" data-sec="family" data-days="2026-10-28" data-age="all" data-free="1" data-start="10:30">
+<article class="card ev" id="ev-2026-10-28-family-storytime" data-id="2026-10-28-family-storytime" data-sec="family" data-days="2026-10-28" data-age="all" data-free="1" data-start="10:30">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 10:30 AM</span></div>
   <h4>Family Storytime</h4>
   <p class="where">Girdwood (Scott and Wesley Gerrish) Library · <b>Girdwood</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragelibrary.org/" rel="noopener" target="_blank" aria-label="Event details: Family Storytime (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-28" data-age="all" data-free="1" data-start="10:30">
+<article class="card ev" id="ev-2026-10-28-weekly-community-storytime" data-id="2026-10-28-weekly-community-storytime" data-sec="family" data-days="2026-10-28" data-age="all" data-free="1" data-start="10:30">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 10:30 AM</span></div>
   <h4>Weekly Community Storytime</h4>
   <p class="where">Alaska Zoo Gateway Hall, 4731 O&#x27;Malley Rd · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.alaskazoo.org/event-calendar/2026/october-28-weekly-community-storytime" rel="noopener" target="_blank" aria-label="Event details: Weekly Community Storytime (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-28" data-age="all" data-free="1" data-start="15:00" data-end="16:00">
+<article class="card ev" id="ev-2026-10-28-a-great-horned-owl-visits" data-id="2026-10-28-a-great-horned-owl-visits" data-sec="family" data-days="2026-10-28" data-age="all" data-free="1" data-start="15:00" data-end="16:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 3 PM</span></div>
   <h4>A Great Horned Owl Visits</h4>
   <p class="where">Chugiak-Eagle River Library · <b>Eagle River</b></p><p class="note">Meet Archimedes the great horned owl and learn about Alaska owls.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/" rel="noopener" target="_blank" aria-label="Event details: A Great Horned Owl Visits (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-29" data-age="all" data-free="1" data-start="16:00" data-end="19:00">
+<article class="card ev" id="ev-2026-10-29-a-very-friendly-halloween-indoor-trick-or-treating" data-id="2026-10-29-a-very-friendly-halloween-indoor-trick-or-treating" data-sec="family" data-days="2026-10-29" data-age="all" data-free="1" data-start="16:00" data-end="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Thu Oct 29</span> · 4 PM</span></div>
   <h4>A Very Friendly Halloween: Indoor Trick-or-Treating</h4>
   <p class="where">The Workshop · <b>Anchorage</b></p><p class="note">For toddlers and young kids.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://anchoragepress.com/events/a-very-friendly-halloween-indoor-trick-or-treating-the-works-2026-10-29/" rel="noopener" target="_blank" aria-label="Event details: A Very Friendly Halloween: Indoor Trick-or-Treating (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-29" data-age="all" data-free="1" data-start="16:00" data-end="18:00">
+<article class="card ev" id="ev-2026-10-29-little-monsters-game-night" data-id="2026-10-29-little-monsters-game-night" data-sec="family" data-days="2026-10-29" data-age="all" data-free="1" data-start="16:00" data-end="18:00">
   <div class="pills"><span class="pill when"><span class="wd">Thu Oct 29</span> · 4 PM</span></div>
   <h4>Little Monsters Game Night</h4>
   <p class="where">Girdwood (Scott and Wesley Gerrish) Library · <b>Girdwood</b></p><p class="note">Costumes and candy.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/" rel="noopener" target="_blank" aria-label="Event details: Little Monsters Game Night (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-29" data-age="all" data-free="1" data-start="16:00" data-end="17:00">
+<article class="card ev" id="ev-2026-10-29-spooky-slime-lab" data-id="2026-10-29-spooky-slime-lab" data-sec="family" data-days="2026-10-29" data-age="all" data-free="1" data-start="16:00" data-end="17:00">
   <div class="pills"><span class="pill when"><span class="wd">Thu Oct 29</span> · 4 PM</span></div>
   <h4>Spooky Slime Lab</h4>
   <p class="where">Chugiak-Eagle River Library · <b>Eagle River</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/" rel="noopener" target="_blank" aria-label="Event details: Spooky Slime Lab (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="10:00" data-end="14:00">
+<article class="card ev" id="ev-2026-10-30-haunted-mini-golf-at-loussac" data-id="2026-10-30-haunted-mini-golf-at-loussac" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="10:00" data-end="14:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 10 AM</span></div>
   <h4>Haunted Mini-Golf at Loussac</h4>
   <p class="where">Z. J. Loussac Library, 3600 Denali St · <b>Anchorage</b></p><p class="note">Indoor spooky mini-golf through the library stacks.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/" rel="noopener" target="_blank" aria-label="Event details: Haunted Mini-Golf at Loussac (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-30" data-age="all" data-start="15:00" data-end="18:00">
+<article class="card ev" id="ev-2026-10-30-halloween-at-the-museum" data-id="2026-10-30-halloween-at-the-museum" data-sec="family" data-days="2026-10-30" data-age="all" data-start="15:00" data-end="18:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 3 PM</span></div>
   <h4>Halloween at the Museum</h4>
   <p class="where">Anchorage Museum, 625 C St · <b>Anchorage</b></p><p class="note">Gallery trick-or-treat 3–5:30 PM; toddler dance party 4–6 PM in the Atrium. Costumes encouraged.</p>
   <div class="pills meta"><span class="pill">Included with museum admission; free for members</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragemuseum.org/programs/special-events/halloween-at-the-museum/" rel="noopener" target="_blank" aria-label="Event details: Halloween at the Museum (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev drive-card" data-sec="family" data-days="2026-10-30 2026-10-31" data-age="all" data-free="1" data-start="16:00" data-end="21:00">
+<article class="card ev drive-card" id="ev-2026-10-30-haunted-health-fest" data-id="2026-10-30-haunted-health-fest" data-sec="family" data-days="2026-10-30 2026-10-31" data-age="all" data-free="1" data-start="16:00" data-end="21:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · Fri 4–9 PM · Sat 12–9 PM</span><span class="pill drive">Worth the drive</span></div>
   <h4>Haunted Health Fest</h4>
   <p class="where">Raven Hall, Alaska State Fairgrounds · <b>Palmer</b></p><p class="note">Fri 4–9 PM, Sat 12–9 PM. Indoor trick-or-treating, vendors, health resources, workshops.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://anchoragepress.com/this-weekend/" rel="noopener" target="_blank" aria-label="Event details: Haunted Health Fest (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev drive-card" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="16:00" data-end="17:30">
+<article class="card ev drive-card" id="ev-2026-10-30-family-movie-night-at-gerrish-library" data-id="2026-10-30-family-movie-night-at-gerrish-library" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="16:00" data-end="17:30">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 4 PM</span><span class="pill drive">Worth the drive</span></div>
   <h4>Family Movie Night at Gerrish Library</h4>
   <p class="where">Girdwood (Scott and Wesley Gerrish) Library · <b>Girdwood</b></p><p class="note">Popcorn provided. Call the library for the film title.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.visitgirdwood.com/events/family-movie-night-gerrish-library-1-kfaer-ckfj6-l6922" rel="noopener" target="_blank" aria-label="Event details: Family Movie Night at Gerrish Library (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="16:00" data-end="17:45">
+<article class="card ev" id="ev-2026-10-30-family-movie-night-at-loussac" data-id="2026-10-30-family-movie-night-at-loussac" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="16:00" data-end="17:45">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 4 PM</span></div>
   <h4>Family Movie Night at Loussac</h4>
   <p class="where">Z. J. Loussac Library, 3600 Denali St · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/" rel="noopener" target="_blank" aria-label="Event details: Family Movie Night at Loussac (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev drive-card" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="16:00" data-end="19:00">
+<article class="card ev drive-card" id="ev-2026-10-30-palmer-trick-or-treat-street" data-id="2026-10-30-palmer-trick-or-treat-street" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="16:00" data-end="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 4 PM</span><span class="pill drive">Worth the drive</span></div>
   <h4>Palmer Trick or Treat Street</h4>
   <p class="where">Colony Way downtown · <b>Palmer</b></p><p class="note">Downtown Palmer businesses welcome trick-or-treaters.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://anchoragepress.com/this-weekend/" rel="noopener" target="_blank" aria-label="Event details: Palmer Trick or Treat Street (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="17:30" data-end="19:30">
+<article class="card ev" id="ev-2026-10-30-apu-trick-or-treat-and-fall-festival" data-id="2026-10-30-apu-trick-or-treat-and-fall-festival" data-sec="family" data-days="2026-10-30" data-age="all" data-free="1" data-start="17:30" data-end="19:30">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 5:30 PM</span></div>
   <h4>APU Trick or Treat &amp; Fall Festival</h4>
   <p class="where">Alaska Pacific University main campus · <b>Anchorage</b></p><p class="note">Outdoor Halloween with Nordic team &amp; Olympians, games, haunted houses, food trucks; ski-team Fall Feed fundraiser.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.alaskapacific.edu/event/apu-trick-or-treat-fall-festival/" rel="noopener" target="_blank" aria-label="Event details: APU Trick or Treat &amp; Fall Festival (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-31" data-age="all" data-start="11:00" data-end="13:00">
+<article class="card ev" id="ev-2026-10-31-d-a-de-muertos-at-the-garden-session-1" data-id="2026-10-31-d-a-de-muertos-at-the-garden-session-1" data-sec="family" data-days="2026-10-31" data-age="all" data-start="11:00" data-end="13:00">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 11 AM</span></div>
   <h4>Día de Muertos at the Garden (Session 1)</h4>
   <p class="where">Alaska Botanical Garden, 4601 Campbell Airstrip Rd · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">$5 suggested donation; members &amp; kids 6 &amp; under free</span><span class="pill">All ages</span><a class="more" href="https://www.alaskabg.org/upcoming-events-workshops/da-de-muertos-at-the-garden" rel="noopener" target="_blank" aria-label="Event details: Día de Muertos at the Garden (Session 1) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-31" data-age="all" data-free="1" data-start="11:00" data-end="11:30">
+<article class="card ev" id="ev-2026-10-31-not-so-spooky-storytime-at-loussac" data-id="2026-10-31-not-so-spooky-storytime-at-loussac" data-sec="family" data-days="2026-10-31" data-age="all" data-free="1" data-start="11:00" data-end="11:30">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 11 AM</span></div>
   <h4>Not-So-Spooky Storytime at Loussac</h4>
   <p class="where">Z. J. Loussac Library, 3600 Denali St · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/" rel="noopener" target="_blank" aria-label="Event details: Not-So-Spooky Storytime at Loussac (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-31" data-age="all" data-free="1" data-start="12:00" data-end="16:00">
+<article class="card ev" id="ev-2026-10-31-trick-or-treat-street" data-id="2026-10-31-trick-or-treat-street" data-sec="family" data-days="2026-10-31" data-age="all" data-free="1" data-start="12:00" data-end="16:00">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 12 PM</span></div>
   <h4>Trick or Treat Street</h4>
   <p class="where">4th Ave between E &amp; G St and G St between 3rd &amp; 5th Ave · <b>Anchorage</b></p><p class="note">Business trick-or-treating, haunted trolley, trunk-or-treat, bounce house, food trucks, costume contests from 2 PM.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://meetmedowntownanchorage.com/events/trick-or-treat-street/" rel="noopener" target="_blank" aria-label="Event details: Trick or Treat Street (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-31" data-age="other" data-free="1" data-start="15:00" data-end="17:00">
+<article class="card ev" id="ev-2026-10-31-teen-movie-night-at-loussac" data-id="2026-10-31-teen-movie-night-at-loussac" data-sec="family" data-days="2026-10-31" data-age="other" data-free="1" data-start="15:00" data-end="17:00">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 3 PM</span></div>
   <h4>Teen Movie Night at Loussac</h4>
   <p class="where">Z. J. Loussac Library, 3600 Denali St · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/" rel="noopener" target="_blank" aria-label="Event details: Teen Movie Night at Loussac (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-10-31" data-age="all" data-free="1" data-start="16:00" data-end="18:30">
+<article class="card ev" id="ev-2026-10-31-trick-or-treat-fish-creek" data-id="2026-10-31-trick-or-treat-fish-creek" data-sec="family" data-days="2026-10-31" data-age="all" data-free="1" data-start="16:00" data-end="18:30">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 4 PM</span></div>
   <h4>Trick or Treat Fish Creek</h4>
   <p class="where">Fish Creek Trail (Kiwanis Fish Creek Park to Woodland Park) · <b>Anchorage</b></p><p class="note">Neighborhood trail trick-or-treating. Parking is very limited; walk or bike.</p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://anchorageparkfoundation.org/events/trick-or-treat-fish-creek/" rel="noopener" target="_blank" aria-label="Event details: Trick or Treat Fish Creek (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-11-01" data-age="all" data-start="15:00" data-end="16:30">
+<article class="card ev" id="ev-2026-11-01-d-a-de-muertos-at-the-garden-session-2" data-id="2026-11-01-d-a-de-muertos-at-the-garden-session-2" data-sec="family" data-days="2026-11-01" data-age="all" data-start="15:00" data-end="16:30">
   <div class="pills"><span class="pill when"><span class="wd">Sun Nov 1</span> · 3 PM</span></div>
   <h4>Día de Muertos at the Garden (Session 2)</h4>
   <p class="where">Alaska Botanical Garden, 4601 Campbell Airstrip Rd · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">$5 suggested donation; members &amp; kids 6 &amp; under free</span><span class="pill">All ages</span><a class="more" href="https://www.alaskabg.org/upcoming-events-workshops/da-de-muertos-at-the-garden-we8px" rel="noopener" target="_blank" aria-label="Event details: Día de Muertos at the Garden (Session 2) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-11-04" data-age="all" data-free="1" data-start="11:30">
+<article class="card ev" id="ev-2026-11-04-weekly-community-storytime-at-the-zoo" data-id="2026-11-04-weekly-community-storytime-at-the-zoo" data-sec="family" data-days="2026-11-04" data-age="all" data-free="1" data-start="11:30">
   <div class="pills"><span class="pill when"><span class="wd">Wed Nov 4</span> · 11:30 AM</span></div>
   <h4>Weekly Community Storytime at the Zoo</h4>
   <p class="where">Alaska Zoo Gateway Hall, 4731 O&#x27;Malley Rd · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.alaskazoo.org/event-calendar/2026/november-4-weekly-community-storytime" rel="noopener" target="_blank" aria-label="Event details: Weekly Community Storytime at the Zoo (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="family" data-days="2026-11-04" data-age="all" data-start="12:00">
+<article class="card ev" id="ev-2026-11-04-storytime-in-the-garden" data-id="2026-11-04-storytime-in-the-garden" data-sec="family" data-days="2026-11-04" data-age="all" data-start="12:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Nov 4</span> · 12 PM</span></div>
   <h4>Storytime in the Garden</h4>
   <p class="where">Alaska Botanical Garden, 4601 Campbell Airstrip Rd · <b>Anchorage</b></p>
   <div class="pills meta"><span class="pill">Price not listed</span><span class="pill">All ages</span><a class="more" href="https://www.alaskabg.org/upcoming-events-workshops/storytime-in-the-gardennov4th" rel="noopener" target="_blank" aria-label="Event details: Storytime in the Garden (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev drive-card" data-sec="family" data-days="2026-11-05" data-age="all" data-free="1" data-start="16:00" data-end="18:00">
+<article class="card ev drive-card" id="ev-2026-11-05-game-night-at-gerrish-library" data-id="2026-11-05-game-night-at-gerrish-library" data-sec="family" data-days="2026-11-05" data-age="all" data-free="1" data-start="16:00" data-end="18:00">
   <div class="pills"><span class="pill when"><span class="wd">Thu Nov 5</span> · 4 PM</span><span class="pill drive">Worth the drive</span></div>
   <h4>Game Night at Gerrish Library</h4>
   <p class="where">Girdwood (Scott and Wesley Gerrish) Library · <b>Girdwood</b></p>
@@ -370,7 +374,7 @@
 <section class="evsec" id="cat-food" data-sec="food" aria-labelledby="h-food">
 <h3 class="sech" id="h-food">Food, drink &amp; classes <span class="n">1</span></h3>
 <div class="evgrid">
-<article class="card ev" data-sec="food" data-days="2026-10-29" data-age="other" data-start="18:00" data-end="20:30">
+<article class="card ev" id="ev-2026-10-29-halloween-cookie-decorating-class" data-id="2026-10-29-halloween-cookie-decorating-class" data-sec="food" data-days="2026-10-29" data-age="other" data-start="18:00" data-end="20:30">
   <div class="pills"><span class="pill when"><span class="wd">Thu Oct 29</span> · 6 PM</span><span class="pill cat">Make &amp; Taste</span></div>
   <h4>Halloween Cookie Decorating Class</h4>
   <p class="where">Double Shovel Cider Co., 502 W 58th Ave #C · <b>Anchorage</b></p>
@@ -380,13 +384,13 @@
 <section class="evsec" id="cat-nightlife" data-sec="nightlife" aria-labelledby="h-nightlife">
 <h3 class="sech" id="h-nightlife">Nightlife &amp; trivia <span class="n">2</span></h3>
 <div class="evgrid">
-<article class="card ev" data-sec="nightlife" data-days="2026-10-28" data-age="other" data-free="1" data-start="18:00">
+<article class="card ev" id="ev-2026-10-28-geeks-who-drink-trivia" data-id="2026-10-28-geeks-who-drink-trivia" data-sec="nightlife" data-days="2026-10-28" data-age="other" data-free="1" data-start="18:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 6 PM</span></div>
   <h4>Geeks Who Drink Trivia</h4>
   <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Geeks Who Drink Trivia (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="nightlife" data-days="2026-10-30" data-age="adult" data-start="20:00" data-end="01:00">
+<article class="card ev" id="ev-2026-10-30-season-of-the-witch-dance-party" data-id="2026-10-30-season-of-the-witch-dance-party" data-sec="nightlife" data-days="2026-10-30" data-age="adult" data-start="20:00" data-end="01:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 8 PM</span></div>
   <h4>Season of the Witch Dance Party</h4>
   <p class="where">Bear Tooth Theatrepub, 1230 W 27th Ave · <b>Anchorage</b></p><p class="note">Bear Tooth x Showdown Halloween dance party. Costumes encouraged. $2 per ticket benefits STAR.</p>
@@ -396,19 +400,19 @@
 <section class="evsec" id="cat-seasonal" data-sec="seasonal" aria-labelledby="h-seasonal">
 <h3 class="sech" id="h-seasonal">Seasonal &amp; holiday <span class="n">3</span></h3>
 <div class="evgrid">
-<article class="card ev" data-sec="seasonal" data-days="2026-10-28" data-age="other" data-start="18:00" data-end="21:00">
+<article class="card ev" id="ev-2026-10-28-fright-night-manor-haunted-house" data-id="2026-10-28-fright-night-manor-haunted-house" data-sec="seasonal" data-days="2026-10-28" data-age="other" data-start="18:00" data-end="21:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Oct 28</span> · 6 PM</span></div>
   <h4>Fright Night Manor Haunted House</h4>
   <p class="where">Midtown Mall, Unit 133, 600 E Northern Lights Blvd · <b>Anchorage</b></p><p class="note">Includes 3D glasses. Open nightly through Sun Nov 1.</p>
   <div class="pills meta"><span class="pill">$20 at the door</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://midtownmall.com/frightnight/" rel="noopener" target="_blank" aria-label="Event details: Fright Night Manor Haunted House (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="seasonal" data-days="2026-10-30 2026-10-31 2026-11-01" data-age="other" data-start="18:00" data-end="21:00">
+<article class="card ev" id="ev-2026-10-30-fright-night-manor-haunted-house" data-id="2026-10-30-fright-night-manor-haunted-house" data-sec="seasonal" data-days="2026-10-30 2026-10-31 2026-11-01" data-age="other" data-start="18:00" data-end="21:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 6 PM</span></div>
   <h4>Fright Night Manor Haunted House</h4>
   <p class="where">Midtown Mall, Unit 133, 600 E Northern Lights Blvd · <b>Anchorage</b></p><p class="note">Includes 3D glasses. Open nightly through Sun Nov 1.</p>
   <div class="pills meta"><span class="pill">$20 at the door</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://midtownmall.com/frightnight/" rel="noopener" target="_blank" aria-label="Event details: Fright Night Manor Haunted House (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="seasonal" data-days="2026-10-31" data-age="all" data-start="10:00" data-end="19:00">
+<article class="card ev" id="ev-2026-10-31-zoo-boo-on-halloween" data-id="2026-10-31-zoo-boo-on-halloween" data-sec="seasonal" data-days="2026-10-31" data-age="all" data-start="10:00" data-end="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 10 AM</span></div>
   <h4>Zoo Boo on Halloween</h4>
   <p class="where">Alaska Zoo, 4731 O&#x27;Malley Rd · <b>Anchorage</b></p><p class="note">Timed-entry online tickets; sells out. Trails, candy stations, animal enrichment, carnival games, food trucks.</p>
@@ -418,19 +422,19 @@
 <section class="evsec" id="cat-sports" data-sec="sports" aria-labelledby="h-sports">
 <h3 class="sech" id="h-sports">Sports <span class="n">3</span></h3>
 <div class="evgrid">
-<article class="card ev" data-sec="sports" data-days="2026-10-30" data-age="all" data-start="19:00">
+<article class="card ev" id="ev-2026-10-30-anchorage-wolverines-vs-kenai-river-brown-bears" data-id="2026-10-30-anchorage-wolverines-vs-kenai-river-brown-bears" data-sec="sports" data-days="2026-10-30" data-age="all" data-start="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 7 PM</span></div>
   <h4>Anchorage Wolverines vs. Kenai River Brown Bears</h4>
   <p class="where">Sullivan Arena, 1600 Gambell St · <b>Anchorage</b></p><p class="note">NAHL junior hockey.</p>
   <div class="pills meta"><span class="pill">From $18</span><span class="pill">All ages</span><a class="more" href="https://anchoragewolverines.com/" rel="noopener" target="_blank" aria-label="Event details: Anchorage Wolverines vs. Kenai River Brown Bears (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="sports" data-days="2026-10-30" data-age="all" data-start="19:00">
+<article class="card ev" id="ev-2026-10-30-uaa-volleyball-vs-alaska-fairbanks-trick-or-treat-with-the-s" data-id="2026-10-30-uaa-volleyball-vs-alaska-fairbanks-trick-or-treat-with-the-s" data-sec="sports" data-days="2026-10-30" data-age="all" data-start="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Oct 30</span> · 7 PM</span></div>
   <h4>UAA Volleyball vs. Alaska Fairbanks (Trick-or-Treat with the Seawolves)</h4>
   <p class="where">Alaska Airlines Center, 3550 Providence Dr · <b>Anchorage</b></p><p class="note">Trick-or-Treat with the Seawolves, presented by GCI. Free admission for youth 18-and-under in costume.</p>
   <div class="pills meta"><span class="pill">Ticketed; free for youth 18 &amp; under in costume</span><span class="pill">All ages</span><a class="more" href="https://goseawolves.com/sports/womens-volleyball/schedule" rel="noopener" target="_blank" aria-label="Event details: UAA Volleyball vs. Alaska Fairbanks (Trick-or-Treat with the Seawolves) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
-<article class="card ev" data-sec="sports" data-days="2026-10-31" data-age="all" data-start="11:00">
+<article class="card ev" id="ev-2026-10-31-frightening-4k" data-id="2026-10-31-frightening-4k" data-sec="sports" data-days="2026-10-31" data-age="all" data-start="11:00">
   <div class="pills"><span class="pill when"><span class="wd">Sat Oct 31</span> · 11 AM</span></div>
   <h4>Frightening 4K</h4>
   <p class="where">Hotel Captain Cook courtyard, 939 W 5th Ave · <b>Anchorage</b></p><p class="note">Costume 4K fun run/walk. Mass start 11 AM on 4th Ave. Pairs well with Trick or Treat Street after.</p>
@@ -519,9 +523,11 @@
     <p>Your Alaska weekend, planned.</p>
     <p class="links"><a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Instagram · @todayinak</a><a href="https://www.facebook.com/profile.php?id=61595774151541" rel="noopener" target="_blank">Facebook</a></p>
     <p><b>Want your event featured?</b> <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">DM @todayinak on Instagram</a></p>
+    <p class="fine">Saved events stay on your device only. Weather: <a href="https://open-meteo.com/" rel="noopener" target="_blank">Open-Meteo.com</a>.</p>
     <p class="fine">Details, menus and hours change. Always check with the venue, organizer or truck before you go. Nothing on this page is a paid placement.</p>
   </div>
 </footer>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <script src="assets/events.js" defer></script>
 </body>
 </html>

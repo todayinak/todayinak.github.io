@@ -203,3 +203,47 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
 .card.ev.is-today{border-color:rgba(94,242,181,.55);box-shadow:0 0 0 1px rgba(94,242,181,.18) inset}
 .tday.firstvis{border-top:0;padding-top:2px}
 .area .tdone{margin:0;padding:0 16px 14px;font-size:14px;font-weight:600;color:#6e5649}
+
+/* header dial: live Anchorage temp + tonight's moon (assets/events.js; hidden without JS) */
+.dial{display:inline-flex;align-items:center;gap:7px;margin:14px 0 -22px;padding:5px 11px 5px 10px;border:1px solid var(--line);border-radius:99px;
+ background:rgba(13,22,38,.55);color:var(--gray);font:600 12.5px/1.2 Inter;letter-spacing:.01em;white-space:nowrap;max-width:100%}
+.dial .dtemp{color:var(--white)}
+.dial .dsep{color:var(--faint)}
+.dial .dmoon{display:inline-flex;align-items:center;gap:5px;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.dial svg{width:15px;height:15px;flex:none}
+.dial svg .dark{fill:#22324E;stroke:#3A4C6C;stroke-width:1}
+.dial svg .lit{fill:#E9EEF7}
+/* invite a friend (hero) */
+.btn2{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:10px;background:transparent;color:var(--green);border:1.5px solid var(--green);cursor:pointer;padding:14.5px 18px}
+.btn2 svg,.savedbtn svg,.act svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.btn2:hover{background:rgba(94,242,181,.12)}
+.btn2:focus-visible,.act:focus-visible,.savedbtn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.chips a.savedlink{color:#FF8FAB;border-color:rgba(255,143,171,.45)}
+.chips a.savedlink span{color:var(--gray);font-weight:500}
+/* per-card actions: share, add to calendar, save (above the stretched card link) */
+#events .card.ev .acts{position:absolute;top:8px;right:8px;z-index:2;display:flex;gap:2px}
+#events .card.ev .pills.toprow{padding-right:118px;min-height:38px}
+.act{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:11px;background:transparent;color:var(--gray);cursor:pointer;padding:0}
+.act:hover{background:rgba(94,242,181,.10);color:var(--green)}
+.act.heart[aria-pressed="true"]{color:#FF6B8E}
+.act.heart[aria-pressed="true"] svg{fill:#FF6B8E;stroke:#FF6B8E}
+.act.heart:active svg{transform:scale(1.2)}
+.savedbtn{display:inline-flex;align-items:center;gap:7px;font:600 14px/1.2 Inter;color:var(--white);background:rgba(13,22,38,.6);border:1px solid var(--line);border-radius:99px;padding:8px 13px;cursor:pointer}
+.savedbtn svg{width:16px;height:16px;color:#FF6B8E}
+.savedbtn span{color:var(--gray);font-weight:500}
+.savedbtn[aria-pressed="true"]{background:#FF6B8E;border-color:#FF6B8E;color:var(--navy)}
+.savedbtn[aria-pressed="true"] svg{color:var(--navy);fill:var(--navy)}
+.savedbtn[aria-pressed="true"] span{color:var(--navy)}
+@keyframes tiaflash{0%,60%{box-shadow:0 0 0 3px var(--green)}100%{box-shadow:0 0 0 0 transparent}}
+#events .card.ev.flash{animation:tiaflash 2.4s ease-out}
+/* toast */
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));z-index:50;transform:translate(-50%,12px);opacity:0;transition:opacity .2s,transform .2s;
+ background:var(--white);color:var(--navy);font:700 14.5px/1.3 Inter;padding:11px 18px;border-radius:12px;box-shadow:0 8px 28px rgba(0,0,0,.45);width:max-content;max-width:calc(100vw - 32px);text-align:center;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (min-width:900px){
+ .btn2{display:inline-flex;width:auto;margin:0 0 0 10px;vertical-align:top;padding:14.5px 22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#events .card.ev.flash{animation:none;box-shadow:0 0 0 3px var(--green)}.toast{transition:none}}
+/* long date/time pills wrap next to the card buttons instead of running under them */
+#events .card.ev .pill{white-space:normal;max-width:100%;border-radius:14px}   /* long prices wrap to a 2nd line on phones */
+@media (max-width:599px){.act{width:36px;height:38px}#events .card.ev .acts{right:6px}#events .card.ev .pills.toprow{padding-right:108px}}
