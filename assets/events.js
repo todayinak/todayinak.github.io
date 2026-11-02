@@ -1,7 +1,7 @@
 /* Today in AK: event search + filters, plus live "Today" labels and hiding of past listings.
    Progressive enhancement: without this file the page is the full list, grouped by type, with plain weekday + date
    labels and jump links. No frameworks, no tracking, no accounts.
-   One outside request: the current Anchorage temperature from Open-Meteo (no key, nothing about the visitor is sent).
+   Outside requests (no keys, nothing about the visitor is sent): Anchorage temp from Open-Meteo, and planetary K-index from NOAA SWPC for the aurora dial.
    Saved events (hearts) live only in this browser's localStorage, as event ids + last date; never sent anywhere.
    All date math is Alaska time (America/Anchorage), whatever time zone the visitor's device is set to. */
 (function () {
@@ -310,9 +310,10 @@
     el.scrollIntoView({ block: 'center' }); el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
   }
 
-  // ---------- header dial: live Anchorage temperature (Open-Meteo, no key) + tonight's moon phase ----------
+  // ---------- header dial: Anchorage temp (Open-Meteo) + moon phase + aurora chance (NOAA SWPC planetary Kp) ----------
   var dialEl = document.getElementById('dial'), dTemp = document.getElementById('dialtemp'), dSep = document.getElementById('dialsep'),
-      dMoon = document.getElementById('dialmoon'), lastMoon = '';
+      dMoon = document.getElementById('dialmoon'), dAurora = document.getElementById('dialaurora'),
+      dAuroraSep = document.getElementById('dialaurorasep'), lastMoon = '', lastKpKey = '';
   var PHASES = ['New moon', 'Waxing crescent', 'First quarter', 'Waxing gibbous', 'Full moon', 'Waning gibbous', 'Last quarter', 'Waning crescent'];
   function moonSvg(p) {   // p: 0 new … .5 full … 1 new; lit side drawn as seen from the northern hemisphere
     var r = 9, c = Math.cos(2 * Math.PI * p), rx = Math.abs(c) * r, wax = p < 0.5, k = (1 - c) / 2;
@@ -332,18 +333,61 @@
     dMoon.title = PHASES[idx] + ', about ' + Math.round((1 - Math.cos(2 * Math.PI * p)) * 50) + '% lit';
     dialEl.hidden = false;
   }
+  function kpLevel(kp) {
+    if (kp >= 5) return { level: 'high', label: 'High' };
+    if (kp >= 3) return { level: 'moderate', label: 'Moderate' };
+    return { level: 'low', label: 'Low' };
+  }
+  function setAurora(kp) {
+    if (!dAurora) return;
+    var k = Math.round(Number(kp) * 10) / 10;
+    if (!isFinite(k)) throw 0;
+    var info = kpLevel(k), key = info.level + ':' + k;
+    if (key === lastKpKey) return; lastKpKey = key;
+    dAurora.setAttribute('data-level', info.level);
+    dAurora.innerHTML = '<span class="dot" aria-hidden="true"></span><span>Aurora ' + info.label + ' · Kp ' + (Number.isInteger(k) ? k : k.toFixed(1)) + '</span>';
+    dAurora.title = 'Anchorage aurora chance (planetary Kp ' + k + ') from NOAA SWPC. Low < 3, Moderate 3–4, High 5+.';
+    dAurora.hidden = false;
+    if (dAuroraSep) dAuroraSep.hidden = false;
+  }
+  function hideAurora() {
+    if (dAurora) dAurora.hidden = true;
+    if (dAuroraSep) dAuroraSep.hidden = true;
+    lastKpKey = '';
+  }
   function dial() {
     moon();
     if (!dialEl || !window.fetch || window.__tiaNoWeather) return;
     var ctl = window.AbortController ? new AbortController() : null, to = setTimeout(function () { if (ctl) ctl.abort(); }, 8000);
-    fetch('https://api.open-meteo.com/v1/forecast?latitude=61.2181&longitude=-149.9003&current=temperature_2m&temperature_unit=fahrenheit&timezone=America%2FAnchorage',
-          { signal: ctl ? ctl.signal : undefined, credentials: 'omit', referrerPolicy: 'no-referrer' })
+    var opts = { signal: ctl ? ctl.signal : undefined, credentials: 'omit', referrerPolicy: 'no-referrer' };
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=61.2181&longitude=-149.9003&current=temperature_2m&temperature_unit=fahrenheit&timezone=America%2FAnchorage', opts)
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function (j) {
         var v = j && j.current && j.current.temperature_2m; if (typeof v !== 'number' || !isFinite(v)) throw 0;
         dTemp.textContent = 'Anchorage ' + Math.round(v) + '°F'; dTemp.hidden = dSep.hidden = false;
       })
-      .catch(function () { dTemp.hidden = dSep.hidden = true; })   // quietly hide the temperature; the moon stays
+      .catch(function () { dTemp.hidden = dSep.hidden = true; });   // quietly hide the temperature; the moon stays
+    // Planetary K-index (NOAA SWPC). Prefer 1-minute estimated series; fall back to 3-hour product.
+    fetch('https://services.swpc.noaa.gov/json/planetary_k_index_1m.json', opts)
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function (rows) {
+        var last = Array.isArray(rows) && rows.length ? rows[rows.length - 1] : null;
+        var kp = last && (last.kp_index != null ? last.kp_index : last.estimated_kp);
+        if (kp == null) throw 0;
+        setAurora(kp);
+      })
+      .catch(function () {
+        return fetch('https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json', opts)
+          .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+          .then(function (rows) {
+            // product JSON: [header, ...rows]; each data row is [time_tag, Kp, a_running, station_count]
+            if (!Array.isArray(rows) || rows.length < 2) throw 0;
+            var last = rows[rows.length - 1], kp = Array.isArray(last) ? Number(last[1]) : (last && last.Kp);
+            if (kp == null || !isFinite(kp)) throw 0;
+            setAurora(kp);
+          });
+      })
+      .catch(function () { hideAurora(); })   // graceful: hide aurora segment; temp/moon keep working
       .then(function () { clearTimeout(to); });
   }
 
