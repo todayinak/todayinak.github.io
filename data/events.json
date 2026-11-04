@@ -1,92 +1,52 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-04",
  "timezone_note": "All times are Alaska time (AKDT through Sat Oct 31, AKST from Sun Nov 1).",
  "disclaimer": "Details can change. Check with the organizer before you go.",
  "events": [
   {
-   "id": "2026-11-02-music-together-at-loussac",
-   "date": "2026-11-02",
-   "time": "11 AM",
-   "title": "Music Together at Loussac",
-   "category": "Family & Outdoors",
-   "venue": "Z. J. Loussac Library, 3600 Denali St",
-   "town": "Anchorage",
-   "price": "Free",
-   "ages": "All ages",
-   "start": "11:00",
-   "end": "11:45",
-   "note": "Music and movement for kids birth to 5 and their grown-ups",
-   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
-  },
-  {
-   "id": "2026-11-02-alaskas-wild-icons-winter-tour",
-   "date": "2026-11-02",
-   "time": "12:30 PM",
-   "title": "Alaska's Wild Icons Winter Tour",
-   "category": "Family & Outdoors",
-   "venue": "Alaska Zoo, 4731 O'Malley Rd",
-   "town": "Anchorage",
-   "price": "$50 ages 3+; 2 & under free",
-   "ages": "All ages",
-   "start": "12:30",
-   "end": "14:00",
-   "note": "Guided outdoor tour: polar bears, muskox, wolves, moose and a big cat. Max 12 people",
-   "url": "https://www.alaskazoo.org/event-calendar/2026/11/2/alaskas-wild-icons-winter-tour"
-  },
-  {
-   "id": "2026-11-02-monday-movies-the-incomer",
-   "date": "2026-11-02",
-   "time": "6 PM",
-   "title": "Monday Movies: The Incomer",
-   "category": "Arts & Talks",
-   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
-   "town": "Anchorage",
-   "price": "Price not listed",
-   "ages": "Ages not listed",
-   "start": "18:00",
-   "note": "Rated R. Starring Domhnall Gleeson",
-   "url": "https://beartooththeatre.filmbot.com/movies/the-incomer/"
-  },
-  {
-   "id": "2026-11-02-monday-night-jazz-jam",
-   "date": "2026-11-02",
-   "time": "6:30 PM",
-   "title": "Monday Night Jazz Jam",
-   "category": "Music",
-   "venue": "Fire Island Rustic Bakeshop, K St Market, 718 K St",
-   "town": "Anchorage",
-   "price": "$5 suggested donation",
-   "ages": "Ages not listed",
-   "start": "18:30",
-   "end": "21:30",
-   "note": "Hosted by Alaska Jazz Workshop, Nick Petumenos & friends. Open to the public",
-   "url": "https://akjazzworkshop.org/calendar/"
-  },
-  {
    "id": "2026-11-04-weekly-community-storytime-at-the-zoo",
    "date": "2026-11-04",
-   "time": "11:30 AM",
+   "time": "10:30 AM",
    "title": "Weekly Community Storytime at the Zoo",
    "category": "Family & Outdoors",
    "venue": "Alaska Zoo Gateway Hall, 4731 O'Malley Rd",
    "town": "Anchorage",
    "price": "Free",
    "ages": "All ages",
-   "start": "11:30",
+   "start": "10:30",
+   "end": "11:00",
    "url": "https://www.alaskazoo.org/event-calendar/2026/november-4-weekly-community-storytime"
   },
   {
    "id": "2026-11-04-storytime-in-the-garden",
    "date": "2026-11-04",
-   "time": "12 PM",
+   "time": "11 AM",
    "title": "Storytime in the Garden",
    "category": "Family & Outdoors",
    "venue": "Alaska Botanical Garden, 4601 Campbell Airstrip Rd",
    "town": "Anchorage",
-   "price": "Price not listed",
+   "price": "Free for kids 6 and under; garden admission for adults",
    "ages": "All ages",
-   "start": "12:00",
+   "start": "11:00",
+   "end": "12:00",
    "url": "https://www.alaskabg.org/upcoming-events-workshops/storytime-in-the-gardennov4th"
+  },
+  {
+   "id": "2026-11-04-warren-miller-film-tour-days-off",
+   "date": "2026-11-04",
+   "time": "5:30 PM & 8:30 PM",
+   "title": "Warren Miller Film Tour: Days Off",
+   "category": "Arts & Talks",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$25",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-05"
+   ],
+   "start": "17:30",
+   "note": "Warren Miller's 77th ski film, presented by Alyeska Ski Club. Shows 5:30 PM and 8:30 PM.",
+   "url": "https://beartooththeatre.filmbot.com/movies/warren-miller-film-tour-presented-by-alyeska-ski-club-2/"
   },
   {
    "id": "2026-11-04-slow-craft-session-needle-felting",
@@ -102,6 +62,21 @@
    "end": "20:00",
    "note": "Anchorage Weavers and Spinners Guild teaches needle felting; materials provided, registration recommended.",
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=jl3julti7a8fun652681c0hfos"
+  },
+  {
+   "id": "2026-11-04-koots-comedy-open-mic",
+   "date": "2026-11-04",
+   "time": "7 PM",
+   "title": "Koot's Comedy Open Mic",
+   "category": "Comedy",
+   "venue": "Koot's (Swing Bar), 2435 Spenard Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "21+",
+   "start": "19:00",
+   "end": "22:00",
+   "note": "Local stand-up, every Wednesday 7–10 PM",
+   "url": "https://anchoragepress.com/events/weekly/"
   },
   {
    "id": "2026-11-05-game-night-at-gerrish-library",
@@ -180,5 +155,5 @@
   }
  ],
  "through": "2026-11-07",
- "last_verified": "2026-11-01"
+ "last_verified": "2026-11-03"
 }
