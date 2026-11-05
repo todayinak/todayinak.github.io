@@ -50,14 +50,14 @@
 <section id="events" class="sec wrap">
   <p class="eyebrow">01 · Upcoming events</p>
   <h2>What's happening</h2>
-  <p class="lede">Grouped by type, in date order within each, <span id="evfrom">Wed Nov 4</span> through Sat Nov 7. <span class="pill age">18+</span> <span class="pill age">21+</span> are marked on every listing. Details can change. Check with the organizer before you go.</p>
-  <nav class="chips catnav" aria-label="Event categories"><a href="#cat-comedy">Comedy <span>3</span></a><a href="#cat-stage">Theater, arts &amp; talks <span>1</span></a><a href="#cat-family">Family &amp; outdoors <span>3</span></a><a href="#cat-food">Food, drink &amp; classes <span>1</span></a></nav>
+  <p class="lede">Grouped by type, in date order within each, <span id="evfrom">Wed Nov 4</span> through Sun Nov 15. <span class="pill age">18+</span> <span class="pill age">21+</span> are marked on every listing. Details can change. Check with the organizer before you go.</p>
+  <nav class="chips catnav" aria-label="Event categories"><a href="#cat-music">Live music <span>5</span></a><a href="#cat-comedy">Comedy <span>4</span></a><a href="#cat-stage">Theater, arts &amp; talks <span>6</span></a><a href="#cat-family">Family &amp; outdoors <span>9</span></a><a href="#cat-food">Food, drink &amp; classes <span>5</span></a><a href="#cat-nightlife">Nightlife &amp; trivia <span>4</span></a><a href="#cat-seasonal">Seasonal &amp; holiday <span>1</span></a><a href="#cat-sports">Sports <span>4</span></a></nav>
   <div class="finder" id="finder" hidden>
     <label class="lbl" for="evq">Search events</label>
     <div class="searchrow"><input type="search" id="evq" placeholder="Band, venue, town…" autocomplete="off" enterkeyhint="search"><button type="button" class="clear" id="evclear">Clear</button></div>
-    <div class="catchips" role="group" aria-label="Filter by day or category"><button type="button" class="chip" data-sec="" aria-pressed="true">All <span>8</span></button><button type="button" class="chip" data-when="today" aria-pressed="false">Today <span>0</span></button><button type="button" class="chip" data-sec="comedy" aria-pressed="false">Comedy <span>3</span></button><button type="button" class="chip" data-sec="stage" aria-pressed="false">Theater, arts &amp; talks <span>1</span></button><button type="button" class="chip" data-sec="family" aria-pressed="false">Family &amp; outdoors <span>3</span></button><button type="button" class="chip" data-sec="food" aria-pressed="false">Food, drink &amp; classes <span>1</span></button></div>
+    <div class="catchips" role="group" aria-label="Filter by day or category"><button type="button" class="chip" data-sec="" aria-pressed="true">All <span>38</span></button><button type="button" class="chip" data-when="today" aria-pressed="false">Today <span>0</span></button><button type="button" class="chip" data-sec="music" aria-pressed="false">Live music <span>5</span></button><button type="button" class="chip" data-sec="comedy" aria-pressed="false">Comedy <span>4</span></button><button type="button" class="chip" data-sec="stage" aria-pressed="false">Theater, arts &amp; talks <span>6</span></button><button type="button" class="chip" data-sec="family" aria-pressed="false">Family &amp; outdoors <span>9</span></button><button type="button" class="chip" data-sec="food" aria-pressed="false">Food, drink &amp; classes <span>5</span></button><button type="button" class="chip" data-sec="nightlife" aria-pressed="false">Nightlife &amp; trivia <span>4</span></button><button type="button" class="chip" data-sec="seasonal" aria-pressed="false">Seasonal &amp; holiday <span>1</span></button><button type="button" class="chip" data-sec="sports" aria-pressed="false">Sports <span>4</span></button></div>
     <div class="extras">
-      <label>Day <select id="evday"><option value="">Any day</option><option value="2026-11-04">Wed Nov 4</option><option value="2026-11-05">Thu Nov 5</option><option value="2026-11-06">Fri Nov 6</option><option value="2026-11-07">Sat Nov 7</option></select></label>
+      <label>Day <select id="evday"><option value="">Any day</option><option value="2026-11-04">Wed Nov 4</option><option value="2026-11-05">Thu Nov 5</option><option value="2026-11-06">Fri Nov 6</option><option value="2026-11-07">Sat Nov 7</option><option value="2026-11-08">Sun Nov 8</option><option value="2026-11-10">Tue Nov 10</option><option value="2026-11-11">Wed Nov 11</option><option value="2026-11-12">Thu Nov 12</option><option value="2026-11-14">Sat Nov 14</option><option value="2026-11-15">Sun Nov 15</option></select></label>
       <label>Ages <select id="evage"><option value="">Any ages</option><option value="all">All ages</option><option value="adult">18+ and 21+ only</option></select></label>
       <label class="chk"><input type="checkbox" id="evfree"> Free only</label>
       <button type="button" class="savedbtn" id="evsaved" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.4 2.5h1.8c.8-1.3 2.3-2.5 4.4-2.5 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21z"/></svg>My saved events <span id="evsavedn">0</span></button>
@@ -67,8 +67,42 @@
   <div class="nomatch" id="evdone" hidden><p><b>That's a wrap for this week's listings.</b> New events every Thursday. Follow @todayinak for the next batch.</p></div>
   <div class="nomatch" id="evnosaved" hidden><p><b>No saved events yet.</b> Tap <b>Save</b> on any event to keep it here. Saved on this device only, no account needed.</p><button type="button" class="clear" id="evsavedoff">Show all events</button></div>
   <div class="nomatch" id="evnone" hidden><p><b>No events match.</b> Try another word, day or category.</p><button type="button" class="clear" id="evreset">Clear filters</button></div>
-  <section class="evsec" id="cat-comedy" data-sec="comedy" aria-labelledby="h-comedy">
-<h3 class="sech" id="h-comedy">Comedy <span class="n">3</span></h3>
+  <section class="evsec" id="cat-music" data-sec="music" aria-labelledby="h-music">
+<h3 class="sech" id="h-music">Live music <span class="n">5</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-06-refuge-coffee-open-mic-night" data-id="2026-11-06-refuge-coffee-open-mic-night" data-sec="music" data-days="2026-11-06" data-age="all" data-free="1" data-start="17:00" data-end="20:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 5 PM</span></div>
+  <h4>Refuge Coffee Open Mic Night</h4>
+  <p class="where">Refuge Coffee Collab, 3309 Spenard Rd · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.refugecoffeeak.com/events/open-mic-night-5yk55-eshtw" rel="noopener" target="_blank" aria-label="Event details: Refuge Coffee Open Mic Night (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-06-after-hours-still-sound" data-id="2026-11-06-after-hours-still-sound" data-sec="music" data-days="2026-11-06" data-age="other" data-start="19:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 7 PM</span></div>
+  <h4>After Hours: Still Sound</h4>
+  <p class="where">Momentum Studios, 705 W 59th Ave · <b>Anchorage</b></p><p class="note">Featuring vocalist Jessica Lucas.</p>
+  <div class="pills meta"><span class="pill">$18</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://allevents.in/anchorage/after-hours-still-sound/100002003488115887" rel="noopener" target="_blank" aria-label="Event details: After Hours: Still Sound (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-07-america-at-250-anchorage-symphony" data-id="2026-11-07-america-at-250-anchorage-symphony" data-sec="music" data-days="2026-11-07" data-age="all" data-start="19:30" data-end="21:30">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · 7:30 PM</span></div>
+  <h4>America at 250 (Anchorage Symphony)</h4>
+  <p class="where">Atwood Concert Hall, 621 W 6th Ave · <b>Anchorage</b></p><p class="note">Gershwin, Barber and Copland. Violinist Tim Fain. Ticket required for all ages.</p>
+  <div class="pills meta"><span class="pill">From $30</span><span class="pill">All ages</span><a class="more" href="https://centertix.com/events/anchorage-symphony-america-at-250" rel="noopener" target="_blank" aria-label="Event details: America at 250 (Anchorage Symphony) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-07-raised-by-elephants-at-humpys" data-id="2026-11-07-raised-by-elephants-at-humpys" data-sec="music" data-days="2026-11-07" data-age="other" data-free="1" data-start="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · 9 PM</span></div>
+  <h4>Raised by Elephants at Humpy&#x27;s</h4>
+  <p class="where">Humpy&#x27;s Great Alaskan Alehouse, 610 W 6th Ave · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://alaskamusic.live/venues/humpys-great-alaskan-alehouse" rel="noopener" target="_blank" aria-label="Event details: Raised by Elephants at Humpy&#x27;s (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-08-irish-session-at-turnagain-brewing" data-id="2026-11-08-irish-session-at-turnagain-brewing" data-sec="music" data-days="2026-11-08" data-age="other" data-start="15:00" data-end="17:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sun Nov 8</span> · 3 PM</span></div>
+  <h4>Irish Session at Turnagain Brewing</h4>
+  <p class="where">Turnagain Brewing, 7920 King St · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.turnagainbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Irish Session at Turnagain Brewing (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" id="cat-comedy" data-sec="comedy" aria-labelledby="h-comedy">
+<h3 class="sech" id="h-comedy">Comedy <span class="n">4</span></h3>
 <div class="evgrid">
 <article class="card ev" id="ev-2026-11-04-koots-comedy-open-mic" data-id="2026-11-04-koots-comedy-open-mic" data-sec="comedy" data-days="2026-11-04" data-age="adult" data-free="1" data-start="19:00" data-end="22:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Nov 4</span> · 7 PM</span></div>
@@ -84,13 +118,19 @@
 </article>
 <article class="card ev" id="ev-2026-11-06-jason-mewes" data-id="2026-11-06-jason-mewes" data-sec="comedy" data-days="2026-11-06 2026-11-07" data-age="adult" data-start="19:00">
   <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 7 PM &amp; 9 PM</span></div>
-  <h4>Jason Mewes</h4>
-  <p class="where">The Aurora Room, 415 E St · <b>Anchorage</b></p><p class="note">Also Sat Nov 7, 7 &amp; 9 PM</p>
-  <div class="pills meta"><span class="pill">See ticket page</span><span class="pill age">18+</span><a class="more" href="https://www.ericksonevents.com/jason-mewes-1106-0726-anchorage/" rel="noopener" target="_blank" aria-label="Event details: Jason Mewes (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+  <h4>Jason Mewes: Diary of a Manchild</h4>
+  <p class="where">The Aurora Room, 415 E St · <b>Anchorage</b></p><p class="note">Also Sat Nov 7, 7 &amp; 9 PM shows. Tickets from $42.</p>
+  <div class="pills meta"><span class="pill">From $42</span><span class="pill age">18+</span><a class="more" href="https://www.rubberptarmigan.com/events/jason-mewes-the-diary-of-a-manchild-tour-the-aurora-room-nov-fri-7pm" rel="noopener" target="_blank" aria-label="Event details: Jason Mewes: Diary of a Manchild (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-11-comedy-open-mic-at-koots" data-id="2026-11-11-comedy-open-mic-at-koots" data-sec="comedy" data-days="2026-11-11" data-age="adult" data-free="1" data-start="19:00" data-end="22:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Nov 11</span> · 7 PM</span></div>
+  <h4>Comedy Open Mic at Koot&#x27;s</h4>
+  <p class="where">Koot&#x27;s, 2435 Spenard Rd · <b>Anchorage</b></p><p class="note">Weekly Wednesday open mic, 7–10 PM.</p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill age">21+</span><a class="more" href="https://koots.com/events" rel="noopener" target="_blank" aria-label="Event details: Comedy Open Mic at Koot&#x27;s (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
 </div></section>
 <section class="evsec" id="cat-stage" data-sec="stage" aria-labelledby="h-stage">
-<h3 class="sech" id="h-stage">Theater, arts &amp; talks <span class="n">1</span></h3>
+<h3 class="sech" id="h-stage">Theater, arts &amp; talks <span class="n">6</span></h3>
 <div class="evgrid">
 <article class="card ev" id="ev-2026-11-04-warren-miller-film-tour-days-off" data-id="2026-11-04-warren-miller-film-tour-days-off" data-sec="stage" data-days="2026-11-04 2026-11-05" data-age="other" data-start="17:30">
   <div class="pills"><span class="pill when"><span class="wd">Wed Nov 4</span> · 5:30 PM &amp; 8:30 PM</span><span class="pill cat">Arts &amp; Talks</span></div>
@@ -98,9 +138,39 @@
   <p class="where">Bear Tooth Theatrepub, 1230 W 27th Ave · <b>Anchorage</b></p><p class="note">Warren Miller&#x27;s 77th ski film, presented by Alyeska Ski Club. Shows 5:30 PM and 8:30 PM.</p>
   <div class="pills meta"><span class="pill">$25</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://beartooththeatre.filmbot.com/movies/warren-miller-film-tour-presented-by-alyeska-ski-club-2/" rel="noopener" target="_blank" aria-label="Event details: Warren Miller Film Tour: Days Off (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
+<article class="card ev" id="ev-2026-11-05-willie-hensley-alaska-a-story-still-being-written" data-id="2026-11-05-willie-hensley-alaska-a-story-still-being-written" data-sec="stage" data-days="2026-11-05" data-age="all" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Thu Nov 5</span> · 7 PM</span><span class="pill cat">Arts &amp; Talks</span></div>
+  <h4>Willie Hensley: Alaska - A Story Still Being Written</h4>
+  <p class="where">UAA Fine Arts Building (livestream room), 3211 Providence Dr · <b>Anchorage</b></p><p class="note">Recital Hall sold out; livestream seats + reception</p>
+  <div class="pills meta"><span class="pill">From $30.50</span><span class="pill">All ages</span><a class="more" href="https://centertix.com/events/alaska-a-story-still-being-written-our-past-present-future" rel="noopener" target="_blank" aria-label="Event details: Willie Hensley: Alaska - A Story Still Being Written (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-06-first-friday-at-the-anchorage-museum" data-id="2026-11-06-first-friday-at-the-anchorage-museum" data-sec="stage" data-days="2026-11-06" data-age="all" data-free="1" data-start="18:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 6 PM</span><span class="pill cat">Arts &amp; Talks</span></div>
+  <h4>First Friday at the Anchorage Museum</h4>
+  <p class="where">Anchorage Museum, 625 C St · <b>Anchorage</b></p><p class="note">Grandeur and Grit: The Alaska Highway opens. Anchorage Opera performs season selections.</p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragemuseum.org/programs/special-events/free-first-fridays/" rel="noopener" target="_blank" aria-label="Event details: First Friday at the Anchorage Museum (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-06-proof-midnight-sun-theatre" data-id="2026-11-06-proof-midnight-sun-theatre" data-sec="stage" data-days="2026-11-06 2026-11-07 2026-11-08" data-age="other" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · Fri 7 PM; Sat 3 &amp; 7 PM; Sun 3 PM</span><span class="pill cat">Theater</span></div>
+  <h4>Proof (Midnight Sun Theatre)</h4>
+  <p class="where">Jerry Harper Studio, 3700 Alumni Dr · <b>Anchorage</b></p><p class="note">Also Sat Nov 7 (3 &amp; 7 PM) and Sun Nov 8 (3 PM). Continues later weekends.</p>
+  <div class="pills meta"><span class="pill">$35 adults; seniors &amp; students free</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://midnightsuntheatre.com/performances/" rel="noopener" target="_blank" aria-label="Event details: Proof (Midnight Sun Theatre) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-06-dancewest-monstro-city" data-id="2026-11-06-dancewest-monstro-city" data-sec="stage" data-days="2026-11-06 2026-11-07" data-age="all" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 7 PM</span><span class="pill cat">Theater</span></div>
+  <h4>DanceWest: Monstro City</h4>
+  <p class="where">West Anchorage High School, 1700 Hillcrest Dr · <b>Anchorage</b></p><p class="note">Student dance show inspired by monsters and folklore. Also Sat Nov 7.</p>
+  <div class="pills meta"><span class="pill">From $18</span><span class="pill">All ages</span><a class="more" href="https://allevents.in/anchorage/dancewest-monstro-city/100002002812556270" rel="noopener" target="_blank" aria-label="Event details: DanceWest: Monstro City (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-12-macbeth-anchorage-opera" data-id="2026-11-12-macbeth-anchorage-opera" data-sec="stage" data-days="2026-11-12 2026-11-14 2026-11-15" data-age="other" data-start="19:30" data-end="22:00">
+  <div class="pills"><span class="pill when"><span class="wd">Thu Nov 12</span> · 7:30 PM</span><span class="pill cat">Theater</span></div>
+  <h4>Macbeth (Anchorage Opera)</h4>
+  <p class="where">Discovery Theatre, 621 W 6th Ave · <b>Anchorage</b></p><p class="note">Also Sat Nov 14, 7:30 PM and Sun Nov 15, 2 PM. Under 16 with an adult.</p>
+  <div class="pills meta"><span class="pill">From $55</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://centertix.com/events/macbeth" rel="noopener" target="_blank" aria-label="Event details: Macbeth (Anchorage Opera) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
 </div></section>
 <section class="evsec" id="cat-family" data-sec="family" aria-labelledby="h-family">
-<h3 class="sech" id="h-family">Family &amp; outdoors <span class="n">3</span></h3>
+<h3 class="sech" id="h-family">Family &amp; outdoors <span class="n">9</span></h3>
 <div class="evgrid">
 <article class="card ev" id="ev-2026-11-04-weekly-community-storytime-at-the-zoo" data-id="2026-11-04-weekly-community-storytime-at-the-zoo" data-sec="family" data-days="2026-11-04" data-age="all" data-free="1" data-start="10:30" data-end="11:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Nov 4</span> · 10:30 AM</span></div>
@@ -120,15 +190,141 @@
   <p class="where">Girdwood (Scott and Wesley Gerrish) Library · <b>Girdwood</b></p>
   <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/" rel="noopener" target="_blank" aria-label="Event details: Game Night at Gerrish Library (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
+<article class="card ev" id="ev-2026-11-07-apu-family-health-fair" data-id="2026-11-07-apu-family-health-fair" data-sec="family" data-days="2026-11-07" data-age="all" data-free="1" data-start="08:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · 8 AM</span></div>
+  <h4>APU Family Health Fair</h4>
+  <p class="where">Moseley Sports Center, 4400 University Dr · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.alaskapacific.edu/event/fall-apu-and-alaska-health-fair-inc-family-health-fair-event/" rel="noopener" target="_blank" aria-label="Event details: APU Family Health Fair (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev drive-card" id="ev-2026-11-07-four-valleys-community-school-sport-swap" data-id="2026-11-07-four-valleys-community-school-sport-swap" data-sec="family" data-days="2026-11-07" data-age="all" data-start="09:00" data-end="16:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · 9 AM</span><span class="pill drive">Worth the drive</span></div>
+  <h4>Four Valleys Community School Sport Swap</h4>
+  <p class="where">Alyeska Resort Daylodge, 104 Arlberg Ave · <b>Girdwood</b></p><p class="note">Used gear swap at Alyeska Daylodge.</p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill">All ages</span><a class="more" href="https://www.visitgirdwood.com/events/four-valleys-community-school-sport-swap-alyeska-resort" rel="noopener" target="_blank" aria-label="Event details: Four Valleys Community School Sport Swap (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-07-friends-of-the-library-book-sale" data-id="2026-11-07-friends-of-the-library-book-sale" data-sec="family" data-days="2026-11-07" data-age="all" data-free="1" data-start="10:00" data-end="16:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · 10 AM</span></div>
+  <h4>Friends of the Library Book Sale</h4>
+  <p class="where">Loussac Library, 3600 Denali St · <b>Anchorage</b></p><p class="note">Half-price sale Sun Nov 8, 1–4 PM.</p>
+  <div class="pills meta"><span class="pill">Free admission; books from $0.50</span><span class="pill">All ages</span><a class="more" href="https://www.adn.com/arts/2026/11/04/this-weekend-around-anchorage-best-of-alaska-america-at-250-and-plenty-of-first-friday-events/" rel="noopener" target="_blank" aria-label="Event details: Friends of the Library Book Sale (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-07-weather-nature-journaling" data-id="2026-11-07-weather-nature-journaling" data-sec="family" data-days="2026-11-07" data-age="other" data-start="11:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · 11 AM</span></div>
+  <h4>Weather Nature Journaling</h4>
+  <p class="where">Alaska Botanical Garden, 4601 Campbell Airstrip Rd · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">See event page</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.alaskabg.org/upcoming-events-workshops/weather-nature-jornaling" rel="noopener" target="_blank" aria-label="Event details: Weather Nature Journaling (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-11-weekly-community-storytime-at-the-zoo" data-id="2026-11-11-weekly-community-storytime-at-the-zoo" data-sec="family" data-days="2026-11-11" data-age="all" data-start="10:30">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Nov 11</span> · 10:30 AM</span></div>
+  <h4>Weekly Community Storytime at the Zoo</h4>
+  <p class="where">Alaska Zoo, 4731 O&#x27;Malley Rd · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Included with zoo admission</span><span class="pill">All ages</span><a class="more" href="https://www.alaskazoo.org/event-calendar/2026/november-11-weekly-community-storytime" rel="noopener" target="_blank" aria-label="Event details: Weekly Community Storytime at the Zoo (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-11-wildlife-wednesdays-free-science-lecture" data-id="2026-11-11-wildlife-wednesdays-free-science-lecture" data-sec="family" data-days="2026-11-11" data-age="all" data-free="1" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Nov 11</span> · 7 PM</span></div>
+  <h4>Wildlife Wednesdays Free Science Lecture</h4>
+  <p class="where">Alaska Zoo, 4731 O&#x27;Malley Rd · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.alaskazoo.org/event-calendar/2026/11/11/wildlife-wednesdays-free-science-lecture" rel="noopener" target="_blank" aria-label="Event details: Wildlife Wednesdays Free Science Lecture (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
 </div></section>
 <section class="evsec" id="cat-food" data-sec="food" aria-labelledby="h-food">
-<h3 class="sech" id="h-food">Food, drink &amp; classes <span class="n">1</span></h3>
+<h3 class="sech" id="h-food">Food, drink &amp; classes <span class="n">5</span></h3>
 <div class="evgrid">
 <article class="card ev" id="ev-2026-11-04-slow-craft-session-needle-felting" data-id="2026-11-04-slow-craft-session-needle-felting" data-sec="food" data-days="2026-11-04" data-age="other" data-start="18:00" data-end="20:00">
   <div class="pills"><span class="pill when"><span class="wd">Wed Nov 4</span> · 6 PM</span><span class="pill cat">Make &amp; Taste</span></div>
   <h4>Slow Craft Session: Needle Felting</h4>
   <p class="where">Seed Lab, Anchorage Museum, 111 W 6th Ave · <b>Anchorage</b></p><p class="note">Anchorage Weavers and Spinners Guild teaches needle felting; materials provided, registration recommended.</p>
   <div class="pills meta"><span class="pill">$10 materials fee</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.anchoragemuseum.org/visit/calendar/event-details/?id=jl3julti7a8fun652681c0hfos" rel="noopener" target="_blank" aria-label="Event details: Slow Craft Session: Needle Felting (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-06-bad-girls-of-the-north-unique-boutique" data-id="2026-11-06-bad-girls-of-the-north-unique-boutique" data-sec="food" data-days="2026-11-06 2026-11-07" data-age="other" data-free="1" data-start="16:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · Fri 4–9 PM; Sat 10 AM–5 PM</span><span class="pill cat">Make &amp; Taste</span></div>
+  <h4>Bad Girls of the North Unique Boutique</h4>
+  <p class="where">O&#x27;Malley&#x27;s on the Green, 3651 O&#x27;Malley Rd · <b>Anchorage</b></p><p class="note">29th annual handmade market. Sat Nov 7, 10 AM–5 PM.</p>
+  <div class="pills meta"><span class="pill">Free admission</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.badgirlsofthenorth.com/yearly-events" rel="noopener" target="_blank" aria-label="Event details: Bad Girls of the North Unique Boutique (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-06-alaska-crafted-invitational" data-id="2026-11-06-alaska-crafted-invitational" data-sec="food" data-days="2026-11-06" data-age="adult" data-start="18:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 6 PM</span><span class="pill cat">Food &amp; Drink</span></div>
+  <h4>Alaska Crafted Invitational</h4>
+  <p class="where">49th State Brewing Heritage Theater, 717 W 3rd Ave · <b>Anchorage</b></p><p class="note">Beers, ciders and seltzers from the 2026 AK Beer Awards lineup.</p>
+  <div class="pills meta"><span class="pill">$40+</span><span class="pill age">21+</span><a class="more" href="https://www.brewersguildofalaska.org/alaska-crafted-festival.html" rel="noopener" target="_blank" aria-label="Event details: Alaska Crafted Invitational (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-07-anchorage-fall-rock-and-mineral-show" data-id="2026-11-07-anchorage-fall-rock-and-mineral-show" data-sec="food" data-days="2026-11-07 2026-11-08" data-age="all" data-start="10:00" data-end="18:30">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · Sat 10 AM–6:30 PM; Sun noon–5:30 PM</span><span class="pill cat">Make &amp; Taste</span></div>
+  <h4>Anchorage Fall Rock and Mineral Show</h4>
+  <p class="where">Midtown Mall, 600 E Northern Lights Blvd · <b>Anchorage</b></p><p class="note">Also Sun Nov 8, noon–5:30 PM.</p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill">All ages</span><a class="more" href="https://allevents.in/anchorage/2026-anchorage-fall-rock-and-mineral-show/200030775812607" rel="noopener" target="_blank" aria-label="Event details: Anchorage Fall Rock and Mineral Show (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-08-eagle-river-market-at-odd-man-rush" data-id="2026-11-08-eagle-river-market-at-odd-man-rush" data-sec="food" data-days="2026-11-08" data-age="other" data-free="1" data-start="12:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sun Nov 8</span> · 12 PM</span><span class="pill cat">Make &amp; Taste</span></div>
+  <h4>Eagle River Market at Odd Man Rush</h4>
+  <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p><p class="note">Indoor vendor market in the OMR Lounge.</p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Eagle River Market at Odd Man Rush (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" id="cat-nightlife" data-sec="nightlife" aria-labelledby="h-nightlife">
+<h3 class="sech" id="h-nightlife">Nightlife &amp; trivia <span class="n">4</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-06-nerdvana-trivia-night" data-id="2026-11-06-nerdvana-trivia-night" data-sec="nightlife" data-days="2026-11-06" data-age="other" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 7 PM</span></div>
+  <h4>Nerdvana Trivia Night</h4>
+  <p class="where">The Whale&#x27;s Tail at Hotel Captain Cook, 939 W 5th Ave · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://captaincook.com/event/nerdvana-trivia-night-whales-tail/2026-11-06/" rel="noopener" target="_blank" aria-label="Event details: Nerdvana Trivia Night (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-06-mad-myrnas-diva-variety-show" data-id="2026-11-06-mad-myrnas-diva-variety-show" data-sec="nightlife" data-days="2026-11-06 2026-11-07" data-age="adult" data-start="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 9 PM</span></div>
+  <h4>Mad Myrna&#x27;s Diva Variety Show</h4>
+  <p class="where">Mad Myrna&#x27;s, 530 E 5th Ave · <b>Anchorage</b></p><p class="note">Fri &amp; Sat nights. Check in by 8:45 PM for reserved tables.</p>
+  <div class="pills meta"><span class="pill">Table reservations from $40</span><span class="pill age">21+</span><a class="more" href="https://madmyrnas.com/diva-variety-show" rel="noopener" target="_blank" aria-label="Event details: Mad Myrna&#x27;s Diva Variety Show (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-07-legacy-a-drag-experience-featuring-jaida-essence-hall" data-id="2026-11-07-legacy-a-drag-experience-featuring-jaida-essence-hall" data-sec="nightlife" data-days="2026-11-07" data-age="adult" data-start="20:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · 8 PM</span></div>
+  <h4>Legacy: A Drag Experience featuring Jaida Essence Hall</h4>
+  <p class="where">Bear Tooth Theatrepub, 1230 W 27th Ave · <b>Anchorage</b></p><p class="note">Doors 7:30 PM. Hosted with Athena Nuff LLC.</p>
+  <div class="pills meta"><span class="pill">From $35</span><span class="pill age">18+</span><a class="more" href="https://www.eventbrite.com/e/legacy-a-drag-experience-featuring-jaida-essence-hall-tickets-2001079428438" rel="noopener" target="_blank" aria-label="Event details: Legacy: A Drag Experience featuring Jaida Essence Hall (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-10-bear-tooth-tuesday-night-trivia" data-id="2026-11-10-bear-tooth-tuesday-night-trivia" data-sec="nightlife" data-days="2026-11-10" data-age="all" data-free="1" data-start="19:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Tue Nov 10</span> · 7 PM</span></div>
+  <h4>Bear Tooth Tuesday Night Trivia</h4>
+  <p class="where">Bear Tooth Theatrepub, 1230 W 27th Ave · <b>Anchorage</b></p><p class="note">Doors 6:30 PM. Teams of 2–6.</p>
+  <div class="pills meta"><span class="pill">Free to play</span><span class="pill">All ages</span><a class="more" href="https://www.beartoothak.com/live-events" rel="noopener" target="_blank" aria-label="Event details: Bear Tooth Tuesday Night Trivia (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" id="cat-seasonal" data-sec="seasonal" aria-labelledby="h-seasonal">
+<h3 class="sech" id="h-seasonal">Seasonal &amp; holiday <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-07-best-of-alaska-showcase" data-id="2026-11-07-best-of-alaska-showcase" data-sec="seasonal" data-days="2026-11-07" data-age="all" data-free="1" data-start="13:00" data-end="18:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · 1 PM</span></div>
+  <h4>Best of Alaska Showcase</h4>
+  <p class="where">Dena&#x27;ina Center, 600 W 7th Ave · <b>Anchorage</b></p><p class="note">Local businesses, food, drinks and live music from Yachtly Crew.</p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://allevents.in/anchorage/best-of-alaska-showcase/200030834222716" rel="noopener" target="_blank" aria-label="Event details: Best of Alaska Showcase (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" id="cat-sports" data-sec="sports" aria-labelledby="h-sports">
+<h3 class="sech" id="h-sports">Sports <span class="n">4</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-06-uaa-mens-basketball-vs-evergreen-state" data-id="2026-11-06-uaa-mens-basketball-vs-evergreen-state" data-sec="sports" data-days="2026-11-06 2026-11-07" data-age="all" data-start="11:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · Fri 11 AM; Sat 4:15 PM</span></div>
+  <h4>UAA Men&#x27;s Basketball vs. Evergreen State</h4>
+  <p class="where">Alaska Airlines Center, 3550 Providence Dr · <b>Anchorage</b></p><p class="note">Slam Dunk tip. Also Sat Nov 7, 4:15 PM.</p>
+  <div class="pills meta"><span class="pill">See ticket page</span><span class="pill">All ages</span><a class="more" href="https://goseawolves.com/calendar" rel="noopener" target="_blank" aria-label="Event details: UAA Men&#x27;s Basketball vs. Evergreen State (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-06-uaa-womens-basketball-vs-college-of-idaho" data-id="2026-11-06-uaa-womens-basketball-vs-college-of-idaho" data-sec="sports" data-days="2026-11-06 2026-11-07" data-age="all" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · Fri 7 PM; Sat 2 PM</span></div>
+  <h4>UAA Women&#x27;s Basketball vs. College of Idaho</h4>
+  <p class="where">Alaska Airlines Center, 3550 Providence Dr · <b>Anchorage</b></p><p class="note">Also Sat Nov 7, 2 PM.</p>
+  <div class="pills meta"><span class="pill">See ticket page</span><span class="pill">All ages</span><a class="more" href="https://goseawolves.com/calendar" rel="noopener" target="_blank" aria-label="Event details: UAA Women&#x27;s Basketball vs. College of Idaho (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-06-anchorage-wolverines-vs-minnesota-mallards" data-id="2026-11-06-anchorage-wolverines-vs-minnesota-mallards" data-sec="sports" data-days="2026-11-06 2026-11-07" data-age="all" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 6</span> · 7 PM</span></div>
+  <h4>Anchorage Wolverines vs. Minnesota Mallards</h4>
+  <p class="where">Sullivan Arena, 1600 Gambell St · <b>Anchorage</b></p><p class="note">NAHL junior hockey. Also Sat Nov 7, 7 PM.</p>
+  <div class="pills meta"><span class="pill">See ticket page</span><span class="pill">All ages</span><a class="more" href="https://tickets.anchoragewolverines.com/" rel="noopener" target="_blank" aria-label="Event details: Anchorage Wolverines vs. Minnesota Mallards (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-07-uaa-volleyball-vs-western-oregon-senior-night" data-id="2026-11-07-uaa-volleyball-vs-western-oregon-senior-night" data-sec="sports" data-days="2026-11-07" data-age="all" data-start="19:15">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 7</span> · 7:15 PM</span></div>
+  <h4>UAA Volleyball vs. Western Oregon (Senior Night)</h4>
+  <p class="where">Alaska Airlines Center, 3550 Providence Dr · <b>Anchorage</b></p><p class="note">Senior Night.</p>
+  <div class="pills meta"><span class="pill">See ticket page</span><span class="pill">All ages</span><a class="more" href="https://goseawolves.com/calendar" rel="noopener" target="_blank" aria-label="Event details: UAA Volleyball vs. Western Oregon (Senior Night) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
 </article>
 </div></section>
   
