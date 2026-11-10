@@ -99,6 +99,65 @@
    "url": "https://akjazzworkshop.org/calendar/"
   },
   {
+   "id": "2026-11-10-pawsitive-reading-at-chugiak-eagle-river",
+   "date": "2026-11-10",
+   "time": "3:30 PM",
+   "title": "PAWSitive Reading at Chugiak-Eagle River",
+   "category": "Family & Outdoors",
+   "venue": "Chugiak-Eagle River Library, 12001 Business Blvd #176 (Eagle River Town Center)",
+   "town": "Eagle River",
+   "price": "No fee listed",
+   "ages": "All ages",
+   "start": "15:30",
+   "end": "16:30",
+   "note": "Kids in K–4th grade read to therapy dogs. Sign-up opens 3:15 PM.",
+   "url": "https://anchorage.librarycalendar.com/event/pawsitive-reading-chugiak-eagle-river-21018"
+  },
+  {
+   "id": "2026-11-10-planetarium-show-james-webb-space-telescope",
+   "date": "2026-11-10",
+   "time": "4:30 PM",
+   "title": "Planetarium Show: James Webb Space Telescope",
+   "category": "Arts & Talks",
+   "venue": "Anchorage Museum (Thomas Planetarium), 625 C St",
+   "town": "Anchorage",
+   "price": "$6 adults; $4 ages 6–12; 5 & under free",
+   "ages": "All ages",
+   "start": "16:30",
+   "end": "17:00",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/categories/Planetarium"
+  },
+  {
+   "id": "2026-11-10-irish-music-and-dancing-at-organic-oasis",
+   "date": "2026-11-10",
+   "time": "6 PM",
+   "title": "Irish Music & Dancing at Organic Oasis",
+   "category": "Music",
+   "venue": "Organic Oasis, 2610 Spenard Rd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "20:00",
+   "note": "Weekly Irish session; no experience needed to dance.",
+   "url": "https://anchoragepress.com/events/irish-dance-night-2026-11-10/"
+  },
+  {
+   "id": "2026-11-10-urban-harvest-bringing-kelp-into-your-kitchen",
+   "date": "2026-11-10",
+   "time": "6:30 PM",
+   "title": "Urban Harvest: Bringing Kelp into Your Kitchen",
+   "category": "Make & Taste",
+   "venue": "Anchorage Museum (Discovery Center Art Lab), 625 C St",
+   "town": "Anchorage",
+   "price": "$15",
+   "ages": "16+",
+   "start": "18:30",
+   "end": "20:00",
+   "note": "Talk with Kachemak Kelp, then make and taste kelp dishes. Recommended 16+.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=6pih6l74h7pjlrgd5fs37aoq50"
+  },
+  {
    "id": "2026-11-10-bear-tooth-tuesday-night-trivia",
    "date": "2026-11-10",
    "time": "7 PM",
@@ -125,6 +184,22 @@
    "ages": "All ages",
    "start": "10:30",
    "url": "https://www.alaskazoo.org/event-calendar/2026/november-11-weekly-community-storytime"
+  },
+  {
+   "id": "2026-11-11-fireside-chats-cold-feet-warm-pirogues",
+   "date": "2026-11-11",
+   "time": "6 PM",
+   "title": "Fireside Chats – Cold Feet, Warm Pirogues",
+   "category": "Arts & Talks",
+   "venue": "Kenai River Brewing Company, 308 Homestead Ln",
+   "town": "Soldotna",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "18:00",
+   "end": "19:00",
+   "worth_the_drive": true,
+   "note": "Talk by Ben Meyer. Free and open to all ages (brewery venue).",
+   "url": "https://www.kenaiwatershed.org/event/fireside-chats-cold-feet-warm-pirogues/"
   },
   {
    "id": "2026-11-11-comedy-open-mic-at-koots",
@@ -155,6 +230,31 @@
    "url": "https://www.alaskazoo.org/event-calendar/2026/11/11/wildlife-wednesdays-free-science-lecture"
   },
   {
+   "id": "2026-11-12-its-a-wonderful-life-live-1940s-radio-play",
+   "date": "2026-11-12",
+   "time": "7:30 PM",
+   "title": "It's a Wonderful Life (live 1940s radio play)",
+   "category": "Theater",
+   "venue": "DeWild Theatre, West Valley High School, 3800 Geist Rd",
+   "town": "Fairbanks",
+   "price": "$25 adult; $20 student/military/senior/first responder; $15 youth",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15",
+    "2026-11-19",
+    "2026-11-20",
+    "2026-11-21",
+    "2026-11-22"
+   ],
+   "start": "19:30",
+   "end": "21:30",
+   "worth_the_drive": true,
+   "note": "Thu–Sun Nov 12–22 (no shows Mon–Wed Nov 16–18).",
+   "url": "https://www.explorefairbanks.com/event/its-a-wonderful-life/12601/"
+  },
+  {
    "id": "2026-11-12-macbeth-anchorage-opera",
    "date": "2026-11-12",
    "time": "7:30 PM",
@@ -172,6 +272,265 @@
    "end": "22:00",
    "note": "Also Sat Nov 14, 7:30 PM and Sun Nov 15, 2 PM. Under 16 with an adult.",
    "url": "https://centertix.com/events/macbeth"
+  },
+  {
+   "id": "2026-11-13-fairbanks-holiday-marketplace",
+   "date": "2026-11-13",
+   "time": "Fri 12–7 PM; Sat 10 AM–6 PM; Sun 11 AM–5 PM",
+   "title": "Fairbanks Holiday Marketplace",
+   "category": "Seasonal",
+   "venue": "Carlson Center, 2010 Second Ave",
+   "town": "Fairbanks",
+   "price": "$5 at the door; children 12 and under free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-14",
+    "2026-11-15"
+   ],
+   "start": "12:00",
+   "end": "19:00",
+   "worth_the_drive": true,
+   "url": "https://fairbanksevents.com/holidaymarketplace/"
+  },
+  {
+   "id": "2026-11-13-skeetawk-season-premiere-warren-miller-days-off",
+   "date": "2026-11-13",
+   "time": "Doors 5:30 PM; meeting 6 PM; film 7 PM",
+   "title": "Skeetawk Season Premiere (Warren Miller Days Off)",
+   "category": "Arts & Talks",
+   "venue": "Palmer Sports Arena, Palmer",
+   "town": "Palmer",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "17:30",
+   "end": "21:00",
+   "worth_the_drive": true,
+   "note": "Warren Miller Days Off. Film free for members; public ticket price not listed.",
+   "url": "https://skeetawk.com/premiere"
+  },
+  {
+   "id": "2026-11-13-vitamin-string-quartet",
+   "date": "2026-11-13",
+   "time": "7:30 PM",
+   "title": "Vitamin String Quartet",
+   "category": "Music",
+   "venue": "Atwood Concert Hall, Alaska Center for the Performing Arts, 621 W 6th Ave",
+   "town": "Anchorage",
+   "price": "From $40.50",
+   "ages": "6+",
+   "start": "19:30",
+   "note": "Bridgerton & Beyond. About 110 minutes.",
+   "url": "https://centertix.com/events/vitamin-string-quartet"
+  },
+  {
+   "id": "2026-11-14-beers-by-the-bay",
+   "date": "2026-11-14",
+   "time": "6:30 PM",
+   "title": "Beers by the Bay",
+   "category": "Food & Drink",
+   "venue": "Alaska SeaLife Center, 301 Railway Ave",
+   "town": "Seward",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "18:30",
+   "end": "22:00",
+   "worth_the_drive": true,
+   "note": "Tasting and appetizer buffet fundraiser.",
+   "url": "https://alaskasealife.org/calendar_detail/203"
+  },
+  {
+   "id": "2026-11-14-vitamin-string-quartet",
+   "date": "2026-11-14",
+   "time": "7:30 PM",
+   "title": "Vitamin String Quartet",
+   "category": "Music",
+   "venue": "Davis Concert Hall, UAF, 1708 Tanana Loop",
+   "town": "Fairbanks",
+   "price": "Individual $35–$65 (includes $3 outlet fee); youth/seniors/military $5 off; subscription $30–$55",
+   "ages": "Ages not listed",
+   "start": "19:30",
+   "worth_the_drive": true,
+   "note": "Bridgerton & Beyond. Atmospheric haze used during the show.",
+   "url": "https://fairbanksconcert.org/project/vitamin-string-quartet-11-14-26/"
+  },
+  {
+   "id": "2026-11-20-alaska-vintage-holiday-market-and-food-truck-fest",
+   "date": "2026-11-20",
+   "time": "Fri 12–6 PM; Sat 10 AM–6 PM; Sun 10 AM–4 PM (both weekends)",
+   "title": "Alaska Vintage Holiday Market & Food Truck Fest",
+   "category": "Seasonal",
+   "venue": "Raven Hall & Hoskins Building, Alaska State Fairgrounds, 2075 Glenn Hwy",
+   "town": "Palmer",
+   "price": "Price not listed",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-21",
+    "2026-11-22",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
+   ],
+   "start": "12:00",
+   "end": "18:00",
+   "worth_the_drive": true,
+   "note": "Nov 20–22 and Nov 27–29. Ages 12 and under free; free parking.",
+   "url": "https://alaskavintagemarkets.com/"
+  },
+  {
+   "id": "2026-11-20-alaska-airlines-governors-cup-uaf-nanooks-vs-uaa-seawolves-h",
+   "date": "2026-11-20",
+   "time": "7:07 PM both nights",
+   "title": "Alaska Airlines Governor's Cup (UAF Nanooks vs UAA Seawolves hockey)",
+   "category": "Sports",
+   "venue": "Carlson Center, Fairbanks",
+   "town": "Fairbanks",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-21"
+   ],
+   "start": "19:07",
+   "worth_the_drive": true,
+   "note": "Fri Whiteout; Sat Nanooks Power Play 4k & Whiteout.",
+   "url": "https://alaskananooks.com/sports/mens-ice-hockey/schedule/2026-27"
+  },
+  {
+   "id": "2026-11-21-asrc-conocophillips-great-alaska-shootout",
+   "date": "2026-11-21",
+   "time": "Sat 5:15 PM & 7:30 PM; Sun 2 PM & 4:30 PM",
+   "title": "ASRC/ConocoPhillips Great Alaska Shootout",
+   "category": "Sports",
+   "venue": "Alaska Airlines Center, 3550 Providence Drive",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-22"
+   ],
+   "start": "17:15",
+   "note": "Sat: Seattle U vs Chicago State 5:15 PM; Louisville vs Alaska Anchorage 7:30 PM. Sun: title game 2 PM; 3rd-place 4:30 PM.",
+   "url": "https://thealaskaairlinescenter.com/class/great-alaska-shootout-4/"
+  },
+  {
+   "id": "2026-11-26-tonsina-turkey-trot",
+   "date": "2026-11-26",
+   "time": "10 AM",
+   "title": "Tonsina Turkey Trot",
+   "category": "Sports",
+   "venue": "Tonsina Trailhead / Tonsina Creek Road, Seward",
+   "town": "Seward",
+   "price": "$30 adult race; $20 kids race",
+   "ages": "Ages not listed",
+   "start": "10:00",
+   "worth_the_drive": true,
+   "note": "About 4.4 miles. Fees may apply at checkout.",
+   "url": "https://runsignup.com/Race/AK/Seward/TonsinaTurkeyTrot"
+  },
+  {
+   "id": "2026-11-26-skinny-raven-turkey-trot",
+   "date": "2026-11-26",
+   "time": "5K 10:30 AM; Mini Turkey 2 Mile 10:40 AM",
+   "title": "Skinny Raven Turkey Trot",
+   "category": "Sports",
+   "venue": "Start 8th Ave & G St; indoor finish Dena'ina Civic & Convention Center",
+   "town": "Anchorage",
+   "price": "$37 ages 16+ / $20 ages 0–15 (increases after Nov 19)",
+   "ages": "All ages",
+   "start": "10:30",
+   "url": "https://runsignup.com/Race/AK/Anchorage/TurkeyTrotAK"
+  },
+  {
+   "id": "2026-11-27-kenai-art-center-winter-arts-and-crafts-fair",
+   "date": "2026-11-27",
+   "time": "10 AM–5 PM both days",
+   "title": "Kenai Art Center Winter Arts & Crafts Fair",
+   "category": "Seasonal",
+   "venue": "Kenai Central High School commons and gym, 9583 Kenai Spur Hwy",
+   "town": "Kenai",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-28"
+   ],
+   "start": "10:00",
+   "end": "17:00",
+   "worth_the_drive": true,
+   "url": "https://kenaiartcenter.org/event-kenai-arts-crafts-fair-2026/"
+  },
+  {
+   "id": "2026-11-27-juneau-public-market",
+   "date": "2026-11-27",
+   "time": "Fri 12–7 PM; Sat–Sun 10 AM–5 PM",
+   "title": "Juneau Public Market",
+   "category": "Seasonal",
+   "venue": "Centennial Hall and Juneau Arts & Culture Center (JACC)",
+   "town": "Juneau",
+   "price": "$10 cash-only for 3-day Centennial Hall pass; JACC free; children 11 and younger free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-28",
+    "2026-11-29"
+   ],
+   "start": "12:00",
+   "end": "19:00",
+   "worth_the_drive": true,
+   "url": "https://www.juneaupublicmarket.com/faq"
+  },
+  {
+   "id": "2026-11-27-the-nutcracker-with-eugene-ballet",
+   "date": "2026-11-27",
+   "time": "Fri & Sat 2 PM & 7:30 PM; Sun 1 PM & 5:30 PM",
+   "title": "The Nutcracker with Eugene Ballet",
+   "category": "Theater",
+   "venue": "Atwood Concert Hall, Alaska Center for the Performing Arts, 621 W 6th Ave",
+   "town": "Anchorage",
+   "price": "From $49.50",
+   "ages": "6+",
+   "extra_dates": [
+    "2026-11-28",
+    "2026-11-29"
+   ],
+   "start": "14:00",
+   "url": "https://centertix.com/events/the-nutcracker-with-eugene-ballet"
+  },
+  {
+   "id": "2026-11-27-ketchikan-winter-arts-faire",
+   "date": "2026-11-27",
+   "time": "Fri opening gala 5–8 PM; Sat–Sun daytime booths",
+   "title": "Ketchikan Winter Arts Faire",
+   "category": "Seasonal",
+   "venue": "Ted Ferry Civic Center, Ketchikan",
+   "town": "Ketchikan",
+   "price": "Sat–Sun admission free; Opening Gala price not listed",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-28",
+    "2026-11-29"
+   ],
+   "start": "17:00",
+   "end": "20:00",
+   "worth_the_drive": true,
+   "note": "Opening gala Fri 5–8 PM. Sat–Sun daytime booths; exact Sat/Sun hours vary by listing.",
+   "url": "https://www.ketchikanarts.org/events/winter-arts-faire.html"
+  },
+  {
+   "id": "2026-11-27-zoo-lights-opening-weekend",
+   "date": "2026-11-27",
+   "time": "5 PM",
+   "title": "Zoo Lights (opening weekend)",
+   "category": "Seasonal",
+   "venue": "Alaska Zoo, 4731 O'Malley Rd",
+   "town": "Anchorage",
+   "price": "$25 ages 16+; $15 ages 15 & under; ages 2 and under free; members 3+ 30% off",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-28",
+    "2026-11-29"
+   ],
+   "start": "17:00",
+   "end": "20:00",
+   "note": "Opening weekend Nov 27–29, 5–8 PM. Season continues on later dates.",
+   "url": "https://www.alaskazoo.org/zoo-lights"
   }
  ],
  "running_label": "Running now",
@@ -203,6 +562,6 @@
    "town": "Downtown Anchorage"
   }
  ],
- "through": "2026-11-15",
- "last_verified": "2026-11-08"
+ "through": "2026-11-29",
+ "last_verified": "2026-11-09"
 }
