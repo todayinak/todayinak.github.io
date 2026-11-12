@@ -258,6 +258,8 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
 #events .card.ev .pills.meta > .more{margin-left:auto;flex:0 0 auto}   /* stay with Save/Share when space allows */
 
 #events .card.ev .pills.meta > .pill{white-space:normal;overflow-wrap:anywhere;word-break:break-word;min-width:0;max-width:100%;border-radius:var(--pillr);flex:1 1 auto}
+/* long green time pills (e.g. Fri & Sat 2 PM & 7:30 PM; Sun 1 PM & 5:30 PM) wrap inside the card, including calendar day list */
+#events .card.ev .pills > .pill.when{white-space:normal;overflow-wrap:anywhere;word-break:break-word;min-width:0;max-width:100%;flex:1 1 auto;line-height:1.35;padding:6px 11px;border-radius:12px}
 @media (max-width:599px){
  #events .card.ev .pills.meta > .pill:first-child{flex:1 1 100%}   /* price takes its own full-width row on phones */
  .act{padding:8px 12px;min-height:42px}
@@ -306,11 +308,17 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
 .evcal-runs:empty{display:none}
 .evcal-runs .acts{position:relative;z-index:2;display:inline-flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px}
 @media (min-width:900px){
-  .evcal-wrap{display:grid;grid-template-columns:minmax(320px,1.05fr) minmax(280px,1fr);gap:22px;align-items:start}
-  .evcal-pane{margin:0}
-  .evcal-day{min-height:64px;padding:8px 2px 6px}
+  /* Month grid stays a comfortable width; the day's list gets the remaining space. Grid sticks while the list scrolls. */
+  .evcal-wrap{display:grid;grid-template-columns:minmax(360px,420px) minmax(0,1fr);gap:28px;align-items:start}
+  .evcal-board{position:sticky;top:16px;padding:16px 16px 18px;max-width:420px}
+  .evcal-pane{margin:0;min-width:0}
+  .evcal-wd,.evcal-grid{gap:6px}
+  .evcal-day{min-height:72px;padding:10px 4px 8px;border-radius:12px}
+  .evcal-day .num{width:32px;height:32px}
+  .evcal-day .dot{width:6px;height:6px}
   .evcal-month{font-size:22px}
   .evcal-wd span{font-size:12px}
+  .evcal-jump{margin:10px 0 0}
 }
 @media (max-width:599px){
   .evcal-board{padding:10px 8px 12px}
