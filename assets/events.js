@@ -1,4 +1,4 @@
-/* Today in AK: event search + filters, plus live "Today" labels and hiding of past listings.
+/* Today in AK: event search + filters, live "Today" labels and hiding of past listings, plus a List | Calendar layout.
    Progressive enhancement: without this file the page is the full list, grouped by type, with plain weekday + date
    labels and jump links. No frameworks, no tracking, no accounts.
    Outside requests (no keys, nothing about the visitor is sent): Anchorage temp from Open-Meteo, and planetary K-index from NOAA SWPC for the aurora dial.
@@ -34,6 +34,7 @@
     return p.year + '-' + p.month + '-' + p.day + 'T' + (p.hour === '24' ? '00' : p.hour) + ':' + p.minute;
   }
   function addDays(iso, n) { var a = iso.split('-'), d = new Date(Date.UTC(+a[0], a[1] - 1, +a[2] + n)); return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate()); }
+  function ym(iso) { return (iso || '').slice(0, 7); }
   function label(iso) { var a = iso.split('-'), d = new Date(Date.UTC(+a[0], a[1] - 1, +a[2])); return WD[d.getUTCDay()] + ' ' + MO[d.getUTCMonth()] + ' ' + d.getUTCDate(); }
   // When a listing on day `iso` is over: its end time if listed (an end earlier than the start runs past midnight),
   // otherwise the end of that Alaska day, so start-time-only listings stay up all day.
@@ -50,6 +51,7 @@
       chips = hasFinder ? [].slice.call(finder.querySelectorAll('.chip')) : [], secs = [].slice.call(document.querySelectorAll('.evsec')),
       cards = [].slice.call(document.querySelectorAll('#events .card.ev')), runs = [].slice.call(document.querySelectorAll('#events li.run')),
       items = cards.concat(runs), running = document.getElementById('running'), jump = document.querySelector('.catnav'), cat = '', whenToday = false, todayISO = '';
+  var calView = false;
   var dayOpts = day ? [].slice.call(day.options).filter(function (o) { return o.value; }) : [];
   dayOpts.forEach(function (o) { o._label = o.textContent; });
   cards.forEach(function (el, i) {
@@ -86,6 +88,7 @@
     pruneSaved(today);
     // date order within each section: next upcoming date, then start time, then the original order
     secs.forEach(function (s) {
+      if (calView) return;
       var grid = s.querySelector('.evgrid'); if (!grid) return;
       var list = [].slice.call(grid.querySelectorAll('.card.ev'));
       list.sort(function (a, b) { return a._next < b._next ? -1 : a._next > b._next ? 1 : a._start < b._start ? -1 : a._start > b._start ? 1 : a._i - b._i; });
@@ -242,7 +245,7 @@
     'END:VTIMEZONE'];
   function fold(line) { var out = []; while (line.length > 73) { out.push(line.slice(0, 73)); line = ' ' + line.slice(73); } out.push(line); return out.join('\r\n'); }
   function ics(el) {
-    var day = el._next || el._days[0], st = el._start, en = el._end, L = [];
+    var day = el._calDay || el._next || el._days[0], st = el._start, en = el._end, L = [];
     var stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
     L.push('BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Today in AK//Events//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH');
     if (st) L = L.concat(VTZ);
@@ -291,7 +294,7 @@
       var cb = btn('cal', 'cal', 'Cal', 'Add to calendar: ' + el._title);
       hb.setAttribute('aria-pressed', 'false'); el._heart = hb;
       sb.addEventListener('click', function () {
-        var when = (el._next ? label(el._next) : el._wdText) + (el._time ? ' · ' + el._time : '');
+        var when = ((el._calDay || el._next) ? label(el._calDay || el._next) : el._wdText) + (el._time ? ' · ' + el._time : '');
         share(el._title, 'Found this — ' + el._title + ', ' + when + ' at ' + el._where + ' 👉', SITE + '#ev-' + el._id);
       });
       cb.addEventListener('click', function () { download(el); });
@@ -306,7 +309,13 @@
   // Shared event links (todayinak.github.io/#ev-<id>) scroll to that card and give it a short glow
   function evFromHash() {
     var m = /^#ev-([a-z0-9-]+)$/.exec(location.hash), el = m && byId[m[1]];
-    if (!el || el.hidden) return;
+    if (!el) return;
+    if (calView && el._days && el._days.length) {
+      var jump = el._next || el._days[0], i;
+      for (i = 0; i < el._days.length; i++) if (el._days[i] >= todayISO) { jump = el._days[i]; break; }
+      calSel = jump; calMonth = ym(calSel); apply();
+    }
+    if (el.hidden) return;
     el.scrollIntoView({ block: 'center' }); el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
   }
 
@@ -391,8 +400,317 @@
       .then(function () { clearTimeout(to); });
   }
 
+
+  // ---------- calendar view (month grid in Alaska time; a day's cards sit below the grid) ----------
+  var calSel = '', calMonth = '',
+      calBox = document.getElementById('evcal'),
+      calGrid = document.getElementById('evcal-grid'),
+      calWd = document.getElementById('evcal-wd'),
+      calMonthEl = document.getElementById('evcal-month'),
+      calList = document.getElementById('evcal-daylist'),
+      calRuns = document.getElementById('evcal-runs'),
+      calHead = document.getElementById('evcal-dayhead'),
+      calEmpty = document.getElementById('evcal-empty'),
+      calPrev = document.getElementById('evcal-prev'),
+      calNext = document.getElementById('evcal-next'),
+      calTodayBtn = document.getElementById('evcal-goto-today'),
+      viewListBtn = document.getElementById('evview-list'),
+      viewCalBtn = document.getElementById('evview-cal');
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      WDLONG = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  cards.forEach(function (el) { el._home = el.parentNode; });
+  runs.forEach(function (el) {
+    el._home = el.parentNode;
+    el._id = el.getAttribute('data-id') || '';
+    el._start = el.getAttribute('data-start') || '';
+    el._end = el.getAttribute('data-end') || '';
+    var rb = el.querySelector('b'), ra = el.querySelector('a.more'), rs = el.querySelector('span');
+    el._title = rb ? rb.textContent : '';
+    el._url = ra ? ra.href : SITE;
+    el._where = ''; el._time = ''; el._price = '';
+    if (rs) {
+      var bits = rs.textContent.split(' · ');
+      el._time = bits[0] || '';
+      el._price = bits.length ? bits[bits.length - 1] : '';
+      el._where = bits.slice(1, Math.max(1, bits.length - 1)).join(' · ');
+    }
+    if (el._id && !byId[el._id]) byId[el._id] = el;
+  });
+  function monthLabel(yymm) { var a = (yymm || '').split('-'); return MONTHS[+a[1] - 1] + ' ' + a[0]; }
+  function longDay(iso) {
+    var a = iso.split('-'), d = new Date(Date.UTC(+a[0], a[1] - 1, +a[2]));
+    return WDLONG[d.getUTCDay()] + ', ' + MONTHS[d.getUTCMonth()] + ' ' + d.getUTCDate() + ', ' + d.getUTCFullYear();
+  }
+  function shiftMonth(yymm, n) {
+    var a = (yymm || '').split('-'), d = new Date(Date.UTC(+a[0], +a[1] - 1 + n, 1));
+    return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1);
+  }
+  function monthRange() {
+    var min = todayISO ? ym(todayISO) : '', max = min;
+    items.forEach(function (el) {
+      el._days.forEach(function (d) {
+        var m = ym(d);
+        if (!min || m < min) min = m;
+        if (!max || m > max) max = m;
+      });
+    });
+    return [min, max];
+  }
+  function calFilters(el) {
+    var words = hasFinder ? norm(q.value).trim().split(/\s+/).filter(Boolean) : [],
+        a = hasFinder ? age.value : '', f = hasFinder && free.checked, sv = savedView;
+    return (!cat || el.getAttribute('data-sec') === cat) &&
+           (!a || el.getAttribute('data-age') === a) &&
+           (!f || el.hasAttribute('data-free')) &&
+           (!sv || (!!el._id && saved.hasOwnProperty(el._id))) &&
+           words.every(function (w) { return el._q.indexOf(w) > -1; });
+  }
+  function restoreHomes() {
+    items.forEach(function (el) {
+      el._calDay = '';
+      if (el._home && el.parentNode !== el._home) el._home.appendChild(el);
+    });
+  }
+  function setCardDayLabel(el, iso) {
+    if (!el._wd) { el._calDay = iso; return; }
+    var tomorrow = addDays(todayISO, 1), yesterday = addDays(todayISO, -1);
+    var rel = iso === todayISO ? 'Today' : iso === tomorrow ? 'Tomorrow' : iso === yesterday ? 'Still on' : '';
+    el._wd.textContent = rel ? rel + ' · ' + label(iso) : label(iso);
+    el._wd.setAttribute('title', label(iso));
+    el._wd.classList.toggle('rel', !!rel);
+    el.classList.toggle('is-today', iso === todayISO || iso === yesterday);
+    el._calDay = iso;
+  }
+  function ensureRunActs(el) {
+    if (!el._id || el._heart) return;
+    var box = document.createElement('div'); box.className = 'acts';
+    var hb = btn('heart', 'heart', 'Save', 'Save: ' + el._title);
+    var sb = btn('share', 'share', 'Share', 'Share: ' + el._title);
+    var cb = btn('cal', 'cal', 'Cal', 'Add to calendar: ' + el._title);
+    hb.setAttribute('aria-pressed', 'false'); el._heart = hb;
+    sb.addEventListener('click', function () {
+      var when = (el._calDay ? label(el._calDay) : '') + (el._time ? (el._calDay ? ' · ' : '') + el._time : '');
+      share(el._title, 'Found this — ' + el._title + ', ' + when + ' at ' + el._where + ' 👉', SITE + '#ev-' + el._id);
+    });
+    cb.addEventListener('click', function () { download(el); });
+    hb.addEventListener('click', function () { toggleSaved(el); });
+    box.appendChild(hb); box.appendChild(sb); box.appendChild(cb);
+    el.appendChild(box);
+    el.classList.add('has-acts');
+  }
+  function countOn(iso) {
+    var n = 0;
+    items.forEach(function (el) { if (el._days.indexOf(iso) > -1 && calFilters(el)) n++; });
+    return n;
+  }
+  function nextDayWithEvents(fromIso) {
+    var days = [];
+    items.forEach(function (el) {
+      if (!calFilters(el)) return;
+      el._days.forEach(function (d) { if (d >= fromIso) days.push(d); });
+    });
+    days.sort();
+    return days[0] || fromIso;
+  }
+  function setView(mode) {
+    var next = mode === 'cal';
+    if (next === calView) { if (calView) apply(); return; }
+    calView = next;
+    if (viewListBtn) viewListBtn.setAttribute('aria-pressed', String(!calView));
+    if (viewCalBtn) viewCalBtn.setAttribute('aria-pressed', String(calView));
+    if (calView) {
+      if (!todayISO) todayISO = akNow().slice(0, 10);
+      if (!calSel) calSel = countOn(todayISO) ? todayISO : nextDayWithEvents(todayISO);
+      calMonth = ym(calSel);
+    } else {
+      restoreHomes();
+      timePass();
+    }
+    apply();
+  }
+  function goMonth(yymm) {
+    var b = monthRange();
+    if (b[0] && yymm < b[0]) yymm = b[0];
+    if (b[1] && yymm > b[1]) yymm = b[1];
+    calMonth = yymm;
+    if (ym(calSel) !== calMonth) {
+      if (todayISO && ym(todayISO) === calMonth) calSel = todayISO;
+      else {
+        var last = new Date(Date.UTC(+calMonth.slice(0, 4), +calMonth.slice(5, 7), 0)).getUTCDate(), i, found = '';
+        for (i = 1; i <= last; i++) {
+          var iso = calMonth + '-' + pad(i);
+          if (countOn(iso)) { found = iso; break; }
+        }
+        calSel = found || (calMonth + '-01');
+      }
+    }
+    apply();
+  }
+  function selectDay(iso) { calSel = iso; calMonth = ym(iso); apply(); }
+  function paintWeekdays() {
+    if (!calWd || calWd.childNodes.length) return;
+    WD.forEach(function (w, i) {
+      var s = document.createElement('span');
+      s.textContent = w;
+      s.title = WDLONG[i];
+      calWd.appendChild(s);
+    });
+  }
+  function dayCell(iso) {
+    var cell = document.createElement('div');
+    cell.setAttribute('role', 'gridcell');
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'evcal-day';
+    b.setAttribute('data-day', iso);
+    var nEv = countOn(iso), out = ym(iso) !== calMonth, past = iso < todayISO, isToday = iso === todayISO, sel = iso === calSel;
+    if (out) b.classList.add('is-out');
+    if (past) b.classList.add('is-past');
+    if (isToday) { b.classList.add('is-today'); b.setAttribute('aria-current', 'date'); }
+    b.setAttribute('aria-pressed', String(sel));
+    var lab = longDay(iso);
+    if (isToday) lab += ', today';
+    if (sel) lab += ', selected';
+    lab += nEv === 0 ? ', no events' : (nEv === 1 ? ', 1 event' : ', ' + nEv + ' events');
+    b.setAttribute('aria-label', lab);
+    var num = document.createElement('span'); num.className = 'num'; num.textContent = String(+iso.slice(8));
+    var marks = document.createElement('span'); marks.className = 'marks'; marks.setAttribute('aria-hidden', 'true');
+    if (nEv > 0 && nEv <= 3) {
+      var j;
+      for (j = 0; j < nEv; j++) { var dot = document.createElement('span'); dot.className = 'dot'; marks.appendChild(dot); }
+    } else if (nEv > 3) {
+      var ct = document.createElement('span'); ct.className = 'n'; ct.textContent = String(nEv); marks.appendChild(ct);
+    }
+    b.appendChild(num); b.appendChild(marks);
+    b.addEventListener('click', function () { selectDay(iso); });
+    cell.appendChild(b);
+    return cell;
+  }
+  function focusDay(iso) {
+    if (!calGrid) return false;
+    var b = calGrid.querySelector('[data-day="' + iso + '"]');
+    if (b) { b.focus(); return true; }
+    return false;
+  }
+  function onGridKey(ev) {
+    var btn = ev.target.closest && ev.target.closest('[data-day]');
+    if (!btn) return;
+    var iso = btn.getAttribute('data-day'), next = null, last;
+    if (ev.key === 'ArrowLeft') next = addDays(iso, -1);
+    else if (ev.key === 'ArrowRight') next = addDays(iso, 1);
+    else if (ev.key === 'ArrowUp') next = addDays(iso, -7);
+    else if (ev.key === 'ArrowDown') next = addDays(iso, 7);
+    else if (ev.key === 'Home') next = iso.slice(0, 8) + '01';
+    else if (ev.key === 'End') {
+      last = new Date(Date.UTC(+iso.slice(0, 4), +iso.slice(5, 7), 0)).getUTCDate();
+      next = iso.slice(0, 8) + pad(last);
+    } else if (ev.key === 'PageUp') { ev.preventDefault(); goMonth(shiftMonth(calMonth, -1)); focusDay(calSel); return; }
+    else if (ev.key === 'PageDown') { ev.preventDefault(); goMonth(shiftMonth(calMonth, 1)); focusDay(calSel); return; }
+    if (!next) return;
+    ev.preventDefault();
+    var bds = monthRange();
+    if (bds[0] && ym(next) < bds[0]) return;
+    if (bds[1] && ym(next) > bds[1]) return;
+    if (!focusDay(next)) { calMonth = ym(next); apply(); focusDay(next); }
+  }
+  function renderCal() {
+    if (!calBox || !calGrid) return;
+    paintWeekdays();
+    if (!todayISO) todayISO = akNow().slice(0, 10);
+    if (!calSel) calSel = todayISO;
+    if (!calMonth) calMonth = ym(calSel);
+    var bounds = monthRange();
+    if (calPrev) calPrev.disabled = !!(bounds[0] && calMonth <= bounds[0]);
+    if (calNext) calNext.disabled = !!(bounds[1] && calMonth >= bounds[1]);
+    if (calMonthEl) calMonthEl.textContent = monthLabel(calMonth);
+    if (calTodayBtn) calTodayBtn.hidden = !(calSel !== todayISO || calMonth !== ym(todayISO));
+    var y = +calMonth.slice(0, 4), mo = +calMonth.slice(5, 7);
+    var startIso = addDays(calMonth + '-01', -(new Date(Date.UTC(y, mo - 1, 1)).getUTCDay()));
+    calGrid.innerHTML = '';
+    var r, c, iso, row, inMonth;
+    for (r = 0; r < 6; r++) {
+      row = document.createElement('div');
+      row.setAttribute('role', 'row');
+      inMonth = false;
+      for (c = 0; c < 7; c++) {
+        iso = addDays(startIso, r * 7 + c);
+        if (ym(iso) === calMonth) inMonth = true;
+        row.appendChild(dayCell(iso));
+      }
+      if (r > 0 && !inMonth) continue;
+      calGrid.appendChild(row);
+    }
+    secs.forEach(function (s) { s.hidden = true; });
+    if (running) running.hidden = true;
+    calBox.hidden = false;
+    var dayItems = items.filter(function (el) { return el._days.indexOf(calSel) > -1 && calFilters(el); });
+    dayItems.sort(function (a, b) {
+      var as = a._start || '99:99', bs = b._start || '99:99';
+      if (as !== bs) return as < bs ? -1 : 1;
+      var at = (a._title || '').toLowerCase(), bt = (b._title || '').toLowerCase();
+      return at < bt ? -1 : at > bt ? 1 : 0;
+    });
+    items.forEach(function (el) {
+      if (dayItems.indexOf(el) === -1) {
+        el._calDay = '';
+        if (el._home && el.parentNode !== el._home) el._home.appendChild(el);
+        el.hidden = true;
+      }
+    });
+    dayItems.forEach(function (el) {
+      el.hidden = false;
+      el._calDay = calSel;
+      if (el.classList.contains('run')) {
+        ensureRunActs(el);
+        if (calRuns) calRuns.appendChild(el);
+      } else {
+        setCardDayLabel(el, calSel);
+        if (calList) calList.appendChild(el);
+      }
+    });
+    updateSavedUI();
+    var n = dayItems.length;
+    if (calHead) calHead.innerHTML = longDay(calSel) + (n ? ' <span class="n">' + n + (n === 1 ? ' event' : ' events') + '</span>' : '');
+    if (calEmpty) calEmpty.hidden = n !== 0;
+    if (none) none.hidden = true;
+    if (done) done.hidden = true;
+    if (nosaved) nosaved.hidden = !(savedView && savedCount() === 0);
+    if (savedView && savedCount() === 0 && calEmpty) calEmpty.hidden = true;
+    if (hasFinder) {
+      chips.forEach(function (c) {
+        if (c.getAttribute('data-when') === 'today') c.setAttribute('aria-pressed', String(whenToday));
+        else if (c.getAttribute('data-sec') === '') c.setAttribute('aria-pressed', String(cat === '' && !whenToday));
+        else c.setAttribute('aria-pressed', String(c.getAttribute('data-sec') === cat));
+      });
+      if (savedBtn) savedBtn.setAttribute('aria-pressed', String(savedView));
+      if (count) {
+        if (savedView && savedCount() === 0) count.textContent = '';
+        else count.textContent = n === 0 ? 'No events on ' + label(calSel)
+                              : n === 1 ? '1 event on ' + label(calSel)
+                                        : n + ' events on ' + label(calSel);
+      }
+    }
+  }
+  function bindCal() {
+    if (viewListBtn) viewListBtn.addEventListener('click', function () { setView('list'); });
+    if (viewCalBtn) viewCalBtn.addEventListener('click', function () { setView('cal'); });
+    if (calPrev) calPrev.addEventListener('click', function () { goMonth(shiftMonth(calMonth || ym(todayISO), -1)); });
+    if (calNext) calNext.addEventListener('click', function () { goMonth(shiftMonth(calMonth || ym(todayISO), 1)); });
+    if (calTodayBtn) calTodayBtn.addEventListener('click', function () { calSel = todayISO; calMonth = ym(todayISO); apply(); });
+    if (calGrid) calGrid.addEventListener('keydown', onGridKey);
+    var views = document.getElementById('evviews');
+    if (views) views.addEventListener('keydown', function (ev) {
+      if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
+      ev.preventDefault();
+      setView(ev.key === 'ArrowLeft' ? 'list' : 'cal');
+      (calView ? viewCalBtn : viewListBtn).focus();
+    });
+  }
+
   // ---------- search + filters ----------
   function apply() {
+    if (calView) { renderCal(); return; }
+    if (calBox) calBox.hidden = true;
     var words = hasFinder ? norm(q.value).trim().split(/\s+/).filter(Boolean) : [], d = hasFinder ? day.value : '', a = hasFinder ? age.value : '',
         f = hasFinder && free.checked, sv = savedView, shown = 0, total = 0;
     items.forEach(function (el) {
@@ -438,6 +756,7 @@
         if (c.getAttribute('data-when') === 'today') {
           whenToday = !whenToday;
           if (whenToday && day) day.value = '';   // avoid Today chip fighting the Day dropdown
+          if (calView && whenToday) { calSel = todayISO; calMonth = ym(todayISO); }
           apply(); return;
         }
         var s = c.getAttribute('data-sec');
@@ -447,7 +766,11 @@
     });
     q.addEventListener('input', apply);
     q.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') { q.value = ''; apply(); } });
-    day.addEventListener('change', function () { whenToday = false; apply(); });
+    day.addEventListener('change', function () {
+      whenToday = false;
+      if (calView && day.value) { calSel = day.value; calMonth = ym(day.value); }
+      apply();
+    });
     [age, free].forEach(function (el) { el.addEventListener('change', apply); });
     document.getElementById('evclear').addEventListener('click', function () { q.value = ''; apply(); q.focus(); });
     document.getElementById('evreset').addEventListener('click', function () { reset(); q.focus(); });
@@ -455,8 +778,13 @@
     var fromHash = function () {
       var m = /^#cat-([a-z]+)$/.exec(location.hash);
       if (m && chips.some(function (c) { return c.getAttribute('data-sec') === m[1] && !c.hidden; })) { cat = m[1]; whenToday = false; apply(); }
-      if (location.hash === '#today') { whenToday = true; if (day) day.value = ''; savedView = false; apply(); finder.scrollIntoView(); }
+      if (location.hash === '#today') { whenToday = true; if (day) day.value = ''; savedView = false; if (calView) { calSel = todayISO; calMonth = ym(todayISO); } apply(); finder.scrollIntoView(); }
       if (location.hash === '#saved') { setSavedView(true); finder.scrollIntoView(); }
+      var cm = /^#cal(?:-(\d{4}-\d{2}-\d{2}))?$/.exec(location.hash);
+      if (cm) {
+        if (cm[1]) { calSel = cm[1]; calMonth = ym(calSel); }
+        setView('cal'); finder.scrollIntoView();
+      }
     };
     window.addEventListener('hashchange', fromHash);
     finder.hidden = false;
@@ -467,6 +795,7 @@
     var off = document.getElementById('evsavedoff'); if (off) off.addEventListener('click', function () { setSavedView(false); });
     if (savedLink) savedLink.addEventListener('click', function (ev) { ev.preventDefault(); setSavedView(true); finder.scrollIntoView({ behavior: 'smooth' }); });
   }
+  bindCal();
   enhanceCards();
   refresh();
   if (hasFinder) fromHash();
