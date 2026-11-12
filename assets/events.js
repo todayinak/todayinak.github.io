@@ -249,7 +249,7 @@
     var stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
     L.push('BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Today in AK//Events//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH');
     if (st) L = L.concat(VTZ);
-    L.push('BEGIN:VEVENT', 'UID:' + el._id + '-' + day + '-todayinak.github.io', 'DTSTAMP:' + stamp);
+    L.push('BEGIN:VEVENT', 'UID:' + el._id + '-' + day + '-todayinak.com', 'DTSTAMP:' + stamp);
     if (st) {
       var e2 = en ? [en <= st ? addDays(day, 1) : day, en] : plusMin(day, st, 120);   // no listed end: hold 2 hours
       L.push('DTSTART;TZID=America/Anchorage:' + icsDT(day, st), 'DTEND;TZID=America/Anchorage:' + icsDT(e2[0], e2[1]));
@@ -306,7 +306,7 @@
       el.classList.add('has-acts');
     });
   }
-  // Shared event links (todayinak.github.io/#ev-<id>) scroll to that card and give it a short glow
+  // Shared event links (todayinak.com/#ev-<id>) scroll to that card and give it a short glow
   function evFromHash() {
     var m = /^#ev-([a-z0-9-]+)$/.exec(location.hash), el = m && byId[m[1]];
     if (!el) return;
@@ -774,7 +774,7 @@
     [age, free].forEach(function (el) { el.addEventListener('change', apply); });
     document.getElementById('evclear').addEventListener('click', function () { q.value = ''; apply(); q.focus(); });
     document.getElementById('evreset').addEventListener('click', function () { reset(); q.focus(); });
-    // Links like todayinak.github.io/#cat-comedy open with that category selected
+    // Links like todayinak.com/#cat-comedy open with that category selected
     var fromHash = function () {
       var m = /^#cat-([a-z]+)$/.exec(location.hash);
       if (m && chips.some(function (c) { return c.getAttribute('data-sec') === m[1] && !c.hidden; })) { cat = m[1]; whenToday = false; apply(); }
