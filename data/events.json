@@ -172,6 +172,24 @@
    "url": "https://www.denakkanaaga.org/"
   },
   {
+   "id": "2026-11-13-s-o-summit-emergencies-in-climate-art-and-society",
+   "date": "2026-11-13",
+   "time": "Fri & Sat 10:30 AM–6:30 PM",
+   "title": "S.O.Summit: Emergencies in Climate, Art and Society",
+   "category": "Arts & Talks",
+   "venue": "Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$30 one-day; $45 two-day; free for UA and APU students and faculty with ID",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-14"
+   ],
+   "start": "10:30",
+   "end": "18:30",
+   "note": "Artist talks, panels, workshops, performances and a community fair. Check-in from 9:30 AM.",
+   "url": "https://www.anchoragemuseum.org/programs/special-events/sosummit"
+  },
+  {
    "id": "2026-11-13-aarps-six-pillars-of-brain-health",
    "date": "2026-11-13",
    "time": "11 AM",
@@ -204,6 +222,21 @@
    "end": "19:00",
    "worth_the_drive": true,
    "url": "https://fairbanksevents.com/holidaymarketplace/"
+  },
+  {
+   "id": "2026-11-13-family-of-things-artist-talk-with-cameron-harvey",
+   "date": "2026-11-13",
+   "time": "12 PM",
+   "title": "Family of Things: Artist Talk with Cameron Harvey",
+   "category": "Arts & Talks",
+   "venue": "Anchorage Museum Auditorium, 625 C St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "12:00",
+   "end": "13:00",
+   "note": "Painter Cameron Harvey talks about climate change, grief and making art after the 2024-25 Los Angeles-area wildfires. Free; register when you arrive.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=14h4n1l4qg3j9s0i85iceo6cl8"
   },
   {
    "id": "2026-11-13-wreath-making-with-recycled-and-natural-materials",
@@ -246,8 +279,8 @@
    "category": "Seasonal",
    "venue": "ChangePoint Alaska, 6689 Changepoint Dr",
    "town": "Anchorage",
-   "price": "Price not listed",
-   "ages": "Ages not listed",
+   "price": "Free",
+   "ages": "All ages",
    "extra_dates": [
     "2026-11-14"
    ],
@@ -257,19 +290,19 @@
    "url": "https://alaskanchristmasbazaar.com/"
   },
   {
-   "id": "2026-11-13-family-of-things-artist-talk-with-cameron-harvey",
+   "id": "2026-11-13-beards-booze-and-bacon-festival",
    "date": "2026-11-13",
    "time": "5 PM",
-   "title": "Family of Things: Artist Talk with Cameron Harvey",
-   "category": "Arts & Talks",
-   "venue": "Art of the North Gallery, Anchorage Museum, 625 C St",
+   "title": "Beards, Booze & Bacon Festival",
+   "category": "Food & Drink",
+   "venue": "Dena'ina Center, 600 W 7th Ave",
    "town": "Anchorage",
-   "price": "Free",
-   "ages": "Ages not listed",
+   "price": "$60 general admission (12 drink tickets and a glass); $20 non-drinker or beard competitor",
+   "ages": "21+",
    "start": "17:00",
-   "end": "18:00",
-   "note": "Painter Cameron Harvey talks about climate change, grief and making art after the 2024-25 Los Angeles-area wildfires. Register when you arrive.",
-   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=14h4n1l4qg3j9s0i85iceo6cl8"
+   "end": "23:00",
+   "note": "Beer and bacon tasting plus the Mr. Fur Face beard contest. Benefits Katie's Handprint.",
+   "url": "https://www.beardsboozeandbacon.com/anchorage"
   },
   {
    "id": "2026-11-13-skeetawk-season-premiere-warren-miller-days-off",
@@ -290,17 +323,17 @@
   {
    "id": "2026-11-13-shaped-by-wildlife-stories-of-encounters-harvests-and-tradit",
    "date": "2026-11-13",
-   "time": "6 PM",
+   "time": "6–9 PM",
    "title": "Shaped by Wildlife: Stories of Encounters, Harvests and Traditions",
    "category": "Arts & Talks",
    "venue": "Glenn Massay Theater, 8295 E College Dr",
    "town": "Palmer",
-   "price": "Price not listed",
-   "ages": "Ages not listed",
+   "price": "$7",
+   "ages": "All ages",
    "start": "18:00",
    "end": "21:00",
-   "note": "Community storytelling and art night with Arctic Entries. ASL interpretation provided.",
-   "url": "https://www.thematsualaska.com/event/shaped-by-wildlife-stories-of-encounter-harvests-and-traditions/"
+   "note": "Gallery and live music 6–7 PM; stories 7–9 PM. ASL interpretation provided. Some stories may describe intense wildlife encounters.",
+   "url": "https://www.adfg.alaska.gov/static/applications/publicnotification/2026/releases/R4-AA-26-3555.pdf"
   },
   {
    "id": "2026-11-13-acoustic-flying-moose-at-turnagain-brewing",
@@ -332,6 +365,21 @@
    "url": "https://www.thenavespenard.com/upcoming-events"
   },
   {
+   "id": "2026-11-13-dj-la-maite-at-serranos-midtown",
+   "date": "2026-11-13",
+   "time": "7–10 PM",
+   "title": "DJ La Maite at Serrano's Midtown",
+   "category": "Music",
+   "venue": "Serrano's Midtown, 201 E Northern Lights Blvd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "end": "22:00",
+   "note": "Live DJ set, 7–10 PM.",
+   "url": "https://www.instagram.com/serranosalaska/"
+  },
+  {
    "id": "2026-11-13-nerdvana-trivia-night",
    "date": "2026-11-13",
    "time": "7 PM",
@@ -357,6 +405,54 @@
    "start": "19:00",
    "note": "Holiday comedy runs through Dec 6, evenings 7 PM and matinees 3 PM.",
    "url": "https://www.actalaska.org/"
+  },
+  {
+   "id": "2026-11-13-tom-cotter-at-alaskaland-theater",
+   "date": "2026-11-13",
+   "time": "7 PM",
+   "title": "Tom Cotter at Alaskaland Theater",
+   "category": "Comedy",
+   "venue": "Alaskaland Theater, Pioneer Park",
+   "town": "Fairbanks",
+   "price": "From $25",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-14"
+   ],
+   "start": "19:00",
+   "end": "21:00",
+   "worth_the_drive": true,
+   "note": "Also Saturday, Nov 14, 7 PM.",
+   "url": "https://www.rubberptarmigan.com/events"
+  },
+  {
+   "id": "2026-11-13-turning-away-pink-floyd-live-band-experience",
+   "date": "2026-11-13",
+   "time": "7 PM",
+   "title": "Turning Away: Pink Floyd Live Band Experience",
+   "category": "Music",
+   "venue": "Everett's Fine Dining, 1850 Bogard Rd",
+   "town": "Wasilla",
+   "price": "$25 advance; prices increase at the door",
+   "ages": "18+",
+   "start": "19:00",
+   "end": "22:00",
+   "note": "Doors 6 PM. Six-piece Pink Floyd tribute with a short intermission.",
+   "url": "https://www.hooked-entertainment.com/events/turning-away-pink-floyd-live-band-experience-everetts"
+  },
+  {
+   "id": "2026-11-13-vieux-farka-tour",
+   "date": "2026-11-13",
+   "time": "7 PM",
+   "title": "Vieux Farka Touré",
+   "category": "Music",
+   "venue": "Wendy Williamson Auditorium, 2533 Providence Dr",
+   "town": "Anchorage",
+   "price": "From $41; $31 students",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "note": "Presented by UAA. Malian guitarist often called the Hendrix of the Sahara.",
+   "url": "https://www.uaa.alaska.edu/news/archive/2026/09/vieux-farka-toure.cshtml"
   },
   {
    "id": "2026-11-13-contra-dance-with-the-dancing-bears",
@@ -416,7 +512,7 @@
    "price": "$25 advance; $30 day of show",
    "ages": "21+",
    "start": "20:00",
-   "note": "Seward folk-Americana dance band plus Juneau bluegrass. Doors 7 PM.",
+   "note": "Seward folk-Americana dance band plus Juneau bluegrass. Doors 7 PM; Steady Going at 8 PM; Blackwater Railroad Co. at 9 PM.",
    "url": "https://www.beartoothak.com/live-events"
   },
   {
