@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "timezone_note": "All times are Alaska time (AKDT through Sat Oct 31, AKST from Sun Nov 1).",
  "disclaimer": "Details can change. Check with the organizer before you go.",
  "events": [
@@ -66,6 +66,21 @@
    "start": "18:00",
    "note": "Fish ecologist Lorena Edenfield and marine engineer Kevin Reinhardt share stories from UAF's ice-capable research ship. Registration encouraged.",
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=65oeurn0pph4rgc7eqln0djgmc"
+  },
+  {
+   "id": "2026-11-12-kage-frees-velvet-hours-silvertooth-patnes",
+   "date": "2026-11-12",
+   "time": "6 PM",
+   "title": "Kage Free's Velvet Hours: Silvertooth Patnes",
+   "category": "Music",
+   "venue": "Penny Royalty, 3005 Spenard Rd",
+   "town": "Anchorage",
+   "price": "$35 pre-sale, $40 at the door",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "21:00",
+   "note": "Doors 6 PM, show 7–9 PM. Hosted by Kage Free, with Silvertooth Patnes (Good Company and Harp Daddy). Couples buying together get $20 off. Includes 2 drink tokens (3 if you're dressed stylish). Tickets by Venmo, Cash App or Zelle on the event flyer. Sponsored by Fromagio's Artisan Cheese and Birch Brew.",
+   "url": "https://www.instagram.com/pennyroyaltyalaska/"
   },
   {
    "id": "2026-11-12-spenard-divorces-seawolf-session-with-historian-david-reamer",
@@ -1480,6 +1495,21 @@
    "url": "https://www.beartoothak.com/live-events"
   },
   {
+   "id": "2026-12-10-kage-frees-velvet-hours-grace-e-elliot",
+   "date": "2026-12-10",
+   "time": "6 PM",
+   "title": "Kage Free's Velvet Hours: Grace E Elliot",
+   "category": "Music",
+   "venue": "Penny Royalty, 3005 Spenard Rd",
+   "town": "Anchorage",
+   "price": "$35 pre-sale, $40 at the door",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "21:00",
+   "note": "Doors 6 PM, show 7–9 PM. Hosted by Kage Free, with Grace E Elliot. Couples buying together get $20 off. Includes 2 drink tokens (3 if you're dressed stylish). Tickets by Venmo, Cash App or Zelle on the event flyer. Sponsored by Fromagio's Artisan Cheese and Birch Brew.",
+   "url": "https://www.instagram.com/pennyroyaltyalaska/"
+  },
+  {
    "id": "2026-12-12-dark-daze-music-fest-at-the-anchorage-museum",
    "date": "2026-12-12",
    "time": "6:30 PM",
@@ -1554,5 +1584,5 @@
   }
  ],
  "through": "2026-12-20",
- "last_verified": "2026-11-11"
+ "last_verified": "2026-11-12"
 }
