@@ -1548,6 +1548,25 @@
    "url": "https://www.alaskabg.org/brighter-winter-nights"
   },
   {
+   "id": "2026-12-04-seward-holiday-arts-and-craft-fair",
+   "date": "2026-12-04",
+   "time": "Fri 5–8:30 PM; Sat 9:30 AM–4:30 PM",
+   "title": "Seward Holiday Arts & Craft Fair",
+   "category": "Seasonal",
+   "venue": "Dale R. and Carol Ann Lindsay Cruise Ship Terminal, 913 Port Avenue",
+   "town": "Seward",
+   "price": "Price not listed",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-05"
+   ],
+   "start": "17:00",
+   "end": "20:30",
+   "worth_the_drive": true,
+   "note": "40+ local Alaskan artists and crafters, food vendors, live entertainment, holiday music and Santa. New venue this year.",
+   "url": "https://www.kenaicrewsers.org/christmas-craft-fair"
+  },
+  {
    "id": "2026-12-04-author-talk-sandy-harper",
    "date": "2026-12-04",
    "time": "7 PM",
