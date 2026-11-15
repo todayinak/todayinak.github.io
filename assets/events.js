@@ -712,7 +712,10 @@
 
   // ---------- region filter + day-grouped list (Today first, Alaska time) ----------
   function regionOk(el) {
-    return !region || el.getAttribute('data-region') === region;
+    if (!region) return true;
+    if (el.getAttribute('data-region') === region) return true;
+    var multi = (el.getAttribute('data-regions') || '').split(/\s+/).filter(Boolean);
+    return multi.indexOf(region) !== -1;
   }
   function canonicalRegion(raw) {
     if (raw == null) return null;
@@ -883,8 +886,100 @@
     });
   }
 
+  // ---------- Thanksgiving "what's open" guide filters ----------
+  var kind = '', kindNav = document.getElementById('kinds'),
+      kindBtns = kindNav ? [].slice.call(kindNav.querySelectorAll('.chip[data-kind]')) : [],
+      isOpenGuide = document.body && document.body.getAttribute('data-page') === 'thanksgiving-open';
+  function kindOk(el) {
+    if (!kind) return true;
+    if (el.getAttribute('data-kind-any') === 'true') return true;
+    return el.getAttribute('data-kind') === kind;
+  }
+  function kindLabel(slug) {
+    if (!slug) return 'All';
+    var btn = kindBtns.filter(function (b) { return b.getAttribute('data-kind') === slug; })[0];
+    return (btn && (btn.getAttribute('data-label') || btn.textContent.trim())) || slug;
+  }
+  function writeKindUrl(slug) {
+    try {
+      var url = new URL(location.href);
+      if (!slug) url.searchParams.delete('kind');
+      else url.searchParams.set('kind', slug);
+      history.replaceState(null, '', url.pathname + url.search + (url.hash || ''));
+    } catch (err) {}
+  }
+  function paintKindUI() {
+    kindBtns.forEach(function (b) {
+      b.setAttribute('aria-pressed', String((b.getAttribute('data-kind') || '') === kind));
+    });
+  }
+  function setKind(slug, fromUrl) {
+    kind = slug || '';
+    if (kind !== 'food' && kind !== 'activity') kind = '';
+    if (!fromUrl) writeKindUrl(kind);
+    apply();
+  }
+  function initKind() {
+    if (!kindNav) return;
+    try {
+      var qk = new URLSearchParams(location.search).get('kind');
+      if (qk === 'food' || qk === 'activity' || qk === 'things-to-do') {
+        kind = (qk === 'food') ? 'food' : 'activity';
+      }
+    } catch (err) {}
+    kindBtns.forEach(function (b) {
+      b.addEventListener('click', function () { setKind(b.getAttribute('data-kind') || ''); });
+    });
+    paintKindUI();
+  }
+  function applyGuide() {
+    var cardsG = [].slice.call(document.querySelectorAll('#events .tgcard'));
+    var secsG = [].slice.call(document.querySelectorAll('#events .tgsec'));
+    var shown = 0, inRegion = 0;
+    cardsG.forEach(function (el) {
+      var inR = regionOk(el);
+      if (inR) inRegion++;
+      var ok = inR && kindOk(el);
+      el.hidden = !ok;
+      if (ok) shown++;
+    });
+    [].forEach.call(document.querySelectorAll('#events .tgsub'), function (g) {
+      g.hidden = !g.querySelector('.tgcard:not([hidden])');
+    });
+    secsG.forEach(function (s) {
+      var extra = s.classList.contains('tg-unconfirmed') || s.classList.contains('tg-around');
+      if (extra && (region || kind)) { s.hidden = true; return; }
+      var n = s.querySelectorAll('.tgcard:not([hidden])').length;
+      var lis = s.querySelectorAll('.tgwait li').length;
+      s.hidden = extra ? false : n === 0;
+      var c = s.querySelector('.sech .n');
+      if (c && n) c.textContent = n;
+    });
+    paintRegionUI();
+    paintKindUI();
+    if (regionEmpty) {
+      var showRE = shown === 0;
+      regionEmpty.hidden = !showRE;
+      if (regionEmptyName) regionEmptyName.textContent = regionLabel(region);
+    }
+    var jumpG = document.querySelector('.catnav');
+    if (jumpG) {
+      [].forEach.call(jumpG.querySelectorAll('a'), function (a) {
+        var id = (a.getAttribute('href') || '').replace('#', '');
+        var sec = id ? document.getElementById(id) : null;
+        if (!sec || sec.hidden) { a.hidden = true; return; }
+        a.hidden = false;
+        var n = sec.querySelectorAll('.tgcard:not([hidden])').length;
+        var lis = sec.querySelectorAll('.tgwait li').length;
+        var sp = a.querySelector('span');
+        if (sp) sp.textContent = n || lis || '';
+      });
+    }
+  }
+
   // ---------- search + filters ----------
   function apply() {
+    if (isOpenGuide) { applyGuide(); return; }
     if (calView) { renderCal(); paintRegionUI(); return; }
     if (calBox) calBox.hidden = true;
     paintDayList();
@@ -1000,6 +1095,7 @@
   bindCal();
   enhanceCards();
   initRegion();
+  initKind();
   refresh();
   if (hasFinder) fromHash();
   evFromHash(); window.addEventListener('hashchange', evFromHash);
