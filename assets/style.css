@@ -478,34 +478,40 @@ html[data-theme="light"] .toast,
 html[data-theme="blush"] .toast{box-shadow:0 8px 28px rgba(16,32,56,.16)}
 
 /* Black & White: no aurora glow, color tints, or gradients; links underlined; buttons black */
-html[data-theme="bw"] a,a{color:#111111;text-decoration:underline;text-underline-offset:2px}
-html[data-theme="bw"] .chips a,.chips a,
-html[data-theme="bw"] .handle,.handle,
-html[data-theme="bw"] .btn,.btn,
-html[data-theme="bw"] .btn2,.btn2,
-html[data-theme="bw"] button,button,
-html[data-theme="bw"] .theme-toggle,.theme-toggle,
-html[data-theme="bw"] .theme-swatch,.theme-swatch,
-html[data-theme="bw"] .act,.act{text-decoration:none}
-html[data-theme="bw"] .trucks,.trucks{background:#FFFFFF;background-image:none;color:#111111}
-html[data-theme="bw"] .trucks h2,.trucks h2{color:#111111;text-shadow:none}
-html[data-theme="bw"] .area summary span,.area summary span{color:#595959}
-html[data-theme="bw"] .tday,.tday{border-top-color:#666666}
-html[data-theme="bw"] .ticket,.ticket{border-left-color:#666666}
-html[data-theme="bw"] .fc,.fc{background:#F5F5F5}
-html[data-theme="bw"] .ph,.ph{background:#F0F0F0;color:#111111;border-color:#666666}
-html[data-theme="bw"] .card.drive-card,.card.drive-card,
-html[data-theme="bw"] .card.ev.is-today,.card.ev.is-today{border-color:var(--line);box-shadow:none}
-html[data-theme="bw"] .btn2:hover,.btn2:hover,
-html[data-theme="bw"] .act:hover,.act:hover,
-html[data-theme="bw"] .act.share:hover,.act.share:hover,
-html[data-theme="bw"] .evcal-navbtn:hover,.evcal-navbtn:hover,
-html[data-theme="bw"] .evcal-todaybtn:hover,.evcal-todaybtn:hover,
-html[data-theme="bw"] .evcal-day:hover,.evcal-day:hover,
-html[data-theme="bw"] .evcal-day[aria-pressed="true"],.evcal-day[aria-pressed="true"]{background:#F0F0F0;border-color:#111111;color:#111111}
-html[data-theme="bw"] .act.share,.act.share{border-color:#666666;color:#111111}
-html[data-theme="bw"] .evcal-day.is-today .num,.evcal-day.is-today .num{background:#F0F0F0;box-shadow:0 0 0 1.5px #111111 inset;color:#111111}
-html[data-theme="bw"] .dial .daurora .dot,.dial .daurora .dot{box-shadow:none}
-html[data-theme="bw"] .dial svg .dark,.dial svg .dark{fill:#E8E8E8;stroke:#666666;stroke-width:1}
-html[data-theme="bw"] .dial svg .lit,.dial svg .lit{fill:#111111}
-html[data-theme="bw"] .toast,.toast{box-shadow:0 8px 28px rgba(0,0,0,.16)}
+html[data-theme="bw"] a{color:#111111;text-decoration:underline;text-underline-offset:2px}
+html[data-theme="bw"] .chips a,
+html[data-theme="bw"] .handle,
+html[data-theme="bw"] .btn,
+html[data-theme="bw"] .btn2,
+html[data-theme="bw"] button,
+html[data-theme="bw"] .theme-toggle,
+html[data-theme="bw"] .theme-swatch,
+html[data-theme="bw"] .act{text-decoration:none}
+html[data-theme="bw"] .btn,
+html[data-theme="bw"] .pill.when,
+html[data-theme="bw"] .flag.gf,
+html[data-theme="bw"] .chip[aria-pressed="true"],
+html[data-theme="bw"] .viewbtn[aria-pressed="true"],
+html[data-theme="bw"] .evcal-day[aria-pressed="true"] .num{background:#111111;color:#FFFFFF}
+html[data-theme="bw"] .trucks{background:#FFFFFF;background-image:none;color:#111111}
+html[data-theme="bw"] .trucks h2{color:#111111;text-shadow:none}
+html[data-theme="bw"] .area summary span{color:#595959}
+html[data-theme="bw"] .tday{border-top-color:#666666}
+html[data-theme="bw"] .ticket{border-left-color:#666666}
+html[data-theme="bw"] .fc{background:#F5F5F5}
+html[data-theme="bw"] .ph{background:#F0F0F0;color:#111111;border-color:#666666}
+html[data-theme="bw"] .card.drive-card,
+html[data-theme="bw"] .card.ev.is-today{border-color:var(--line);box-shadow:none}
+html[data-theme="bw"] .btn2:hover,
+html[data-theme="bw"] .act:hover,
+html[data-theme="bw"] .act.share:hover,
+html[data-theme="bw"] .evcal-navbtn:hover,
+html[data-theme="bw"] .evcal-todaybtn:hover,
+html[data-theme="bw"] .evcal-day:hover,
+html[data-theme="bw"] .evcal-day[aria-pressed="true"]{background:#F0F0F0;border-color:#111111;color:#111111}
+html[data-theme="bw"] .act.share{border-color:#666666;color:#111111}
+html[data-theme="bw"] .evcal-day.is-today .num{background:#F0F0F0;box-shadow:0 0 0 1.5px #111111 inset;color:#111111}
+html[data-theme="bw"] .dial .daurora .dot{box-shadow:none}
+html[data-theme="bw"] .dial svg .dark{fill:#E8E8E8;stroke:#666666;stroke-width:1}
+html[data-theme="bw"] .dial svg .lit{fill:#111111}
+html[data-theme="bw"] .toast{box-shadow:0 8px 28px rgba(0,0,0,.16)}
