@@ -349,10 +349,10 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
 .theme-toggle:focus-visible,.theme-swatch:focus-visible{outline:3px solid var(--green);outline-offset:2px}
 .theme-toggle svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .theme-toggle svg .dot{fill:currentColor;stroke:none}
-.theme-menu{position:absolute;top:calc(100% + 8px);right:0;z-index:30;display:flex;flex-wrap:wrap;gap:4px 2px;width:min(228px,calc(100vw - 32px));padding:10px 8px 8px;background:var(--card);border:1.5px solid var(--line);border-radius:var(--slab);box-shadow:0 12px 36px var(--overlay,rgba(0,0,0,.45))}
+.theme-menu{position:absolute;top:calc(100% + 8px);right:0;z-index:30;display:flex;flex-wrap:wrap;gap:4px 0;width:min(272px,calc(100vw - 24px));padding:10px 6px 8px;background:var(--card);border:1.5px solid var(--line);border-radius:var(--slab);box-shadow:0 12px 36px var(--overlay,rgba(0,0,0,.45))}
 .theme-menu[hidden]{display:none}
 .theme-menu-label{flex:0 0 100%;margin:0 6px 4px;font:700 11px/1 Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
-.theme-swatch{appearance:none;display:flex;flex-direction:column;align-items:center;gap:5px;width:70px;margin:0;padding:6px 4px 4px;border:0;border-radius:10px;background:transparent;color:var(--white);font:600 11.5px/1.2 Inter;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.theme-swatch{appearance:none;display:flex;flex-direction:column;align-items:center;gap:5px;width:25%;margin:0;padding:6px 2px 4px;border:0;border-radius:10px;background:transparent;color:var(--white);font:600 10.5px/1.2 Inter;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .theme-swatch:hover{background:color-mix(in srgb,var(--green) 12%,transparent)}
 .theme-swatch i{display:block;width:28px;height:28px;border-radius:50%;background:
   radial-gradient(circle at 50% 50%,var(--swatch) 0 38%,var(--swatch-bg) 42% 100%);
@@ -360,8 +360,25 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
 .theme-swatch[aria-selected="true"] i{border-color:var(--green);box-shadow:0 0 0 2px var(--green)}
 .theme-swatch[aria-selected="true"]{color:var(--green)}
 
+/* ----- Light ----- */
+html[data-theme="light"]{
+  --void:#F3F6FB;--navy:#FFFFFF;--navy2:#E6EDF6;--card:#FFFFFF;--line:#C5D0E0;
+  --green:#0B6B4C;--white:#102038;--gray:#3D4A63;--faint:#5A6780;--ember:#9A4E0F;
+  --pill-bg:#E4EBF5;--chip-bg:#FFFFFF;--chip-bg-soft:#EEF3F9;--act-bg:#FFFFFF;
+  --hero-a:#EEF3FA;--hero-b:#F7F9FC;--card-hover:#E7F5EE;--overlay:rgba(16,32,56,.16);
+  --signup-bg:linear-gradient(135deg,#E7F3EE,#E8EEF8);
+  --teal:#0E6E7A;--violet:#5B3FB5;
+}
+html[data-theme="light"] .hero{
+  background:
+    radial-gradient(110% 55% at 12% 0%,rgba(91,63,181,.16),transparent 58%),
+    radial-gradient(90% 50% at 95% 8%,rgba(14,110,122,.14),transparent 55%),
+    radial-gradient(70% 40% at 40% 35%,rgba(11,107,76,.10),transparent 70%),
+    linear-gradient(180deg,var(--hero-a),var(--hero-b) 70%,var(--hero-a));
+}
+
 /* ----- Black & White (simple, high-contrast) ----- */
-html[data-theme="bw"],html[data-theme="light"]{
+html[data-theme="bw"]{
   --void:#FFFFFF;--navy:#FFFFFF;--navy2:#FFFFFF;--card:#FFFFFF;--line:#666666;
   --green:#111111;--white:#111111;--gray:#444444;--faint:#595959;--ember:#111111;
   --pill-bg:#F0F0F0;--chip-bg:#FFFFFF;--chip-bg-soft:#F5F5F5;--act-bg:#FFFFFF;
@@ -371,7 +388,7 @@ html[data-theme="bw"],html[data-theme="light"]{
   --mustard:#FFFFFF;--chili:#111111;--cream:#F5F5F5;--esp:#111111;
   --ketchup:#111111;--yel:#111111;--paper:#FFFFFF;--ink:#111111;
 }
-html[data-theme="bw"] .hero,html[data-theme="light"] .hero{
+html[data-theme="bw"] .hero{
   background:#FFFFFF;
 }
 
@@ -443,44 +460,52 @@ html[data-theme="sunset"] .hero{
     linear-gradient(180deg,var(--hero-a),var(--hero-b) 70%,var(--hero-a));
 }
 
+html[data-theme="light"] .chips a,
+html[data-theme="light"] .chip,
+html[data-theme="light"] .savedbtn,
+html[data-theme="light"] .act,
+html[data-theme="light"] .evcal-navbtn,
 html[data-theme="blush"] .chips a,
 html[data-theme="blush"] .chip,
 html[data-theme="blush"] .savedbtn,
 html[data-theme="blush"] .act,
 html[data-theme="blush"] .evcal-navbtn{box-shadow:0 1px 0 rgba(16,32,56,.04)}
+html[data-theme="light"] .dial svg .dark,
 html[data-theme="blush"] .dial svg .dark{fill:#D5DEEB;stroke:#9AA8BE;stroke-width:1}
+html[data-theme="light"] .dial svg .lit{fill:#102038}
 html[data-theme="blush"] .dial svg .lit{fill:#3A1524}
+html[data-theme="light"] .toast,
 html[data-theme="blush"] .toast{box-shadow:0 8px 28px rgba(16,32,56,.16)}
 
 /* Black & White: no aurora glow, color tints, or gradients; links underlined; buttons black */
-html[data-theme="bw"] a,html[data-theme="light"] a{color:#111111;text-decoration:underline;text-underline-offset:2px}
-html[data-theme="bw"] .chips a,html[data-theme="light"] .chips a,
-html[data-theme="bw"] .handle,html[data-theme="light"] .handle,
-html[data-theme="bw"] .btn,html[data-theme="light"] .btn,
-html[data-theme="bw"] .btn2,html[data-theme="light"] .btn2,
-html[data-theme="bw"] button,html[data-theme="light"] button,
-html[data-theme="bw"] .theme-toggle,html[data-theme="light"] .theme-toggle,
-html[data-theme="bw"] .theme-swatch,html[data-theme="light"] .theme-swatch,
-html[data-theme="bw"] .act,html[data-theme="light"] .act{text-decoration:none}
-html[data-theme="bw"] .trucks,html[data-theme="light"] .trucks{background:#FFFFFF;background-image:none;color:#111111}
-html[data-theme="bw"] .trucks h2,html[data-theme="light"] .trucks h2{color:#111111;text-shadow:none}
-html[data-theme="bw"] .area summary span,html[data-theme="light"] .area summary span{color:#595959}
-html[data-theme="bw"] .tday,html[data-theme="light"] .tday{border-top-color:#666666}
-html[data-theme="bw"] .ticket,html[data-theme="light"] .ticket{border-left-color:#666666}
-html[data-theme="bw"] .fc,html[data-theme="light"] .fc{background:#F5F5F5}
-html[data-theme="bw"] .ph,html[data-theme="light"] .ph{background:#F0F0F0;color:#111111;border-color:#666666}
-html[data-theme="bw"] .card.drive-card,html[data-theme="light"] .card.drive-card,
-html[data-theme="bw"] .card.ev.is-today,html[data-theme="light"] .card.ev.is-today{border-color:var(--line);box-shadow:none}
-html[data-theme="bw"] .btn2:hover,html[data-theme="light"] .btn2:hover,
-html[data-theme="bw"] .act:hover,html[data-theme="light"] .act:hover,
-html[data-theme="bw"] .act.share:hover,html[data-theme="light"] .act.share:hover,
-html[data-theme="bw"] .evcal-navbtn:hover,html[data-theme="light"] .evcal-navbtn:hover,
-html[data-theme="bw"] .evcal-todaybtn:hover,html[data-theme="light"] .evcal-todaybtn:hover,
-html[data-theme="bw"] .evcal-day:hover,html[data-theme="light"] .evcal-day:hover,
-html[data-theme="bw"] .evcal-day[aria-pressed="true"],html[data-theme="light"] .evcal-day[aria-pressed="true"]{background:#F0F0F0;border-color:#111111;color:#111111}
-html[data-theme="bw"] .act.share,html[data-theme="light"] .act.share{border-color:#666666;color:#111111}
-html[data-theme="bw"] .evcal-day.is-today .num,html[data-theme="light"] .evcal-day.is-today .num{background:#F0F0F0;box-shadow:0 0 0 1.5px #111111 inset;color:#111111}
-html[data-theme="bw"] .dial .daurora .dot,html[data-theme="light"] .dial .daurora .dot{box-shadow:none}
-html[data-theme="bw"] .dial svg .dark,html[data-theme="light"] .dial svg .dark{fill:#E8E8E8;stroke:#666666;stroke-width:1}
-html[data-theme="bw"] .dial svg .lit,html[data-theme="light"] .dial svg .lit{fill:#111111}
-html[data-theme="bw"] .toast,html[data-theme="light"] .toast{box-shadow:0 8px 28px rgba(0,0,0,.16)}
+html[data-theme="bw"] a,a{color:#111111;text-decoration:underline;text-underline-offset:2px}
+html[data-theme="bw"] .chips a,.chips a,
+html[data-theme="bw"] .handle,.handle,
+html[data-theme="bw"] .btn,.btn,
+html[data-theme="bw"] .btn2,.btn2,
+html[data-theme="bw"] button,button,
+html[data-theme="bw"] .theme-toggle,.theme-toggle,
+html[data-theme="bw"] .theme-swatch,.theme-swatch,
+html[data-theme="bw"] .act,.act{text-decoration:none}
+html[data-theme="bw"] .trucks,.trucks{background:#FFFFFF;background-image:none;color:#111111}
+html[data-theme="bw"] .trucks h2,.trucks h2{color:#111111;text-shadow:none}
+html[data-theme="bw"] .area summary span,.area summary span{color:#595959}
+html[data-theme="bw"] .tday,.tday{border-top-color:#666666}
+html[data-theme="bw"] .ticket,.ticket{border-left-color:#666666}
+html[data-theme="bw"] .fc,.fc{background:#F5F5F5}
+html[data-theme="bw"] .ph,.ph{background:#F0F0F0;color:#111111;border-color:#666666}
+html[data-theme="bw"] .card.drive-card,.card.drive-card,
+html[data-theme="bw"] .card.ev.is-today,.card.ev.is-today{border-color:var(--line);box-shadow:none}
+html[data-theme="bw"] .btn2:hover,.btn2:hover,
+html[data-theme="bw"] .act:hover,.act:hover,
+html[data-theme="bw"] .act.share:hover,.act.share:hover,
+html[data-theme="bw"] .evcal-navbtn:hover,.evcal-navbtn:hover,
+html[data-theme="bw"] .evcal-todaybtn:hover,.evcal-todaybtn:hover,
+html[data-theme="bw"] .evcal-day:hover,.evcal-day:hover,
+html[data-theme="bw"] .evcal-day[aria-pressed="true"],.evcal-day[aria-pressed="true"]{background:#F0F0F0;border-color:#111111;color:#111111}
+html[data-theme="bw"] .act.share,.act.share{border-color:#666666;color:#111111}
+html[data-theme="bw"] .evcal-day.is-today .num,.evcal-day.is-today .num{background:#F0F0F0;box-shadow:0 0 0 1.5px #111111 inset;color:#111111}
+html[data-theme="bw"] .dial .daurora .dot,.dial .daurora .dot{box-shadow:none}
+html[data-theme="bw"] .dial svg .dark,.dial svg .dark{fill:#E8E8E8;stroke:#666666;stroke-width:1}
+html[data-theme="bw"] .dial svg .lit,.dial svg .lit{fill:#111111}
+html[data-theme="bw"] .toast,.toast{box-shadow:0 8px 28px rgba(0,0,0,.16)}
