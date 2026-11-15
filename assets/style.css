@@ -27,6 +27,14 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
 .hero h1::after{content:"";display:block;width:72px;height:8px;background:var(--green);border-radius:2px;margin:16px 0 4px}
 .range{font:300 22px/1.2 Montserrat;color:var(--green);margin:12px 0 4px}
 .regions{color:var(--gray);margin:0 0 20px;font-size:15px}
+nav.regions{margin:8px 0 20px}
+.regionchips{display:flex;gap:8px;overflow-x:auto;margin:0 -20px;padding:0 20px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.regionchips::-webkit-scrollbar{display:none}
+.regionchips .chip{flex:none}
+.regionchips a.chip{text-decoration:none;display:inline-block}
+.regionchips .chip:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.region-showing{color:var(--gray);margin:8px 0 0;font-size:15px}
+.region-showing b{color:var(--white);font-weight:700}
 .btn{display:block;text-align:center;background:var(--green);color:var(--void);font:800 16px/1 Montserrat;padding:16px 18px;border-radius:var(--slab);text-decoration:none}
 .chips{display:flex;gap:8px;overflow-x:auto;margin:16px -20px 0;padding:0 20px 4px;scrollbar-width:none}
 .chips a{flex:none;color:var(--white);text-decoration:none;border:1.5px solid var(--line);background:var(--chip-bg);border-radius:var(--pillr);padding:9px 14px;font-weight:700;font-size:13.5px}
@@ -136,6 +144,7 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
  .wrap{max-width:1040px}
  .btn{display:inline-block}
  .chips{margin:18px 0 0;padding:0}
+ .regionchips{flex-wrap:wrap;overflow:visible;margin:0;padding:0 0 6px}
  .daygrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
  .daygrid .card{margin:0}
  .trucks .wrap{columns:2;column-gap:16px}

@@ -51,6 +51,15 @@
       chips = hasFinder ? [].slice.call(finder.querySelectorAll('.chip')) : [], secs = [].slice.call(document.querySelectorAll('.evsec')),
       cards = [].slice.call(document.querySelectorAll('#events .card.ev')), runs = [].slice.call(document.querySelectorAll('#events li.run')),
       items = cards.concat(runs), running = document.getElementById('running'), jump = document.querySelector('.catnav'), cat = '', whenToday = false, todayISO = '';
+  var region = '', REGION_KEY = 'tia-region',
+      regionNav = document.getElementById('regions'),
+      regionStatic = document.querySelector('.regions-static'),
+      regionBtns = regionNav ? [].slice.call(regionNav.querySelectorAll('.chip[data-region]')) : [],
+      regionShow = document.getElementById('region-showing'),
+      regionEmpty = document.getElementById('region-empty'),
+      regionEmptyName = document.getElementById('region-empty-name'),
+      regionAllBtn = document.getElementById('region-all'),
+      dayRoot = document.getElementById('evdays');
   var calView = false;
   var dayOpts = day ? [].slice.call(day.options).filter(function (o) { return o.value; }) : [];
   dayOpts.forEach(function (o) { o._label = o.textContent; });
@@ -74,7 +83,12 @@
     var now = akNow(), today = now.slice(0, 10), tomorrow = addDays(today, 1), yesterday = addDays(today, -1);
     cards.forEach(function (el) {
       var next = null;   // the listing's next date that isn't over yet
-      for (var i = 0; i < el._days.length; i++) if (endsAt(el._days[i], el._start, el._end) > now) { next = el._days[i]; break; }
+      var only = el.getAttribute('data-on');
+      if (only) {
+        if (endsAt(only, el._start, el._end) > now) next = only;
+      } else {
+        for (var i = 0; i < el._days.length; i++) if (endsAt(el._days[i], el._start, el._end) > now) { next = el._days[i]; break; }
+      }
       el._past = !next; el._next = next || '';
       el.classList.toggle('is-today', next === today || next === yesterday);
       if (!el._wd) return;
@@ -102,30 +116,9 @@
       o.textContent = o.value === today ? 'Today (' + o._label + ')' : o.value === tomorrow ? 'Tomorrow (' + o._label + ')' : o._label;
     });
     todayISO = today;
-    // category + Today counts (chips + jump links) only count what's still coming up
-    var live = cards.filter(function (c) { return !c._past; });
-    chips.forEach(function (c) {
-      var sp = c.querySelector('span');
-      if (c.getAttribute('data-when') === 'today') {
-        var nToday = items.filter(function (x) {
-          return !x._past && (' ' + (x.getAttribute('data-days') || '') + ' ').indexOf(' ' + today + ' ') > -1;
-        }).length;
-        if (sp) sp.textContent = nToday;
-        c.hidden = nToday === 0;
-        if (nToday === 0) whenToday = false;
-        return;
-      }
-      var s = c.getAttribute('data-sec'), n = live.filter(function (x) { return !s || x.getAttribute('data-sec') === s; }).length;
-      if (sp) sp.textContent = n;
-      c.hidden = !!s && n === 0;
-      if (s && n === 0 && cat === s) cat = '';
-    });
-    if (jump) [].forEach.call(jump.querySelectorAll('a'), function (a) {
-      var s = (a.getAttribute('href') || '').replace('#cat-', ''), n = live.filter(function (x) { return x.getAttribute('data-sec') === s; }).length, sp = a.querySelector('span');
-      if (sp) sp.textContent = n; a.hidden = n === 0;
-    });
+    updateChipCounts();
     if (from) {
-      var firstLive = live.map(function (c) { return c._next; }).sort()[0];
+      var firstLive = cards.filter(function (c) { return !c._past && regionOk(c); }).map(function (c) { return c._next; }).sort()[0];
       if (firstLive) from.textContent = label(firstLive);
     }
     trucks(now, today, tomorrow);
@@ -138,7 +131,7 @@
       var shown = 0, firstVis = true;
       [].forEach.call(area.querySelectorAll('li.stop'), function (li) {
         var d = li.getAttribute('data-day');
-        li.hidden = !d || endsAt(d, li.getAttribute('data-start'), li.getAttribute('data-end')) <= now;
+        li.hidden = !d || endsAt(d, li.getAttribute('data-start'), li.getAttribute('data-end')) <= now || !regionOk(li);
         if (!li.hidden) shown++;
       });
       [].forEach.call(area.querySelectorAll('li.tday'), function (h) {
@@ -151,7 +144,14 @@
       });
       var c = area.querySelector('summary .n'); if (c) c.textContent = shown === 0 ? 'none left' : shown === 1 ? '1 stop' : shown + ' stops';
       var msg = area.querySelector('.tdone'); if (msg) msg.hidden = shown > 0;
+      area.hidden = shown === 0 && !!region;
     });
+    var tre = document.getElementById('trucks-region-empty');
+    if (tre) {
+      var any = [].slice.call(document.querySelectorAll('#trucks li.stop')).some(function (li) { return !li.hidden; });
+      var hasStops = !!document.querySelector('#trucks li.stop');
+      tre.hidden = !region || !hasStops || any;
+    }
   }
 
   // ---------- saved events (hearts): ids in localStorage on this device only, no account, nothing sent ----------
@@ -460,6 +460,7 @@
     var words = hasFinder ? norm(q.value).trim().split(/\s+/).filter(Boolean) : [],
         a = hasFinder ? age.value : '', f = hasFinder && free.checked, sv = savedView;
     return (!cat || el.getAttribute('data-sec') === cat) &&
+           regionOk(el) &&
            (!a || el.getAttribute('data-age') === a) &&
            (!f || el.hasAttribute('data-free')) &&
            (!sv || (!!el._id && saved.hasOwnProperty(el._id))) &&
@@ -641,6 +642,7 @@
       calGrid.appendChild(row);
     }
     secs.forEach(function (s) { s.hidden = true; });
+    if (dayRoot) dayRoot.hidden = true;
     if (running) running.hidden = true;
     calBox.hidden = false;
     var dayItems = items.filter(function (el) { return el._days.indexOf(calSel) > -1 && calFilters(el); });
@@ -707,15 +709,191 @@
     });
   }
 
+
+  // ---------- region filter + day-grouped list (Today first, Alaska time) ----------
+  function regionOk(el) {
+    return !region || el.getAttribute('data-region') === region;
+  }
+  function canonicalRegion(raw) {
+    if (raw == null) return null;
+    var t = String(raw).toLowerCase().replace(/_/g, '-').trim();
+    if (!t || t === 'all' || t === 'alaska' || t === 'all-alaska' || t === 'allalaska') return '';
+    var aliases = {
+      'anc': 'anchorage', 'matsu': 'mat-su', 'mat-su-valley': 'mat-su', 'matanuska': 'mat-su',
+      'palmer': 'mat-su', 'wasilla': 'mat-su', 'eagleriver': 'eagle-river', 'eagle': 'eagle-river',
+      'chugiak': 'eagle-river', 'chugiak-eagle-river': 'eagle-river', 'fbx': 'fairbanks',
+      'north-pole': 'fairbanks', 'kenai-peninsula': 'kenai', 'peninsula': 'kenai',
+      'soldotna': 'kenai', 'homer': 'kenai', 'seward': 'kenai', 'juneau': 'southeast',
+      'ketchikan': 'southeast', 'sitka': 'southeast', 'se': 'southeast'
+    };
+    if (aliases.hasOwnProperty(t)) t = aliases[t];
+    if (t === '') return '';
+    if (regionBtns.some(function (b) { return b.getAttribute('data-region') === t; })) return t;
+    return null;
+  }
+  function regionLabel(slug) {
+    if (!slug) return 'All Alaska';
+    var btn = regionBtns.filter(function (b) { return b.getAttribute('data-region') === slug; })[0];
+    return (btn && (btn.getAttribute('data-label') || btn.textContent.trim())) || slug;
+  }
+  function writeRegionUrl(slug) {
+    try {
+      var url = new URL(location.href);
+      if (!slug) url.searchParams.delete('region');
+      else url.searchParams.set('region', slug);
+      var hash = url.hash || '';
+      if (/^#region[=-]/.test(hash)) hash = '';
+      history.replaceState(null, '', url.pathname + url.search + hash);
+    } catch (err) { /* file:// or old browsers: skip */ }
+  }
+  function readRegionFromLocation() {
+    try {
+      var q = new URLSearchParams(location.search).get('region');
+      if (q !== null) {
+        var fromQ = canonicalRegion(q);
+        if (fromQ !== null) return fromQ;
+      }
+    } catch (err) {}
+    var hm = /(?:^|#)region[=-]([a-z0-9-]+)/i.exec(location.hash || '');
+    if (hm) {
+      var fromH = canonicalRegion(hm[1]);
+      if (fromH !== null) return fromH;
+    }
+    return null;
+  }
+  function paintRegionUI() {
+    regionBtns.forEach(function (b) {
+      b.setAttribute('aria-pressed', String((b.getAttribute('data-region') || '') === region));
+    });
+    if (regionShow) {
+      regionShow.innerHTML = 'Showing: <b>' + regionLabel(region) + '</b>';
+    }
+  }
+  function setRegion(slug, fromUrl) {
+    var next = canonicalRegion(slug);
+    if (next === null) next = '';
+    region = next;
+    try { localStorage.setItem(REGION_KEY, region); } catch (err) {}
+    if (!fromUrl) writeRegionUrl(region);
+    apply();
+  }
+  function initRegion() {
+    var fromLoc = readRegionFromLocation();
+    if (fromLoc !== null) {
+      region = fromLoc;
+      try { localStorage.setItem(REGION_KEY, region); } catch (err) {}
+    } else {
+      try {
+        var savedR = canonicalRegion(localStorage.getItem(REGION_KEY) || '');
+        region = savedR === null ? '' : savedR;
+      } catch (err) { region = ''; }
+    }
+    if (regionStatic) regionStatic.hidden = true;
+    if (regionNav) regionNav.hidden = false;
+    regionBtns.forEach(function (b) {
+      b.addEventListener('click', function () { setRegion(b.getAttribute('data-region') || ''); });
+    });
+    if (regionAllBtn) regionAllBtn.addEventListener('click', function () { setRegion(''); });
+  }
+
+  function ensureDayRoot() {
+    if (dayRoot) return dayRoot;
+    var ev = document.getElementById('events');
+    if (!ev || !cards.length) return null;
+    dayRoot = document.createElement('div');
+    dayRoot.id = 'evdays';
+    var first = ev.querySelector('.evsec, #running, #calendar');
+    if (first) ev.insertBefore(dayRoot, first);
+    else ev.appendChild(dayRoot);
+    return dayRoot;
+  }
+  function dayHeading(iso) {
+    var tomorrow = addDays(todayISO, 1);
+    if (iso === todayISO) return 'Today · ' + longDay(iso);
+    if (iso === tomorrow) return 'Tomorrow · ' + longDay(iso);
+    return longDay(iso);
+  }
+  function paintDayList() {
+    if (calView) {
+      if (dayRoot) dayRoot.hidden = true;
+      return;
+    }
+    var root = ensureDayRoot();
+    if (!root || !cards.length) return;
+    restoreHomes();
+    root.hidden = false;
+    root.innerHTML = '';
+    var byDay = {}, order = [];
+    cards.forEach(function (el) {
+      if (el._past || !el._next) return;
+      var iso = el._next;
+      if (!byDay[iso]) { byDay[iso] = []; order.push(iso); }
+      byDay[iso].push(el);
+    });
+    order.sort();
+    order.forEach(function (iso) {
+      var sec = document.createElement('section');
+      sec.className = 'evsec evday';
+      if (iso === todayISO) sec.classList.add('is-today');
+      sec.setAttribute('data-day', iso);
+      var hid = 'h-day-' + iso;
+      sec.setAttribute('aria-labelledby', hid);
+      var h = document.createElement('h3');
+      h.className = 'sech';
+      h.id = hid;
+      h.innerHTML = dayHeading(iso) + ' <span class="n"></span>';
+      var grid = document.createElement('div');
+      grid.className = 'evgrid';
+      byDay[iso].sort(function (a, b) {
+        var as = a._start || '99:99', bs = b._start || '99:99';
+        if (as !== bs) return as < bs ? -1 : 1;
+        return a._i - b._i;
+      }).forEach(function (el) { grid.appendChild(el); });
+      sec.appendChild(h);
+      sec.appendChild(grid);
+      root.appendChild(sec);
+    });
+    secs.forEach(function (s) { s.hidden = true; });
+    if (jump) jump.hidden = true;   // day list is already in date order; old category/day jump targets are hidden
+  }
+
+
+  function updateChipCounts() {
+    if (!cards.length) return;
+    var live = cards.filter(function (c) { return !c._past && regionOk(c); });
+    chips.forEach(function (c) {
+      var sp = c.querySelector('span');
+      if (c.getAttribute('data-when') === 'today') {
+        var nToday = items.filter(function (x) {
+          return !x._past && regionOk(x) && (' ' + (x.getAttribute('data-days') || '') + ' ').indexOf(' ' + todayISO + ' ') > -1;
+        }).length;
+        if (sp) sp.textContent = nToday;
+        c.hidden = nToday === 0;
+        if (nToday === 0) whenToday = false;
+        return;
+      }
+      var s = c.getAttribute('data-sec'), n = live.filter(function (x) { return !s || x.getAttribute('data-sec') === s; }).length;
+      if (sp) sp.textContent = n;
+      c.hidden = !!s && n === 0;
+      if (s && n === 0 && cat === s) cat = '';
+    });
+    if (jump) [].forEach.call(jump.querySelectorAll('a'), function (a) {
+      var s = (a.getAttribute('href') || '').replace('#cat-', ''), n = live.filter(function (x) { return x.getAttribute('data-sec') === s; }).length, sp = a.querySelector('span');
+      if (sp) sp.textContent = n; a.hidden = n === 0;
+    });
+  }
+
   // ---------- search + filters ----------
   function apply() {
-    if (calView) { renderCal(); return; }
+    if (calView) { renderCal(); paintRegionUI(); return; }
     if (calBox) calBox.hidden = true;
+    paintDayList();
     var words = hasFinder ? norm(q.value).trim().split(/\s+/).filter(Boolean) : [], d = hasFinder ? day.value : '', a = hasFinder ? age.value : '',
-        f = hasFinder && free.checked, sv = savedView, shown = 0, total = 0;
+        f = hasFinder && free.checked, sv = savedView, shown = 0, total = 0, inRegion = 0;
     items.forEach(function (el) {
+      if (!el._past && regionOk(el)) inRegion++;
       if (!el._past) total++;
-      var ok = !el._past && (!cat || el.getAttribute('data-sec') === cat) &&
+      var ok = !el._past && regionOk(el) && (!cat || el.getAttribute('data-sec') === cat) &&
                (!whenToday || (' ' + (el.getAttribute('data-days') || '') + ' ').indexOf(' ' + todayISO + ' ') > -1) &&
                (!d || (' ' + el.getAttribute('data-days') + ' ').indexOf(' ' + d + ' ') > -1) &&
                (!a || el.getAttribute('data-age') === a) &&
@@ -724,25 +902,49 @@
                words.every(function (w) { return el._q.indexOf(w) > -1; });
       el.hidden = !ok; if (ok) shown++;
     });
-    secs.forEach(function (s) {
-      var n = s.querySelectorAll('.card.ev:not([hidden])').length;
-      s.hidden = n === 0;
-      var c = s.querySelector('.sech .n'); if (c) c.textContent = n;
-    });
+    if (dayRoot && !dayRoot.hidden) {
+      [].forEach.call(dayRoot.querySelectorAll('.evday'), function (s) {
+        var n = s.querySelectorAll('.card.ev:not([hidden])').length;
+        s.hidden = n === 0;
+        var c = s.querySelector('.sech .n'); if (c) c.textContent = n;
+      });
+    } else {
+      secs.forEach(function (s) {
+        var n = s.querySelectorAll('.card.ev:not([hidden])').length;
+        s.hidden = n === 0;
+        var c = s.querySelector('.sech .n'); if (c) c.textContent = n;
+      });
+    }
     if (running) running.hidden = !running.querySelector('li.run:not([hidden])');
-    if (!hasFinder) { if (done) done.hidden = total !== 0; return; }
+    paintRegionUI();
+    updateChipCounts();
+    var now = akNow();
+    trucks(now, now.slice(0, 10), addDays(now.slice(0, 10), 1));
+    var noSaved = sv && savedCount() === 0;
+    var otherFilters = !!(cat || whenToday || words.length || d || a || f || sv);
+    if (regionEmpty) {
+      var showRE = !!region && shown === 0 && !noSaved && inRegion === 0;
+      regionEmpty.hidden = !showRE;
+      if (regionEmptyName) regionEmptyName.textContent = regionLabel(region);
+    }
+    if (!hasFinder) {
+      if (done) done.hidden = total !== 0;
+      if (none) none.hidden = true;
+      return;
+    }
     chips.forEach(function (c) {
       if (c.getAttribute('data-when') === 'today') c.setAttribute('aria-pressed', String(whenToday));
       else if (c.getAttribute('data-sec') === '') c.setAttribute('aria-pressed', String(cat === '' && !whenToday));
       else c.setAttribute('aria-pressed', String(c.getAttribute('data-sec') === cat));
     });
-    var active = cat || whenToday || words.length || d || a || f || sv;
-    count.textContent = sv && !(cat || whenToday || words.length || d || a || f) ? (shown === 1 ? '1 saved event' : shown + ' saved events')
-                      : active ? (shown === 1 ? '1 listing matches' : shown + ' listings match') + ' (of ' + total + ')'
-                               : (total === 0 ? '' : total === 1 ? 'Showing 1 upcoming listing' : 'Showing all ' + total + ' upcoming listings');
+    var pool = region ? inRegion : total;
+    var where = region ? ' in ' + regionLabel(region) : '';
+    var active = otherFilters;
+    count.textContent = sv && !((cat || whenToday || words.length || d || a || f)) ? (shown === 1 ? '1 saved event' : shown + ' saved events')
+                      : active ? (shown === 1 ? '1 listing matches' : shown + ' listings match') + ' (of ' + pool + ')'
+                               : (pool === 0 ? '' : pool === 1 ? 'Showing 1 upcoming listing' + where : 'Showing all ' + pool + ' upcoming listings' + where);
     if (done) done.hidden = total !== 0;
-    var noSaved = sv && savedCount() === 0;
-    none.hidden = shown !== 0 || total === 0 || noSaved;
+    none.hidden = shown !== 0 || pool === 0 || noSaved || (region && inRegion === 0);
     if (nosaved) nosaved.hidden = !noSaved;
     if (savedBtn) savedBtn.setAttribute('aria-pressed', String(sv));
   }
@@ -797,6 +999,7 @@
   }
   bindCal();
   enhanceCards();
+  initRegion();
   refresh();
   if (hasFinder) fromHash();
   evFromHash(); window.addEventListener('hashchange', evFromHash);
