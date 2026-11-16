@@ -250,6 +250,36 @@
    "url": "https://www.beartoothak.com/live-events"
   },
   {
+   "id": "2026-11-17-khatumu-at-nonnas-osteria",
+   "date": "2026-11-17",
+   "time": "7 PM",
+   "title": "Khatumu at Nonna's Osteria",
+   "category": "Music",
+   "venue": "Nonna's Osteria, 201 W Herning Ave",
+   "town": "Wasilla",
+   "price": "$28.52 with fees",
+   "ages": "All ages",
+   "start": "19:00",
+   "end": "21:00",
+   "note": "Indie-folk dinner show.",
+   "url": "https://www.eventbrite.com/e/khatumu-live-at-nonnas-osteria-tickets-2002959933078"
+  },
+  {
+   "id": "2026-11-17-jazz-jam-at-the-crystal-saloon",
+   "date": "2026-11-17",
+   "time": "8 PM",
+   "title": "Jazz Jam at the Crystal Saloon",
+   "category": "Music",
+   "venue": "The Crystal Saloon, 218 Front St",
+   "town": "Juneau",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "20:00",
+   "end": "23:00",
+   "note": "Weekly Tuesday jazz session. Players of any level can sit in.",
+   "url": "https://www.eventbrite.com/e/jazz-jam-tuesday-tickets-2004594879246"
+  },
+  {
    "id": "2026-11-18-weekly-community-storytime-at-the-zoo",
    "date": "2026-11-18",
    "time": "10:30 AM",
@@ -365,6 +395,20 @@
    "url": "https://akconcerts.com/calendar"
   },
   {
+   "id": "2026-11-18-wednesday-open-mic-at-the-crystal-saloon",
+   "date": "2026-11-18",
+   "time": "8 PM",
+   "title": "Wednesday Open Mic at the Crystal Saloon",
+   "category": "Music",
+   "venue": "The Crystal Saloon, 218 Front St",
+   "town": "Juneau",
+   "price": "Free",
+   "ages": "21+",
+   "start": "20:00",
+   "note": "Music, poetry, comedy and stories. Sign up and take a turn.",
+   "url": "https://www.eventbrite.com/e/wednesday-open-mic-tickets-2004601198146"
+  },
+  {
    "id": "2026-11-19-5-third-thursday-at-the-anchorage-museum",
    "date": "2026-11-19",
    "time": "10 AM",
@@ -378,6 +422,21 @@
    "end": "18:00",
    "note": "Museum admission drops to $5 every third Thursday, October through April.",
    "url": "https://www.anchoragemuseum.org/visit/calendar/"
+  },
+  {
+   "id": "2026-11-19-holiday-faux-floral-workshop",
+   "date": "2026-11-19",
+   "time": "6 PM",
+   "title": "Holiday Faux Floral Workshop",
+   "category": "Make & Taste",
+   "venue": "Birch & Bloom, 10950 Mausel St B4",
+   "town": "Eagle River",
+   "price": "$39.19 with fees",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "20:00",
+   "note": "Build a seasonal faux-flower arrangement in a mug you bring from home.",
+   "url": "https://www.eventbrite.com/e/holiday-faux-floral-arrangement-workshop-tickets-2004867106485"
   },
   {
    "id": "2026-11-19-parlor-in-the-round-season-12",
@@ -489,6 +548,21 @@
    "url": "https://alaskavintagemarkets.com/"
   },
   {
+   "id": "2026-11-20-parlor-in-the-round-in-palmer",
+   "date": "2026-11-20",
+   "time": "7 PM",
+   "title": "Parlor in the Round in Palmer",
+   "category": "Music",
+   "venue": "Glenn Massay Theater, 8295 E College Dr",
+   "town": "Palmer",
+   "price": "$33.85 with fees",
+   "ages": "All ages",
+   "start": "19:00",
+   "end": "22:00",
+   "note": "Grace C. Elliot, Khatumu and Jason Overby in the songwriter game show. Under 14 with an adult.",
+   "url": "https://www.eventbrite.com/e/parlor-in-the-round-feat-khatumu-jason-overby-and-grace-c-elliot-tickets-2003520213893"
+  },
+  {
    "id": "2026-11-20-vitamin-come-d-y-sam-miller",
    "date": "2026-11-20",
    "time": "7 PM",
@@ -564,6 +638,21 @@
    "end": "15:30",
    "note": "Holiday tea with seasonal treats, Nutcracker performances, gifts and a raffle. Seatings 11:30 AM–1 PM and 2–3:30 PM.",
    "url": "https://www.anchorageballet.org/nutcrackertea"
+  },
+  {
+   "id": "2026-11-21-artisan-chocolate-ornament-class",
+   "date": "2026-11-21",
+   "time": "12 PM",
+   "title": "Artisan Chocolate Ornament Class",
+   "category": "Make & Taste",
+   "venue": "Alaska Wild Berry Products, 5225 Juneau St",
+   "town": "Anchorage",
+   "price": "$175",
+   "ages": "12+",
+   "start": "12:00",
+   "end": "16:00",
+   "note": "Paint, mold and fill a 4-inch chocolate ornament to take home.",
+   "url": "https://www.eventbrite.com/e/artisan-chocolate-ornament-class-tickets-2000665361954"
   },
   {
    "id": "2026-11-21-build-your-own-marble-run",
@@ -643,6 +732,36 @@
    "end": "18:00",
    "note": "An artist-run market for zines, small presses, printmakers and other self-published work.",
    "url": "https://www.anczine.com/"
+  },
+  {
+   "id": "2026-11-22-anchorage-mandolin-orchestra-holiday-concert",
+   "date": "2026-11-22",
+   "time": "4:30 PM",
+   "title": "Anchorage Mandolin Orchestra Holiday Concert",
+   "category": "Music",
+   "venue": "Anchorage Lutheran Church, 1420 N St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "16:30",
+   "end": "18:00",
+   "note": "Holiday music from the mandolin orchestra, part of the church's free concert series.",
+   "url": "https://www.eventbrite.com/e/alc-concert-series-anchorage-mandolin-orchestra-tickets-2004441008013"
+  },
+  {
+   "id": "2026-11-22-loter-a-night-at-jalape-os",
+   "date": "2026-11-22",
+   "time": "5:30 PM",
+   "title": "Lotería Night at Jalapeños",
+   "category": "Food & Drink",
+   "venue": "Jalapeños Mexican Restaurant, 16708 Park Place St",
+   "town": "Eagle River",
+   "price": "$15",
+   "ages": "Ages not listed",
+   "start": "17:30",
+   "end": "20:00",
+   "note": "Mexican bingo night at the restaurant.",
+   "url": "https://www.eventbrite.com/e/loteria-night-tickets-2004506131800"
   },
   {
    "id": "2026-11-26-tonsina-turkey-trot",
@@ -802,6 +921,35 @@
    "url": "https://www.alaskazoo.org/zoo-lights"
   },
   {
+   "id": "2026-11-27-sleeping-lady-twig-art-workshop",
+   "date": "2026-11-27",
+   "time": "Fri 6 PM–Sat 1 PM",
+   "title": "Sleeping Lady Twig Art Workshop",
+   "category": "Make & Taste",
+   "venue": "Birch & Bloom, 10950 Mausel St B4",
+   "town": "Eagle River",
+   "price": "$175 plus fees",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "note": "Two-session class with artist Holly Goozen making a Sleeping Lady twig piece. Supplies included.",
+   "url": "https://www.eventbrite.com/e/sleeping-lady-twig-art-tickets-2004569131233"
+  },
+  {
+   "id": "2026-11-27-h3-alaska-reggae-at-odd-man-rush",
+   "date": "2026-11-27",
+   "time": "7 PM",
+   "title": "H3 Alaska Reggae at Odd Man Rush",
+   "category": "Music",
+   "venue": "Odd Man Rush Brewing, 10930 Mausel St",
+   "town": "Eagle River",
+   "price": "$12.51 with fees",
+   "ages": "21+",
+   "start": "19:00",
+   "end": "22:00",
+   "note": "Local reggae band H3 plays the taproom.",
+   "url": "https://www.eventbrite.com/e/h3-alaska-reggae-tickets-2003377791905"
+  },
+  {
    "id": "2026-11-28-comedysportz-and-scared-scriptless-at-the-nave",
    "date": "2026-11-28",
    "time": "6 PM & 8 PM",
@@ -814,6 +962,21 @@
    "start": "18:00",
    "note": "ComedySportz at 6 PM is for everyone (doors 5:30). Scared Scriptless at 8 PM has adult themes; anyone under 18 needs an adult (doors 7:30).",
    "url": "https://scared-scriptless.square.site/product/scared-scriptless-feat-comedysportz-at-the-nave-november-28th/WXOM64IS4VWAQKRP4PMVETNU"
+  },
+  {
+   "id": "2026-11-28-king-rooster-alice-in-chains-tribute-manic-3",
+   "date": "2026-11-28",
+   "time": "9 PM",
+   "title": "King Rooster (Alice In Chains tribute) + Manic 3",
+   "category": "Music",
+   "venue": "The Crystal Saloon, 218 Front St",
+   "town": "Juneau",
+   "price": "$29.43 with fees",
+   "ages": "21+",
+   "start": "21:00",
+   "end": "23:00",
+   "note": "Grunge tribute plus classic hard rock. Doors 8 PM.",
+   "url": "https://www.eventbrite.com/e/king-rooster-alice-in-chains-tribute-manic-3-at-the-crystal-saloon-tickets-2004690382900"
   },
   {
    "id": "2026-11-29-try-a-sewing-machine-at-winter-solstice",
@@ -829,6 +992,21 @@
    "end": "17:00",
    "note": "Drop in, use the shop's machines to make a small project, and take it home.",
    "url": "https://wintersolsticecrafts.com/event/maker-space-try-out-a-sewing-machine-and-take-a-project-home/"
+  },
+  {
+   "id": "2026-11-29-teton-gravity-research-actually-it-is-rocket-science",
+   "date": "2026-11-29",
+   "time": "5 PM",
+   "title": "Teton Gravity Research: Actually It Is Rocket Science",
+   "category": "Arts & Talks",
+   "venue": "Odd Man Rush Brewing, 10930 Mausel St",
+   "town": "Eagle River",
+   "price": "$17.85 with fees",
+   "ages": "Ages not listed (brewery tasting room)",
+   "start": "17:00",
+   "end": "19:30",
+   "note": "Screening of TGR's new ski film.",
+   "url": "https://www.eventbrite.com/e/teton-gravity-research-presents-actually-it-is-rocket-science-tickets-2000200169551"
   },
   {
    "id": "2026-12-02-uaa-jazz-ensemble-groove-spectrum",
@@ -869,6 +1047,35 @@
    "url": "https://www.alaskabg.org/brighter-winter-nights"
   },
   {
+   "id": "2026-12-03-hpac-state-of-the-snowpack",
+   "date": "2026-12-03",
+   "time": "6:15 PM",
+   "title": "HPAC State of the Snowpack",
+   "category": "Family & Outdoors",
+   "venue": "Backcountry Bike & Ski, Palmer",
+   "town": "Palmer",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "18:15",
+   "note": "Avalanche forecasters talk about the early-season snowpack at Hatcher Pass. Open to everyone.",
+   "url": "https://hpavalanche.org/december-state-of-the-snowpack-2/"
+  },
+  {
+   "id": "2026-12-04-anhc-holiday-bazaar",
+   "date": "2026-12-04",
+   "time": "1:30 PM",
+   "title": "ANHC Holiday Bazaar",
+   "category": "Seasonal",
+   "venue": "Alaska Native Heritage Center, 8800 Heritage Center Dr",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "13:30",
+   "end": "17:00",
+   "note": "More than 60 Indigenous artists selling work. Continues through Sun Dec 6.",
+   "url": "https://www.eventbrite.com/e/2026-anhc-holiday-bazaar-tickets-2004789730050"
+  },
+  {
    "id": "2026-12-04-seward-holiday-arts-and-craft-fair",
    "date": "2026-12-04",
    "time": "Fri 5–8:30 PM; Sat 9:30 AM–4:30 PM",
@@ -886,6 +1093,21 @@
    "worth_the_drive": true,
    "note": "40+ local Alaskan artists and crafters, food vendors, live entertainment, holiday music and Santa. New venue this year. Look for Moon Muse among the vendors.",
    "url": "https://www.kenaicrewsers.org/christmas-craft-fair"
+  },
+  {
+   "id": "2026-12-04-after-hours-aspenyarrow-lauren-langford",
+   "date": "2026-12-04",
+   "time": "7 PM",
+   "title": "After Hours: Aspenyarrow + Lauren Langford",
+   "category": "Arts & Talks",
+   "venue": "Momentum Studios, 705 W 59th Ave",
+   "town": "Anchorage",
+   "price": "$18",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "end": "21:00",
+   "note": "Photography by Lauren Langford with a live set from singer-songwriter Aspenyarrow.",
+   "url": "https://www.eventbrite.com/e/after-hours-aspenyarrow-lauren-langford-tickets-2004689258537"
   },
   {
    "id": "2026-12-04-alaska-airlines-governors-cup-uaa-seawolves-vs-uaf-nanooks-h",
@@ -916,6 +1138,39 @@
    "start": "19:00",
    "note": "Sandy Harper reads from her memoir about Cyrano's Off-Center Playhouse. Books for sale afterward. A First Friday program.",
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=fbluk455f0g24m1tq3h52chcok"
+  },
+  {
+   "id": "2026-12-04-open-mic-night-at-south",
+   "date": "2026-12-04",
+   "time": "7 PM",
+   "title": "Open Mic Night at South",
+   "category": "Music",
+   "venue": "South Restaurant + Coffeehouse, 11124 Old Seward Hwy",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-12-18"
+   ],
+   "start": "19:00",
+   "end": "21:00",
+   "note": "Acoustic open mic in the coffeehouse. Same setup Fri Dec 18.",
+   "url": "https://www.eventbrite.com/e/open-mic-night-tickets-2004044359627"
+  },
+  {
+   "id": "2026-12-04-the-original-nightmare-before-christmas-humbug",
+   "date": "2026-12-04",
+   "time": "7 PM",
+   "title": "The Original Nightmare Before Christmas: Humbug!",
+   "category": "Theater",
+   "venue": "1540 C St",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "All ages",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Family holiday comedy from Upper Room Theatre Alaska.",
+   "url": "https://www.eventbrite.com/e/the-original-nightmare-before-christmas-humbug-tickets-2004532194755"
   },
   {
    "id": "2026-12-04-the-best-of-broadway",
@@ -1028,6 +1283,21 @@
    "url": "https://centertix.com/events/community-messiah"
   },
   {
+   "id": "2026-12-06-byo-craft-night-at-south",
+   "date": "2026-12-06",
+   "time": "6 PM",
+   "title": "BYO Craft Night at South",
+   "category": "Make & Taste",
+   "venue": "South Restaurant + Coffeehouse, 11124 Old Seward Hwy",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "21:00",
+   "note": "Bring whatever you're working on and craft alongside other makers.",
+   "url": "https://www.eventbrite.com/e/byo-craft-night-tickets-2004038578335"
+  },
+  {
    "id": "2026-12-08-arctic-entries-plot-twist",
    "date": "2026-12-08",
    "time": "7 PM",
@@ -1137,6 +1407,21 @@
    "url": "https://centertix.com/events/christmas-with-alaska-chamber-singers"
   },
   {
+   "id": "2026-12-12-hpac-rescue-rendezvous",
+   "date": "2026-12-12",
+   "time": "1 PM",
+   "title": "HPAC Rescue Rendezvous",
+   "category": "Family & Outdoors",
+   "venue": "Hatcher Pass",
+   "town": "Palmer",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "13:00",
+   "end": "15:00",
+   "note": "Free avalanche companion-rescue clinic for all skill levels. Bring your gear; a few loaners available.",
+   "url": "https://hpavalanche.org/announcements/"
+  },
+  {
    "id": "2026-12-12-dark-daze-music-fest-at-the-anchorage-museum",
    "date": "2026-12-12",
    "time": "6:30 PM",
@@ -1190,6 +1475,21 @@
    "ages": "All ages",
    "start": "16:00",
    "url": "https://centertix.com/events/accb-concert"
+  },
+  {
+   "id": "2026-12-13-holiday-ornament-paint-class-at-south",
+   "date": "2026-12-13",
+   "time": "6:45 PM",
+   "title": "Holiday Ornament Paint Class at South",
+   "category": "Make & Taste",
+   "venue": "South Restaurant + Coffeehouse, 11124 Old Seward Hwy",
+   "town": "Anchorage",
+   "price": "$28.52 with fees",
+   "ages": "All ages",
+   "start": "18:45",
+   "end": "20:30",
+   "note": "Paint up to three ornaments with Palette Alaska. Under 18 with an adult.",
+   "url": "https://www.eventbrite.com/e/palette-paint-experience-holiday-ornaments-tickets-2004555766258"
   },
   {
    "id": "2026-12-16-comedy-up-north-daniel-franzese",
@@ -1253,6 +1553,21 @@
    "url": "https://centertix.com/events/disco-nutcracker"
   },
   {
+   "id": "2026-12-19-fa-la-la-fabulous-a-holiday-sparkle-cabaret",
+   "date": "2026-12-19",
+   "time": "7 PM",
+   "title": "Fa-La-La-Fabulous: A Holiday Sparkle Cabaret",
+   "category": "Music",
+   "venue": "The Crystal Saloon, 218 Front St",
+   "town": "Juneau",
+   "price": "From $18.31 with fees",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "end": "21:00",
+   "note": "Steven Arends, Wendy Byrnes and Annie Goodenough sing holiday standards by candlelight.",
+   "url": "https://www.eventbrite.com/e/fa-la-la-fabulous-a-holiday-sparkle-cabaret-tickets-2004588900363"
+  },
+  {
    "id": "2026-12-20-anchorage-concert-chorus-family-holiday-pops",
    "date": "2026-12-20",
    "time": "4 PM",
@@ -1296,5 +1611,5 @@
   }
  ],
  "through": "2026-12-20",
- "last_verified": "2026-11-14"
+ "last_verified": "2026-11-15"
 }
