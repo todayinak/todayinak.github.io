@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Affiliate disclosure · Today in AK</title>
+<meta name="description" content="How Today in AK may earn a small commission from some ticket, tour or hotel links, at no extra cost to you.">
+<meta name="google-site-verification" content="R-UyxeZQOgapG3BMBy2vlycc2zH-wJ_AVFE5U5Wilqs">
+<meta name="google-site-verification" content="XUgCnjfqnmBOgDKfXt2SQeZYLD7qbN6veQSigK6uvdg">
+<meta name="theme-color" content="#0D1626" id="theme-color">
+<script>
+(function(){
+  var KEY="tia-theme";
+  var THEMES={aurora:"#0D1626",dark:"#0D1626",light:"#F3F6FB",bw:"#FFFFFF",fireweed:"#1A0B14",blush:"#FBF3F6",glacier:"#071820",sunset:"#1A0E0C"};
+  var NAMES={aurora:"Aurora",light:"Light",bw:"Black & White",fireweed:"Fireweed",blush:"Blush",glacier:"Glacier",sunset:"Sunset"};
+  function known(t){ if(!t) return null; if(t==="dark") return "aurora"; if(t==="pink") return "fireweed"; return THEMES[t] ? t : null; }
+  function preferred(){
+    try{ var s=known(localStorage.getItem(KEY)); if(s) return s; }catch(e){}
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "bw" : "aurora";
+  }
+  function apply(theme){
+    theme=known(theme)||"aurora";
+    document.documentElement.setAttribute("data-theme", theme);
+    var meta=document.getElementById("theme-color");
+    if(meta) meta.setAttribute("content", THEMES[theme]);
+    var btn=document.getElementById("theme-menu");
+    if(btn) btn.setAttribute("aria-label", "Color theme, "+(NAMES[theme]||theme)+" selected. Open to change.");
+    var list=document.getElementById("theme-options");
+    if(list){
+      var opts=list.querySelectorAll("[data-theme-value]");
+      for(var i=0;i<opts.length;i++){
+        var on=opts[i].getAttribute("data-theme-value")===theme;
+        opts[i].setAttribute("aria-selected", on?"true":"false");
+        opts[i].tabIndex=on?0:-1;
+      }
+    }
+  }
+  function save(theme){ try{ localStorage.setItem(KEY, theme); }catch(e){} apply(theme); }
+  apply(preferred());
+  function closeMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=true;
+    btn.setAttribute("aria-expanded","false");
+  }
+  function openMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=false;
+    btn.setAttribute("aria-expanded","true");
+    var sel=list.querySelector('[aria-selected="true"]')||list.querySelector("[data-theme-value]");
+    if(sel) sel.focus();
+  }
+  function wire(){
+    apply(preferred());
+    var root=document.getElementById("theme-picker"), btn=document.getElementById("theme-menu"), list=document.getElementById("theme-options");
+    if(!root||!btn||!list) return;
+    btn.addEventListener("click", function(ev){ ev.stopPropagation(); if(list.hidden) openMenu(); else closeMenu(); });
+    list.addEventListener("click", function(ev){
+      var t=ev.target.closest("[data-theme-value]");
+      if(!t) return;
+      ev.preventDefault();
+      save(t.getAttribute("data-theme-value"));
+      closeMenu();
+      btn.focus();
+    });
+    document.addEventListener("click", function(ev){ if(!root.contains(ev.target)) closeMenu(); });
+    document.addEventListener("keydown", function(ev){
+      if(list.hidden) return;
+      var opts=[].slice.call(list.querySelectorAll("[data-theme-value]"));
+      var i=opts.indexOf(document.activeElement);
+      if(ev.key==="Escape"){ ev.preventDefault(); closeMenu(); btn.focus(); return; }
+      if(ev.key==="ArrowRight"||ev.key==="ArrowDown"){ ev.preventDefault(); opts[(i+1+opts.length)%opts.length].focus(); }
+      if(ev.key==="ArrowLeft"||ev.key==="ArrowUp"){ ev.preventDefault(); opts[(i-1+opts.length)%opts.length].focus(); }
+      if(ev.key==="Home"){ ev.preventDefault(); opts[0].focus(); }
+      if(ev.key==="End"){ ev.preventDefault(); opts[opts.length-1].focus(); }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", wire);
+})();
+</script>
+
+<link rel="canonical" href="https://todayinak.com/affiliate-disclosure/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Today in AK">
+<meta property="og:title" content="Affiliate disclosure · Today in AK">
+<meta property="og:description" content="How Today in AK may earn a small commission from some ticket, tour or hotel links, at no extra cost to you.">
+<meta property="og:url" content="https://todayinak.com/affiliate-disclosure/">
+<meta property="og:image" content="https://todayinak.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Today in AK: Affiliate disclosure.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Affiliate disclosure · Today in AK">
+<meta name="twitter:description" content="How Today in AK may earn a small commission from some ticket, tour or hotel links, at no extra cost to you.">
+<meta name="twitter:image" content="https://todayinak.com/assets/og-image.png">
+<!-- Generated by tools/legal_pages.py. Do not hand-edit; edit that file and re-run tools/render.py. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Affiliate disclosure · Today in AK","description":"How Today in AK may earn a small commission from some ticket, tour or hotel links, at no extra cost to you.","url":"https://todayinak.com/affiliate-disclosure/","dateModified":"2026-11-15","isPartOf":{"@type":"WebSite","name":"Today in AK","url":"https://todayinak.com/"}}</script>
+<link rel="preload" href="/assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=c6d3dde7">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow"><span class="mark"><i></i>TODAY IN AK</span><div class="brandactions"><div class="theme-picker" id="theme-picker"><button type="button" class="theme-toggle" id="theme-menu" aria-label="Color theme, Aurora selected. Open to change." aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 2.2 17.7c.7-.2 1-1 .6-1.6-.3-.5-.5-1.1-.5-1.7a2.4 2.4 0 0 1 2.4-2.4h1.2A4.1 4.1 0 0 0 21 11.1 9 9 0 0 0 12 3z"/><circle class="dot" cx="8" cy="10" r="1.15"/><circle class="dot" cx="12" cy="7.4" r="1.15"/><circle class="dot" cx="16.2" cy="9.2" r="1.15"/><circle class="dot" cx="9.6" cy="14.2" r="1.15"/></svg></button><div class="theme-menu" id="theme-options" role="listbox" aria-label="Color theme" hidden><p class="theme-menu-label" id="theme-menu-label">Color theme</p><button type="button" role="option" class="theme-swatch" data-theme-value="aurora" aria-label="Aurora" aria-selected="true"><i style="--swatch:#5EF2B5;--swatch-bg:#0D1626"></i><span>Aurora</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="light" aria-label="Light" aria-selected="false" tabindex="-1"><i style="--swatch:#0B6B4C;--swatch-bg:#F3F6FB"></i><span>Light</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="bw" aria-label="Black &amp; White" aria-selected="false" tabindex="-1"><i style="--swatch:#111111;--swatch-bg:#FFFFFF"></i><span>Black &amp; White</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="fireweed" aria-label="Fireweed" aria-selected="false" tabindex="-1"><i style="--swatch:#FF6BA8;--swatch-bg:#1A0B14"></i><span>Fireweed</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="blush" aria-label="Blush" aria-selected="false" tabindex="-1"><i style="--swatch:#A81B58;--swatch-bg:#FBF3F6"></i><span>Blush</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="glacier" aria-label="Glacier" aria-selected="false" tabindex="-1"><i style="--swatch:#7EE0F2;--swatch-bg:#071820"></i><span>Glacier</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="sunset" aria-label="Sunset" aria-selected="false" tabindex="-1"><i style="--swatch:#FF8A5B;--swatch-bg:#1A0E0C"></i><span>Sunset</span></button></div></div><a class="handle" href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">@todayinak</a></div></div>
+    <p class="kicker">A clear note</p>
+    <h1>Affiliate disclosure</h1>
+    <nav class="chips" aria-label="Sections">
+      <a href="/">This week</a><a href="/this-weekend/">This weekend</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a><a href="/submit/">Submit your event</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="sec wrap legal">
+  <p class="updated">Last updated Nov 15, 2026</p>
+  <p class="lede">Today in AK is a free guide to things to do in Alaska. This page explains how we may earn a little money from some links, and how we will tell you when that is happening.</p>
+
+  <h2>Affiliate links</h2>
+  <p>Some links on this site may be affiliate links. That means we may earn a small commission if you buy tickets, book a tour or reserve a stay through them. It does not cost you extra.</p>
+  <p>We do not currently use affiliate links. Ticket and tour links on the site today go straight to the venue, organizer or ticket office. When we do start using affiliate links, we will put a short note near them:</p>
+  <div class="affil-sample">
+    <p class="affil-note">Some links may earn Today in AK a small commission at no extra cost to you.</p>
+  </div>
+
+  <h2>Eventbrite</h2>
+  <p>If we take part in Eventbrite's affiliate program, this also applies, in the wording they ask affiliates to use:</p>
+  <blockquote>
+    <p>As an Eventbrite Affiliate, I earn from qualifying ticket purchases and paid events published on Eventbrite.</p>
+  </blockquote>
+
+  <h2>Other partners we may work with</h2>
+  <p>We may also use programs from companies such as Viator, GetYourGuide, Stay22 and Expedia. Each company has its own terms. A booking or ticket purchase is between you and that company, not with Today in AK.</p>
+
+  <h2>Featured listings</h2>
+  <p>Some events on the site are paid placements. Those are marked as Featured, and they are advertising, separate from affiliate links. You can read more, or submit an event, on the <a href="/submit/">submit your event</a> page.</p>
+
+  <h2>Questions</h2>
+  <p>Email <a href="mailto:todayinak@gmail.com">todayinak@gmail.com</a> or <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">DM @todayinak on Instagram</a>.</p>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="mark"><i></i>TODAY IN AK</span>
+    <p>Your Alaska weekend, planned.</p>
+    <div class="footsignup" id="weekmail">
+    <p class="eyebrow">This weekend in AK</p>
+    <p>One free email a week with what's on Friday through Sunday.</p>
+    <!-- Newsletter form action comes from signup_form_url in data/site.json (Buttondown, Beehiiv, or similar). Left empty, this falls back to a mailto to submit_email. -->
+    <form class="signupform signupform-row" id="footsignup" action="mailto:todayinak@gmail.com?subject=This%20weekend%20in%20AK%20signup" method="post" enctype="text/plain">
+      <label class="sr-only" for="footsignup-email">Email address</label>
+      <input id="footsignup-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email">
+      <button type="submit">Get the email</button>
+    </form>
+  </div>
+    <p class="links"><a href="/">This week in Alaska</a><a href="/this-weekend/">This weekend</a><a href="/submit/">Submit your event</a><a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Instagram · @todayinak</a><a href="https://www.facebook.com/profile.php?id=61595774151541" rel="noopener" target="_blank">Facebook</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a></p>
+    <p><b>Want your event featured?</b> <a href="/submit/">Submit it here</a>, or <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">DM @todayinak on Instagram</a>.</p>
+    <p class="fine">Most listings are free. Featured events are paid placements and are marked as Featured. Details, menus and hours change. Always check with the venue, organizer or truck before you go.</p>
+  </div>
+</footer>
+</body>
+</html>
