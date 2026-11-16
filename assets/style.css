@@ -743,3 +743,33 @@ html[data-theme="bw"] .tgwait li{border-left-color:#111}
 .affil-note{color:var(--faint);font-size:13px;line-height:1.45;margin:8px 0 0}
 .affil-sample{margin:0 0 18px;padding:12px 16px;border:1.5px solid var(--line);border-radius:var(--slab);background:var(--card)}
 .affil-sample .affil-note{margin:0}
+
+/* Evergreen /guides/ pages. Same typefaces and theme tokens as legal + aurora modules. */
+.guide{padding-top:8px;padding-bottom:28px}
+.guide .crumbs{font-size:13.5px;color:var(--gray);margin:0 0 14px}
+.guide .crumbs a{font-weight:600}
+.guide .lede{margin-bottom:16px}
+.guide h2{font-weight:800;font-size:22px;line-height:1.2;margin:32px 0 10px}
+.guide h3{font-weight:800;font-size:17px;line-height:1.3;margin:20px 0 8px}
+.guide p,.guide li{color:var(--gray);font-size:16px;line-height:1.6}
+.guide p{margin:0 0 12px}
+.guide ul:not(.spots){margin:0 0 16px;padding-left:1.25em}
+.guide ul:not(.spots) li{margin:0 0 8px}
+.guide a{font-weight:600}
+.guide .spots{margin:8px 0 18px}
+.guide .catnav{margin:8px -20px 22px}
+.guidefaq{margin-top:4px}
+.bookcard{margin:8px 0 18px;padding:16px 18px;background:var(--card);border:1.5px solid var(--line);border-left:8px solid var(--green);border-radius:var(--slab)}
+.bookcard .fchead{margin:0 0 8px;color:var(--white);font:800 17px/1.2 Montserrat}
+.bookcard p{margin:0 0 10px}
+.booklinks{display:flex;flex-direction:column;gap:8px;margin:12px 0 10px}
+.booklinks a{color:var(--green);font:700 15px/1.4 Inter;text-decoration:none}
+.booklinks a:hover,.booklinks a:focus-visible{text-decoration:underline}
+.bookcard .affil-note{margin:6px 0 0}
+.bookcard .affil-note a{font-weight:600;color:inherit}
+.guidecards{list-style:none;padding:0;margin:8px 0 18px;display:grid;gap:10px}
+.guidecards a{display:block;background:var(--card);border:1.5px solid var(--line);border-left:8px solid var(--green);border-radius:var(--slab);padding:14px 16px;text-decoration:none;color:inherit}
+.guidecards b{font:800 18px/1.25 Montserrat;color:var(--white);display:block;margin-bottom:4px}
+.guidecards span{color:var(--gray);font-size:14.5px;line-height:1.5;font-weight:400}
+.moreguide{margin:16px 0 0}
+.moreguide a{font-weight:700}
