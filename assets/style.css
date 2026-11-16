@@ -804,5 +804,5 @@ html[lang="ja"] .mark{font-family:Montserrat,Inter,sans-serif}
 .featured-note .btn{display:inline-block;margin:0 6px 0 0}
 .signupembed{margin:14px 0 8px;max-width:36rem;width:100%}
 .signup .signupembed{max-width:28rem}
-.signupembed iframe{display:block;width:100%;min-height:120px;border:0;border-radius:12px;background:transparent}
+.signupembed iframe{display:block;width:100%;min-height:48px;border:0;border-radius:12px;background:transparent}
 .signupembed noscript .fine{margin:8px 0 0}
