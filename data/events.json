@@ -677,6 +677,35 @@
    "url": "https://www.eventbrite.com/e/loteria-night-tickets-2004506131800"
   },
   {
+   "id": "2026-11-25-ken-ludwigs-twas-the-night-before-christmas",
+   "date": "2026-11-25",
+   "time": "Preview Wed Nov 25, 7 PM; then Fri 7 PM, Sat 3 PM & 7 PM, Sun 3 PM through Dec 20",
+   "title": "Ken Ludwig's 'Twas the Night Before Christmas",
+   "category": "Theater",
+   "venue": "Cyrano's Theatre Company, 3800 Debarr Rd",
+   "town": "Anchorage",
+   "price": "$15; pay-what-you-can preview Nov 25",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29",
+    "2026-12-04",
+    "2026-12-05",
+    "2026-12-06",
+    "2026-12-11",
+    "2026-12-12",
+    "2026-12-13",
+    "2026-12-18",
+    "2026-12-19",
+    "2026-12-20"
+   ],
+   "start": "19:00",
+   "end": "20:30",
+   "note": "Pay-what-you-can preview Wed Nov 25 at 7 PM; donation appreciated. Then Fri Nov 27–Sun Dec 20: Fridays 7 PM, Saturdays 3 PM and 7 PM, Sundays 3 PM. A one-hour family play with music, plus a character meet-and-greet after. General admission.",
+   "url": "https://www.cyranos.org/tnbc"
+  },
+  {
    "id": "2026-11-26-tonsina-turkey-trot",
    "date": "2026-11-26",
    "time": "10 AM",
@@ -757,6 +786,25 @@
    "end": "17:00",
    "worth_the_drive": true,
    "url": "https://kenaiartcenter.org/event-kenai-arts-crafts-fair-2026/"
+  },
+  {
+   "id": "2026-11-27-7th-annual-downtown-anchorage-holiday-market",
+   "date": "2026-11-27",
+   "time": "Fri–Sun 12–6 PM",
+   "title": "7th Annual Downtown Anchorage Holiday Market",
+   "category": "Seasonal",
+   "venue": "49th State Brewing, 717 W 3rd Ave",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-28",
+    "2026-11-29"
+   ],
+   "start": "12:00",
+   "end": "18:00",
+   "note": "Indoors in the Theater at the downtown pub this year. Local handmade vendors, festive food and drink specials, and visits and photos with Santa.",
+   "url": "https://www.49thstatebrewing.com/series/7th-annual-holiday-market/"
   },
   {
    "id": "2026-11-27-juneau-public-market",
@@ -1524,5 +1572,5 @@
   }
  ],
  "through": "2026-12-20",
- "last_verified": "2026-11-15"
+ "last_verified": "2026-11-16"
 }
