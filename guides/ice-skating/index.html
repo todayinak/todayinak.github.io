@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ice Skating in Anchorage: Westchester, Cuddy Park and Indoor Rinks · Today in AK</title>
+<meta name="description" content="Where to ice skate in Anchorage: Westchester Lagoon, the Cuddy Park oval, indoor rinks, rentals, hours, tips for kids, and how to check official ice conditions.">
+<meta name="google-site-verification" content="R-UyxeZQOgapG3BMBy2vlycc2zH-wJ_AVFE5U5Wilqs">
+<meta name="google-site-verification" content="XUgCnjfqnmBOgDKfXt2SQeZYLD7qbN6veQSigK6uvdg">
+<meta name="theme-color" content="#0D1626" id="theme-color">
+<script>
+(function(){
+  var KEY="tia-theme";
+  var THEMES={aurora:"#0D1626",dark:"#0D1626",light:"#F3F6FB",bw:"#FFFFFF",fireweed:"#1A0B14",blush:"#FBF3F6",glacier:"#071820",sunset:"#1A0E0C"};
+  var NAMES={aurora:"Aurora",light:"Light",bw:"Black & White",fireweed:"Fireweed",blush:"Blush",glacier:"Glacier",sunset:"Sunset"};
+  function known(t){ if(!t) return null; if(t==="dark") return "aurora"; if(t==="pink") return "fireweed"; return THEMES[t] ? t : null; }
+  function preferred(){
+    try{ var s=known(localStorage.getItem(KEY)); if(s) return s; }catch(e){}
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "bw" : "aurora";
+  }
+  function apply(theme){
+    theme=known(theme)||"aurora";
+    document.documentElement.setAttribute("data-theme", theme);
+    var meta=document.getElementById("theme-color");
+    if(meta) meta.setAttribute("content", THEMES[theme]);
+    var btn=document.getElementById("theme-menu");
+    if(btn) btn.setAttribute("aria-label", "Color theme, "+(NAMES[theme]||theme)+" selected. Open to change.");
+    var list=document.getElementById("theme-options");
+    if(list){
+      var opts=list.querySelectorAll("[data-theme-value]");
+      for(var i=0;i<opts.length;i++){
+        var on=opts[i].getAttribute("data-theme-value")===theme;
+        opts[i].setAttribute("aria-selected", on?"true":"false");
+        opts[i].tabIndex=on?0:-1;
+      }
+    }
+  }
+  function save(theme){ try{ localStorage.setItem(KEY, theme); }catch(e){} apply(theme); }
+  apply(preferred());
+  function closeMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=true;
+    btn.setAttribute("aria-expanded","false");
+  }
+  function openMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=false;
+    btn.setAttribute("aria-expanded","true");
+    var sel=list.querySelector('[aria-selected="true"]')||list.querySelector("[data-theme-value]");
+    if(sel) sel.focus();
+  }
+  function wire(){
+    apply(preferred());
+    var root=document.getElementById("theme-picker"), btn=document.getElementById("theme-menu"), list=document.getElementById("theme-options");
+    if(!root||!btn||!list) return;
+    btn.addEventListener("click", function(ev){ ev.stopPropagation(); if(list.hidden) openMenu(); else closeMenu(); });
+    list.addEventListener("click", function(ev){
+      var t=ev.target.closest("[data-theme-value]");
+      if(!t) return;
+      ev.preventDefault();
+      save(t.getAttribute("data-theme-value"));
+      closeMenu();
+      btn.focus();
+    });
+    document.addEventListener("click", function(ev){ if(!root.contains(ev.target)) closeMenu(); });
+    document.addEventListener("keydown", function(ev){
+      if(list.hidden) return;
+      var opts=[].slice.call(list.querySelectorAll("[data-theme-value]"));
+      var i=opts.indexOf(document.activeElement);
+      if(ev.key==="Escape"){ ev.preventDefault(); closeMenu(); btn.focus(); return; }
+      if(ev.key==="ArrowRight"||ev.key==="ArrowDown"){ ev.preventDefault(); opts[(i+1+opts.length)%opts.length].focus(); }
+      if(ev.key==="ArrowLeft"||ev.key==="ArrowUp"){ ev.preventDefault(); opts[(i-1+opts.length)%opts.length].focus(); }
+      if(ev.key==="Home"){ ev.preventDefault(); opts[0].focus(); }
+      if(ev.key==="End"){ ev.preventDefault(); opts[opts.length-1].focus(); }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", wire);
+})();
+</script>
+
+<link rel="canonical" href="https://todayinak.com/guides/ice-skating/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Today in AK">
+<meta property="og:title" content="Ice Skating in Anchorage: Westchester, Cuddy Park and Indoor Rinks · Today in AK">
+<meta property="og:description" content="Where to ice skate in Anchorage: Westchester Lagoon, the Cuddy Park oval, indoor rinks, rentals, hours, tips for kids, and how to check official ice conditions.">
+<meta property="og:url" content="https://todayinak.com/guides/ice-skating/">
+<meta property="og:image" content="https://todayinak.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ice skating in Anchorage">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ice Skating in Anchorage: Westchester, Cuddy Park and Indoor Rinks · Today in AK">
+<meta name="twitter:description" content="Where to ice skate in Anchorage: Westchester Lagoon, the Cuddy Park oval, indoor rinks, rentals, hours, tips for kids, and how to check official ice conditions.">
+<meta name="twitter:image" content="https://todayinak.com/assets/og-image.png">
+<!-- Generated by tools/guides_pages.py. Do not hand-edit; edit that file and re-run tools/render.py. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Ice skating in Anchorage","description":"Ice skating in Anchorage: Westchester Lagoon, the Cuddy Park oval, indoor rinks, rentals, hours, kid tips, and how to check official ice conditions.","url":"https://todayinak.com/guides/ice-skating/","dateModified":"2026-11-15","isPartOf":{"@type":"WebSite","name":"Today in AK","url":"https://todayinak.com/"},"about":"Ice skating in Anchorage, Alaska"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where can I ice skate in Anchorage?","acceptedAnswer":{"@type":"Answer","text":"The two best-known outdoor spots are Westchester Lagoon (Margaret Eagan Sullivan Park, 1824 W 15th Ave) and the skating oval at Cuddy Family Midtown Park (201 W 40th Ave). The city also maintains other outdoor rinks and lake ice, including Cheney Lake and a skating ribbon at Chanshtnu Muldoon Park, once the season is underway. For indoor ice, start with Ben Boeke Ice Arena and Dempsey Anderson Ice Arena. Always check the city's ice status page before you go out."}},{"@type":"Question","name":"Is the ice at Westchester Lagoon or Cuddy Park open yet?","acceptedAnswer":{"@type":"Answer","text":"Check the Municipality of Anchorage Winter Maintenance page. As of November 12, 2026, the city had not started lake-ice or outdoor-rink maintenance for the 2026–2027 season, and it asked people to stay off the ice because naturally formed ice was still thin. That status changes through the winter, so use the official table, not a photo of a frozen surface."}},{"@type":"Question","name":"Where can I rent ice skates in Anchorage?","acceptedAnswer":{"@type":"Answer","text":"Lifetime Adventures plans on-site rentals at The Icebox at Westchester Lagoon for winter 2026–2027, starting in December, with hockey and figure skates in youth and adult sizes. Indoor-arena rental details change with the session; check the Anchorage Community Ice Management schedule for Ben Boeke and Dempsey Anderson. Some city family events also lend youth skates."}},{"@type":"Question","name":"Can I take kids ice skating in Anchorage?","acceptedAnswer":{"@type":"Answer","text":"Yes, once the ice is officially open or you go indoors. The city's Westchester Lagoon Family Skate, Skater Tots evenings, and similar events are built for families, often with skate-assist seals, youth skates, and helmets. On other days, helmets, warm waterproof layers, and a plan to leave if the child is cold are more useful than staying out for one more lap."}},{"@type":"Question","name":"What if the outdoor ice is closed?","acceptedAnswer":{"@type":"Answer","text":"Use an indoor arena. Ben Boeke and Dempsey Anderson post live public and open-skate times. Town Square Park is fenced for a rebuild through 2026, so don't count on a downtown park rink there."}}]}]}</script>
+<link rel="preload" href="/assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=69834704">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow"><span class="mark"><i></i>TODAY IN AK</span><div class="brandactions"><div class="theme-picker" id="theme-picker"><button type="button" class="theme-toggle" id="theme-menu" aria-label="Color theme, Aurora selected. Open to change." aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 2.2 17.7c.7-.2 1-1 .6-1.6-.3-.5-.5-1.1-.5-1.7a2.4 2.4 0 0 1 2.4-2.4h1.2A4.1 4.1 0 0 0 21 11.1 9 9 0 0 0 12 3z"/><circle class="dot" cx="8" cy="10" r="1.15"/><circle class="dot" cx="12" cy="7.4" r="1.15"/><circle class="dot" cx="16.2" cy="9.2" r="1.15"/><circle class="dot" cx="9.6" cy="14.2" r="1.15"/></svg></button><div class="theme-menu" id="theme-options" role="listbox" aria-label="Color theme" hidden><p class="theme-menu-label" id="theme-menu-label">Color theme</p><button type="button" role="option" class="theme-swatch" data-theme-value="aurora" aria-label="Aurora" aria-selected="true"><i style="--swatch:#5EF2B5;--swatch-bg:#0D1626"></i><span>Aurora</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="light" aria-label="Light" aria-selected="false" tabindex="-1"><i style="--swatch:#0B6B4C;--swatch-bg:#F3F6FB"></i><span>Light</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="bw" aria-label="Black &amp; White" aria-selected="false" tabindex="-1"><i style="--swatch:#111111;--swatch-bg:#FFFFFF"></i><span>Black &amp; White</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="fireweed" aria-label="Fireweed" aria-selected="false" tabindex="-1"><i style="--swatch:#FF6BA8;--swatch-bg:#1A0B14"></i><span>Fireweed</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="blush" aria-label="Blush" aria-selected="false" tabindex="-1"><i style="--swatch:#A81B58;--swatch-bg:#FBF3F6"></i><span>Blush</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="glacier" aria-label="Glacier" aria-selected="false" tabindex="-1"><i style="--swatch:#7EE0F2;--swatch-bg:#071820"></i><span>Glacier</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="sunset" aria-label="Sunset" aria-selected="false" tabindex="-1"><i style="--swatch:#FF8A5B;--swatch-bg:#1A0E0C"></i><span>Sunset</span></button></div></div><a class="handle" href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">@todayinak</a></div></div>
+    <p class="kicker">Winter guide</p>
+    <h1>Ice skating in Anchorage</h1>
+    <p class="range">Lagoons, ovals, indoor rinks and how to check the ice</p>
+    <nav class="chips" aria-label="Sections"><a href="/">This week</a><a href="/this-weekend/">This weekend</a><a href="/holiday-events/">Holiday events</a><a href="/december/">December</a><a href="/guides/">Guides</a><a href="/submit/">Submit your event</a></nav>
+    <p class="updated">Updated Sun Nov 15, 2026 · Alaska time</p>
+  </div>
+</header>
+
+<main>
+<section class="sec wrap guide">
+<nav class="chips catnav" aria-label="On this page"><a href="#check">Ice conditions</a><a href="#westchester">Westchester</a><a href="#cuddy">Cuddy oval</a><a href="#indoor">Indoor</a><a href="#rentals">Rentals</a><a href="#hours">Hours</a><a href="#kids">Kids</a><a href="#stay">Visiting</a><a href="#faq">Questions</a></nav>
+  <p class="crumbs"><a href="/guides/">Guides</a> · Ice skating</p>
+  <p class="lede">Anchorage has real outdoor ice once winter sets in — a lagoon on the edge of downtown, a midtown oval, and smaller city rinks — plus indoor arenas for the many weeks when the lakes are not ready. The first rule is simple: don't step on city ice until the official status page says it's being maintained. A frozen-looking surface is not the same thing as a safe rink.</p>
+  <p>As of November 12, 2026, Anchorage Parks and Recreation had not started lake-ice or outdoor-rink maintenance for the 2026–2027 season. The city said naturally formed ice was still thin and asked people to stay off it. That will change as the winter goes on. Use the <a href="https://www.muni.org/departments/parks_and_recreation/winter_maintenance.php" rel="noopener" target="_blank">Winter Maintenance</a> page as your live check, then pick a spot below. If the outdoor ice is closed, go indoors.</p>
+
+  <h2 id="check">How to check ice conditions</h2>
+  <p>Start with the city's own table, not a social post or a photo from the parking lot.</p>
+  <ul>
+    <li>Open the <a href="https://www.muni.org/departments/parks_and_recreation/winter_maintenance.php" rel="noopener" target="_blank">Municipality of Anchorage Winter Maintenance</a> page. It has a Lake Ice Status table (Westchester Lagoon, the Cuddy skating pond, Cheney Lake) with ice depth and condition when crews are working, and a separate Outdoor Ice Rink Status table (the Cuddy oval, Chanshtnu ribbon, Delaney, Tikishla, Bonnie Cusack).</li>
+    <li>Read the date at the top of each table. If maintenance has not started, or a row still says the ice is not ready, stay off that surface.</li>
+    <li>After a thaw, a heavy snow, or a rain-on-snow stretch, check again even if it was fine earlier in the week. The city updates these tables through the season; it does not mean the ice is automatically safe between updates.</li>
+    <li>Don't invent your own thickness rule on unmaintained lake ice, overflow, or creeks. The official word this season, while naturally formed ice was still thin, was to stay off.</li>
+  </ul>
+  <p>Indoor ice does not depend on that table. For Ben Boeke and Dempsey Anderson, use the arena schedule instead.</p>
+
+  <h2 id="westchester">Westchester Lagoon</h2>
+  <p>Westchester Lagoon sits in Margaret Eagan Sullivan Park at 1824 W 15th Avenue, a short trip from downtown. It is the outdoor skating spot most visitors hear about first, and it's also the site of the city's Saturday family skates once the ice is in.</p>
+  <p>It is still a lake. Go only when the Winter Maintenance page lists it as maintained and in condition. Park in a real lot for the park, not on a nearby trail or shoulder. Dress for standing still on an open, often windy basin — warmer than you would for a walk between downtown buildings.</p>
+  <p>The city schedules free, family-oriented skates here when ice allows:</p>
+  <ul>
+    <li><a href="https://www.muni.org/departments/parks_and_recreation/activities/westchester_lagoon_family_skate.php" rel="noopener" target="_blank">Westchester Lagoon Family Skate</a> — Saturdays, January 9 through February 14, 2027, 1–3 PM, ice conditions permitting. Free to attend. The city lists warming barrels, free hot chocolate, music, and skate-assist seals. Bring your own skates unless a rental stand is open that day.</li>
+    <li><a href="https://www.muni.org/Departments/parks/Pages/ValentineSkate.aspx" rel="noopener" target="_blank">Sweetheart Skate</a> — Saturday, February 14, 2027, 5:30–9 PM, ice conditions permitting. Free. The city lists warming barrels, music, hot chocolate, and a lighted photo setup, and suggests a headlamp.</li>
+  </ul>
+
+  <h2 id="cuddy">The Cuddy Park oval</h2>
+  <p>Cuddy Family Midtown Park is at 201 W 40th Avenue. The skating oval is the outdoor rink — a long, maintained loop — and it is listed separately from the park's skating pond, which is lake ice. If someone says “meet at the Cuddy oval,” they mean the rink, not the pond.</p>
+  <p>The same status page covers both. Stay off until the outdoor-rink table (for the oval) or the lake-ice table (for the pond) says that surface is ready. Midtown parking is at the park; don't block residential streets if the lot is full.</p>
+  <p>The city's free <a href="https://www.muni.org/Departments/parks/Pages/SkaterTots.aspx" rel="noopener" target="_blank">Skater Tots</a> evenings are scheduled on Wednesdays, 5:30–7:30 PM, in January and February 2027: January 14, 21 and 28 at Chanshtnu Muldoon Park, then February 4, 11, 18 and 25 at the Cuddy oval. Those nights are free, with youth ice skates to borrow, skate-assist seals, helmets, and hot chocolate, per the city's event page.</p>
+
+  <h2 id="indoor">Indoor rinks</h2>
+  <p>When the lakes are thin, closed, or wind-blasted, go inside. Anchorage Community Ice Management, a local nonprofit contracted by the Municipality, runs the two youth-focused municipal arenas:</p>
+  <ul>
+    <li><b>Ben Boeke Ice Arena</b> — 334 E 16th Ave.</li>
+    <li><b>Dempsey Anderson Ice Arena</b> — 1741 W Northern Lights Blvd.</li>
+  </ul>
+  <p>Public and open skate, stick-and-puck, figure skating, and learn-to-skate sessions are listed on a live calendar. Hours change by day and by which pad is booked, so this guide does not invent a standing public-skate schedule. Check the <a href="https://www.anchoragecommunityice.org/schedules" rel="noopener" target="_blank">ACIM schedules</a> before you go, and use the <a href="https://www.anchoragecommunityice.org/" rel="noopener" target="_blank">ACIM site</a> for how to book ice. Skate-rental availability and prices at the arenas were not posted as a single standing rate on the homepage we read — ask at the desk or check the schedule notes for that session.</p>
+  <p>Town Square Park is fenced for a rebuild through 2026, so don't plan on the old downtown park rink or flower displays there. Other indoor ice exists in town (school and private facilities come and go on public calendars); if a session isn't on the ACIM schedule, confirm it directly with that venue before you promise kids a public skate.</p>
+
+  <h2 id="rentals">Rentals</h2>
+  <p>Lifetime Adventures says The Icebox at Westchester Lagoon is new for winter 2026–2027, with on-site ice skate, fat-tire bike, and snowshoe rentals in youth and adult sizes. Per <a href="https://www.lifetimeadventures.net/icebox" rel="noopener" target="_blank">their Icebox page</a>:</p>
+  <ul>
+    <li>Planned hours, starting in December: Monday–Thursday 3–7 PM, Friday–Sunday 10 AM–6 PM.</li>
+    <li>Ice skates $20 for two hours, sizes 8Y through adult 13, hockey and figure skates. Helmets are provided for all youth rentals and offered for adults. Skate assists are available.</li>
+    <li>Lessons on Saturdays beginning in January: youth 11 AM–12 PM, adult 12–1 PM; $100 for four lessons or $30 drop-in. Helmets follow the same youth-provided, adult-offered pattern.</li>
+    <li>Skate sharpening $20 a pair. Fat-tire bikes $35 for two hours or $50 for four, helmets provided. Snowshoes $25 for the day, poles included, due back at closing unless arranged otherwise.</li>
+  </ul>
+  <p>Those are the operator's published winter 2026–2027 figures, not a city rate sheet. Hours, prices and the December start can move; check the Icebox page before you count on a rental. Advanced online reservations were marked as not yet available when we read the page (November 15, 2026).</p>
+  <p>At city family events, read the event page for that date: Skater Tots lists free youth skates and helmets for the evening; the Saturday Family Skate asks you to bring skates, with assists on site.</p>
+
+  <h2 id="hours">Hours</h2>
+  <p>Outdoor skating on city lakes and rinks follows ice conditions, not a single posted “rink is always open from X to Y” schedule on the pages we used. Treat the status page as the open/closed sign, then use event hours when you're going to a city skate, and rental-stand hours when you need skates from the Icebox.</p>
+  <ul>
+    <li>City family skates: Saturday 1–3 PM at Westchester (January 9–February 14, 2027); Sweetheart Skate 5:30–9 PM on February 14, 2027; Skater Tots Wednesdays 5:30–7:30 PM on the dates above. All are ice conditions permitting, or indoors-not-applicable for timing only — these are outdoor events.</li>
+    <li>Icebox rentals: the December-start hours above, on the operator's page.</li>
+    <li>Indoor arenas: whatever the live ACIM calendar says for that pad and day.</li>
+  </ul>
+  <p>We did not find a current, official Municipality page stating a single set of winter park closure hours just for Westchester or Cuddy, so this guide does not invent one. Leave before you would be guessing in a dark, empty lot, and follow posted signs at the park.</p>
+
+  <h2 id="kids">Tips for kids</h2>
+  <ul>
+    <li>Wait for official ice, or go to an indoor public skate. A lagoon that “looks frozen” is not a kids' rink.</li>
+    <li>Start with a city family event if you can. Seals, borrowed youth skates, helmets, and a definite end time take a lot of the friction out of a first outing.</li>
+    <li>Helmets are a good idea even when they aren't required. The Icebox provides them with youth rentals; Skater Tots provides them on event nights.</li>
+    <li>Waterproof mittens, warm socks, and a layer you can add in the wind matter more than a perfect costume. Sitting still on a bench is colder than walking downtown.</li>
+    <li>Keep the first visit short. A cup of something warm (the city serves hot chocolate at the listed family events) and a clear exit plan beat one last lap on tired ankles.</li>
+    <li>If a child is done, you're done. Indoor ice is the better second try after a windy lagoon.</li>
+  </ul>
+
+  <h2 id="stay">If you're visiting</h2>
+  <p>You don't need a tour to skate. You do need a weather window, the official ice status, and a pair of skates — brought, borrowed at a city event, or rented. If you're choosing a place to stay and want to walk or take a short hop to the lagoon, downtown and the Chester Creek side of midtown are the practical base.</p>
+  <aside class="bookcard" aria-label="Stay near the lagoon">
+    <p class="fchead">Stay near Westchester Lagoon</p>
+    <p>A downtown or lagoon-side stay makes a Saturday family skate or a midweek indoor session easier, especially if you don't want to drive after dark.</p>
+    <p class="booklinks">
+      <a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Westchester%20Lagoon%2C%20Anchorage%2C%20Alaska&amp;campaign=ice-skating-guide" rel="sponsored noopener" target="_blank">Look at stays near the lagoon</a>
+    </p>
+    <p class="affil-note">Some links may earn Today in AK a small commission at no extra cost to you.</p>
+    <p class="affil-note">See our <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
+  </aside>
+  <p>For the rest of the day, the <a href="/">weekly calendar</a>, <a href="/this-weekend/">weekend list</a>, and <a href="/guides/northern-lights/">northern lights guide</a> are next door. Outdoor ice and aurora-watching both depend on the actual conditions that night — check before you lock in a plan.</p>
+
+  <h2 id="faq">Common questions</h2>
+  <div class="guidefaq">
+  <h3>Where can I ice skate in Anchorage?</h3>
+  <p>The two best-known outdoor spots are Westchester Lagoon (Margaret Eagan Sullivan Park, 1824 W 15th Ave) and the skating oval at Cuddy Family Midtown Park (201 W 40th Ave). The city also maintains other outdoor rinks and lake ice, including Cheney Lake and a skating ribbon at Chanshtnu Muldoon Park, once the season is underway. For indoor ice, start with Ben Boeke Ice Arena and Dempsey Anderson Ice Arena. Always check the city&#x27;s ice status page before you go out.</p>
+  <h3>Is the ice at Westchester Lagoon or Cuddy Park open yet?</h3>
+  <p>Check the Municipality of Anchorage Winter Maintenance page. As of November 12, 2026, the city had not started lake-ice or outdoor-rink maintenance for the 2026–2027 season, and it asked people to stay off the ice because naturally formed ice was still thin. That status changes through the winter, so use the official table, not a photo of a frozen surface.</p>
+  <h3>Where can I rent ice skates in Anchorage?</h3>
+  <p>Lifetime Adventures plans on-site rentals at The Icebox at Westchester Lagoon for winter 2026–2027, starting in December, with hockey and figure skates in youth and adult sizes. Indoor-arena rental details change with the session; check the Anchorage Community Ice Management schedule for Ben Boeke and Dempsey Anderson. Some city family events also lend youth skates.</p>
+  <h3>Can I take kids ice skating in Anchorage?</h3>
+  <p>Yes, once the ice is officially open or you go indoors. The city&#x27;s Westchester Lagoon Family Skate, Skater Tots evenings, and similar events are built for families, often with skate-assist seals, youth skates, and helmets. On other days, helmets, warm waterproof layers, and a plan to leave if the child is cold are more useful than staying out for one more lap.</p>
+  <h3>What if the outdoor ice is closed?</h3>
+  <p>Use an indoor arena. Ben Boeke and Dempsey Anderson post live public and open-skate times. Town Square Park is fenced for a rebuild through 2026, so don&#x27;t count on a downtown park rink there.</p>
+  </div>
+
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="mark"><i></i>TODAY IN AK</span>
+    <p>Your Alaska weekend, planned.</p>
+    <div class="footsignup" id="weekmail">
+    <p class="eyebrow">This weekend in AK</p>
+    <p>One free email a week with what's on Friday through Sunday.</p>
+    <!-- Newsletter form action comes from signup_form_url in data/site.json (Buttondown, Beehiiv, or similar). Left empty, this falls back to a mailto to submit_email. -->
+    <form class="signupform signupform-row" id="footsignup" action="mailto:todayinak@gmail.com?subject=This%20weekend%20in%20AK%20signup" method="post" enctype="text/plain">
+      <label class="sr-only" for="footsignup-email">Email address</label>
+      <input id="footsignup-email" type="email" name="email" required placeholder="you@example.com" autocomplete="email">
+      <button type="submit">Get the email</button>
+    </form>
+  </div>
+    <p class="links"><a href="/">This week in Alaska</a><a href="/this-weekend/">This weekend</a><a href="/guides/">Guides</a><a href="/holiday-events/">Holiday events</a><a href="/december/">December</a><a href="/submit/">Submit your event</a><a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Instagram · @todayinak</a><a href="https://www.facebook.com/profile.php?id=61595774151541" rel="noopener" target="_blank">Facebook</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a></p>
+    <p><b>Want your event featured?</b> <a href="/submit/">Submit it here</a>, or <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">DM @todayinak on Instagram</a>.</p>
+    <p class="fine">Most listings are free. Featured events are paid placements and are marked as Featured. Details, menus and hours change. Always check with the venue, organizer or truck before you go.</p>
+  </div>
+</footer>
+</body>
+</html>

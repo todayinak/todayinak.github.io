@@ -773,3 +773,15 @@ html[data-theme="bw"] .tgwait li{border-left-color:#111}
 .guidecards span{color:var(--gray);font-size:14.5px;line-height:1.5;font-weight:400}
 .moreguide{margin:16px 0 0}
 .moreguide a{font-weight:700}
+
+/* Japanese guide pages: system gothic for body copy, keep Montserrat on the brand mark. */
+html[lang="ja"]{line-break:strict;word-break:normal}
+html[lang="ja"] body{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Noto Sans CJK JP","Yu Gothic",YuGothic,Meiryo,Inter,sans-serif;line-height:1.75}
+html[lang="ja"] h1,html[lang="ja"] h2,html[lang="ja"] h3,html[lang="ja"] h4,
+html[lang="ja"] .spots b,html[lang="ja"] .guidecards b,html[lang="ja"] .bookcard .fchead,html[lang="ja"] .kicker,html[lang="ja"] .range{
+  font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Noto Sans CJK JP","Yu Gothic",YuGothic,Montserrat,sans-serif
+}
+html[lang="ja"] .mark{font-family:Montserrat,Inter,sans-serif}
+.langswitch{margin:0 0 14px;font-size:13.5px;color:var(--gray)}
+.langswitch a{font-weight:600}
+.langswitch [aria-current="page"]{font-weight:700;color:var(--white)}
