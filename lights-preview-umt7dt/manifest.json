@@ -1,6 +1,6 @@
 {
-  "name": "Today in AK Lights",
-  "short_name": "AK Lights",
+  "name": "Anchorage Holiday Lights Map",
+  "short_name": "Lights Map",
   "description": "Holiday lights around Anchorage and the Mat-Su, on one map.",
   "start_url": "/lights-preview-umt7dt/?source=homescreen",
   "scope": "/lights-preview-umt7dt/",
