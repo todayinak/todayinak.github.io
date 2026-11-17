@@ -2,20 +2,20 @@
   "name": "Anchorage Holiday Lights Map",
   "short_name": "Lights Map",
   "description": "Holiday lights around Anchorage and the Mat-Su, on one map.",
-  "start_url": "/lights-preview-umt7dt/?source=homescreen",
-  "scope": "/lights-preview-umt7dt/",
+  "start_url": "/holiday-lights/?source=homescreen",
+  "scope": "/holiday-lights/",
   "display": "standalone",
   "background_color": "#070B14",
   "theme_color": "#0D1626",
   "icons": [
     {
-      "src": "/lights-preview-umt7dt/icon-192.png",
+      "src": "/holiday-lights/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/lights-preview-umt7dt/icon-512.png",
+      "src": "/holiday-lights/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
