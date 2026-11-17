@@ -123,7 +123,7 @@
   <p class="lede">Today in AK is a free guide to events, food trucks and things to do around Anchorage, Mat-Su, Eagle River and Girdwood. This page explains what information we collect and what we do with it. We try to collect as little as we can.</p>
 
   <h2>What this site is</h2>
-  <p>A static website, hosted on GitHub Pages. There is no account to create. We do not run an advertising or analytics script in the pages themselves.</p>
+  <p>A static website, hosted on GitHub Pages. There is no account to create. We use GoatCounter, a privacy-friendly visitor counter, to see which pages are read and which tour, stay or ticket links are clicked. It does not use cookies or identify you. See <a href="https://www.goatcounter.com/help/privacy" rel="noopener" target="_blank">GoatCounter's privacy page</a>.</p>
 
   <h2>What stays on your device</h2>
   <p>Your browser can remember a few choices on this device only, using the browser's own local storage. We do not set our own cookies today. Those saved choices are:</p>
@@ -189,5 +189,31 @@
     <p class="fine">Most listings are free. Featured events are paid placements and are marked as Featured. Details, menus and hours change. Always check with the venue, organizer or truck before you go.</p>
   </div>
 </footer>
+<script data-goatcounter="https://todayinak.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var skip = /(?:^|\.)(instagram\.com|facebook\.com|todayinak\.com)$/i;
+  document.addEventListener("click", function(ev){
+    var a = ev.target.closest && ev.target.closest("a[href]");
+    if (!a || !window.goatcounter || !goatcounter.count) return;
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#" || href.indexOf("mailto:") === 0) return;
+    var host = "";
+    try { host = a.hostname || ""; } catch (err) { return; }
+    if (!host || host === location.hostname) return;
+    if (skip.test(host)) return;
+    var rel = a.getAttribute("rel") || "";
+    var name = a.getAttribute("data-count");
+    if (!name) {
+      name = (/\bsponsored\b/.test(rel) ? "affiliate-" : "out-") + host.replace(/^www\./, "");
+    }
+    goatcounter.count({
+      path: "/click/" + name,
+      title: (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80),
+      event: true
+    });
+  }, true);
+})();
+</script>
 </body>
 </html>

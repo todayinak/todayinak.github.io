@@ -366,5 +366,31 @@
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <script src="/assets/events.js?v=f09df364" defer></script>
+<script data-goatcounter="https://todayinak.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var skip = /(?:^|\.)(instagram\.com|facebook\.com|todayinak\.com)$/i;
+  document.addEventListener("click", function(ev){
+    var a = ev.target.closest && ev.target.closest("a[href]");
+    if (!a || !window.goatcounter || !goatcounter.count) return;
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#" || href.indexOf("mailto:") === 0) return;
+    var host = "";
+    try { host = a.hostname || ""; } catch (err) { return; }
+    if (!host || host === location.hostname) return;
+    if (skip.test(host)) return;
+    var rel = a.getAttribute("rel") || "";
+    var name = a.getAttribute("data-count");
+    if (!name) {
+      name = (/\bsponsored\b/.test(rel) ? "affiliate-" : "out-") + host.replace(/^www\./, "");
+    }
+    goatcounter.count({
+      path: "/click/" + name,
+      title: (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80),
+      event: true
+    });
+  }, true);
+})();
+</script>
 </body>
 </html>
