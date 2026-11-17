@@ -1,0 +1,1502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holiday Lights in Anchorage: Map, Zoo Lights and Tree Lighting · Today in AK</title>
+<meta name="description" content="Holiday lights around Anchorage and the Mat-Su for 2026–27: Zoo Lights, the 4th Avenue tree lighting, Brighter Winter Nights, Palmer&#x27;s drive-through, and a community map for neighborhood displays.">
+<meta name='impact-site-verification' value='296fdaff-3c85-4fa4-a2dd-ec15bf39f020'>
+<meta name="google-site-verification" content="R-UyxeZQOgapG3BMBy2vlycc2zH-wJ_AVFE5U5Wilqs">
+<meta name="google-site-verification" content="XUgCnjfqnmBOgDKfXt2SQeZYLD7qbN6veQSigK6uvdg">
+<meta name="theme-color" content="#0D1626" id="theme-color">
+<script>
+(function(){
+  var KEY="tia-theme";
+  var THEMES={aurora:"#0D1626",dark:"#0D1626",light:"#F3F6FB",bw:"#FFFFFF",fireweed:"#1A0B14",blush:"#FBF3F6",glacier:"#071820",sunset:"#1A0E0C"};
+  var NAMES={aurora:"Aurora",light:"Light",bw:"Black & White",fireweed:"Fireweed",blush:"Blush",glacier:"Glacier",sunset:"Sunset"};
+  function known(t){ if(!t) return null; if(t==="dark") return "aurora"; if(t==="pink") return "fireweed"; return THEMES[t] ? t : null; }
+  function preferred(){
+    try{ var s=known(localStorage.getItem(KEY)); if(s) return s; }catch(e){}
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "bw" : "aurora";
+  }
+  function apply(theme){
+    theme=known(theme)||"aurora";
+    document.documentElement.setAttribute("data-theme", theme);
+    var meta=document.getElementById("theme-color");
+    if(meta) meta.setAttribute("content", THEMES[theme]);
+    var btn=document.getElementById("theme-menu");
+    if(btn) btn.setAttribute("aria-label", "Color theme, "+(NAMES[theme]||theme)+" selected. Open to change.");
+    var list=document.getElementById("theme-options");
+    if(list){
+      var opts=list.querySelectorAll("[data-theme-value]");
+      for(var i=0;i<opts.length;i++){
+        var on=opts[i].getAttribute("data-theme-value")===theme;
+        opts[i].setAttribute("aria-selected", on?"true":"false");
+        opts[i].tabIndex=on?0:-1;
+      }
+    }
+  }
+  function save(theme){ try{ localStorage.setItem(KEY, theme); }catch(e){} apply(theme); }
+  apply(preferred());
+  function closeMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=true;
+    btn.setAttribute("aria-expanded","false");
+  }
+  function openMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=false;
+    btn.setAttribute("aria-expanded","true");
+    var sel=list.querySelector('[aria-selected="true"]')||list.querySelector("[data-theme-value]");
+    if(sel) sel.focus();
+  }
+  function wire(){
+    apply(preferred());
+    var root=document.getElementById("theme-picker"), btn=document.getElementById("theme-menu"), list=document.getElementById("theme-options");
+    if(!root||!btn||!list) return;
+    btn.addEventListener("click", function(ev){ ev.stopPropagation(); if(list.hidden) openMenu(); else closeMenu(); });
+    list.addEventListener("click", function(ev){
+      var t=ev.target.closest("[data-theme-value]");
+      if(!t) return;
+      ev.preventDefault();
+      save(t.getAttribute("data-theme-value"));
+      closeMenu();
+      btn.focus();
+    });
+    document.addEventListener("click", function(ev){ if(!root.contains(ev.target)) closeMenu(); });
+    document.addEventListener("keydown", function(ev){
+      if(list.hidden) return;
+      var opts=[].slice.call(list.querySelectorAll("[data-theme-value]"));
+      var i=opts.indexOf(document.activeElement);
+      if(ev.key==="Escape"){ ev.preventDefault(); closeMenu(); btn.focus(); return; }
+      if(ev.key==="ArrowRight"||ev.key==="ArrowDown"){ ev.preventDefault(); opts[(i+1+opts.length)%opts.length].focus(); }
+      if(ev.key==="ArrowLeft"||ev.key==="ArrowUp"){ ev.preventDefault(); opts[(i-1+opts.length)%opts.length].focus(); }
+      if(ev.key==="Home"){ ev.preventDefault(); opts[0].focus(); }
+      if(ev.key==="End"){ ev.preventDefault(); opts[opts.length-1].focus(); }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", wire);
+})();
+</script>
+
+<link rel="canonical" href="https://todayinak.com/lights-preview-umt7dt/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Today in AK">
+<meta property="og:title" content="Holiday Lights in Anchorage: Map, Zoo Lights and Tree Lighting · Today in AK">
+<meta property="og:description" content="Holiday lights around Anchorage and the Mat-Su for 2026–27: Zoo Lights, the 4th Avenue tree lighting, Brighter Winter Nights, Palmer&#x27;s drive-through, and a community map for neighborhood displays.">
+<meta property="og:url" content="https://todayinak.com/lights-preview-umt7dt/">
+<meta property="og:image" content="https://todayinak.com/lights-preview-umt7dt/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Holiday lights in Anchorage: a map of Zoo Lights, the tree lighting and neighborhood displays">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Holiday Lights in Anchorage: Map, Zoo Lights and Tree Lighting · Today in AK">
+<meta name="twitter:description" content="Holiday lights around Anchorage and the Mat-Su for 2026–27: Zoo Lights, the 4th Avenue tree lighting, Brighter Winter Nights, Palmer&#x27;s drive-through, and a community map for neighborhood displays.">
+<meta name="twitter:image" content="https://todayinak.com/lights-preview-umt7dt/og-image.png">
+<meta name="robots" content="noindex,nofollow">
+<link rel="manifest" href="/lights-preview-umt7dt/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="AK Lights">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+.lights-mapwrap{margin:8px 0 6px}
+#lights-map{height:min(62vh,560px);min-height:340px;width:100%;border:1.5px solid var(--line);border-radius:var(--slab);background:var(--card);z-index:0}
+.lights-attr{font-size:12.5px;color:var(--faint);margin:8px 0 14px}
+.lights-attr a{font-weight:600}
+ul.spots.lights-list{grid-template-columns:1fr}
+@media (min-width:900px){
+  ul.spots.lights-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+.lights-filters-label{font:800 13px/1.2 Montserrat;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin:14px 0 8px}
+.lights-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 8px}
+.lights-list span{display:block;margin:4px 0 0}
+.lights-list li > b{color:var(--white)}
+.lights-list span b{display:inline;font:700 14.5px Inter;color:var(--white)}
+.lights-list a{font-weight:600}
+.lights-list .btn2{width:auto;display:inline-flex;margin:10px 0 0;padding:10px 14px}
+.leaflet-container{font:inherit;background:#0D1626}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--white);border:1.5px solid var(--line);box-shadow:none}
+.leaflet-popup-content{margin:12px 14px;font-size:14.5px;line-height:1.45;color:var(--gray)}
+.leaflet-popup-content b{color:var(--white);font:800 16px/1.3 Montserrat;display:block;margin-bottom:4px}
+.leaflet-popup-content a{color:var(--green);font-weight:600}
+.leaflet-container a.leaflet-popup-close-button{color:var(--gray);padding:6px 8px}
+.leaflet-bar a{background:var(--card);color:var(--white);border-bottom-color:var(--line)}
+.leaflet-bar a:hover{background:var(--chip-bg)}
+.leaflet-control-attribution{background:rgba(13,22,38,.85);color:var(--faint)}
+.leaflet-control-attribution a{color:var(--gray)}
+.lights-route{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;margin:10px 0 0;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--slab);background:var(--card)}
+.lights-route-summary{margin:0;color:var(--white)}
+.lights-route-actions{display:flex;flex-wrap:wrap;gap:8px}
+.lights-route .btn,.lights-route .btn2{width:auto;margin:0;padding:12px 16px}
+.lights-new{display:inline-block;margin-left:6px;padding:2px 7px;border-radius:999px;background:var(--green);color:var(--void);font:800 10.5px/1.2 Inter;letter-spacing:.04em;text-transform:uppercase;vertical-align:2px}
+.lights-popup-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.lights-popup-actions button{font:700 13px/1 Inter;padding:8px 11px;border-radius:var(--pillr);border:1.5px solid var(--line);background:var(--chip-bg);color:var(--white);cursor:pointer}
+.lights-popup-actions button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--void)}
+.lights-respect{font-size:14.5px;color:var(--gray);margin:12px 0 18px}
+.lights-empty{font-size:14.5px;color:var(--gray);margin:4px 0 12px}
+.lights-form{margin:12px 0 18px}
+.lights-fieldset{margin:0 0 18px;padding:16px;border:1.5px solid var(--line);border-radius:var(--slab);background:var(--card)}
+.lights-fieldset legend{font:800 16px/1.2 Montserrat;color:var(--white);padding:0 6px}
+.lights-fieldset legend span{font:500 13px Inter;color:var(--gray);letter-spacing:0;text-transform:none;margin-left:6px}
+.lights-help,.lights-form .field .lights-help,span.lights-help{display:block;margin:6px 0 10px;font-size:13.5px;color:var(--faint)}
+.lights-form-actions{margin:0 0 10px}
+.lights-form-actions .btn{width:100%;max-width:22rem;border:0;cursor:pointer}
+.lights-picker{height:240px;width:100%;border:1.5px solid var(--line);border-radius:var(--slab);background:var(--card);z-index:0;margin:0 0 10px}
+.lights-pin-label{margin:0 0 12px;font:700 14.5px/1.4 Inter;color:var(--white)}
+.lights-type-chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 8px}
+.lights-form .field{margin:0 0 16px}
+.lights-form .field span{font:500 13px Inter;color:var(--gray);letter-spacing:0;text-transform:none}
+.lights-form input.lights-file{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+body .lights-form .btn2.lights-file-btn{display:inline-flex;width:auto;max-width:100%;margin:0 0 6px;padding:10px 16px;cursor:pointer}
+.lights-photo-preview{display:block;margin:10px 0 0;max-width:min(100%,280px);max-height:160px;object-fit:cover;border-radius:12px;border:1.5px solid var(--line)}
+.lights-fieldset .agree{margin:12px 0 10px}
+.lights-form .btn{border:0;cursor:pointer}
+.lights-form-status{margin:0 0 12px;padding:12px 14px;border-radius:var(--slab);border:1.5px solid var(--green);background:color-mix(in srgb,var(--green) 10%,var(--card));color:var(--white)}
+.lights-form-status.is-error{border-color:#ff8fab;background:color-mix(in srgb,#ff8fab 12%,var(--card))}
+.lights-hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+.lights-popup-actions button.lights-vote[aria-pressed="true"]{background:#FF6B8E;border-color:#FF6B8E;color:var(--void)}
+.lights-popup-actions.share-row{margin-top:8px}
+.leaflet-popup-content .lights-popup-meta{display:block;margin:2px 0}
+.lights-allbtn{font:700 12.5px/1 Inter;padding:8px 10px;border-radius:var(--pillr);border:1.5px solid var(--line);background:var(--card);color:var(--white);cursor:pointer}
+.lights-allbtn:hover{background:var(--chip-bg)}
+.lights-jump{margin:16px 0 12px;padding:0;flex-wrap:wrap;overflow:visible}
+.lights-top{margin:8px 0 14px;padding:0 0 0 22px}
+.lights-top li{margin:6px 0;color:var(--gray)}
+.lights-top a{font-weight:700;color:var(--white)}
+.lights-top-n{color:#FF8FAB;font-weight:700;margin-left:6px}
+.lights-top-empty{font-size:14.5px;color:var(--gray);margin:6px 0 18px;padding:12px 14px;border:1.5px dashed var(--line);border-radius:var(--slab)}
+.lights-a2hs{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:space-between;margin:14px 0 18px;padding:12px 14px;border:1.5px solid var(--line);border-left:6px solid var(--green);border-radius:var(--slab);background:var(--card)}
+.lights-a2hs[hidden]{display:none}
+.lights-a2hs p{margin:0;font-size:14.5px;color:var(--gray)}
+.lights-a2hs p b{color:var(--white)}
+.lights-a2hs-actions{display:flex;gap:8px;align-items:center}
+.lights-a2hs .btn2{width:auto;margin:0;padding:10px 14px}
+.lights-a2hs-x{background:none;border:0;color:var(--faint);font:600 13px Inter;cursor:pointer;padding:8px}
+.lights-story-modal{position:fixed;inset:0;z-index:60;background:var(--overlay);display:flex;align-items:center;justify-content:center;padding:16px}
+.lights-story-sheet{background:var(--card);border:1.5px solid var(--line);border-radius:var(--slab);padding:14px;max-width:360px;width:100%;max-height:calc(100vh - 32px);overflow:auto;text-align:center}
+.lights-story-sheet img{display:block;width:auto;max-width:100%;max-height:56vh;margin:0 auto 12px;border-radius:10px;border:1.5px solid var(--line)}
+.lights-story-actions{display:flex;flex-direction:column;gap:8px;align-items:stretch}
+.lights-story-actions .btn,.lights-story-actions .btn2{width:auto;margin:0;border:0;cursor:pointer}
+.lights-story-actions .btn2{border:1.5px solid var(--line)}
+@media (max-width:640px){
+  .hero{padding-bottom:16px}
+  .hero .range,.hero .updated{display:none}
+  .hero h1::after{margin:12px 0 0}
+  .lights-maphead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .lights-mapwrap{margin:0 0 6px}
+  #lights-map{height:60vh;min-height:320px;max-height:600px}
+  .lights-scroll{flex-wrap:nowrap;overflow-x:auto;margin:0 -20px 8px;padding:0 20px 4px;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 44px),transparent)}
+  .lights-scroll::-webkit-scrollbar{display:none}
+  .lights-scroll.at-end{-webkit-mask-image:none;mask-image:none}
+  .lights-scroll .chip{flex:none}
+  .hero .chips{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 44px),transparent);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 44px),transparent)}
+  .hero .chips.at-end{-webkit-mask-image:none;mask-image:none}
+  .lights-jump a{padding:8px 12px}
+  .lights-picker{height:210px}
+  .lights-form-actions .btn,.lights-form .formfall .btn{max-width:none}
+}
+</style>
+<!-- Generated by tools/guides_pages.py. Do not hand-edit; edit that file and re-run tools/render.py. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the Town Square tree lighting happening this year?","acceptedAnswer":{"@type":"Answer","text":"Yes, but not in Town Square Park. The park is fenced for reconstruction this winter, and new park lighting may not go in until spring. The Anchorage Downtown Partnership moved the ceremony to 4th Avenue, between E and F Streets, in front of Historic City Hall. It's Saturday, November 28, 2026, from 6 to 8 PM, with the tree lighting at 6:15 PM."}},{"@type":"Question","name":"When does Zoo Lights start?","acceptedAnswer":{"@type":"Answer","text":"Opening weekend is November 27–29, 2026, from 5 to 8 PM, then it continues on scheduled nights through February 28, 2027. The zoo is closed on Christmas Day. Check the Alaska Zoo page for the full calendar and tickets."}},{"@type":"Question","name":"Is there a drive-through lights display near Anchorage?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bright Up the Night at the Alaska State Fairgrounds in Palmer runs November 26, 2026 through January 2, 2027. Early dates are Thursday–Sunday only; from December 10 it is nightly, 5 to 9 PM. Stay in your vehicle. The Fair's Yuletide Festival is not happening in 2026."}},{"@type":"Question","name":"Can I add my house to the map?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the form on this page — it takes about 30 seconds. You'll drop a pin or use your location, pick a display type, and confirm you live there or have the owner's OK. We look at every pin before it goes on the map, and we never show your name."}},{"@type":"Question","name":"Will my exact address show up?","acceptedAnswer":{"@type":"Answer","text":"Not unless you ask it to. The default is a street- or block-level pin, like “near the 3400 block of X St.” You can opt in to an exact pin if you want people to find the precise spot."}},{"@type":"Question","name":"How do I change or take down a listing?","acceptedAnswer":{"@type":"Answer","text":"If you left an email, we'll send a private link you can use to edit or remove the pin. You can also write to todayinak@gmail.com and we'll pull it on the next update."}},{"@type":"Question","name":"Are neighborhood houses on the map now?","acceptedAnswer":{"@type":"Answer","text":"Not yet. This first version is official public events and landmarks only. Home displays will be added after people submit them and we review the pins."}}],"url":"https://todayinak.com/lights-preview-umt7dt/"}</script>
+<link rel="preload" href="/assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=4d26a7b0">
+<link rel="icon" href="/favicon.ico" sizes="any">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow"><span class="mark"><i></i>TODAY IN AK</span><div class="brandactions"><div class="theme-picker" id="theme-picker"><button type="button" class="theme-toggle" id="theme-menu" aria-label="Color theme, Aurora selected. Open to change." aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 2.2 17.7c.7-.2 1-1 .6-1.6-.3-.5-.5-1.1-.5-1.7a2.4 2.4 0 0 1 2.4-2.4h1.2A4.1 4.1 0 0 0 21 11.1 9 9 0 0 0 12 3z"/><circle class="dot" cx="8" cy="10" r="1.15"/><circle class="dot" cx="12" cy="7.4" r="1.15"/><circle class="dot" cx="16.2" cy="9.2" r="1.15"/><circle class="dot" cx="9.6" cy="14.2" r="1.15"/></svg></button><div class="theme-menu" id="theme-options" role="listbox" aria-label="Color theme" hidden><p class="theme-menu-label" id="theme-menu-label">Color theme</p><button type="button" role="option" class="theme-swatch" data-theme-value="aurora" aria-label="Aurora" aria-selected="true"><i style="--swatch:#5EF2B5;--swatch-bg:#0D1626"></i><span>Aurora</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="light" aria-label="Light" aria-selected="false" tabindex="-1"><i style="--swatch:#0B6B4C;--swatch-bg:#F3F6FB"></i><span>Light</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="bw" aria-label="Black &amp; White" aria-selected="false" tabindex="-1"><i style="--swatch:#111111;--swatch-bg:#FFFFFF"></i><span>Black &amp; White</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="fireweed" aria-label="Fireweed" aria-selected="false" tabindex="-1"><i style="--swatch:#FF6BA8;--swatch-bg:#1A0B14"></i><span>Fireweed</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="blush" aria-label="Blush" aria-selected="false" tabindex="-1"><i style="--swatch:#A81B58;--swatch-bg:#FBF3F6"></i><span>Blush</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="glacier" aria-label="Glacier" aria-selected="false" tabindex="-1"><i style="--swatch:#7EE0F2;--swatch-bg:#071820"></i><span>Glacier</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="sunset" aria-label="Sunset" aria-selected="false" tabindex="-1"><i style="--swatch:#FF8A5B;--swatch-bg:#1A0E0C"></i><span>Sunset</span></button></div></div><a class="handle" href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">@todayinak</a></div></div>
+    <p class="kicker">Holiday guide</p>
+    <h1>Holiday lights in Anchorage</h1>
+    <p class="range">Official 2026–27 events, on a map, plus a spot for neighborhood displays</p>
+    <nav class="chips" aria-label="Sections"><a href="/">This week</a><a href="/this-weekend/">This weekend</a><a href="/holiday-events/">Holiday events</a><a href="/december/">December</a><a href="/guides/">Guides</a><a href="/submit/">Submit your event</a></nav>
+    <p class="updated">Updated Mon Nov 16, 2026 · Alaska time</p>
+  </div>
+</header>
+
+<main>
+<section class="sec wrap guide">
+  <div id="lights-map-panel">
+  <h2 id="map" class="lights-maphead">Holiday lights map</h2>
+  <div class="lights-mapwrap">
+    <div id="lights-map" role="region" aria-label="Map of official holiday lights around Anchorage and the Mat-Su"></div>
+    <div class="lights-route" id="lights-route" hidden>
+      <p class="lights-route-summary"><b id="lights-route-count">0 stops</b> on your drive</p>
+      <div class="lights-route-actions">
+        <button type="button" class="btn" id="lights-route-go">Drive this route</button>
+        <button type="button" class="btn2" id="lights-route-clear">Clear</button>
+      </div>
+    </div>
+    <p class="lights-attr">Tap a pin to share it, vote, or make a Story image. Map: <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">OpenStreetMap</a>. Drive route opens in Google Maps.</p>
+  </div>
+  <p class="lights-filters-label" id="lights-filters-origin-label">Show on the map</p>
+  <div class="lights-filters lights-scroll" id="lights-filters-origin" role="group" aria-labelledby="lights-filters-origin-label">
+    <button type="button" class="chip" data-origin="all" aria-pressed="true">All</button>
+    <button type="button" class="chip" data-origin="official" aria-pressed="false">Official events</button>
+    <button type="button" class="chip" data-origin="community" aria-pressed="false">Neighborhood</button>
+    <button type="button" class="chip" data-origin="new" aria-pressed="false">New this week</button>
+  </div>
+  <p class="lights-filters-label" id="lights-filters-label">Type</p>
+  <div class="lights-filters lights-scroll" role="group" aria-labelledby="lights-filters-label">
+    <button type="button" class="chip" data-kind="all" aria-pressed="true">All types</button>
+    <button type="button" class="chip" data-kind="walk" aria-pressed="false">Walk-throughs</button>
+    <button type="button" class="chip" data-kind="drive" aria-pressed="false">Drive-through</button>
+    <button type="button" class="chip" data-kind="parade" aria-pressed="false">Parades</button>
+    <button type="button" class="chip" data-kind="event" aria-pressed="false">Events</button>
+    <button type="button" class="chip" data-kind="downtown" aria-pressed="false">Downtown trail</button>
+    <button type="button" class="chip" data-kind="landmark" aria-pressed="false">Landmarks</button>
+    <button type="button" class="chip lights-comm-filter" data-kind="whole-house" aria-pressed="false">Whole-house</button>
+    <button type="button" class="chip lights-comm-filter" data-kind="music" aria-pressed="false">Synced to music</button>
+    <button type="button" class="chip lights-comm-filter" data-kind="drive-by" aria-pressed="false">Drive-by</button>
+    <button type="button" class="chip lights-comm-filter" data-kind="walkable" aria-pressed="false">Walkable</button>
+    <button type="button" class="chip lights-comm-filter" data-kind="inflatables" aria-pressed="false">Inflatables</button>
+    <button type="button" class="chip lights-comm-filter" data-kind="business" aria-pressed="false">Business</button>
+  </div>
+  <p class="lights-empty" id="lights-empty" hidden>No neighborhood pins on the map yet. You can add yours below.</p>
+  </div>
+
+  <nav class="chips catnav lights-jump" aria-label="On this page"><a href="#map">Map</a><a href="#top">Top displays</a><a href="#events">Official events</a><a href="#town-square">Town Square</a><a href="#submit">Add yours</a><a href="#tips">Tips</a><a href="#faq">Questions</a></nav>
+<p class="crumbs"><a href="/holiday-events/">Holiday events</a> · Holiday lights</p>
+  <p class="lede lights-draft"><b>Private preview.</b> This page is not listed in the site menu, the Guides hub or the sitemap. Please do not share the link widely.</p>
+<p class="lede">Anchorage has plenty of holiday lights this winter — just not at Town Square. The park is fenced for reconstruction, so the tree lighting moves to 4th Avenue, Zoo Lights opens November 27, and Palmer's drive-through starts the night before Thanksgiving. This page is the official list, on a map. Neighborhood displays will be added as people send them in and we review each pin.</p>
+  <p>Pins right now are official public events and landmarks only. No private homes yet. <a href="#submit">Add yours</a> — it takes about 30 seconds.</p>
+  <p class="lights-respect">If you go see a house display, stay respectful: don't block driveways, keep the noise down, and leave if you're asked to.</p>
+
+  <div class="lights-a2hs" id="lights-a2hs" hidden>
+    <p><b>Keep the map handy.</b> <span id="lights-a2hs-text">Add it to your home screen and it opens full screen, like an app.</span></p>
+    <div class="lights-a2hs-actions">
+      <button type="button" class="btn2" id="lights-a2hs-install" hidden>Add to home screen</button>
+      <button type="button" class="lights-a2hs-x" id="lights-a2hs-close" aria-label="Dismiss">Not now</button>
+    </div>
+  </div>
+
+  <h2 id="top">Top displays</h2>
+  <ol class="lights-top" id="lights-top" hidden></ol>
+  <p class="lights-top-empty" id="lights-top-empty" hidden>Tap ❤️ on any pin to vote. Once voting opens on the live map, the five displays with the most hearts show up here, and we'll share a weekly Top 5 on Instagram.</p>
+
+
+  <h2 id="events">Official lights, 2026–27</h2>
+  <ul class="spots lights-list">
+    <li id="pin-zoo-lights"><small>Ticketed walk · Anchorage</small><b>Zoo Lights</b><span>Alaska Zoo, 4731 O&#x27;Malley Rd</span><span><b>When:</b> Nov 27, 2026–Feb 28, 2027, on scheduled nights. 5–8 PM on open nights</span><span><b>Cost:</b> $25 ages 16+; $15 ages 15 and under; ages 2 and under free; members 3+ 30% off</span><span>Opening weekend is Nov 27–29. Then weekends Dec 4–6 and 11–13; nightly Dec 18–Jan 3 except Christmas Day (zoo closed); then weekends in January and February, including Valentine&#x27;s Lights Feb 12–14. Buy tickets online or at the gate.</span><p><a href="https://www.alaskazoo.org/zoo-lights" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="zoo-lights">Add to route</button></p></li><li id="pin-tree-lighting"><small>Event · Anchorage</small><b>Holiday Tree Lighting</b><span>4th Avenue between E and F Streets, in front of Historic City Hall</span><span><b>When:</b> Saturday, Nov 28, 2026. 6–8 PM; tree lighting at 6:15 PM</span><span><b>Cost:</b> Free</span><span>Town Square Park is under reconstruction and fenced this winter, so the ceremony moves to 4th Avenue. Pictures with Santa, reindeer, free hot chocolate, choirs and caroling. Presented by Anchorage Downtown Partnership, sponsored by ConocoPhillips Alaska.</span><p><a href="https://anchoragedowntown.org/adp-events/holiday-tree-lighting/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="tree-lighting">Add to route</button></p></li><li id="pin-brighter-winter-nights"><small>Ticketed walk · Anchorage</small><b>Brighter Winter Nights</b><span>Alaska Botanical Garden, 4601 Campbell Airstrip Rd</span><span><b>When:</b> Dec 3, 2026–Jan 31, 2027, on scheduled evenings. Off-peak 5–8 PM; peak Dec 18–Jan 3, 4:30–8:30 PM (closed Christmas Day and New Year&#x27;s Day)</span><span><b>Cost:</b> $12 off-peak; $16 peak; members and kids 6 and under free. Tickets must be bought in advance.</span><span>Botanical light displays, ice luminarias, fire pits, a kicksled trail and a model train. Dec 3–17 is Thursday–Sunday; Dec 18–Jan 3 is nightly except Christmas and New Year&#x27;s Day; Jan 10–31 is Saturdays and Sundays. Bring your own mug; the Garden does not hand out disposable cups.</span><p><a href="https://www.alaskabg.org/brighter-winter-nights" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="brighter-winter-nights">Add to route</button></p></li><li id="pin-bright-up-the-night"><small>Drive-through · Palmer</small><b>Bright Up the Night</b><span>Alaska State Fairgrounds, 2075 Glenn Hwy (enter at Purple Gate, north end)</span><span><b>When:</b> Nov 26, 2026–Jan 2, 2027. 5–9 PM. Nov 26–Dec 6 is Thursday–Sunday only; Dec 10–Jan 2 is every night</span><span><b>Cost:</b> Standard vehicle $22 online, $25 at the gate (up to 8 people). Vans/limos and buses cost more.</span><span>A drive-through with more than 70 light installations and a holiday radio station. Stay in your vehicle. Each ticket is one vehicle, one visit. The Fair&#x27;s Yuletide Festival is not happening in 2026.</span><p><a href="https://www.alaskastatefair.org/site/bright-up-the-night/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="bright-up-the-night">Add to route</button></p></li><li id="pin-colony-christmas-parade"><small>Parade · Palmer</small><b>Colony Christmas Parade of Lights</b><span>Downtown Palmer (South Colony Way / central business district)</span><span><b>When:</b> Saturday, Dec 12, 2026. Colony Christmas weekend is Dec 11–13. Parade at 5 PM; fireworks follow, weather permitting</span><span><b>Cost:</b> Free to watch</span><span>Palmer&#x27;s holiday weekend includes the vendor market, hayrides and the Parade of Lights through downtown. Fireworks follow the parade when weather allows.</span><p><a href="https://www.palmerchamber.org/colony-christmas-2026" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="colony-christmas-parade">Add to route</button></p></li><li id="pin-merry-alyeska"><small>Event · Girdwood</small><b>Merry Alyeska</b><span>Alyeska Resort, 1000 Arlberg Ave</span><span><b>When:</b> Dec 13–31, 2026. Resort grounds and scheduled events; see the official Merry Alyeska page</span><span><b>Cost:</b> Varies by event</span><span>The resort&#x27;s holiday season, with decorated grounds, the Nordic Noël Market on Dec 13, Santa visits, Skate with Santa (weather permitting) and other scheduled events. This is a holiday stay and events lineup, not a ticketed lights walk like Zoo Lights.</span><p><a href="https://www.alyeskaresort.com/merry-alyeska/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="merry-alyeska">Add to route</button></p></li><li id="pin-gpra-tree-tour"><small>Ticketed walk · Palmer</small><b>Holiday Tree Tour at Government Peak</b><span>Pioneer Loop Trail, Government Peak Recreation Area</span><span><b>When:</b> Saturday, Dec 18, 2026. Lights stay up through the holidays. 4–8 PM on Dec 18</span><span><b>Cost:</b> See the Mat-Su Ski Club page</span><span>Ski, walk or bike a little over a mile of lighted trail on Pioneer Loop. Traction devices recommended. Pets should stay home. Cozy fires and warm drinks are on hold this year because of weather.</span><p><a href="https://www.matsuski.org/holiday-tree-tour" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="gpra-tree-tour">Add to route</button></p></li><li id="pin-illuminate-downtown"><small>Downtown trail · Anchorage</small><b>Illuminate Anchorage light trail</b><span>Downtown Anchorage storefronts</span><span><b>When:</b> Interactive map and voting scheduled to launch Dec 5, 2026. Evening storefront displays during the holiday season</span><span><b>Cost:</b> Free to walk</span><span>A downtown business light trail with an interactive map and voting, presented by SparkStory Marketing. This is storefronts, not neighborhood houses. Their map had not launched yet when we wrote this page.</span><p><a href="https://anchoragecitylights.com/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="illuminate-downtown">Add to route</button></p></li><li id="pin-star-on-the-mountain"><small>Landmark · Anchorage</small><b>Star on the Mountain</b><span>Mount Gordon Lyon, above Arctic Valley (view from town)</span><span><b>When:</b> Traditionally late November through the end of the Iditarod. 2026 switch-on date not posted when we checked. Visible on clear evenings once it is lit</span><span><b>Cost:</b> Free to view from town</span><span>A 300-foot star on the mountainside, maintained by crews at Joint Base Elmendorf-Richardson. Look for it from town — this is not a drive-up lights walk, and Arctic Valley Road is not a viewing lot for a close walk-through.</span><p><a href="https://www.anchorage.net/blog/post/the-star-on-the-mountain-an-anchorage-holiday-tradition/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="star-on-the-mountain">Add to route</button></p></li><li id="pin-government-hill-tree"><small>Landmark · Anchorage</small><b>Government Hill holiday tree</b><span>AT&amp;T tower area, Government Hill (near Government Hill Elementary)</span><span><b>When:</b> Lit during the holiday season. A 2026 public ceremony time was not posted when we checked. Visible from downtown and the hillside once it is lit</span><span><b>Cost:</b> Free to view from town</span><span>A large tree display on the Government Hill AT&amp;T tower, visible from downtown. Treat it as a landmark to look at, not a walk-through event.</span><p><a href="https://www.anchorage.net/blog/post/where-to-find-holiday-lights-in-anchorage/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="government-hill-tree">Add to route</button></p></li>
+  </ul>
+  
+  <h2 id="town-square">Town Square is fenced this winter</h2>
+  <p>Town Square Park is in a reconstruction shutdown. The city has said new lighting may not be installed until spring, and the fence is staying up while the park would otherwise be dark. Full reconstruction is aimed at fall 2027. Don't plan on the usual tree or Winter Center in the park this year. Details are on the <a href="https://www.muni.org/departments/parks_and_recreation/park_projects/2026_town_square_park_reconstruction_project.php" rel="noopener" target="_blank">Municipality's Town Square project page</a>.</p>
+
+  <h2 id="also">Also watch for</h2>
+  <ul>
+    <li><b>Eagle River tree lighting.</b> The Chugiak-Eagle River Chamber's Winter Wonderland Celebration is usually at Eagle River Town Square Park, but the chamber page still listed the 2025 date (December 4, 2025) when we checked. We'll add a 2026 pin when the new date is posted.</li>
+    <li><b>Wasilla tree lighting.</b> Traditionally at Iditapark. The City of Wasilla calendar did not list a 2026 date when we checked.</li>
+    <li><b>Star on the Mountain switch-on.</b> The star usually comes on in late November and stays lit until the last Iditarod musher finishes. A 2026 lighting date had not been posted when we wrote this.</li>
+  </ul>
+
+  <div id="lights-submit-panel">
+  <h2 id="submit">Add your lights</h2>
+  <p>Proud of a display, or listing one you have permission to share? Add it here. We review every pin before it goes on the map. We don't ask for your name, and we won't publish your email.</p>
+  
+  <form class="evform lights-form" id="lights-form" action="#" method="post" novalidate>
+    <div class="lights-hp" aria-hidden="true">
+      <label for="lights-company">Company</label>
+      <input id="lights-company" type="text" name="company" tabindex="-1" autocomplete="off">
+    </div>
+
+    <fieldset class="lights-fieldset">
+      <legend>Drop a pin</legend>
+      <p class="lights-help">Takes one tap. We'll show this as a street or block, like “near the 3400 block of X St,” unless you opt into an exact pin.</p>
+      <p class="lights-form-actions">
+        <button type="button" class="btn" id="lights-use-loc">Use my location</button>
+      </p>
+      <div id="lights-picker" class="lights-picker" role="region" aria-label="Drop or drag a pin on the map"></div>
+      <p class="lights-pin-label" id="lights-pin-label">Or tap the map and drag the pin.</p>
+      <p class="agree">
+        <label for="lights-exact">
+          <input type="checkbox" name="exact_pin" id="lights-exact" value="yes">
+          <span>Show the exact spot, not just the block</span>
+        </label>
+      </p>
+      <p class="field" id="lights-street-wrap" hidden>
+        <label for="lights-street">Street or neighborhood <span>(optional — if the label looks off)</span></label>
+        <input id="lights-street" type="text" name="street" maxlength="80" placeholder="e.g. the 3400 block of Arctic Blvd" autocomplete="off">
+      </p>
+      <input type="hidden" name="lat" id="lights-lat">
+      <input type="hidden" name="lon" id="lights-lon">
+      <input type="hidden" name="label" id="lights-label">
+      <input type="hidden" name="precision" id="lights-precision" value="street">
+    </fieldset>
+
+    <fieldset class="lights-fieldset">
+      <legend>What kind of display? <span>pick any that fit</span></legend>
+      <div class="lights-type-chips" id="lights-types" role="group" aria-label="Display type"><button type="button" class="chip" data-type="whole-house" aria-pressed="false">Whole-house display</button><button type="button" class="chip" data-type="music" aria-pressed="false">Synced to music</button><button type="button" class="chip" data-type="drive-by" aria-pressed="false">Drive-by</button><button type="button" class="chip" data-type="walkable" aria-pressed="false">Walkable / neighborhood</button><button type="button" class="chip" data-type="inflatables" aria-pressed="false">Inflatables</button><button type="button" class="chip" data-type="business" aria-pressed="false">Business</button></div>
+    </fieldset>
+
+    <fieldset class="lights-fieldset">
+      <legend>Best time to see it</legend>
+      <div class="lights-type-chips" id="lights-hours" role="group" aria-label="Best viewing hours"><button type="button" class="chip" data-hours="dusk-8" aria-pressed="false">Dusk–8 PM</button><button type="button" class="chip" data-hours="dusk-9" aria-pressed="false">Dusk–9 PM</button><button type="button" class="chip" data-hours="dusk-10" aria-pressed="false">Dusk–10 PM</button><button type="button" class="chip" data-hours="dusk-11" aria-pressed="false">Dusk–11 PM</button><button type="button" class="chip" data-hours="all-evening" aria-pressed="false">All evening</button><button type="button" class="chip" data-hours="other" aria-pressed="false">Other</button></div>
+      <p class="field" id="lights-hours-other-wrap" hidden>
+        <label for="lights-hours-other">What hours?</label>
+        <input id="lights-hours-other" type="text" name="hours_other" maxlength="40" placeholder="e.g. 6–10 PM">
+      </p>
+      <p class="lights-help">Nights, if you want to say</p>
+      <div class="lights-type-chips" id="lights-nights" role="group" aria-label="Nights lit"><button type="button" class="chip" data-nights="nightly" aria-pressed="false">Nightly</button><button type="button" class="chip" data-nights="weekends" aria-pressed="false">Weekends</button><button type="button" class="chip" data-nights="through-new-year" aria-pressed="false">Through New Year's</button><button type="button" class="chip" data-nights="short-run" aria-pressed="false">Just for a bit</button></div>
+    </fieldset>
+
+    <p class="field">
+      <label for="lights-tip">A tip for visitors <span>(optional)</span></label>
+      <input id="lights-tip" type="text" name="tip" maxlength="140" placeholder="Tune to 88.1, or park on the side street">
+    </p>
+
+    <p class="field">
+      <label for="lights-photo">A photo <span>(optional)</span></label>
+      <input id="lights-photo" class="lights-file" type="file" name="photo" accept="image/jpeg,image/png,image/webp,image/heic">
+      <label for="lights-photo" class="btn2 lights-file-btn" id="lights-photo-btn">Choose a photo</label>
+      <span class="lights-help">We'll strip location data from the file. Please skip photos with faces or license plates.</span>
+      <img id="lights-photo-preview" class="lights-photo-preview" alt="" hidden>
+    </p>
+
+    <p class="field">
+      <label for="lights-email">Email for an edit or remove link <span>(optional)</span></label>
+      <input id="lights-email" type="email" name="email" autocomplete="email" inputmode="email">
+      <span class="lights-help">We only use this to send you a private link. It never goes on the map, and we don't ask for your name.</span>
+    </p>
+
+    <p class="agree">
+      <label for="lights-ok">
+        <input id="lights-ok" type="checkbox" name="permission" value="yes" required>
+        <span>I live here, or I have the owner's OK to list this display.</span>
+      </label>
+    </p>
+
+    <p class="lights-respect">Please stay respectful when you visit lights in a neighborhood: don't block driveways or mailboxes, keep music down late, and leave if someone asks you to.</p>
+
+    <p class="formfall"><button type="submit" class="btn" id="lights-submit-btn">Add my lights</button></p>
+    <p class="lights-form-status" id="lights-form-status" role="status" hidden></p>
+  </form>
+
+  <p class="fine">Need a listing taken down later? Use the link we emailed you, or write to <a href="mailto:todayinak@gmail.com">todayinak@gmail.com</a>. Please don't send us addresses of other people's houses — we only list displays the household has agreed to share.</p>
+  </div>
+
+  <h2 id="tips">A few practical notes</h2>
+  <ul>
+    <li>Go after dark, dress for standing outside at the walk-throughs, and give yourself time — Zoo Lights and the Botanical Garden both run on set hours, and the Garden's last entry is 30 minutes before close.</li>
+    <li>Buy Zoo Lights and Brighter Winter Nights tickets ahead when you can. Both are closed on Christmas Day; the Garden is also closed on New Year's Day.</li>
+    <li>At Bright Up the Night, stay in the car. In neighborhoods, don't block driveways or park in front of houses.</li>
+    <li>Check <a href="https://511.alaska.gov/" rel="noopener" target="_blank">511.alaska.gov</a> before you drive to Palmer or Girdwood.</li>
+  </ul>
+  <p>For markets, Nutcracker and the rest of the season, see <a href="/holiday-events/">holiday events</a> and the <a href="/december/">December list</a>.</p>
+
+  <h2 id="faq">Questions</h2>
+  <div class="guidefaq">
+    <details><summary>Is the Town Square tree lighting happening this year?</summary><p>Yes, but not in Town Square Park. The park is fenced for reconstruction this winter, and new park lighting may not go in until spring. The Anchorage Downtown Partnership moved the ceremony to 4th Avenue, between E and F Streets, in front of Historic City Hall. It&#x27;s Saturday, November 28, 2026, from 6 to 8 PM, with the tree lighting at 6:15 PM.</p></details><details><summary>When does Zoo Lights start?</summary><p>Opening weekend is November 27–29, 2026, from 5 to 8 PM, then it continues on scheduled nights through February 28, 2027. The zoo is closed on Christmas Day. Check the Alaska Zoo page for the full calendar and tickets.</p></details><details><summary>Is there a drive-through lights display near Anchorage?</summary><p>Yes. Bright Up the Night at the Alaska State Fairgrounds in Palmer runs November 26, 2026 through January 2, 2027. Early dates are Thursday–Sunday only; from December 10 it is nightly, 5 to 9 PM. Stay in your vehicle. The Fair&#x27;s Yuletide Festival is not happening in 2026.</p></details><details><summary>Can I add my house to the map?</summary><p>Yes. Use the form on this page — it takes about 30 seconds. You&#x27;ll drop a pin or use your location, pick a display type, and confirm you live there or have the owner&#x27;s OK. We look at every pin before it goes on the map, and we never show your name.</p></details><details><summary>Will my exact address show up?</summary><p>Not unless you ask it to. The default is a street- or block-level pin, like “near the 3400 block of X St.” You can opt in to an exact pin if you want people to find the precise spot.</p></details><details><summary>How do I change or take down a listing?</summary><p>If you left an email, we&#x27;ll send a private link you can use to edit or remove the pin. You can also write to todayinak@gmail.com and we&#x27;ll pull it on the next update.</p></details><details><summary>Are neighborhood houses on the map now?</summary><p>Not yet. This first version is official public events and landmarks only. Home displays will be added after people submit them and we review the pins.</p></details>
+  </div>
+
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="mark"><i></i>TODAY IN AK</span>
+    <p>Your Alaska weekend, planned.</p>
+    <div class="footsignup" id="weekmail">
+    <p class="eyebrow">This weekend in AK</p>
+    <p>One free email a week with what's on Friday through Sunday.</p>
+    <!-- Newsletter embed is the Beehiiv v3 loader. Form id comes from beehiiv_form_id in data/site.json. -->
+    <div class="signupembed" id="footsignup">
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="2e680f3e-5587-47b9-ac3c-01aea594638c"></script>
+      <noscript><p class="fine">Get the email at <a href="https://todays-newsletter-29fbf8.beehiiv.com" rel="noopener" target="_blank">todays-newsletter-29fbf8.beehiiv.com</a>.</p></noscript>
+    </div>
+  </div>
+    <p class="links"><a href="/">This week in Alaska</a><a href="/this-weekend/">This weekend</a><a href="/guides/">Guides</a><a href="/holiday-events/">Holiday events</a><a href="/december/">December</a><a href="/submit/">Submit your event</a><a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Instagram · @todayinak</a><a href="https://www.facebook.com/profile.php?id=61595774151541" rel="noopener" target="_blank">Facebook</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a></p>
+    <p><b>Want your event featured?</b> <a href="/submit/">Submit it here</a>, or <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">DM @todayinak on Instagram</a>.</p>
+    <p class="fine">Most listings are free. Featured events are paid placements and are marked as Featured. Details, menus and hours change. Always check with the venue, organizer or truck before you go.</p>
+  </div>
+</footer>
+<script type="application/json" id="lights-data" data-submit-url="https://script.google.com/macros/s/AKfycbyDKLmbUeR08tUrhVl4D9zYMQHfOH5sVVXQbqBScUCkuUnBRjgkLtApisF9oP3I5xrJ/exec" data-page-url="https://todayinak.com/lights-preview-umt7dt/">{"pins": [{"id": "zoo-lights", "name": "Zoo Lights", "kind": "walk", "lat": 61.1246726, "lon": -149.7921739, "venue": "Alaska Zoo, 4731 O'Malley Rd", "town": "Anchorage", "dates": "Nov 27, 2026\u2013Feb 28, 2027, on scheduled nights", "hours": "5\u20138 PM on open nights", "price": "$25 ages 16+; $15 ages 15 and under; ages 2 and under free; members 3+ 30% off", "url": "https://www.alaskazoo.org/zoo-lights", "source": "Alaska Zoo Zoo Lights page, read Nov 15, 2026", "blurb": "Opening weekend is Nov 27\u201329. Then weekends Dec 4\u20136 and 11\u201313; nightly Dec 18\u2013Jan 3 except Christmas Day (zoo closed); then weekends in January and February, including Valentine's Lights Feb 12\u201314. Buy tickets online or at the gate.", "origin": "official"}, {"id": "tree-lighting", "name": "Holiday Tree Lighting", "kind": "event", "lat": 61.2181914, "lon": -149.8926873, "venue": "4th Avenue between E and F Streets, in front of Historic City Hall", "town": "Anchorage", "dates": "Saturday, Nov 28, 2026", "hours": "6\u20138 PM; tree lighting at 6:15 PM", "price": "Free", "url": "https://anchoragedowntown.org/adp-events/holiday-tree-lighting/", "source": "Anchorage Downtown Partnership official page and 2026 poster, read Nov 15, 2026", "blurb": "Town Square Park is under reconstruction and fenced this winter, so the ceremony moves to 4th Avenue. Pictures with Santa, reindeer, free hot chocolate, choirs and caroling. Presented by Anchorage Downtown Partnership, sponsored by ConocoPhillips Alaska.", "origin": "official"}, {"id": "brighter-winter-nights", "name": "Brighter Winter Nights", "kind": "walk", "lat": 61.1767513, "lon": -149.7596631, "venue": "Alaska Botanical Garden, 4601 Campbell Airstrip Rd", "town": "Anchorage", "dates": "Dec 3, 2026\u2013Jan 31, 2027, on scheduled evenings", "hours": "Off-peak 5\u20138 PM; peak Dec 18\u2013Jan 3, 4:30\u20138:30 PM (closed Christmas Day and New Year's Day)", "price": "$12 off-peak; $16 peak; members and kids 6 and under free. Tickets must be bought in advance.", "url": "https://www.alaskabg.org/brighter-winter-nights", "source": "Alaska Botanical Garden Brighter Winter Nights page, read Nov 15, 2026", "blurb": "Botanical light displays, ice luminarias, fire pits, a kicksled trail and a model train. Dec 3\u201317 is Thursday\u2013Sunday; Dec 18\u2013Jan 3 is nightly except Christmas and New Year's Day; Jan 10\u201331 is Saturdays and Sundays. Bring your own mug; the Garden does not hand out disposable cups.", "origin": "official"}, {"id": "bright-up-the-night", "name": "Bright Up the Night", "kind": "drive", "lat": 61.5815312, "lon": -149.1352861, "venue": "Alaska State Fairgrounds, 2075 Glenn Hwy (enter at Purple Gate, north end)", "town": "Palmer", "dates": "Nov 26, 2026\u2013Jan 2, 2027", "hours": "5\u20139 PM. Nov 26\u2013Dec 6 is Thursday\u2013Sunday only; Dec 10\u2013Jan 2 is every night", "price": "Standard vehicle $22 online, $25 at the gate (up to 8 people). Vans/limos and buses cost more.", "url": "https://www.alaskastatefair.org/site/bright-up-the-night/", "source": "Alaska State Fair Bright Up the Night page, read Nov 15, 2026", "blurb": "A drive-through with more than 70 light installations and a holiday radio station. Stay in your vehicle. Each ticket is one vehicle, one visit. The Fair's Yuletide Festival is not happening in 2026.", "origin": "official"}, {"id": "colony-christmas-parade", "name": "Colony Christmas Parade of Lights", "kind": "parade", "lat": 61.5941795, "lon": -149.1179166, "venue": "Downtown Palmer (South Colony Way / central business district)", "town": "Palmer", "dates": "Saturday, Dec 12, 2026. Colony Christmas weekend is Dec 11\u201313", "hours": "Parade at 5 PM; fireworks follow, weather permitting", "price": "Free to watch", "url": "https://www.palmerchamber.org/colony-christmas-2026", "source": "Greater Palmer Chamber Colony Christmas 2026 page and official Eventeny listing, read Nov 15, 2026", "blurb": "Palmer's holiday weekend includes the vendor market, hayrides and the Parade of Lights through downtown. Fireworks follow the parade when weather allows.", "origin": "official"}, {"id": "merry-alyeska", "name": "Merry Alyeska", "kind": "event", "lat": 60.9702713, "lon": -149.0986622, "venue": "Alyeska Resort, 1000 Arlberg Ave", "town": "Girdwood", "dates": "Dec 13\u201331, 2026", "hours": "Resort grounds and scheduled events; see the official Merry Alyeska page", "price": "Varies by event", "url": "https://www.alyeskaresort.com/merry-alyeska/", "source": "Alyeska Resort Merry Alyeska 2026 press release (Nov 10, 2026), pointing to the official resort page", "blurb": "The resort's holiday season, with decorated grounds, the Nordic No\u00ebl Market on Dec 13, Santa visits, Skate with Santa (weather permitting) and other scheduled events. This is a holiday stay and events lineup, not a ticketed lights walk like Zoo Lights.", "origin": "official"}, {"id": "gpra-tree-tour", "name": "Holiday Tree Tour at Government Peak", "kind": "walk", "lat": 61.7121609, "lon": -149.2969598, "venue": "Pioneer Loop Trail, Government Peak Recreation Area", "town": "Palmer", "dates": "Saturday, Dec 18, 2026. Lights stay up through the holidays", "hours": "4\u20138 PM on Dec 18", "price": "See the Mat-Su Ski Club page", "url": "https://www.matsuski.org/holiday-tree-tour", "source": "Mat-Su Ski Club Holiday Tree Tour page, read Nov 15, 2026", "blurb": "Ski, walk or bike a little over a mile of lighted trail on Pioneer Loop. Traction devices recommended. Pets should stay home. Cozy fires and warm drinks are on hold this year because of weather.", "origin": "official"}, {"id": "illuminate-downtown", "name": "Illuminate Anchorage light trail", "kind": "downtown", "lat": 61.21755, "lon": -149.8908, "venue": "Downtown Anchorage storefronts", "town": "Anchorage", "dates": "Interactive map and voting scheduled to launch Dec 5, 2026", "hours": "Evening storefront displays during the holiday season", "price": "Free to walk", "url": "https://anchoragecitylights.com/", "source": "Illuminate Anchorage (anchoragecitylights.com), read Nov 15, 2026", "blurb": "A downtown business light trail with an interactive map and voting, presented by SparkStory Marketing. This is storefronts, not neighborhood houses. Their map had not launched yet when we wrote this page.", "origin": "official"}, {"id": "star-on-the-mountain", "name": "Star on the Mountain", "kind": "landmark", "lat": 61.2622868, "lon": -149.5063328, "venue": "Mount Gordon Lyon, above Arctic Valley (view from town)", "town": "Anchorage", "dates": "Traditionally late November through the end of the Iditarod. 2026 switch-on date not posted when we checked.", "hours": "Visible on clear evenings once it is lit", "price": "Free to view from town", "url": "https://www.anchorage.net/blog/post/the-star-on-the-mountain-an-anchorage-holiday-tradition/", "source": "Visit Anchorage Star on the Mountain explainer (tradition; page last updated 2023)", "blurb": "A 300-foot star on the mountainside, maintained by crews at Joint Base Elmendorf-Richardson. Look for it from town \u2014 this is not a drive-up lights walk, and Arctic Valley Road is not a viewing lot for a close walk-through.", "origin": "official"}, {"id": "government-hill-tree", "name": "Government Hill holiday tree", "kind": "landmark", "lat": 61.2336651, "lon": -149.8702986, "venue": "AT&T tower area, Government Hill (near Government Hill Elementary)", "town": "Anchorage", "dates": "Lit during the holiday season. A 2026 public ceremony time was not posted when we checked.", "hours": "Visible from downtown and the hillside once it is lit", "price": "Free to view from town", "url": "https://www.anchorage.net/blog/post/where-to-find-holiday-lights-in-anchorage/", "source": "Visit Anchorage holiday lights guide (mentions the Government Hill tree; that page was last updated Nov 11, 2025 and is stale on Town Square)", "blurb": "A large tree display on the Government Hill AT&T tower, visible from downtown. Treat it as a landmark to look at, not a walk-through event.", "origin": "official"}]}</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function(){
+  function escapeHtml(s) {
+    return String(s || '').replace(/[&<>"']/g, function(c){
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+    });
+  }
+  function $(id){ return document.getElementById(id); }
+  var dataEl = $('lights-data');
+  var pins = [];
+  try { pins = JSON.parse(dataEl.textContent).pins || []; } catch (err) { pins = []; }
+  var SUBMIT_URL = (dataEl && dataEl.getAttribute('data-submit-url')) || '';
+  var PAGE_URL = (dataEl && dataEl.getAttribute('data-page-url')) || (location.origin + (location.pathname.replace(/\/?$/, '/') || '/holiday-lights/'));
+  var PAGE_PATH = PAGE_URL.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  /* Anchorage bowl: the default view. Palmer, Girdwood and the mountain are one tap away. */
+  var BOWL = { s: 61.08, w: -150.05, n: 61.30, e: -149.70 };
+  var COMM_KINDS = { 'whole-house':1, music:1, 'drive-by':1, walkable:1, inflatables:1, business:1 };
+  var TYPE_LABELS = {
+    'whole-house':'Whole-house display', music:'Synced to music', 'drive-by':'Drive-by',
+    walkable:'Walkable / neighborhood', inflatables:'Inflatables', business:'Business'
+  };
+  var HOUR_LABELS = {
+    'dusk-8':'Dusk–8 PM','dusk-9':'Dusk–9 PM','dusk-10':'Dusk–10 PM',
+    'dusk-11':'Dusk–11 PM','all-evening':'All evening'
+  };
+  var NIGHT_LABELS = {
+    nightly:'Nightly', weekends:'Weekends', 'through-new-year':"Through New Year's", 'short-run':'Just for a bit'
+  };
+
+  function isNewPin(p) {
+    if ((p.origin || 'official') !== 'community' || !p.added) return false;
+    var d = Date.parse(p.added + 'T00:00:00-09:00');
+    if (isNaN(d)) return false;
+    return (Date.now() - d) < 7 * 24 * 3600 * 1000;
+  }
+  function pinMatches(p, origin, kind) {
+    var po = p.origin || 'official';
+    if (origin === 'official' && po !== 'official') return false;
+    if (origin === 'community' && po !== 'community') return false;
+    if (origin === 'new' && !isNewPin(p)) return false;
+    if (kind && kind !== 'all') {
+      if (COMM_KINDS[kind]) {
+        var types = p.types || [];
+        if (types.indexOf(kind) === -1) return false;
+      } else if (p.kind !== kind) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  var sawKey = 'tia-lights-saw';
+  function loadSaw() {
+    try { return JSON.parse(localStorage.getItem(sawKey) || '{}') || {}; } catch (e) { return {}; }
+  }
+  function saveSaw(map) {
+    try { localStorage.setItem(sawKey, JSON.stringify(map)); } catch (e) {}
+  }
+  var sawMap = loadSaw();
+  var routeIds = [];
+
+  function routeCountLabel(n) {
+    return n === 1 ? '1 stop' : (n + ' stops');
+  }
+
+  /* ---- names that are safe to show (home pins are block-level only) ---- */
+  function blockOnly(t) {
+    return String(t || '').replace(/\b(\d{3,6})\b/g, function(_, n){ return String(Math.floor(parseInt(n, 10) / 100) * 100); });
+  }
+  function isHome(p) { return (p.origin || 'official') === 'community'; }
+  function publicName(p) { return isHome(p) ? blockOnly(p.name || 'Neighborhood display') : (p.name || ''); }
+  function typeLine(p) {
+    return (p.types || []).map(function(t){ return TYPE_LABELS[t] || t; }).join(' · ');
+  }
+
+  /* ---- votes: local stub until SUBMIT_URL is set ---- */
+  var VOTE_KEY = 'tia-lights-votes';
+  function loadJson(key) { try { return JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch (e) { return {}; } }
+  function saveJson(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} }
+  var myVotes = loadJson(VOTE_KEY);
+  var liveVotes = null;
+  function deviceId() {
+    var k = 'tia-lights-device', v = '';
+    try { v = localStorage.getItem(k) || ''; } catch (e) {}
+    if (!v) {
+      v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : (Date.now().toString(36) + Math.random().toString(36).slice(2));
+      try { localStorage.setItem(k, v); } catch (e) {}
+    }
+    return v;
+  }
+  function voteCount(p) {
+    if (liveVotes && typeof liveVotes[p.id] === 'number') return liveVotes[p.id];
+    return (p.votes || 0) + (myVotes[p.id] ? 1 : 0);
+  }
+
+  var map, markers = [];
+  function popupHtml(p) {
+    var parts = ['<b>' + escapeHtml(publicName(p)) + (isNewPin(p) ? ' <span class="lights-new">New this week</span>' : '') + '</b>'];
+    if (p.venue) parts.push(escapeHtml(p.venue));
+    if (p.dates) parts.push(escapeHtml(p.dates));
+    if (p.hours) parts.push(escapeHtml(p.hours));
+    if (p.nights) parts.push(escapeHtml(p.nights));
+    if (p.price) parts.push(escapeHtml(p.price));
+    if (p.tip) parts.push('Tip: ' + escapeHtml(p.tip));
+    if (p.types && p.types.length) parts.push(escapeHtml(typeLine(p)));
+    if (p.url) parts.push('<a href="' + escapeHtml(p.url) + '" rel="noopener" target="_blank">Official page</a>');
+    var inRoute = routeIds.indexOf(p.id) !== -1;
+    var sawn = !!sawMap[p.id];
+    var sights = (p.sights || 0) + (sawn && !(p.sightsAlready) ? 1 : 0);
+    var sawLabel = sawn ? 'You saw it' : 'I saw it';
+    if (sights > 0) sawLabel += ' · ' + sights;
+    var voted = !!myVotes[p.id];
+    var n = voteCount(p);
+    var id = escapeHtml(p.id);
+    parts.push('<div class="lights-popup-actions">'
+      + '<button type="button" class="lights-vote" data-id="' + id + '" aria-pressed="' + (voted ? 'true' : 'false') + '" aria-label="' + (voted ? 'Remove your vote' : 'Vote for this display') + ', ' + n + (n === 1 ? ' vote' : ' votes') + '">❤️ ' + n + '</button>'
+      + '<button type="button" class="lights-share" data-id="' + id + '">Share</button>'
+      + '<button type="button" class="lights-story" data-id="' + id + '">Make a Story image</button>'
+      + '</div><div class="lights-popup-actions share-row">'
+      + '<button type="button" class="lights-add-route" data-id="' + id + '" aria-pressed="' + (inRoute ? 'true' : 'false') + '">'
+      + (inRoute ? 'Remove from route' : 'Add to route') + '</button>'
+      + '<button type="button" class="lights-saw" data-id="' + id + '" aria-pressed="' + (sawn ? 'true' : 'false') + '">'
+      + escapeHtml(sawLabel) + '</button></div>');
+    return parts.join('<br>');
+  }
+  function refreshPopups() {
+    markers.forEach(function(m){ m.setPopupContent(popupHtml(m.pin)); });
+  }
+  function currentOrigin() {
+    var btn = document.querySelector('#lights-filters-origin .chip[aria-pressed="true"]');
+    return (btn && btn.getAttribute('data-origin')) || 'all';
+  }
+  function currentKind() {
+    var btn = document.querySelector('.lights-filters .chip[data-kind][aria-pressed="true"]');
+    return (btn && btn.getAttribute('data-kind')) || 'all';
+  }
+  var wholeArea = false;
+  function inBowl(p) { return p.lat >= BOWL.s && p.lat <= BOWL.n && p.lon >= BOWL.w && p.lon <= BOWL.e; }
+  function fitVisible() {
+    if (!map) return;
+    var vis = markers.filter(function(m){ return map.hasLayer(m); });
+    var empty = $('lights-empty');
+    if (empty) {
+      var origin = currentOrigin();
+      empty.hidden = !(origin === 'community' || origin === 'new') || vis.length > 0;
+    }
+    var use = vis;
+    if (!wholeArea) {
+      var bowl = vis.filter(function(m){ return inBowl(m.pin); });
+      if (bowl.length >= 2) use = bowl;
+    }
+    if (use.length) {
+      var b = L.latLngBounds(use.map(function(m){ return [m.pin.lat, m.pin.lon]; }));
+      map.fitBounds(b.pad(0.12), {maxZoom: use === vis ? 11 : 13});
+    } else {
+      map.setView([61.19, -149.86], 11);
+    }
+    var tg = document.querySelector('.lights-allbtn');
+    if (tg) tg.textContent = wholeArea ? 'Back to Anchorage' : 'Show Mat-Su & Girdwood';
+  }
+  /* Nudge pins that sit on top of each other (downtown) apart at the current zoom. */
+  function declutter() {
+    if (!map) return;
+    var vis = markers.filter(function(m){ return map.hasLayer(m); });
+    var pts = vis.map(function(m){ return { m: m, p: map.latLngToLayerPoint(m.home) }; });
+    var used = [];
+    pts.forEach(function(a, i){
+      if (used[i]) return;
+      var group = [a]; used[i] = 1;
+      pts.forEach(function(c, j){
+        if (used[j]) return;
+        if (a.p.distanceTo(c.p) < 22) { group.push(c); used[j] = 1; }
+      });
+      if (group.length === 1) { a.m.setLatLng(a.m.home); return; }
+      var cx = 0, cy = 0;
+      group.forEach(function(g){ cx += g.p.x; cy += g.p.y; });
+      cx /= group.length; cy /= group.length;
+      var r = 13 + group.length * 2;
+      group.forEach(function(g, k){
+        var ang = -Math.PI / 2 + k * 2 * Math.PI / group.length;
+        g.m.setLatLng(map.layerPointToLatLng(L.point(cx + r * Math.cos(ang), cy + r * Math.sin(ang))));
+      });
+    });
+  }
+  function applyFilters() {
+    if (!map) return;
+    var origin = currentOrigin();
+    var kind = currentKind();
+    markers.forEach(function(m){
+      var show = pinMatches(m.pin, origin, kind);
+      if (show && !map.hasLayer(m)) m.addTo(map);
+      if (!show && map.hasLayer(m)) map.removeLayer(m);
+    });
+    fitVisible();
+    declutter();
+  }
+  function updateRouteBar() {
+    var bar = $('lights-route');
+    var count = $('lights-route-count');
+    if (!bar || !count) return;
+    bar.hidden = routeIds.length === 0;
+    count.textContent = routeCountLabel(routeIds.length);
+    refreshPopups();
+    document.querySelectorAll('.lights-route-add').forEach(function(btn){
+      var id = btn.getAttribute('data-id');
+      var on = routeIds.indexOf(id) !== -1;
+      btn.textContent = on ? 'Remove from route' : 'Add to route';
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  function toggleRoute(id) {
+    var i = routeIds.indexOf(id);
+    if (i === -1) routeIds.push(id);
+    else routeIds.splice(i, 1);
+    updateRouteBar();
+  }
+  function pinById(id) {
+    for (var i = 0; i < pins.length; i++) if (pins[i].id === id) return pins[i];
+    return null;
+  }
+  function openRoute() {
+    if (!routeIds.length) return;
+    var pts = [];
+    routeIds.forEach(function(id){
+      var p = pinById(id);
+      if (p && typeof p.lat === 'number' && typeof p.lon === 'number') pts.push(p);
+    });
+    if (!pts.length) return;
+    var use = pts.slice(0, 9);
+    var dest = use[use.length - 1];
+    var origin = use[0];
+    var url = 'https://www.google.com/maps/dir/?api=1&travelmode=driving';
+    url += '&origin=' + encodeURIComponent(origin.lat + ',' + origin.lon);
+    url += '&destination=' + encodeURIComponent(dest.lat + ',' + dest.lon);
+    if (use.length > 2) {
+      var mid = use.slice(1, -1).map(function(p){ return p.lat + ',' + p.lon; }).join('|');
+      url += '&waypoints=' + encodeURIComponent(mid);
+    }
+    if (pts.length > 9) {
+      window.alert('Google Maps can take 9 stops at a time, so we opened the first 9.');
+    }
+    window.open(url, '_blank', 'noopener');
+  }
+
+  function markerById(id) {
+    return markers.filter(function(m){ return m.pin && m.pin.id === id; })[0] || null;
+  }
+  function pinFromUrl() {
+    var m = (location.hash || '').match(/[#&]pin=([^&]+)/);
+    if (m) { try { return decodeURIComponent(m[1]); } catch (e) { return m[1]; } }
+    try { return new URLSearchParams(location.search).get('pin') || ''; } catch (e) { return ''; }
+  }
+  var suppressHash = false;
+  function focusPin(id, scroll) {
+    var mk = markerById(id);
+    if (!mk || !map) return false;
+    if (!map.hasLayer(mk)) {
+      document.querySelectorAll('#lights-filters-origin .chip, .lights-filters .chip[data-kind]').forEach(function(b){
+        var all = b.getAttribute('data-origin') === 'all' || b.getAttribute('data-kind') === 'all';
+        b.setAttribute('aria-pressed', all ? 'true' : 'false');
+      });
+      markers.forEach(function(m){ if (!map.hasLayer(m)) m.addTo(map); });
+    }
+    if (scroll) {
+      var panel = $('lights-map');
+      if (panel && panel.scrollIntoView) panel.scrollIntoView({ block: 'center' });
+    }
+    map.setView([mk.pin.lat, mk.pin.lon], Math.max(map.getZoom(), 15), { animate: false });
+    declutter();
+    suppressHash = true;
+    mk.openPopup();
+    suppressHash = false;
+    return true;
+  }
+  function setPinHash(id) {
+    if (!window.history || !history.replaceState) return;
+    var base = location.pathname + location.search.replace(/([?&])pin=[^&]*&?/, '$1').replace(/[?&]$/, '');
+    history.replaceState(null, '', id ? (base + '#pin=' + encodeURIComponent(id)) : base);
+  }
+
+  var el = $('lights-map');
+  if (el && dataEl && typeof L !== 'undefined') {
+    map = L.map('lights-map', {scrollWheelZoom: false, attributionControl: true, zoomControl: false});
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+    var popW = Math.max(200, Math.min(290, el.clientWidth - 44));
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 19
+    }).addTo(map);
+    var icon = L.divIcon({
+      className: 'lights-pin',
+      html: '<span style="display:block;width:16px;height:16px;border-radius:50%;background:#5EF2B5;border:2px solid #0D1626;box-shadow:0 0 0 2px rgba(94,242,181,.35)"></span>',
+      iconSize: [16, 16],
+      iconAnchor: [8, 8],
+      popupAnchor: [0, -10]
+    });
+    pins.forEach(function(p){
+      if (typeof p.lat !== 'number' || typeof p.lon !== 'number') return;
+      var m = L.marker([p.lat, p.lon], {icon: icon, title: publicName(p), alt: publicName(p)});
+      m.pin = p;
+      m.home = L.latLng(p.lat, p.lon);
+      m.bindPopup(popupHtml(p), {maxWidth: popW, minWidth: Math.min(230, popW), autoPanPaddingTopLeft: L.point(10, 58), autoPanPaddingBottomRight: L.point(10, 30)});
+      m.on('popupopen', function(){ setPinHash(p.id); });
+      m.on('popupclose', function(){ if (pinFromUrl() === p.id) setPinHash(''); });
+      m.addTo(map);
+      markers.push(m);
+    });
+    var AllCtl = L.Control.extend({
+      options: { position: 'topright' },
+      onAdd: function(){
+        var b = L.DomUtil.create('button', 'lights-allbtn');
+        b.type = 'button';
+        b.textContent = 'Show Mat-Su & Girdwood';
+        L.DomEvent.disableClickPropagation(b);
+        L.DomEvent.on(b, 'click', function(){ wholeArea = !wholeArea; map.closePopup(); fitVisible(); declutter(); });
+        return b;
+      }
+    });
+    map.addControl(new AllCtl());
+    map.on('zoomend', declutter);
+    var initial = function(){
+      map.invalidateSize();
+      var id = pinFromUrl();
+      if (!(id && focusPin(id, false))) { fitVisible(); declutter(); }
+    };
+    fitVisible();
+    declutter();
+    setTimeout(initial, 200);
+    window.addEventListener('hashchange', function(){
+      var id = pinFromUrl();
+      if (id) focusPin(id, true);
+    });
+  }
+
+  /* ---- toast + share ---- */
+  var toastEl = null, toastTimer = null;
+  function toast(msg) {
+    if (!toastEl) {
+      toastEl = document.createElement('div');
+      toastEl.className = 'toast';
+      toastEl.setAttribute('role', 'status');
+      toastEl.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2200);
+  }
+  function copyText(text) {
+    function legacy() {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      toast(ok ? 'Link copied' : text);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ toast('Link copied'); }, legacy);
+    } else legacy();
+  }
+  function pinUrl(id) { return PAGE_URL + '#pin=' + encodeURIComponent(id); }
+  function sharePin(p) {
+    var url = pinUrl(p.id);
+    var name = publicName(p);
+    var data = { title: name + ' · Holiday lights map · Today in AK', text: name + ' is on the Today in AK holiday lights map.', url: url };
+    if (navigator.share) {
+      navigator.share(data).catch(function(err){ if (!err || err.name !== 'AbortError') copyText(url); });
+    } else copyText(url);
+  }
+
+  /* ---- "I'm on the map" Story image (1080x1920, drawn in the browser) ---- */
+  function wrapLines(ctx, text, maxW, maxLines) {
+    var words = String(text || '').split(/\s+/).filter(Boolean), lines = [], cur = '';
+    words.forEach(function(w){
+      var t = cur ? cur + ' ' + w : w;
+      if (ctx.measureText(t).width <= maxW || !cur) cur = t; else { lines.push(cur); cur = w; }
+    });
+    if (cur) lines.push(cur);
+    if (lines.length > maxLines) {
+      lines = lines.slice(0, maxLines);
+      var last = lines[maxLines - 1];
+      while (last.length > 1 && ctx.measureText(last + '…').width > maxW) last = last.slice(0, -1);
+      lines[maxLines - 1] = last + '…';
+    }
+    return lines;
+  }
+  function fitFont(ctx, text, weight, family, start, min, maxW, maxLines) {
+    for (var size = start; size >= min; size -= 4) {
+      ctx.font = weight + ' ' + size + 'px ' + family;
+      var lines = wrapLines(ctx, text, maxW, 99);
+      if (lines.length <= maxLines) return { size: size, lines: lines };
+    }
+    ctx.font = weight + ' ' + min + 'px ' + family;
+    return { size: min, lines: wrapLines(ctx, text, maxW, maxLines) };
+  }
+  function storyText(p) {
+    var home = isHome(p);
+    var title = home ? (typeLine(p) || 'Holiday lights') : (p.name || '');
+    var area;
+    if (home) {
+      area = [blockOnly(p.name || ''), p.town || ''].filter(Boolean).join(', ');
+    } else {
+      var place = String(p.venue || '').split(',')[0].trim();
+      area = [place, p.town || ''].filter(Boolean).join(' · ');
+    }
+    return {
+      title: title,
+      area: area,
+      line: home ? "I'm on the Today in AK holiday lights map" : 'Find it on the Today in AK holiday lights map'
+    };
+  }
+  function drawStory(p) {
+    var W = 1080, H = 1920;
+    var c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    var x = c.getContext('2d');
+    var g = x.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, '#070B14'); g.addColorStop(0.55, '#0D1626'); g.addColorStop(1, '#070B14');
+    x.fillStyle = g; x.fillRect(0, 0, W, H);
+    /* aurora: soft glows along two curves */
+    x.globalCompositeOperation = 'lighter';
+    function band(col, pts, r, a) {
+      for (var t = 0; t <= 1.0001; t += 0.04) {
+        var u = 1 - t;
+        var px = u*u*u*pts[0][0] + 3*u*u*t*pts[1][0] + 3*u*t*t*pts[2][0] + t*t*t*pts[3][0];
+        var py = u*u*u*pts[0][1] + 3*u*u*t*pts[1][1] + 3*u*t*t*pts[2][1] + t*t*t*pts[3][1];
+        var rg = x.createRadialGradient(px, py, 0, px, py, r);
+        rg.addColorStop(0, 'rgba(' + col + ',' + a + ')');
+        rg.addColorStop(1, 'rgba(' + col + ',0)');
+        x.fillStyle = rg;
+        x.fillRect(px - r, py - r, r * 2, r * 2);
+      }
+    }
+    band('94,242,181', [[-120, 760], [260, 180], [700, 120], [1200, 420]], 260, 0.10);
+    band('64,196,214', [[-120, 980], [320, 520], [760, 470], [1200, 700]], 220, 0.07);
+    band('140,110,230', [[-120, 1200], [360, 760], [800, 760], [1200, 980]], 260, 0.09);
+    x.globalCompositeOperation = 'source-over';
+    /* little string of lights */
+    var cols = ['#5EF2B5', '#FFB86B', '#FF8FAB', '#40C4D6', '#F2B33D'];
+    x.strokeStyle = 'rgba(150,164,188,.45)'; x.lineWidth = 4;
+    x.beginPath(); x.moveTo(-20, 330);
+    x.quadraticCurveTo(W / 2, 430, W + 20, 330); x.stroke();
+    for (var i = 0; i < 11; i++) {
+      var tt = (i + 0.5) / 11, bx = -20 + tt * (W + 40), by = (1-tt)*(1-tt)*330 + 2*(1-tt)*tt*430 + tt*tt*330 + 22;
+      var col = cols[i % cols.length];
+      var gl = x.createRadialGradient(bx, by, 0, bx, by, 46);
+      gl.addColorStop(0, col); gl.addColorStop(1, 'rgba(0,0,0,0)');
+      x.globalAlpha = 0.55; x.fillStyle = gl; x.fillRect(bx - 46, by - 46, 92, 92); x.globalAlpha = 1;
+      x.fillStyle = col; x.beginPath(); x.ellipse(bx, by, 13, 18, 0, 0, Math.PI * 2); x.fill();
+    }
+    var L0 = 96, maxW = W - L0 * 2;
+    x.textBaseline = 'alphabetic';
+    /* brand */
+    x.fillStyle = '#5EF2B5'; x.beginPath(); x.arc(L0 + 11, 233, 11, 0, Math.PI * 2); x.fill();
+    x.fillStyle = '#F4F6FA'; x.font = '800 38px Montserrat, Inter, sans-serif';
+    if ('letterSpacing' in x) x.letterSpacing = '6px';
+    x.fillText('TODAY IN AK', L0 + 38, 247);
+    if ('letterSpacing' in x) x.letterSpacing = '4px';
+    x.fillStyle = '#5EF2B5'; x.font = '800 34px Montserrat, Inter, sans-serif';
+    x.fillText('HOLIDAY LIGHTS 2026–27', L0, 640);
+    if ('letterSpacing' in x) x.letterSpacing = '0px';
+    var st = storyText(p);
+    var tf = fitFont(x, st.title, '900', 'Montserrat, Inter, sans-serif', 128, 68, maxW, 3);
+    x.fillStyle = '#F4F6FA';
+    var y = 640 + 40 + tf.size;
+    tf.lines.forEach(function(l){ x.fillText(l, L0, y); y += Math.round(tf.size * 1.02); });
+    x.fillStyle = '#5EF2B5'; x.fillRect(L0, y - tf.size * 0.35, 120, 14);
+    y += 70;
+    if (st.area) {
+      var af = fitFont(x, st.area, '500', 'Inter, sans-serif', 52, 38, maxW, 2);
+      x.fillStyle = '#B4C0D4';
+      af.lines.forEach(function(l){ y += af.size; x.fillText(l, L0, y); y += Math.round(af.size * 0.3); });
+    }
+    /* bottom card: below the text, kept above the Story reply bar */
+    var cardH = 320;
+    var cardTop = Math.min(1420, Math.max(1200, y + 60));
+    x.fillStyle = 'rgba(13,22,38,.88)';
+    x.strokeStyle = '#283854'; x.lineWidth = 4;
+    x.beginPath();
+    if (x.roundRect) x.roundRect(L0 - 24, cardTop, maxW + 48, cardH, 28); else x.rect(L0 - 24, cardTop, maxW + 48, cardH);
+    x.fill(); x.stroke();
+    x.fillStyle = '#5EF2B5'; x.fillRect(L0 - 24, cardTop + 24, 10, cardH - 48);
+    var lf = fitFont(x, st.line, '800', 'Montserrat, Inter, sans-serif', 64, 44, maxW - 30, 3);
+    x.fillStyle = '#F4F6FA';
+    var ly = cardTop + 40 + lf.size;
+    lf.lines.forEach(function(l){ x.fillText(l, L0 + 14, ly); ly += Math.round(lf.size * 1.12); });
+    x.fillStyle = '#5EF2B5'; x.font = '700 46px Montserrat, Inter, sans-serif';
+    x.fillText(PAGE_PATH, L0 + 14, cardTop + cardH - 44);
+    return c;
+  }
+  function fontsReady() {
+    if (!document.fonts || !document.fonts.load) return Promise.resolve();
+    var loads = Promise.all([
+      document.fonts.load('900 100px Montserrat'), document.fonts.load('800 60px Montserrat'),
+      document.fonts.load('700 46px Montserrat'), document.fonts.load('500 50px Inter')
+    ]).catch(function(){});
+    return Promise.race([loads, new Promise(function(r){ setTimeout(r, 1500); })]);
+  }
+  var storyBox = null;
+  function closeStory() {
+    if (!storyBox) return;
+    var img = storyBox.querySelector('img');
+    if (img && img.src) URL.revokeObjectURL(img.src);
+    storyBox.remove(); storyBox = null;
+  }
+  function makeStory(p) {
+    fontsReady().then(function(){
+      var c = drawStory(p);
+      c.toBlob(function(blob){
+        if (!blob) { toast('Could not make the image on this browser.'); return; }
+        var fname = 'todayinak-lights-' + String(p.id).replace(/[^a-z0-9-]/gi, '') + '.png';
+        var file = null;
+        try { file = new File([blob], fname, { type: 'image/png' }); } catch (e) {}
+        var canFile = !!(file && navigator.canShare && navigator.share && navigator.canShare({ files: [file] }));
+        closeStory();
+        storyBox = document.createElement('div');
+        storyBox.className = 'lights-story-modal';
+        storyBox.setAttribute('role', 'dialog');
+        storyBox.setAttribute('aria-modal', 'true');
+        storyBox.setAttribute('aria-label', 'Story image');
+        var url = URL.createObjectURL(blob);
+        storyBox.innerHTML = '<div class="lights-story-sheet"><img alt="Story image preview" src="' + url + '">'
+          + '<div class="lights-story-actions">'
+          + (canFile ? '<button type="button" class="btn" data-act="share">Share to your Story</button>' : '')
+          + '<a class="' + (canFile ? 'btn2' : 'btn') + '" data-act="save" href="' + url + '" download="' + fname + '">Save image</a>'
+          + '<button type="button" class="lights-a2hs-x" data-act="close">Close</button></div>'
+          + '<p class="lights-help">Post it to your Instagram or Facebook Story and add a link sticker to ' + escapeHtml(PAGE_PATH) + '.</p></div>';
+        document.body.appendChild(storyBox);
+        storyBox.__blob = blob;
+        storyBox.addEventListener('click', function(ev){
+          var t = ev.target.closest('[data-act]');
+          if (!t) { if (ev.target === storyBox) closeStory(); return; }
+          var act = t.getAttribute('data-act');
+          if (act === 'close') closeStory();
+          if (act === 'save') setTimeout(function(){ toast('Image saved'); }, 50);
+          if (act === 'share' && file) {
+            navigator.share({ files: [file], title: 'Today in AK holiday lights map', text: pinUrl(p.id) }).catch(function(){});
+          }
+        });
+        var first = storyBox.querySelector('[data-act]');
+        if (first) first.focus();
+      }, 'image/png');
+    });
+  }
+  document.addEventListener('keydown', function(ev){ if (ev.key === 'Escape') closeStory(); });
+
+  /* ---- votes + Top displays ---- */
+  function renderTop() {
+    var list = $('lights-top'), empty = $('lights-top-empty');
+    if (!list) return;
+    var ranked = pins.map(function(p){ return { p: p, n: voteCount(p) }; })
+      .filter(function(r){ return r.n > 0; })
+      .sort(function(a, b){ return b.n - a.n || publicName(a.p).localeCompare(publicName(b.p)); })
+      .slice(0, 5);
+    list.innerHTML = ranked.map(function(r){
+      return '<li><a href="#pin=' + encodeURIComponent(r.p.id) + '" data-pin="' + escapeHtml(r.p.id) + '">' + escapeHtml(publicName(r.p)) + '</a> <span class="lights-top-n">❤️ ' + r.n + '</span></li>';
+    }).join('');
+    list.hidden = ranked.length === 0;
+    if (empty) empty.hidden = ranked.length > 0;
+  }
+  function updateOpenPopup(id) {
+    var mk = markerById(id);
+    if (mk) mk.setPopupContent(popupHtml(mk.pin));
+  }
+  function toggleVote(id) {
+    var p = pinById(id);
+    if (!p) return;
+    var on = !myVotes[id];
+    if (on) myVotes[id] = Date.now(); else delete myVotes[id];
+    saveJson(VOTE_KEY, myVotes);
+    if (SUBMIT_URL) {
+      if (liveVotes && typeof liveVotes[id] === 'number') liveVotes[id] = Math.max(0, liveVotes[id] + (on ? 1 : -1));
+      fetch(SUBMIT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ action: 'vote', id: id, device: deviceId(), vote: on ? 1 : 0 })
+      }).then(function(r){ return r.json(); }).then(function(j){
+        if (j && j.ok && typeof j.votes === 'number') {
+          liveVotes = liveVotes || {};
+          liveVotes[id] = j.votes;
+          updateOpenPopup(id); renderTop();
+        }
+      }).catch(function(){});
+    }
+    updateOpenPopup(id);
+    renderTop();
+    toast(on ? 'Thanks for the ❤️' : 'Vote removed');
+  }
+  if (SUBMIT_URL) {
+    fetch(SUBMIT_URL + (SUBMIT_URL.indexOf('?') === -1 ? '?' : '&') + 'action=votes')
+      .then(function(r){ return r.json(); })
+      .then(function(j){ if (j && j.ok && j.votes) { liveVotes = j.votes; refreshPopups(); renderTop(); } })
+      .catch(function(){});
+  }
+  renderTop();
+
+  /* ---- chip scrollers: drop the fade once you reach the end ---- */
+  document.querySelectorAll('.lights-scroll, .hero .chips').forEach(function(row){
+    function edge() { row.classList.toggle('at-end', row.scrollLeft + row.clientWidth >= row.scrollWidth - 4); }
+    row.addEventListener('scroll', edge, { passive: true });
+    window.addEventListener('resize', edge);
+    edge();
+  });
+
+  /* ---- add-to-home-screen hint (this page only) ---- */
+  (function(){
+    var box = $('lights-a2hs');
+    if (!box) return;
+    var KEY = 'tia-lights-a2hs';
+    var standalone = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
+    var dismissed = false;
+    try { dismissed = localStorage.getItem(KEY) === 'no'; } catch (e) {}
+    if (standalone || dismissed) return;
+    var ua = navigator.userAgent || '';
+    var ios = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var touch = window.matchMedia && matchMedia('(pointer: coarse)').matches;
+    var text = $('lights-a2hs-text');
+    var btn = $('lights-a2hs-install');
+    var deferred = null;
+    if (ios) {
+      if (text) text.textContent = 'On iPhone, tap the Share button, then “Add to Home Screen.” It opens full screen, like an app.';
+      box.hidden = false;
+    } else if (touch) {
+      if (text) text.textContent = 'In your browser menu, choose “Add to Home screen.” It opens full screen, like an app.';
+      box.hidden = false;
+    }
+    window.addEventListener('beforeinstallprompt', function(ev){
+      ev.preventDefault();
+      deferred = ev;
+      if (text) text.textContent = 'Add it to your home screen and it opens full screen, like an app.';
+      if (btn) btn.hidden = false;
+      box.hidden = false;
+    });
+    if (btn) btn.addEventListener('click', function(){
+      if (!deferred) return;
+      deferred.prompt();
+      deferred = null;
+      box.hidden = true;
+    });
+    var close = $('lights-a2hs-close');
+    if (close) close.addEventListener('click', function(){
+      box.hidden = true;
+      try { localStorage.setItem(KEY, 'no'); } catch (e) {}
+    });
+  })();
+
+  document.addEventListener('click', function(ev){
+    var originBtn = ev.target.closest('#lights-filters-origin .chip');
+    if (originBtn) {
+      document.querySelectorAll('#lights-filters-origin .chip').forEach(function(b){
+        b.setAttribute('aria-pressed', b === originBtn ? 'true' : 'false');
+      });
+      applyFilters();
+      return;
+    }
+    var kindBtn = ev.target.closest('.lights-filters .chip[data-kind]');
+    if (kindBtn) {
+      document.querySelectorAll('.lights-filters .chip[data-kind]').forEach(function(b){
+        b.setAttribute('aria-pressed', b === kindBtn ? 'true' : 'false');
+      });
+      applyFilters();
+      return;
+    }
+    var add = ev.target.closest('.lights-add-route, .lights-route-add');
+    if (add) {
+      ev.preventDefault();
+      toggleRoute(add.getAttribute('data-id'));
+      return;
+    }
+    var vote = ev.target.closest('.lights-vote');
+    if (vote) { ev.preventDefault(); toggleVote(vote.getAttribute('data-id')); return; }
+    var share = ev.target.closest('.lights-share');
+    if (share) { ev.preventDefault(); var sp = pinById(share.getAttribute('data-id')); if (sp) sharePin(sp); return; }
+    var story = ev.target.closest('.lights-story');
+    if (story) { ev.preventDefault(); var stp = pinById(story.getAttribute('data-id')); if (stp) makeStory(stp); return; }
+    var topLink = ev.target.closest('#lights-top a[data-pin]');
+    if (topLink) { ev.preventDefault(); var tid = topLink.getAttribute('data-pin'); setPinHash(tid); focusPin(tid, true); return; }
+    var saw = ev.target.closest('.lights-saw');
+    if (saw) {
+      ev.preventDefault();
+      var sid = saw.getAttribute('data-id');
+      if (sawMap[sid]) return;
+      sawMap[sid] = 1;
+      saveSaw(sawMap);
+      var pin = pinById(sid);
+      if (pin) pin.sights = (pin.sights || 0) + 1;
+      updateOpenPopup(sid);
+      return;
+    }
+  });
+  var goBtn = $('lights-route-go');
+  if (goBtn) goBtn.addEventListener('click', openRoute);
+  var clearBtn = $('lights-route-clear');
+  if (clearBtn) clearBtn.addEventListener('click', function(){ routeIds = []; updateRouteBar(); });
+
+  /* ---- submit form (stubbed unless SUBMIT_URL is set) ---- */
+  var form = $('lights-form');
+  if (!form || typeof L === 'undefined') return;
+
+  var picker = $('lights-picker');
+  var pickMap = L.map('lights-picker', {scrollWheelZoom: true, attributionControl: false, zoomControl: true});
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19}).addTo(pickMap);
+  pickMap.setView([61.193, -149.86], 11);
+  setTimeout(function(){ pickMap.invalidateSize(); }, 200);
+  var pickIcon = L.divIcon({
+    className: 'lights-pin',
+    html: '<span style="display:block;width:18px;height:18px;border-radius:50%;background:#5EF2B5;border:2px solid #0D1626;box-shadow:0 0 0 3px rgba(94,242,181,.4)"></span>',
+    iconSize: [18, 18],
+    iconAnchor: [9, 9]
+  });
+  var pickMarker = null;
+  var exact = { lat: null, lon: null };
+  var geocodeTimer = null;
+  var lastAddress = null;
+
+  function snapCoords(lat, lon) {
+    var latGrid = 0.0011;
+    var lonGrid = 0.0022;
+    return { lat: Math.round(lat / latGrid) * latGrid, lon: Math.round(lon / lonGrid) * lonGrid };
+  }
+  function isExact(){ return !!($('lights-exact') && $('lights-exact').checked); }
+  function publicCoords() {
+    if (exact.lat == null) return null;
+    return isExact() ? { lat: exact.lat, lon: exact.lon } : snapCoords(exact.lat, exact.lon);
+  }
+  function blockLabelFromAddress(addr) {
+    if (!addr) return '';
+    var road = addr.road || addr.pedestrian || addr.residential || addr.hamlet || '';
+    var house = addr.house_number || '';
+    var neigh = addr.suburb || addr.neighbourhood || addr.quarter || '';
+    var town = addr.city || addr.town || addr.village || addr.municipality || '';
+    var n = parseInt(String(house).replace(/[^\d]/g, ''), 10);
+    var block = (n && isFinite(n)) ? String(Math.floor(n / 100) * 100) : '';
+    if (block && road) return 'Near the ' + block + ' block of ' + road;
+    if (road) return 'Near ' + road;
+    if (neigh) return 'Near ' + neigh;
+    if (town) return 'Near ' + town;
+    return '';
+  }
+  function sanitizeStreetLabel(text) {
+    var t = String(text || '').trim();
+    if (!t) return '';
+    t = t.replace(/\b(\d{3,6})\b/, function(_, n){
+      return 'the ' + (Math.floor(parseInt(n, 10) / 100) * 100) + ' block of';
+    });
+    t = t.replace(/^(near\s+)?/i, '');
+    return 'Near ' + t;
+  }
+  function updateLabel() {
+    var elLabel = $('lights-pin-label');
+    var pub = publicCoords();
+    if (!pub) {
+      if (elLabel) elLabel.textContent = 'Or tap the map and drag the pin.';
+      return;
+    }
+    var custom = sanitizeStreetLabel(($('lights-street') && $('lights-street').value) || '');
+    var auto = blockLabelFromAddress(lastAddress) || 'Street-level pin set';
+    var label = isExact()
+      ? (custom || blockLabelFromAddress(lastAddress) || 'Exact pin set')
+      : (custom || auto);
+    if (isExact() && label.indexOf('Exact') !== 0 && label.indexOf('Near') !== 0) label = label;
+    $('lights-lat').value = String(pub.lat);
+    $('lights-lon').value = String(pub.lon);
+    $('lights-label').value = label;
+    $('lights-precision').value = isExact() ? 'exact' : 'street';
+    if (elLabel) {
+      elLabel.textContent = isExact()
+        ? ('We will show this exact spot' + (label ? ': ' + label : '.'))
+        : ('We will show this as: ' + label);
+    }
+    var streetWrap = $('lights-street-wrap');
+    if (streetWrap) streetWrap.hidden = !pub;
+  }
+  function reverseGeocode(lat, lon) {
+    var url = 'https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat='
+      + encodeURIComponent(lat) + '&lon=' + encodeURIComponent(lon)
+      + '&zoom=17&addressdetails=1';
+    return fetch(url, { headers: { 'Accept': 'application/json' } })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(j){
+        lastAddress = (j && j.address) || null;
+        updateLabel();
+      })
+      .catch(function(){ lastAddress = null; updateLabel(); });
+  }
+  function setPin(lat, lon, zoom) {
+    exact.lat = lat;
+    exact.lon = lon;
+    if (!pickMarker) {
+      pickMarker = L.marker([lat, lon], { icon: pickIcon, draggable: true }).addTo(pickMap);
+      pickMarker.on('dragend', function(){
+        var ll = pickMarker.getLatLng();
+        setPin(ll.lat, ll.lng);
+      });
+    } else {
+      pickMarker.setLatLng([lat, lon]);
+    }
+    if (zoom) pickMap.setView([lat, lon], zoom);
+    updateLabel();
+    if (geocodeTimer) clearTimeout(geocodeTimer);
+    geocodeTimer = setTimeout(function(){ reverseGeocode(lat, lon); }, 250);
+  }
+  pickMap.on('click', function(ev){ setPin(ev.latlng.lat, ev.latlng.lng, Math.max(pickMap.getZoom(), 15)); });
+
+  var useBtn = $('lights-use-loc');
+  if (useBtn) {
+    useBtn.addEventListener('click', function(){
+      if (!navigator.geolocation) {
+        setStatus('This browser cannot use your location. Drop a pin on the map instead.', true);
+        return;
+      }
+      useBtn.disabled = true;
+      useBtn.textContent = 'Finding you…';
+      navigator.geolocation.getCurrentPosition(function(pos){
+        useBtn.disabled = false;
+        useBtn.textContent = 'Use my location';
+        var lat = pos.coords.latitude, lon = pos.coords.longitude;
+        if (lat < 59 || lat > 65.5 || lon < -154 || lon > -145) {
+          setStatus('That looks outside the Anchorage / Mat-Su area. You can still drop a pin on the map.', true);
+        } else {
+          setStatus('', false, true);
+        }
+        setPin(lat, lon, 16);
+      }, function(){
+        useBtn.disabled = false;
+        useBtn.textContent = 'Use my location';
+        setStatus('Could not get your location. Drop a pin on the map instead.', true);
+      }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 });
+    });
+  }
+  if ($('lights-exact')) $('lights-exact').addEventListener('change', updateLabel);
+  if ($('lights-street')) $('lights-street').addEventListener('input', updateLabel);
+
+  function wireChoiceGroup(rootId, exclusive, allowOff) {
+    var root = $(rootId);
+    if (!root) return;
+    root.addEventListener('click', function(ev){
+      var btn = ev.target.closest('.chip');
+      if (!btn) return;
+      if (exclusive) {
+        var turningOff = allowOff && btn.getAttribute('aria-pressed') === 'true';
+        root.querySelectorAll('.chip').forEach(function(b){
+          b.setAttribute('aria-pressed', (!turningOff && b === btn) ? 'true' : 'false');
+        });
+      } else {
+        var on = btn.getAttribute('aria-pressed') !== 'true';
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      }
+      if (rootId === 'lights-hours') {
+        var otherWrap = $('lights-hours-other-wrap');
+        var sel = root.querySelector('.chip[aria-pressed="true"]');
+        if (otherWrap) otherWrap.hidden = !(sel && sel.getAttribute('data-hours') === 'other');
+      }
+    });
+  }
+  wireChoiceGroup('lights-types', false, false);
+  wireChoiceGroup('lights-hours', true, false);
+  wireChoiceGroup('lights-nights', true, true);
+
+  var photoBlob = null;
+  var photoInput = $('lights-photo');
+  var preview = $('lights-photo-preview');
+  function stripExif(file) {
+    return new Promise(function(resolve, reject){
+      if (!file || !file.type || file.type.indexOf('image/') !== 0) return resolve(null);
+      var img = new Image();
+      var url = URL.createObjectURL(file);
+      img.onload = function(){
+        var max = 1600;
+        var w = img.width, h = img.height;
+        if (w > max || h > max) {
+          var s = Math.min(max / w, max / h);
+          w = Math.round(w * s); h = Math.round(h * s);
+        }
+        var canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        URL.revokeObjectURL(url);
+        canvas.toBlob(function(blob){ resolve(blob || null); }, 'image/jpeg', 0.82);
+      };
+      img.onerror = function(){ URL.revokeObjectURL(url); reject(new Error('photo')); };
+      img.src = url;
+    });
+  }
+  if (photoInput) {
+    photoInput.addEventListener('change', function(){
+      var file = photoInput.files && photoInput.files[0];
+      photoBlob = null;
+      if (preview) { preview.hidden = true; preview.removeAttribute('src'); }
+      if (!file) return;
+      if (file.size > 8 * 1024 * 1024) {
+        setStatus('Please pick a photo under 8 MB.', true);
+        photoInput.value = '';
+        return;
+      }
+      stripExif(file).then(function(blob){
+        photoBlob = blob;
+        var photoBtn = $('lights-photo-btn');
+        if (blob && preview) {
+          preview.src = URL.createObjectURL(blob);
+          preview.hidden = false;
+          if (photoBtn) photoBtn.textContent = 'Photo ready';
+        } else if (photoBtn) {
+          photoBtn.textContent = 'Choose a photo';
+        }
+      }).catch(function(){
+        setStatus('That photo could not be read. Try a JPG or PNG.', true);
+        photoInput.value = '';
+      });
+    });
+  }
+
+  function selectedChips(rootId, attr) {
+    return Array.prototype.map.call(
+      document.querySelectorAll('#' + rootId + ' .chip[aria-pressed="true"]'),
+      function(b){ return b.getAttribute(attr); }
+    ).filter(Boolean);
+  }
+  function setStatus(msg, isError, hide) {
+    var box = $('lights-form-status');
+    if (!box) return;
+    if (hide || !msg) { box.hidden = true; box.textContent = ''; return; }
+    box.hidden = false;
+    box.textContent = msg;
+    box.classList.toggle('is-error', !!isError);
+  }
+  function hoursValue() {
+    var sel = selectedChips('lights-hours', 'data-hours')[0];
+    if (!sel) return '';
+    if (sel === 'other') return (($('lights-hours-other') && $('lights-hours-other').value) || '').trim();
+    return HOUR_LABELS[sel] || sel;
+  }
+  function nightsValue() {
+    var sel = selectedChips('lights-nights', 'data-nights')[0];
+    return NIGHT_LABELS[sel] || sel || '';
+  }
+  function blobToBase64(blob) {
+    return new Promise(function(resolve, reject){
+      if (!blob) return resolve('');
+      var reader = new FileReader();
+      reader.onload = function(){
+        var s = String(reader.result || '');
+        var i = s.indexOf(',');
+        resolve(i >= 0 ? s.slice(i + 1) : s);
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
+  }
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var company = ($('lights-company') && $('lights-company').value) || '';
+    if (company.trim()) {
+      setStatus('Thanks. We will take a look and add this if it looks right.', false);
+      form.reset();
+      return;
+    }
+    var pub = publicCoords();
+    if (!pub) { setStatus('Drop a pin or use your location first.', true); return; }
+    var types = selectedChips('lights-types', 'data-type');
+    if (!types.length) { setStatus('Pick at least one display type.', true); return; }
+    var hours = hoursValue();
+    if (!hours) { setStatus('Pick the best hours to see it.', true); return; }
+    if (!$('lights-ok') || !$('lights-ok').checked) {
+      setStatus('Please confirm you live here or have the owner\'s OK.', true);
+      return;
+    }
+    var email = (($('lights-email') && $('lights-email').value) || '').trim();
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setStatus('That email does not look right. You can leave it blank.', true);
+      return;
+    }
+    var payload = {
+      action: 'submit',
+      lat: exact.lat,
+      lon: exact.lon,
+      public_lat: pub.lat,
+      public_lon: pub.lon,
+      precision: isExact() ? 'exact' : 'street',
+      label: ($('lights-label') && $('lights-label').value) || '',
+      street: (($('lights-street') && $('lights-street').value) || '').trim(),
+      types: types,
+      hours: hours,
+      nights: nightsValue(),
+      tip: (($('lights-tip') && $('lights-tip').value) || '').trim(),
+      email: email,
+      permission: 'yes',
+      photo_name: photoBlob ? 'display.jpg' : '',
+      photo_base64: ''
+    };
+    var btn = $('lights-submit-btn');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    var send = photoBlob ? blobToBase64(photoBlob).then(function(b64){ payload.photo_base64 = b64; }) : Promise.resolve();
+    send.then(function(){
+      if (!SUBMIT_URL) {
+        setStatus('Thanks. On the live page this would go into our review queue, and it would only go on the map after we look at it. This draft is not sending anything yet.', false);
+        if (btn) { btn.disabled = false; btn.textContent = 'Add my lights'; }
+        return;
+      }
+      return fetch(SUBMIT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      }).then(function(r){ return r.text(); }).then(function(){
+        setStatus('Thanks. We will take a look and add this if it looks right.' + (email ? ' Watch for a private edit link at the email you left.' : ''), false);
+        form.reset();
+        photoBlob = null;
+        if (preview) { preview.hidden = true; }
+        if (pickMarker) { pickMap.removeLayer(pickMarker); pickMarker = null; }
+        exact.lat = exact.lon = null;
+        lastAddress = null;
+        updateLabel();
+        if (btn) { btn.disabled = false; btn.textContent = 'Add my lights'; }
+      });
+    }).catch(function(){
+      setStatus('Something went wrong sending this. Try again, or email todayinak@gmail.com.', true);
+      if (btn) { btn.disabled = false; btn.textContent = 'Add my lights'; }
+    });
+  });
+
+  var params = new URLSearchParams(window.location.search);
+  var editToken = params.get('edit') || params.get('remove') || '';
+  if (editToken) {
+    var status = $('lights-form-status');
+    if (status) {
+      setStatus('Want this listing taken off the map? Use the button below, or write to todayinak@gmail.com.', false);
+      var rm = document.createElement('p');
+      rm.className = 'formfall';
+      rm.innerHTML = '<button type="button" class="btn2" id="lights-remove-btn">Take this off the map</button>';
+      form.appendChild(rm);
+      $('lights-remove-btn').addEventListener('click', function(){
+        if (!SUBMIT_URL) {
+          setStatus('On the live page this would send a take-down request. This draft is not sending anything yet. You can also write to todayinak@gmail.com.', false);
+          return;
+        }
+        fetch(SUBMIT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'remove', token: editToken })
+        }).then(function(){
+          setStatus('Got it. We will take this off the map on the next update.', false);
+        }).catch(function(){
+          setStatus('Could not send the take-down. Please email todayinak@gmail.com.', true);
+        });
+      });
+    }
+  }
+})();
+</script>
+<script data-goatcounter="https://todayinak.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var skip = /(?:^|\.)(instagram\.com|facebook\.com|todayinak\.com)$/i;
+  document.addEventListener("click", function(ev){
+    var a = ev.target.closest && ev.target.closest("a[href]");
+    if (!a || !window.goatcounter || !goatcounter.count) return;
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#" || href.indexOf("mailto:") === 0) return;
+    var host = "";
+    try { host = a.hostname || ""; } catch (err) { return; }
+    if (!host || host === location.hostname) return;
+    if (skip.test(host)) return;
+    var rel = a.getAttribute("rel") || "";
+    var name = a.getAttribute("data-count");
+    if (!name) {
+      name = (/\bsponsored\b/.test(rel) ? "affiliate-" : "out-") + host.replace(/^www\./, "");
+    }
+    goatcounter.count({
+      path: "/click/" + name,
+      title: (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80),
+      event: true
+    });
+  }, true);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "Today in AK Lights",
+  "short_name": "AK Lights",
+  "description": "Holiday lights around Anchorage and the Mat-Su, on one map.",
+  "start_url": "/lights-preview-umt7dt/?source=homescreen",
+  "scope": "/lights-preview-umt7dt/",
+  "display": "standalone",
+  "background_color": "#070B14",
+  "theme_color": "#0D1626",
+  "icons": [
+    {
+      "src": "/lights-preview-umt7dt/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/lights-preview-umt7dt/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
