@@ -26,6 +26,7 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
 .hero h1{font-weight:900;font-size:clamp(34px,10vw,60px);line-height:.98;letter-spacing:-.02em;max-width:12ch}
 .hero h1::after{content:"";display:block;width:72px;height:8px;background:var(--green);border-radius:2px;margin:16px 0 4px}
 .range{font:300 22px/1.2 Montserrat;color:var(--green);margin:12px 0 4px}
+.hero-q{margin:10px 0 0;font:600 17px/1.4 Inter,system-ui,sans-serif;color:var(--green);max-width:34rem;text-wrap:pretty}
 .regions{color:var(--gray);margin:0 0 20px;font-size:15px}
 nav.regions{margin:8px 0 20px}
 .regionchips{display:flex;gap:8px;overflow-x:auto;margin:0 -20px;padding:0 20px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
@@ -806,3 +807,62 @@ html[lang="ja"] .mark{font-family:Montserrat,Inter,sans-serif}
 .signup .signupembed{max-width:28rem}
 .signupembed iframe{display:block;width:100%;min-height:48px;border:0;border-radius:12px;background:transparent}
 .signupembed noscript .fine{margin:8px 0 0}
+
+/* Homepage guide and map picks: large tappable cards for the first screen */
+.home-picks{margin:16px 0 6px;padding:0}
+.homepicks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.homepicks a{
+  display:flex;align-items:center;gap:12px;
+  box-sizing:border-box;min-height:48px;padding:14px 16px;
+  background:var(--card);color:inherit;text-decoration:none;
+  border:1.5px solid var(--line);border-left:8px solid var(--green);
+  border-radius:var(--slab);
+  transition:background .15s ease,border-color .15s ease,box-shadow .15s ease;
+}
+.homepicks .pick-copy{flex:1;min-width:0}
+.homepicks b{display:block;font:800 17px/1.25 Montserrat,Inter,sans-serif;color:var(--white)}
+.homepicks .pick-copy span{display:block;margin-top:3px;color:var(--gray);font:400 14px/1.45 Inter,sans-serif}
+.homepicks .pick-go{
+  flex:none;margin-left:auto;color:var(--green);
+  font:800 22px/1 Montserrat,Inter,sans-serif;
+  transition:transform .15s ease;
+}
+.homepicks a:hover{background:var(--card-hover);border-color:var(--green)}
+.homepicks a:hover .pick-go{transform:translateX(3px)}
+.homepicks a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.homepicks a:active{background:var(--card-hover);transform:translateY(1px)}
+/* Holiday lights map: a light Candy gold glow, accent only (not a banner) */
+.homepick-lights a{
+  border-left-color:#E8B44A;
+  box-shadow:0 0 0 1px rgba(232,180,74,.22),0 0 16px rgba(255,184,107,.28);
+}
+.homepick-lights a:hover{
+  border-color:rgba(232,180,74,.85);
+  border-left-color:#E8B44A;
+  box-shadow:0 0 0 1px rgba(232,180,74,.35),0 0 20px rgba(255,184,107,.4);
+}
+.homepick-lights .pick-go{color:#E8B44A}
+html[data-theme="light"] .homepick-lights a{
+  border-left-color:#9A4E0F;
+  box-shadow:0 0 0 1px rgba(154,78,15,.16),0 0 12px rgba(154,78,15,.14);
+}
+html[data-theme="light"] .homepick-lights a:hover{
+  border-color:#9A4E0F;
+  border-left-color:#9A4E0F;
+  box-shadow:0 0 0 1px rgba(154,78,15,.22),0 0 14px rgba(154,78,15,.18);
+}
+html[data-theme="light"] .homepick-lights .pick-go{color:#9A4E0F}
+html[data-theme="bw"] .homepicks a{text-decoration:none;box-shadow:none}
+html[data-theme="bw"] .homepick-lights a,
+html[data-theme="bw"] .homepick-lights a:hover{
+  border-color:#111;border-left-color:#111;
+  box-shadow:none;
+}
+html[data-theme="bw"] .homepick-lights .pick-go{color:#111}
+html[data-theme="light"] .homepicks a,
+html[data-theme="blush"] .homepicks a{box-shadow:0 1px 0 rgba(16,32,56,.04)}
+html[data-theme="light"] .homepick-lights a{box-shadow:0 1px 0 rgba(16,32,56,.04),0 0 0 1px rgba(154,78,15,.16),0 0 12px rgba(154,78,15,.14)}
+@media (prefers-reduced-motion:reduce){
+  .homepicks a,.homepicks .pick-go{transition:none}
+  .homepicks a:hover .pick-go{transform:none}
+}
