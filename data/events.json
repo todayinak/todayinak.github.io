@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-18",
  "timezone_note": "All times are Alaska time (AKDT through Sat Oct 31, AKST from Sun Nov 1).",
  "disclaimer": "Details can change. Check with the organizer before you go.",
  "events": [
@@ -29,24 +29,6 @@
    "url": "https://www.explorefairbanks.com/event/its-a-wonderful-life/12601/"
   },
   {
-   "id": "2026-11-13-alaskas-wild-icons-winter-tour",
-   "date": "2026-11-13",
-   "time": "12:30 PM",
-   "title": "Alaska's Wild Icons Winter Tour",
-   "category": "Family & Outdoors",
-   "venue": "Alaska Zoo, 4731 O'Malley Rd",
-   "town": "Anchorage",
-   "price": "$50 ages 3+; 2 & under free",
-   "ages": "All ages",
-   "extra_dates": [
-    "2026-11-16"
-   ],
-   "start": "12:30",
-   "end": "14:00",
-   "note": "Guided winter tour of the zoo's Alaska animals. Also Mon Nov 16, 12:30 PM.",
-   "url": "https://www.alaskazoo.org/event-calendar"
-  },
-  {
    "id": "2026-11-14-holiday-gift-show-at-dimond-center",
    "date": "2026-11-14",
    "time": "Saturdays and Sundays through Dec 20",
@@ -74,125 +56,6 @@
    "url": "https://dimondcenter.com/events/"
   },
   {
-   "id": "2026-11-16-finding-refuge-film-screening-and-talk",
-   "date": "2026-11-16",
-   "time": "3 PM",
-   "title": "Finding Refuge film screening and talk",
-   "category": "Arts & Talks",
-   "venue": "Alutiiq Museum, 215 Mission Rd",
-   "town": "Kodiak",
-   "price": "Free",
-   "ages": "All ages",
-   "start": "15:00",
-   "end": "16:30",
-   "worth_the_drive": true,
-   "note": "Native American Heritage Month screening followed by a talk on Alutiiq/Sugpiaq history. Light refreshments.",
-   "url": "https://alutiiqmuseum.org/museum/visit/events/"
-  },
-  {
-   "id": "2026-11-16-all-about-my-mother-radio-latina-fundraiser-screening",
-   "date": "2026-11-16",
-   "time": "6 PM",
-   "title": "All About My Mother (Radio Latina fundraiser screening)",
-   "category": "Arts & Talks",
-   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
-   "town": "Anchorage",
-   "price": "$12",
-   "ages": "Ages not listed",
-   "start": "18:00",
-   "end": "19:45",
-   "note": "Almodóvar classic (1999, rated R, in Spanish). Part of the proceeds benefit Out North and Radio Latina.",
-   "url": "https://beartooththeatre.filmbot.com/movies/all-about-my-mother-presented-by-radio-latina/"
-  },
-  {
-   "id": "2026-11-16-karaoke-monday-at-odd-man-rush",
-   "date": "2026-11-16",
-   "time": "6 PM",
-   "title": "Karaoke Monday at Odd Man Rush",
-   "category": "Nightlife",
-   "venue": "Odd Man Rush Brewing, 10930 Mausel St",
-   "town": "Eagle River",
-   "price": "Free",
-   "ages": "Ages not listed (brewery tasting room)",
-   "start": "18:00",
-   "end": "21:00",
-   "url": "https://www.oddmanrushbrewing.com/events"
-  },
-  {
-   "id": "2026-11-16-monday-jazz-jam-at-fire-island",
-   "date": "2026-11-16",
-   "time": "6:30 PM",
-   "title": "Monday Jazz Jam at Fire Island",
-   "category": "Music",
-   "venue": "Fire Island Rustic Bakeshop, K Street Market, 718 K St",
-   "town": "Anchorage",
-   "price": "Free; $5 suggested donation",
-   "ages": "Ages not listed",
-   "start": "18:30",
-   "end": "21:30",
-   "note": "Weekly community jazz session hosted by the Alaska Jazz Workshop. Musicians can bring an instrument and sit in.",
-   "url": "https://akjazzworkshop.org/calendar/"
-  },
-  {
-   "id": "2026-11-17-arctic-entries-playing-with-fire",
-   "date": "2026-11-17",
-   "time": "7 PM",
-   "title": "Arctic Entries: Playing with Fire",
-   "category": "Arts & Talks",
-   "venue": "Atwood Concert Hall, 621 W 6th Ave",
-   "town": "Anchorage",
-   "price": "From $10",
-   "ages": "6+",
-   "start": "19:00",
-   "note": "Seven Alaskans, seven-minute true stories, plus local music. May contain adult themes.",
-   "url": "https://centertix.com/events/arctic-entries-season"
-  },
-  {
-   "id": "2026-11-17-bear-tooth-tuesday-night-trivia",
-   "date": "2026-11-17",
-   "time": "7 PM",
-   "title": "Bear Tooth Tuesday Night Trivia",
-   "category": "Nightlife",
-   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
-   "town": "Anchorage",
-   "price": "Free to play",
-   "ages": "All ages",
-   "start": "19:00",
-   "end": "21:00",
-   "note": "Geeks Who Drink trivia, teams of 2–6. Doors 6:30 PM.",
-   "url": "https://www.beartoothak.com/live-events"
-  },
-  {
-   "id": "2026-11-17-khatumu-at-nonnas-osteria",
-   "date": "2026-11-17",
-   "time": "7 PM",
-   "title": "Khatumu at Nonna's Osteria",
-   "category": "Music",
-   "venue": "Nonna's Osteria, 201 W Herning Ave",
-   "town": "Wasilla",
-   "price": "$28.52 with fees",
-   "ages": "All ages",
-   "start": "19:00",
-   "end": "21:00",
-   "note": "Indie-folk dinner show.",
-   "url": "https://www.eventbrite.com/e/khatumu-live-at-nonnas-osteria-tickets-2002959933078"
-  },
-  {
-   "id": "2026-11-17-jazz-jam-at-the-crystal-saloon",
-   "date": "2026-11-17",
-   "time": "8 PM",
-   "title": "Jazz Jam at the Crystal Saloon",
-   "category": "Music",
-   "venue": "The Crystal Saloon, 218 Front St",
-   "town": "Juneau",
-   "price": "Free",
-   "ages": "Ages not listed",
-   "start": "20:00",
-   "end": "23:00",
-   "note": "Weekly Tuesday jazz session. Players of any level can sit in.",
-   "url": "https://www.eventbrite.com/e/jazz-jam-tuesday-tickets-2004594879246"
-  },
-  {
    "id": "2026-11-18-weekly-community-storytime-at-the-zoo",
    "date": "2026-11-18",
    "time": "10:30 AM",
@@ -204,7 +67,23 @@
    "ages": "All ages",
    "start": "10:30",
    "end": "11:00",
-   "url": "https://www.alaskazoo.org/event-calendar"
+   "url": "https://www.alaskazoo.org/event-calendar/2026/november-18-weekly-community-storytime"
+  },
+  {
+   "id": "2026-11-18-lars-and-friends-holiday-market",
+   "date": "2026-11-18",
+   "time": "11 AM",
+   "title": "LARS & Friends Holiday Market",
+   "category": "Seasonal",
+   "venue": "Margaret Murie Building lobby, UAF campus",
+   "town": "Fairbanks",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "11:00",
+   "end": "16:00",
+   "worth_the_drive": true,
+   "note": "The muskox and reindeer research station brings its gift shop to campus for one day: qiviut yarn and knits, muskox and reindeer gifts, plus local artists. Minors with an adult.",
+   "url": "https://www.uaf.edu/lars/outreach-education.php"
   },
   {
    "id": "2026-11-18-storytime-in-the-garden",
@@ -222,6 +101,21 @@
    "url": "https://www.alaskabg.org/upcoming-events-workshops"
   },
   {
+   "id": "2026-11-18-needle-felting-mini-food",
+   "date": "2026-11-18",
+   "time": "5 PM",
+   "title": "Needle Felting Mini Food",
+   "category": "Make & Taste",
+   "venue": "Homer Art and Frame, 4001 Lake St #3",
+   "town": "Homer",
+   "price": "$49.87 with fees",
+   "ages": "Ages not listed",
+   "start": "17:00",
+   "end": "20:00",
+   "note": "Beginner class: needle felt a tiny 3D food sculpture. All materials included.",
+   "url": "https://www.eventbrite.com/e/needle-felting-mini-food-tickets-2004151171103"
+  },
+  {
    "id": "2026-11-18-907-alehouse-wednesday-unplugged-jared-woods",
    "date": "2026-11-18",
    "time": "6 PM",
@@ -233,6 +127,21 @@
    "ages": "Ages not listed",
    "start": "18:00",
    "url": "https://www.907ale.com/"
+  },
+  {
+   "id": "2026-11-18-free-movie-night-ticket-to-paradise-caregiver-panel",
+   "date": "2026-11-18",
+   "time": "6 PM",
+   "title": "Free Movie Night: Ticket to Paradise + Caregiver Panel",
+   "category": "Arts & Talks",
+   "venue": "Anchorage Museum Auditorium, 625 C St",
+   "town": "Anchorage",
+   "price": "Free (registration required)",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "20:30",
+   "note": "Free screening of the PG-13 comedy with George Clooney and Julia Roberts, after a short panel on caregiver support. Register first; seats are first come, first served. Free parking in the museum garage.",
+   "url": "https://events.aarp.org/event/AARPAKFREEMovieTicket2Paradise/summary"
   },
   {
    "id": "2026-11-18-geeks-who-drink-trivia-at-odd-man-rush",
@@ -248,6 +157,21 @@
    "url": "https://www.oddmanrushbrewing.com/events"
   },
   {
+   "id": "2026-11-18-quiet-company-book-club",
+   "date": "2026-11-18",
+   "time": "6 PM",
+   "title": "Quiet Company Book Club",
+   "category": "Arts & Talks",
+   "venue": "Palmer Public Library, 137 E Arctic Ave",
+   "town": "Palmer",
+   "price": "Price not listed",
+   "ages": "18+",
+   "start": "18:00",
+   "end": "20:00",
+   "note": "After-hours reading night with light snacks: quiet reading 6–7 PM, then book chat. No book list; bring what you are reading.",
+   "url": "https://palmerpublic-ak.whofi.com/calendar/event/409390"
+  },
+  {
    "id": "2026-11-18-reel-rock-20",
    "date": "2026-11-18",
    "time": "6 PM",
@@ -255,7 +179,7 @@
    "category": "Arts & Talks",
    "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
    "town": "Anchorage",
-   "price": "$20",
+   "price": "$20 (booths $66–$88)",
    "ages": "Ages not listed",
    "start": "18:00",
    "end": "20:00",
@@ -275,7 +199,7 @@
    "start": "18:00",
    "end": "20:00",
    "note": "Bring any knit, crochet or tabletop project. Beginners welcome.",
-   "url": "https://www.anchoragemuseum.org/visit/calendar/"
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=f2ug7b03e6iccj5c05u2067cqg"
   },
   {
    "id": "2026-11-18-fireside-chat-hunting-public-lands-with-bird-dogs",
@@ -306,6 +230,19 @@
    "end": "22:00",
    "note": "Local stand-up in the Swing Bar, every Wednesday.",
    "url": "https://akconcerts.com/calendar"
+  },
+  {
+   "id": "2026-11-18-uaf-nanooks-womens-basketball-vs-stanton",
+   "date": "2026-11-18",
+   "time": "7 PM",
+   "title": "UAF Nanooks Women's Basketball vs. Stanton",
+   "category": "Sports",
+   "venue": "Alaska Airlines Gymnasium, Patty Center, UAF",
+   "town": "Fairbanks",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "url": "https://alaskananooks.com/calendar"
   },
   {
    "id": "2026-11-18-wednesday-open-mic-at-the-crystal-saloon",
@@ -1572,5 +1509,5 @@
   }
  ],
  "through": "2026-12-20",
- "last_verified": "2026-11-16"
+ "last_verified": "2026-11-17"
 }
