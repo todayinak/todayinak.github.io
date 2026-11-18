@@ -198,6 +198,26 @@ body .lights-form .btn2.lights-file-btn{display:inline-flex;width:auto;max-width
 .leaflet-div-icon.lights-pin{background:transparent;border:0}
 .lights-pin-bulb{display:block;width:14px;height:20px;margin:2px auto 0;background:var(--pin,#5EF2B5);border:2px solid #0D1626;border-radius:8px 8px 10px 10px;box-shadow:0 0 8px color-mix(in srgb,var(--pin,#5EF2B5) 75%,transparent);position:relative}
 .lights-pin-bulb::before{content:"";position:absolute;top:-5px;left:50%;width:8px;height:5px;margin-left:-4px;background:#E8EDF6;border:2px solid #0D1626;border-bottom:0;border-radius:2px 2px 0 0}
+.lights-pin-star{background:transparent;border:0}
+.lights-star-mark{display:flex;align-items:center;justify-content:center;width:36px;height:36px;font-size:32px;line-height:1;filter:drop-shadow(0 0 8px rgba(255,211,106,.9));text-shadow:0 0 10px rgba(255,184,107,.85)}
+.leaflet-tooltip.lights-star-label{
+  font:800 14px/1.25 Montserrat,sans-serif;color:#1A1408;background:#FFD36A;border:2px solid #1A1408;
+  border-radius:16px;padding:6px 11px;box-shadow:0 2px 10px rgba(0,0,0,.28);
+  white-space:normal;width:168px;max-width:168px;text-align:center
+}
+.leaflet-tooltip.lights-star-label::before{display:none}
+.leaflet-popup-content .lights-popup-blurb{display:block;margin:8px 0 6px;font:400 16px/1.4 Inter,sans-serif;color:inherit}
+.leaflet-popup.lights-pop-kind-landmark .leaflet-popup-content{margin:10px 12px 8px}
+.leaflet-popup.lights-pop-kind-landmark .leaflet-popup-content a{display:inline-block;margin:2px 0 8px}
+.leaflet-popup.lights-pop-kind-landmark .lights-popup-pills{display:block;gap:0}
+.leaflet-popup.lights-pop-kind-landmark .lights-popup-pills span{
+  display:block;background:transparent;border:0;box-shadow:none;padding:0;margin:0 0 4px;border-radius:0;
+  min-height:0;font:600 15px/1.4 Inter,sans-serif;color:inherit
+}
+body.lights-theme-candy .leaflet-popup.lights-pop-kind-landmark .lights-popup-pills span,
+body.lights-theme-candy .leaflet-popup.lights-pop-kind-landmark .lights-popup-pills span b{color:var(--white);background:transparent}
+body.lights-popup-open .lights-allbtn,body.lights-popup-open .leaflet-control-zoom{visibility:hidden}
+.leaflet-popup.lights-pop-kind-landmark .lights-popup-actions button{min-height:44px;padding:8px 12px;font-size:16px}
 
 /* Add-your-display CTA: warm, glowing, distinct from the green .btn */
 .lights-addwrap{margin:0 0 14px}
@@ -374,6 +394,9 @@ body.lights-page .lights-empty,body.lights-page .lights-list-hint,body.lights-pa
   font-size:18px;line-height:1.45;color:var(--white)
 }
 body.lights-page .sec h2,body.lights-page .lights-listhead{font-size:clamp(28px,7vw,40px);color:var(--white)}
+.lights-list-kicker{list-style:none;margin:18px 0 8px;padding:0;border:0;background:none;box-shadow:none}
+.lights-list-kicker b{display:block;font:800 20px/1.2 Montserrat,sans-serif;color:var(--white)}
+ul.spots.lights-list li.lights-list-kicker{border:0;background:transparent;padding:4px 2px;margin:16px 0 4px;box-shadow:none}
 body.lights-page .chip,body.lights-page .lights-jump a,body.lights-page .lights-popup-actions button,
 body.lights-page .lights-allbtn,body.lights-page .btn2,body.lights-page .lights-file-btn,
 body.lights-page .lights-route-add,body.lights-page .lights-directions{
@@ -556,6 +579,7 @@ body.lights-page a.lights-map-stay{
   box-shadow:0 1px 8px rgba(7,11,20,.28)
 }
 body.lights-page a.lights-map-stay:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+body.lights-page.lights-popup-open a.lights-map-stay{visibility:hidden}
 body.lights-page p.lights-foot-stay{margin:28px 0 0;padding:0;font-size:14px;line-height:1.45;color:var(--gray)}
 body.lights-page .lights-foot-stay a{
   display:inline-block;padding:10px 0;background:none;border:0;border-radius:0;box-shadow:none;
@@ -647,6 +671,7 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
     <nav class="lights-jump lights-scroll" aria-label="On this page">
       <a href="#map">See the map</a>
       <a href="#pin-list">See the list</a>
+      <a href="#landmarks">Landmarks</a>
       <a href="#events">Official events</a>
       <a href="#submit">Add my display</a>
       <a href="#faq">Questions</a>
@@ -672,9 +697,14 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
 </div>
 
 
+  <h2 id="landmarks">Landmarks</h2>
+<ul class="spots lights-list">
+<li id="pin-star-on-the-mountain" class="lights-card" data-kind="landmark"><small>Landmark · Anchorage</small><b>Star on the Mountain: see it from afar</b><span class="lights-where">Mount Gordon Lyon, near Arctic Valley</span><div class="lights-pills"><span class="lights-when"><b>When</b> Usually the day after Thanksgiving through the Iditarod finish (March). Visible on clear nights once it is lit</span><span class="lights-cost"><b>Cost</b> Free to see from town</span></div><span class="lights-blurb">You can&#x27;t drive up to it — the star is on military land at Joint Base Elmendorf-Richardson, on the side of Mount Gordon Lyon. See it from town: downtown, east Anchorage and Muldoon, and toward Eagle River.</span><p><a href="https://www.jber.jb.mil/Services-Resources/Environmental/Nike/NSS/" rel="noopener" target="_blank">JBER: the Christmas Star story</a></p></li><li id="pin-government-hill-tree" class="lights-card" data-kind="landmark"><small>Landmark · Anchorage</small><b>Government Hill holiday tree</b><span class="lights-where">AT&amp;T tower area, Government Hill (near Government Hill Elementary)</span><div class="lights-pills"><span class="lights-when"><b>When</b> Lit during the holiday season. We&#x27;ll add a 2026 ceremony time when it&#x27;s posted. Visible from downtown and the hillside once it is lit</span><span class="lights-cost"><b>Cost</b> Free to view from town</span></div><span class="lights-blurb">A large tree display on the Government Hill AT&amp;T tower, visible from downtown. Treat it as a landmark to look at, not a walk-through event.</span><p><a href="https://www.anchorage.net/blog/post/where-to-find-holiday-lights-in-anchorage/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="government-hill-tree">Add to route</button></p></li>
+</ul>
+
   <h2 id="events">Official lights, 2026–27</h2>
   <ul class="spots lights-list">
-    <li id="pin-zoo-lights" class="lights-card" data-kind="walk"><small>Ticketed walk · Anchorage</small><b>Zoo Lights</b><span class="lights-where">Alaska Zoo, 4731 O&#x27;Malley Rd</span><div class="lights-pills"><span class="lights-when"><b>When</b> Nov 27, 2026–Feb 28, 2027, on scheduled nights. 5–8 PM on open nights</span><span class="lights-cost"><b>Cost</b> $25 ages 16+; $15 ages 15 and under; ages 2 and under free; members 3+ 30% off</span></div><span class="lights-blurb">Opening weekend is Nov 27–29. Then weekends Dec 4–6 and 11–13; nightly Dec 18–Jan 3 except Christmas Day (zoo closed); then weekends in January and February, including Valentine&#x27;s Lights Feb 12–14. Buy tickets online or at the gate.</span><p><a href="https://www.alaskazoo.org/zoo-lights" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="zoo-lights">Add to route</button></p></li><li id="pin-tree-lighting" class="lights-card" data-kind="event"><small>Event · Anchorage</small><b>Holiday Tree Lighting</b><span class="lights-where">4th Avenue between E and F Streets, in front of Historic City Hall</span><div class="lights-pills"><span class="lights-when"><b>When</b> Saturday, Nov 28, 2026. 6–8 PM; tree lighting at 6:15 PM</span><span class="lights-cost"><b>Cost</b> Free</span></div><span class="lights-blurb">Town Square Park is under reconstruction and fenced this winter, so the ceremony moves to 4th Avenue. Pictures with Santa, reindeer, free hot chocolate, choirs and caroling. Presented by Anchorage Downtown Partnership, sponsored by ConocoPhillips Alaska.</span><p><a href="https://anchoragedowntown.org/adp-events/holiday-tree-lighting/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="tree-lighting">Add to route</button></p></li><li id="pin-brighter-winter-nights" class="lights-card" data-kind="walk"><small>Ticketed walk · Anchorage</small><b>Brighter Winter Nights</b><span class="lights-where">Alaska Botanical Garden, 4601 Campbell Airstrip Rd</span><div class="lights-pills"><span class="lights-when"><b>When</b> Dec 3, 2026–Jan 31, 2027, on scheduled evenings. Off-peak 5–8 PM; peak Dec 18–Jan 3, 4:30–8:30 PM (closed Christmas Day and New Year&#x27;s Day)</span><span class="lights-cost"><b>Cost</b> $12 off-peak; $16 peak; members and kids 6 and under free. Tickets must be bought in advance.</span></div><span class="lights-blurb">Botanical light displays, ice luminarias, fire pits, a kicksled trail and a model train. Dec 3–17 is Thursday–Sunday; Dec 18–Jan 3 is nightly except Christmas and New Year&#x27;s Day; Jan 10–31 is Saturdays and Sundays. Bring your own mug; the Garden does not hand out disposable cups.</span><p><a href="https://www.alaskabg.org/brighter-winter-nights" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="brighter-winter-nights">Add to route</button></p></li><li id="pin-bright-up-the-night" class="lights-card" data-kind="drive"><small>Drive-through · Palmer</small><b>Bright Up the Night</b><span class="lights-where">Alaska State Fairgrounds, 2075 Glenn Hwy (enter at Purple Gate, north end)</span><div class="lights-pills"><span class="lights-when"><b>When</b> Nov 26, 2026–Jan 2, 2027. 5–9 PM. Nov 26–Dec 6 is Thursday–Sunday only; Dec 10–Jan 2 is every night</span><span class="lights-cost"><b>Cost</b> Standard vehicle $22 online, $25 at the gate (up to 8 people). Vans/limos and buses cost more.</span></div><span class="lights-blurb">A drive-through with more than 70 light installations and a holiday radio station. Stay in your vehicle. Each ticket is one vehicle, one visit. The Fair&#x27;s Yuletide Festival is not happening in 2026.</span><p><a href="https://www.alaskastatefair.org/site/bright-up-the-night/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="bright-up-the-night">Add to route</button></p><p class="lights-stayline"><a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Palmer%2C%20Alaska&amp;campaign=holiday-lights-map" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p></li><li id="pin-colony-christmas-parade" class="lights-card" data-kind="parade"><small>Parade · Palmer</small><b>Colony Christmas Parade of Lights</b><span class="lights-where">Downtown Palmer (South Colony Way / central business district)</span><div class="lights-pills"><span class="lights-when"><b>When</b> Saturday, Dec 12, 2026. Colony Christmas weekend is Dec 11–13. Parade at 5 PM; fireworks follow, weather permitting</span><span class="lights-cost"><b>Cost</b> Free to watch</span></div><span class="lights-blurb">Palmer&#x27;s holiday weekend includes the vendor market, hayrides and the Parade of Lights through downtown. Fireworks follow the parade when weather allows.</span><p><a href="https://www.palmerchamber.org/colony-christmas-2026" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="colony-christmas-parade">Add to route</button></p><p class="lights-stayline"><a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Palmer%2C%20Alaska&amp;campaign=holiday-lights-map" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p></li><li id="pin-merry-alyeska" class="lights-card" data-kind="event"><small>Event · Girdwood</small><b>Merry Alyeska</b><span class="lights-where">Alyeska Resort, 1000 Arlberg Ave</span><div class="lights-pills"><span class="lights-when"><b>When</b> Dec 13–31, 2026. Resort grounds and scheduled events; see the official Merry Alyeska page</span><span class="lights-cost"><b>Cost</b> Varies by event</span></div><span class="lights-blurb">The resort&#x27;s holiday season, with decorated grounds, the Nordic Noël Market on Dec 13, Santa visits, Skate with Santa (weather permitting) and other scheduled events. This is a holiday stay and events lineup, not a ticketed lights walk like Zoo Lights.</span><p><a href="https://www.alyeskaresort.com/merry-alyeska/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="merry-alyeska">Add to route</button></p><p class="lights-stayline"><a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Girdwood%2C%20Alaska&amp;campaign=holiday-lights-map" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p></li><li id="pin-gpra-tree-tour" class="lights-card" data-kind="walk"><small>Ticketed walk · Palmer</small><b>Holiday Tree Tour at Government Peak</b><span class="lights-where">Pioneer Loop Trail, Government Peak Recreation Area</span><div class="lights-pills"><span class="lights-when"><b>When</b> Saturday, Dec 18, 2026. Lights stay up through the holidays. 4–8 PM on Dec 18</span><span class="lights-cost"><b>Cost</b> See the Mat-Su Ski Club page</span></div><span class="lights-blurb">Ski, walk or bike a little over a mile of lighted trail on Pioneer Loop. Traction devices recommended. Pets should stay home. Cozy fires and warm drinks are on hold this year because of weather.</span><p><a href="https://www.matsuski.org/holiday-tree-tour" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="gpra-tree-tour">Add to route</button></p><p class="lights-stayline"><a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Palmer%2C%20Alaska&amp;campaign=holiday-lights-map" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p></li><li id="pin-illuminate-downtown" class="lights-card" data-kind="downtown"><small>Downtown trail · Anchorage</small><b>Illuminate Anchorage light trail</b><span class="lights-where">Downtown Anchorage storefronts</span><div class="lights-pills"><span class="lights-when"><b>When</b> Interactive map and voting scheduled to launch Dec 5, 2026. Evening storefront displays during the holiday season</span><span class="lights-cost"><b>Cost</b> Free to walk</span></div><span class="lights-blurb">A downtown business light trail with a map and voting, presented by SparkStory Marketing. This is storefronts, not neighborhood houses. Their map is set to launch Dec 5.</span><p><a href="https://anchoragecitylights.com/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="illuminate-downtown">Add to route</button></p></li><li id="pin-star-on-the-mountain" class="lights-card" data-kind="landmark"><small>Landmark · Anchorage</small><b>Star on the Mountain</b><span class="lights-where">Mount Gordon Lyon, above Arctic Valley (view from town)</span><div class="lights-pills"><span class="lights-when"><b>When</b> Usually late November through the end of the Iditarod. We&#x27;ll add the 2026 switch-on date when it&#x27;s posted. Visible on clear evenings once it is lit</span><span class="lights-cost"><b>Cost</b> Free to view from town</span></div><span class="lights-blurb">A 300-foot star on the mountainside, maintained by crews at Joint Base Elmendorf-Richardson. Look for it from town — this is not a drive-up lights walk, and Arctic Valley Road is not a viewing lot for a close walk-through.</span><p><a href="https://www.anchorage.net/blog/post/the-star-on-the-mountain-an-anchorage-holiday-tradition/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="star-on-the-mountain">Add to route</button></p></li><li id="pin-government-hill-tree" class="lights-card" data-kind="landmark"><small>Landmark · Anchorage</small><b>Government Hill holiday tree</b><span class="lights-where">AT&amp;T tower area, Government Hill (near Government Hill Elementary)</span><div class="lights-pills"><span class="lights-when"><b>When</b> Lit during the holiday season. We&#x27;ll add a 2026 ceremony time when it&#x27;s posted. Visible from downtown and the hillside once it is lit</span><span class="lights-cost"><b>Cost</b> Free to view from town</span></div><span class="lights-blurb">A large tree display on the Government Hill AT&amp;T tower, visible from downtown. Treat it as a landmark to look at, not a walk-through event.</span><p><a href="https://www.anchorage.net/blog/post/where-to-find-holiday-lights-in-anchorage/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="government-hill-tree">Add to route</button></p></li>
+    <li id="pin-zoo-lights" class="lights-card" data-kind="walk"><small>Ticketed walk · Anchorage</small><b>Zoo Lights</b><span class="lights-where">Alaska Zoo, 4731 O&#x27;Malley Rd</span><div class="lights-pills"><span class="lights-when"><b>When</b> Nov 27, 2026–Feb 28, 2027, on scheduled nights. 5–8 PM on open nights</span><span class="lights-cost"><b>Cost</b> $25 ages 16+; $15 ages 15 and under; ages 2 and under free; members 3+ 30% off</span></div><span class="lights-blurb">Opening weekend is Nov 27–29. Then weekends Dec 4–6 and 11–13; nightly Dec 18–Jan 3 except Christmas Day (zoo closed); then weekends in January and February, including Valentine&#x27;s Lights Feb 12–14. Buy tickets online or at the gate.</span><p><a href="https://www.alaskazoo.org/zoo-lights" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="zoo-lights">Add to route</button></p></li><li id="pin-tree-lighting" class="lights-card" data-kind="event"><small>Event · Anchorage</small><b>Holiday Tree Lighting</b><span class="lights-where">4th Avenue between E and F Streets, in front of Historic City Hall</span><div class="lights-pills"><span class="lights-when"><b>When</b> Saturday, Nov 28, 2026. 6–8 PM; tree lighting at 6:15 PM</span><span class="lights-cost"><b>Cost</b> Free</span></div><span class="lights-blurb">Town Square Park is under reconstruction and fenced this winter, so the ceremony moves to 4th Avenue. Pictures with Santa, reindeer, free hot chocolate, choirs and caroling. Presented by Anchorage Downtown Partnership, sponsored by ConocoPhillips Alaska.</span><p><a href="https://anchoragedowntown.org/adp-events/holiday-tree-lighting/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="tree-lighting">Add to route</button></p></li><li id="pin-brighter-winter-nights" class="lights-card" data-kind="walk"><small>Ticketed walk · Anchorage</small><b>Brighter Winter Nights</b><span class="lights-where">Alaska Botanical Garden, 4601 Campbell Airstrip Rd</span><div class="lights-pills"><span class="lights-when"><b>When</b> Dec 3, 2026–Jan 31, 2027, on scheduled evenings. Off-peak 5–8 PM; peak Dec 18–Jan 3, 4:30–8:30 PM (closed Christmas Day and New Year&#x27;s Day)</span><span class="lights-cost"><b>Cost</b> $12 off-peak; $16 peak; members and kids 6 and under free. Tickets must be bought in advance.</span></div><span class="lights-blurb">Botanical light displays, ice luminarias, fire pits, a kicksled trail and a model train. Dec 3–17 is Thursday–Sunday; Dec 18–Jan 3 is nightly except Christmas and New Year&#x27;s Day; Jan 10–31 is Saturdays and Sundays. Bring your own mug; the Garden does not hand out disposable cups.</span><p><a href="https://www.alaskabg.org/brighter-winter-nights" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="brighter-winter-nights">Add to route</button></p></li><li id="pin-bright-up-the-night" class="lights-card" data-kind="drive"><small>Drive-through · Palmer</small><b>Bright Up the Night</b><span class="lights-where">Alaska State Fairgrounds, 2075 Glenn Hwy (enter at Purple Gate, north end)</span><div class="lights-pills"><span class="lights-when"><b>When</b> Nov 26, 2026–Jan 2, 2027. 5–9 PM. Nov 26–Dec 6 is Thursday–Sunday only; Dec 10–Jan 2 is every night</span><span class="lights-cost"><b>Cost</b> Standard vehicle $22 online, $25 at the gate (up to 8 people). Vans/limos and buses cost more.</span></div><span class="lights-blurb">A drive-through with more than 70 light installations and a holiday radio station. Stay in your vehicle. Each ticket is one vehicle, one visit. The Fair&#x27;s Yuletide Festival is not happening in 2026.</span><p><a href="https://www.alaskastatefair.org/site/bright-up-the-night/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="bright-up-the-night">Add to route</button></p><p class="lights-stayline"><a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Palmer%2C%20Alaska&amp;campaign=holiday-lights-map" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p></li><li id="pin-colony-christmas-parade" class="lights-card" data-kind="parade"><small>Parade · Palmer</small><b>Colony Christmas Parade of Lights</b><span class="lights-where">Downtown Palmer (South Colony Way / central business district)</span><div class="lights-pills"><span class="lights-when"><b>When</b> Saturday, Dec 12, 2026. Colony Christmas weekend is Dec 11–13. Parade at 5 PM; fireworks follow, weather permitting</span><span class="lights-cost"><b>Cost</b> Free to watch</span></div><span class="lights-blurb">Palmer&#x27;s holiday weekend includes the vendor market, hayrides and the Parade of Lights through downtown. Fireworks follow the parade when weather allows.</span><p><a href="https://www.palmerchamber.org/colony-christmas-2026" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="colony-christmas-parade">Add to route</button></p><p class="lights-stayline"><a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Palmer%2C%20Alaska&amp;campaign=holiday-lights-map" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p></li><li id="pin-merry-alyeska" class="lights-card" data-kind="event"><small>Event · Girdwood</small><b>Merry Alyeska</b><span class="lights-where">Alyeska Resort, 1000 Arlberg Ave</span><div class="lights-pills"><span class="lights-when"><b>When</b> Dec 13–31, 2026. Resort grounds and scheduled events; see the official Merry Alyeska page</span><span class="lights-cost"><b>Cost</b> Varies by event</span></div><span class="lights-blurb">The resort&#x27;s holiday season, with decorated grounds, the Nordic Noël Market on Dec 13, Santa visits, Skate with Santa (weather permitting) and other scheduled events. This is a holiday stay and events lineup, not a ticketed lights walk like Zoo Lights.</span><p><a href="https://www.alyeskaresort.com/merry-alyeska/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="merry-alyeska">Add to route</button></p><p class="lights-stayline"><a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Girdwood%2C%20Alaska&amp;campaign=holiday-lights-map" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p></li><li id="pin-gpra-tree-tour" class="lights-card" data-kind="walk"><small>Ticketed walk · Palmer</small><b>Holiday Tree Tour at Government Peak</b><span class="lights-where">Pioneer Loop Trail, Government Peak Recreation Area</span><div class="lights-pills"><span class="lights-when"><b>When</b> Saturday, Dec 18, 2026. Lights stay up through the holidays. 4–8 PM on Dec 18</span><span class="lights-cost"><b>Cost</b> See the Mat-Su Ski Club page</span></div><span class="lights-blurb">Ski, walk or bike a little over a mile of lighted trail on Pioneer Loop. Traction devices recommended. Pets should stay home. Cozy fires and warm drinks are on hold this year because of weather.</span><p><a href="https://www.matsuski.org/holiday-tree-tour" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="gpra-tree-tour">Add to route</button></p><p class="lights-stayline"><a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Palmer%2C%20Alaska&amp;campaign=holiday-lights-map" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p></li><li id="pin-illuminate-downtown" class="lights-card" data-kind="downtown"><small>Downtown trail · Anchorage</small><b>Illuminate Anchorage light trail</b><span class="lights-where">Downtown Anchorage storefronts</span><div class="lights-pills"><span class="lights-when"><b>When</b> Interactive map and voting scheduled to launch Dec 5, 2026. Evening storefront displays during the holiday season</span><span class="lights-cost"><b>Cost</b> Free to walk</span></div><span class="lights-blurb">A downtown business light trail with a map and voting, presented by SparkStory Marketing. This is storefronts, not neighborhood houses. Their map is set to launch Dec 5.</span><p><a href="https://anchoragecitylights.com/" rel="noopener" target="_blank">Official page</a></p><p><button type="button" class="btn2 lights-route-add" data-id="illuminate-downtown">Add to route</button></p></li>
   </ul>
   
   <h2 id="town-square">Town Square is fenced this winter</h2>
@@ -684,7 +714,6 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
   <ul>
     <li><b>Eagle River tree lighting.</b> Usually at Eagle River Town Square Park, as part of the Chugiak-Eagle River Chamber's Winter Wonderland Celebration. We'll add a pin when the 2026 date is posted.</li>
     <li><b>Wasilla tree lighting.</b> Usually at Iditapark. We'll add a pin when the 2026 date is posted.</li>
-    <li><b>Star on the Mountain.</b> The Palmer star usually comes on in late November and stays lit until the last Iditarod musher finishes. We'll add the switch-on date when it's posted.</li>
   </ul>
   <p class="affil-note">Some links may earn Today in AK a small commission at no extra cost to you.</p>
     <p class="affil-note">See our <a href="/affiliate-disclosure/">affiliate disclosure</a>.</p>
@@ -826,7 +855,7 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
     <p class="lights-foot-stay"><a href="https://www.stay22.com/allez/roam?aid=todayinak&amp;address=Anchorage%2C%20Alaska&amp;campaign=holiday-lights-footer" rel="sponsored noopener" target="_blank">Visiting? Places to stay in Anchorage</a></p>
   </div>
 </footer>
-<script type="application/json" id="lights-data" data-submit-url="https://script.google.com/macros/s/AKfycbyDKLmbUeR08tUrhVl4D9zYMQHfOH5sVVXQbqBScUCkuUnBRjgkLtApisF9oP3I5xrJ/exec" data-page-url="https://todayinak.com/holiday-lights/">{"pins": [{"id": "zoo-lights", "name": "Zoo Lights", "kind": "walk", "lat": 61.1246726, "lon": -149.7921739, "venue": "Alaska Zoo, 4731 O'Malley Rd", "town": "Anchorage", "dates": "Nov 27, 2026\u2013Feb 28, 2027, on scheduled nights", "hours": "5\u20138 PM on open nights", "price": "$25 ages 16+; $15 ages 15 and under; ages 2 and under free; members 3+ 30% off", "url": "https://www.alaskazoo.org/zoo-lights", "source": "Alaska Zoo Zoo Lights page, read Nov 15, 2026", "blurb": "Opening weekend is Nov 27\u201329. Then weekends Dec 4\u20136 and 11\u201313; nightly Dec 18\u2013Jan 3 except Christmas Day (zoo closed); then weekends in January and February, including Valentine's Lights Feb 12\u201314. Buy tickets online or at the gate.", "origin": "official"}, {"id": "tree-lighting", "name": "Holiday Tree Lighting", "kind": "event", "lat": 61.2181914, "lon": -149.8926873, "venue": "4th Avenue between E and F Streets, in front of Historic City Hall", "town": "Anchorage", "dates": "Saturday, Nov 28, 2026", "hours": "6\u20138 PM; tree lighting at 6:15 PM", "price": "Free", "url": "https://anchoragedowntown.org/adp-events/holiday-tree-lighting/", "source": "Anchorage Downtown Partnership official page and 2026 poster, read Nov 15, 2026", "blurb": "Town Square Park is under reconstruction and fenced this winter, so the ceremony moves to 4th Avenue. Pictures with Santa, reindeer, free hot chocolate, choirs and caroling. Presented by Anchorage Downtown Partnership, sponsored by ConocoPhillips Alaska.", "origin": "official"}, {"id": "brighter-winter-nights", "name": "Brighter Winter Nights", "kind": "walk", "lat": 61.1767513, "lon": -149.7596631, "venue": "Alaska Botanical Garden, 4601 Campbell Airstrip Rd", "town": "Anchorage", "dates": "Dec 3, 2026\u2013Jan 31, 2027, on scheduled evenings", "hours": "Off-peak 5\u20138 PM; peak Dec 18\u2013Jan 3, 4:30\u20138:30 PM (closed Christmas Day and New Year's Day)", "price": "$12 off-peak; $16 peak; members and kids 6 and under free. Tickets must be bought in advance.", "url": "https://www.alaskabg.org/brighter-winter-nights", "source": "Alaska Botanical Garden Brighter Winter Nights page, read Nov 15, 2026", "blurb": "Botanical light displays, ice luminarias, fire pits, a kicksled trail and a model train. Dec 3\u201317 is Thursday\u2013Sunday; Dec 18\u2013Jan 3 is nightly except Christmas and New Year's Day; Jan 10\u201331 is Saturdays and Sundays. Bring your own mug; the Garden does not hand out disposable cups.", "origin": "official"}, {"id": "bright-up-the-night", "name": "Bright Up the Night", "kind": "drive", "lat": 61.5815312, "lon": -149.1352861, "venue": "Alaska State Fairgrounds, 2075 Glenn Hwy (enter at Purple Gate, north end)", "town": "Palmer", "dates": "Nov 26, 2026\u2013Jan 2, 2027", "hours": "5\u20139 PM. Nov 26\u2013Dec 6 is Thursday\u2013Sunday only; Dec 10\u2013Jan 2 is every night", "price": "Standard vehicle $22 online, $25 at the gate (up to 8 people). Vans/limos and buses cost more.", "url": "https://www.alaskastatefair.org/site/bright-up-the-night/", "source": "Alaska State Fair Bright Up the Night page, read Nov 15, 2026", "blurb": "A drive-through with more than 70 light installations and a holiday radio station. Stay in your vehicle. Each ticket is one vehicle, one visit. The Fair's Yuletide Festival is not happening in 2026.", "origin": "official", "stay_url": "https://www.stay22.com/allez/roam?aid=todayinak&address=Palmer%2C%20Alaska&campaign=holiday-lights-map"}, {"id": "colony-christmas-parade", "name": "Colony Christmas Parade of Lights", "kind": "parade", "lat": 61.5941795, "lon": -149.1179166, "venue": "Downtown Palmer (South Colony Way / central business district)", "town": "Palmer", "dates": "Saturday, Dec 12, 2026. Colony Christmas weekend is Dec 11\u201313", "hours": "Parade at 5 PM; fireworks follow, weather permitting", "price": "Free to watch", "url": "https://www.palmerchamber.org/colony-christmas-2026", "source": "Greater Palmer Chamber Colony Christmas 2026 page and official Eventeny listing, read Nov 15, 2026", "blurb": "Palmer's holiday weekend includes the vendor market, hayrides and the Parade of Lights through downtown. Fireworks follow the parade when weather allows.", "origin": "official", "stay_url": "https://www.stay22.com/allez/roam?aid=todayinak&address=Palmer%2C%20Alaska&campaign=holiday-lights-map"}, {"id": "merry-alyeska", "name": "Merry Alyeska", "kind": "event", "lat": 60.9702713, "lon": -149.0986622, "venue": "Alyeska Resort, 1000 Arlberg Ave", "town": "Girdwood", "dates": "Dec 13\u201331, 2026", "hours": "Resort grounds and scheduled events; see the official Merry Alyeska page", "price": "Varies by event", "url": "https://www.alyeskaresort.com/merry-alyeska/", "source": "Alyeska Resort Merry Alyeska 2026 press release (Nov 10, 2026), pointing to the official resort page", "blurb": "The resort's holiday season, with decorated grounds, the Nordic No\u00ebl Market on Dec 13, Santa visits, Skate with Santa (weather permitting) and other scheduled events. This is a holiday stay and events lineup, not a ticketed lights walk like Zoo Lights.", "origin": "official", "stay_url": "https://www.stay22.com/allez/roam?aid=todayinak&address=Girdwood%2C%20Alaska&campaign=holiday-lights-map"}, {"id": "gpra-tree-tour", "name": "Holiday Tree Tour at Government Peak", "kind": "walk", "lat": 61.7121609, "lon": -149.2969598, "venue": "Pioneer Loop Trail, Government Peak Recreation Area", "town": "Palmer", "dates": "Saturday, Dec 18, 2026. Lights stay up through the holidays", "hours": "4\u20138 PM on Dec 18", "price": "See the Mat-Su Ski Club page", "url": "https://www.matsuski.org/holiday-tree-tour", "source": "Mat-Su Ski Club Holiday Tree Tour page, read Nov 15, 2026", "blurb": "Ski, walk or bike a little over a mile of lighted trail on Pioneer Loop. Traction devices recommended. Pets should stay home. Cozy fires and warm drinks are on hold this year because of weather.", "origin": "official", "stay_url": "https://www.stay22.com/allez/roam?aid=todayinak&address=Palmer%2C%20Alaska&campaign=holiday-lights-map"}, {"id": "illuminate-downtown", "name": "Illuminate Anchorage light trail", "kind": "downtown", "lat": 61.21755, "lon": -149.8908, "venue": "Downtown Anchorage storefronts", "town": "Anchorage", "dates": "Interactive map and voting scheduled to launch Dec 5, 2026", "hours": "Evening storefront displays during the holiday season", "price": "Free to walk", "url": "https://anchoragecitylights.com/", "source": "Illuminate Anchorage (anchoragecitylights.com), read Nov 15, 2026", "blurb": "A downtown business light trail with a map and voting, presented by SparkStory Marketing. This is storefronts, not neighborhood houses. Their map is set to launch Dec 5.", "origin": "official"}, {"id": "star-on-the-mountain", "name": "Star on the Mountain", "kind": "landmark", "lat": 61.2622868, "lon": -149.5063328, "venue": "Mount Gordon Lyon, above Arctic Valley (view from town)", "town": "Anchorage", "dates": "Usually late November through the end of the Iditarod. We'll add the 2026 switch-on date when it's posted.", "hours": "Visible on clear evenings once it is lit", "price": "Free to view from town", "url": "https://www.anchorage.net/blog/post/the-star-on-the-mountain-an-anchorage-holiday-tradition/", "source": "Visit Anchorage Star on the Mountain explainer (tradition; page last updated 2023)", "blurb": "A 300-foot star on the mountainside, maintained by crews at Joint Base Elmendorf-Richardson. Look for it from town \u2014 this is not a drive-up lights walk, and Arctic Valley Road is not a viewing lot for a close walk-through.", "origin": "official"}, {"id": "government-hill-tree", "name": "Government Hill holiday tree", "kind": "landmark", "lat": 61.2336651, "lon": -149.8702986, "venue": "AT&T tower area, Government Hill (near Government Hill Elementary)", "town": "Anchorage", "dates": "Lit during the holiday season. We'll add a 2026 ceremony time when it's posted.", "hours": "Visible from downtown and the hillside once it is lit", "price": "Free to view from town", "url": "https://www.anchorage.net/blog/post/where-to-find-holiday-lights-in-anchorage/", "source": "Visit Anchorage holiday lights guide (mentions the Government Hill tree; that page was last updated Nov 11, 2025 and is stale on Town Square)", "blurb": "A large tree display on the Government Hill AT&T tower, visible from downtown. Treat it as a landmark to look at, not a walk-through event.", "origin": "official"}]}</script>
+<script type="application/json" id="lights-data" data-submit-url="https://script.google.com/macros/s/AKfycbyDKLmbUeR08tUrhVl4D9zYMQHfOH5sVVXQbqBScUCkuUnBRjgkLtApisF9oP3I5xrJ/exec" data-page-url="https://todayinak.com/holiday-lights/">{"pins": [{"id": "star-on-the-mountain", "name": "Star on the Mountain", "kind": "landmark", "lat": 61.2581197, "lon": -149.5285188, "venue": "Mount Gordon Lyon, near Arctic Valley", "town": "Anchorage", "dates": "Usually the day after Thanksgiving through the Iditarod finish (March)", "hours": "Visible on clear nights once it is lit", "price": "Free to see from town", "url": "https://www.jber.jb.mil/Services-Resources/Environmental/Nike/NSS/", "source": "JBER Nike Site Summit page (tradition: lit on Thanksgiving weekend through the last Iditarod musher in Nome, usually March; also lit on Sept. 11). JBER news-release listing of Nov. 26, 2025 announced the 2025 lighting for Friday, Nov. 28 (the day after Thanksgiving). No 2026 lighting notice was on the JBER news-releases page as of Nov. 18, 2026. Coordinates are the OpenStreetMap Site Summit IFC area (the star is on the slope just below), not the Mount Gordon Lyon peak.", "blurb": "You can't drive up to it \u2014 the star is on military land at Joint Base Elmendorf-Richardson, on the side of Mount Gordon Lyon. See it from town: downtown, east Anchorage and Muldoon, and toward Eagle River.", "map_label": "Star on the Mountain: see it from afar", "marker": "star", "view_only": true, "no_vote": true, "no_route": true, "no_directions": true, "include_in_anchorage_view": true, "link_label": "JBER: the Christmas Star story", "origin": "official"}, {"id": "zoo-lights", "name": "Zoo Lights", "kind": "walk", "lat": 61.1246726, "lon": -149.7921739, "venue": "Alaska Zoo, 4731 O'Malley Rd", "town": "Anchorage", "dates": "Nov 27, 2026\u2013Feb 28, 2027, on scheduled nights", "hours": "5\u20138 PM on open nights", "price": "$25 ages 16+; $15 ages 15 and under; ages 2 and under free; members 3+ 30% off", "url": "https://www.alaskazoo.org/zoo-lights", "source": "Alaska Zoo Zoo Lights page, read Nov 15, 2026", "blurb": "Opening weekend is Nov 27\u201329. Then weekends Dec 4\u20136 and 11\u201313; nightly Dec 18\u2013Jan 3 except Christmas Day (zoo closed); then weekends in January and February, including Valentine's Lights Feb 12\u201314. Buy tickets online or at the gate.", "origin": "official"}, {"id": "tree-lighting", "name": "Holiday Tree Lighting", "kind": "event", "lat": 61.2181914, "lon": -149.8926873, "venue": "4th Avenue between E and F Streets, in front of Historic City Hall", "town": "Anchorage", "dates": "Saturday, Nov 28, 2026", "hours": "6\u20138 PM; tree lighting at 6:15 PM", "price": "Free", "url": "https://anchoragedowntown.org/adp-events/holiday-tree-lighting/", "source": "Anchorage Downtown Partnership official page and 2026 poster, read Nov 15, 2026", "blurb": "Town Square Park is under reconstruction and fenced this winter, so the ceremony moves to 4th Avenue. Pictures with Santa, reindeer, free hot chocolate, choirs and caroling. Presented by Anchorage Downtown Partnership, sponsored by ConocoPhillips Alaska.", "origin": "official"}, {"id": "brighter-winter-nights", "name": "Brighter Winter Nights", "kind": "walk", "lat": 61.1767513, "lon": -149.7596631, "venue": "Alaska Botanical Garden, 4601 Campbell Airstrip Rd", "town": "Anchorage", "dates": "Dec 3, 2026\u2013Jan 31, 2027, on scheduled evenings", "hours": "Off-peak 5\u20138 PM; peak Dec 18\u2013Jan 3, 4:30\u20138:30 PM (closed Christmas Day and New Year's Day)", "price": "$12 off-peak; $16 peak; members and kids 6 and under free. Tickets must be bought in advance.", "url": "https://www.alaskabg.org/brighter-winter-nights", "source": "Alaska Botanical Garden Brighter Winter Nights page, read Nov 15, 2026", "blurb": "Botanical light displays, ice luminarias, fire pits, a kicksled trail and a model train. Dec 3\u201317 is Thursday\u2013Sunday; Dec 18\u2013Jan 3 is nightly except Christmas and New Year's Day; Jan 10\u201331 is Saturdays and Sundays. Bring your own mug; the Garden does not hand out disposable cups.", "origin": "official"}, {"id": "bright-up-the-night", "name": "Bright Up the Night", "kind": "drive", "lat": 61.5815312, "lon": -149.1352861, "venue": "Alaska State Fairgrounds, 2075 Glenn Hwy (enter at Purple Gate, north end)", "town": "Palmer", "dates": "Nov 26, 2026\u2013Jan 2, 2027", "hours": "5\u20139 PM. Nov 26\u2013Dec 6 is Thursday\u2013Sunday only; Dec 10\u2013Jan 2 is every night", "price": "Standard vehicle $22 online, $25 at the gate (up to 8 people). Vans/limos and buses cost more.", "url": "https://www.alaskastatefair.org/site/bright-up-the-night/", "source": "Alaska State Fair Bright Up the Night page, read Nov 15, 2026", "blurb": "A drive-through with more than 70 light installations and a holiday radio station. Stay in your vehicle. Each ticket is one vehicle, one visit. The Fair's Yuletide Festival is not happening in 2026.", "origin": "official", "stay_url": "https://www.stay22.com/allez/roam?aid=todayinak&address=Palmer%2C%20Alaska&campaign=holiday-lights-map"}, {"id": "colony-christmas-parade", "name": "Colony Christmas Parade of Lights", "kind": "parade", "lat": 61.5941795, "lon": -149.1179166, "venue": "Downtown Palmer (South Colony Way / central business district)", "town": "Palmer", "dates": "Saturday, Dec 12, 2026. Colony Christmas weekend is Dec 11\u201313", "hours": "Parade at 5 PM; fireworks follow, weather permitting", "price": "Free to watch", "url": "https://www.palmerchamber.org/colony-christmas-2026", "source": "Greater Palmer Chamber Colony Christmas 2026 page and official Eventeny listing, read Nov 15, 2026", "blurb": "Palmer's holiday weekend includes the vendor market, hayrides and the Parade of Lights through downtown. Fireworks follow the parade when weather allows.", "origin": "official", "stay_url": "https://www.stay22.com/allez/roam?aid=todayinak&address=Palmer%2C%20Alaska&campaign=holiday-lights-map"}, {"id": "merry-alyeska", "name": "Merry Alyeska", "kind": "event", "lat": 60.9702713, "lon": -149.0986622, "venue": "Alyeska Resort, 1000 Arlberg Ave", "town": "Girdwood", "dates": "Dec 13\u201331, 2026", "hours": "Resort grounds and scheduled events; see the official Merry Alyeska page", "price": "Varies by event", "url": "https://www.alyeskaresort.com/merry-alyeska/", "source": "Alyeska Resort Merry Alyeska 2026 press release (Nov 10, 2026), pointing to the official resort page", "blurb": "The resort's holiday season, with decorated grounds, the Nordic No\u00ebl Market on Dec 13, Santa visits, Skate with Santa (weather permitting) and other scheduled events. This is a holiday stay and events lineup, not a ticketed lights walk like Zoo Lights.", "origin": "official", "stay_url": "https://www.stay22.com/allez/roam?aid=todayinak&address=Girdwood%2C%20Alaska&campaign=holiday-lights-map"}, {"id": "gpra-tree-tour", "name": "Holiday Tree Tour at Government Peak", "kind": "walk", "lat": 61.7121609, "lon": -149.2969598, "venue": "Pioneer Loop Trail, Government Peak Recreation Area", "town": "Palmer", "dates": "Saturday, Dec 18, 2026. Lights stay up through the holidays", "hours": "4\u20138 PM on Dec 18", "price": "See the Mat-Su Ski Club page", "url": "https://www.matsuski.org/holiday-tree-tour", "source": "Mat-Su Ski Club Holiday Tree Tour page, read Nov 15, 2026", "blurb": "Ski, walk or bike a little over a mile of lighted trail on Pioneer Loop. Traction devices recommended. Pets should stay home. Cozy fires and warm drinks are on hold this year because of weather.", "origin": "official", "stay_url": "https://www.stay22.com/allez/roam?aid=todayinak&address=Palmer%2C%20Alaska&campaign=holiday-lights-map"}, {"id": "illuminate-downtown", "name": "Illuminate Anchorage light trail", "kind": "downtown", "lat": 61.21755, "lon": -149.8908, "venue": "Downtown Anchorage storefronts", "town": "Anchorage", "dates": "Interactive map and voting scheduled to launch Dec 5, 2026", "hours": "Evening storefront displays during the holiday season", "price": "Free to walk", "url": "https://anchoragecitylights.com/", "source": "Illuminate Anchorage (anchoragecitylights.com), read Nov 15, 2026", "blurb": "A downtown business light trail with a map and voting, presented by SparkStory Marketing. This is storefronts, not neighborhood houses. Their map is set to launch Dec 5.", "origin": "official"}, {"id": "government-hill-tree", "name": "Government Hill holiday tree", "kind": "landmark", "lat": 61.2336651, "lon": -149.8702986, "venue": "AT&T tower area, Government Hill (near Government Hill Elementary)", "town": "Anchorage", "dates": "Lit during the holiday season. We'll add a 2026 ceremony time when it's posted.", "hours": "Visible from downtown and the hillside once it is lit", "price": "Free to view from town", "url": "https://www.anchorage.net/blog/post/where-to-find-holiday-lights-in-anchorage/", "source": "Visit Anchorage holiday lights guide (mentions the Government Hill tree; that page was last updated Nov 11, 2025 and is stale on Town Square)", "blurb": "A large tree display on the Government Hill AT&T tower, visible from downtown. Treat it as a landmark to look at, not a walk-through event.", "origin": "official"}]}</script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>window.TIA_LIGHTS_THEME="candy";</script>
 <script>
@@ -936,7 +965,9 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
     return String(t || '').replace(/\b(\d{3,6})\b/g, function(_, n){ return String(Math.floor(parseInt(n, 10) / 100) * 100); });
   }
   function isHome(p) { return (p.origin || 'official') === 'community'; }
-  function publicName(p) { return isHome(p) ? blockOnly(p.name || 'Neighborhood display') : (p.name || ''); }
+  function publicName(p) { return isHome(p) ? blockOnly(p.name || 'Neighborhood display') : (p.map_label || p.name || ''); }
+  function isViewOnly(p) { return !!(p && (p.view_only || p.no_route || p.no_directions)); }
+  function canVote(p) { return !(p && (p.no_vote || p.view_only)); }
   function typeLine(p) {
     return (p.types || []).map(function(t){ return TYPE_LABELS[t] || t; }).join(' · ');
   }
@@ -963,17 +994,21 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
 
   var map, markers = [];
   function popupHtml(p) {
-    var parts = ['<b>' + escapeHtml(publicName(p)) + (isNewPin(p) ? ' <span class="lights-new">New this week</span>' : '') + '</b>'];
+    var title = (!isHome(p) && p.name) ? p.name : publicName(p);
+    var parts = ['<b>' + escapeHtml(title) + (isNewPin(p) ? ' <span class="lights-new">New this week</span>' : '') + '</b>'];
     if (p.venue) parts.push('<span class="lights-popup-meta lights-popup-where">' + escapeHtml(p.venue) + '</span>');
     var pills = [];
     if (p.dates) pills.push('<span class="lights-popup-meta lights-popup-when">' + escapeHtml(p.dates) + '</span>');
     if (p.hours) pills.push('<span class="lights-popup-meta lights-popup-hours">' + escapeHtml(p.hours) + '</span>');
     if (p.nights) pills.push('<span class="lights-popup-meta lights-popup-hours">' + escapeHtml(p.nights) + '</span>');
-    if (p.price) pills.push('<span class="lights-popup-meta lights-popup-price">' + escapeHtml(p.price) + '</span>');
+    if (p.price && !isViewOnly(p)) pills.push('<span class="lights-popup-meta lights-popup-price">' + escapeHtml(p.price) + '</span>');
     if (pills.length) parts.push('<div class="lights-popup-pills">' + pills.join('') + '</div>');
+    if (p.blurb && (isViewOnly(p) || p.kind === 'landmark')) {
+      parts.push('<span class="lights-popup-blurb">' + escapeHtml(p.blurb) + '</span>');
+    }
     if (p.tip) parts.push('Tip: ' + escapeHtml(p.tip));
     if (p.types && p.types.length) parts.push(escapeHtml(typeLine(p)));
-    if (p.url) parts.push('<a href="' + escapeHtml(p.url) + '" rel="noopener" target="_blank">Official page</a>');
+    if (p.url) parts.push('<a href="' + escapeHtml(p.url) + '" rel="noopener" target="_blank">' + escapeHtml(p.link_label || 'Official page') + '</a>');
     var inRoute = routeIds.indexOf(p.id) !== -1;
     var sawn = !!sawMap[p.id];
     var sights = (p.sights || 0) + (sawn && !(p.sightsAlready) ? 1 : 0);
@@ -982,20 +1017,27 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
     var voted = !!myVotes[p.id];
     var n = voteCount(p);
     var id = escapeHtml(p.id);
-    var dir = (typeof p.lat === 'number' && typeof p.lon === 'number')
+    var allowDir = !p.no_directions && !p.view_only && typeof p.lat === 'number' && typeof p.lon === 'number';
+    var dir = allowDir
       ? ('https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(p.lat + ',' + p.lon) + '&travelmode=driving')
       : '';
-    parts.push('<div class="lights-popup-actions">'
-      + (dir ? '<a class="lights-directions" href="' + dir + '" rel="noopener" target="_blank">Directions</a>' : '')
-      + '<button type="button" class="lights-add-route" data-id="' + id + '" aria-pressed="' + (inRoute ? 'true' : 'false') + '">'
-      + (inRoute ? 'Remove from route' : 'Add to route') + '</button>'
-      + '</div><div class="lights-popup-actions share-row">'
-      + '<button type="button" class="lights-vote" data-id="' + id + '" aria-pressed="' + (voted ? 'true' : 'false') + '" aria-label="' + (voted ? 'Remove your vote' : 'Vote for this display') + ', ' + n + (n === 1 ? ' vote' : ' votes') + '">Vote · ' + n + '</button>'
-      + '<button type="button" class="lights-share" data-id="' + id + '">Share</button>'
-      + '<button type="button" class="lights-story" data-id="' + id + '">Make a share picture</button>'
-      + '<button type="button" class="lights-saw" data-id="' + id + '" aria-pressed="' + (sawn ? 'true' : 'false') + '">'
-      + escapeHtml(sawLabel) + '</button></div>');
-    return parts.join('<br>');
+    var actions = [];
+    if (dir) actions.push('<a class="lights-directions" href="' + dir + '" rel="noopener" target="_blank">Directions</a>');
+    if (!p.no_route && !p.view_only) {
+      actions.push('<button type="button" class="lights-add-route" data-id="' + id + '" aria-pressed="' + (inRoute ? 'true' : 'false') + '">'
+        + (inRoute ? 'Remove from route' : 'Add to route') + '</button>');
+    }
+    var share = [];
+    if (canVote(p)) {
+      share.push('<button type="button" class="lights-vote" data-id="' + id + '" aria-pressed="' + (voted ? 'true' : 'false') + '" aria-label="' + (voted ? 'Remove your vote' : 'Vote for this display') + ', ' + n + (n === 1 ? ' vote' : ' votes') + '">Vote · ' + n + '</button>');
+    }
+    share.push('<button type="button" class="lights-share" data-id="' + id + '">Share</button>');
+    if (!isViewOnly(p)) share.push('<button type="button" class="lights-story" data-id="' + id + '">Make a share picture</button>');
+    share.push('<button type="button" class="lights-saw" data-id="' + id + '" aria-pressed="' + (sawn ? 'true' : 'false') + '">'
+      + escapeHtml(sawLabel) + '</button>');
+    if (actions.length) parts.push('<div class="lights-popup-actions">' + actions.join('') + '</div>');
+    parts.push('<div class="lights-popup-actions share-row">' + share.join('') + '</div>');
+    return parts.join(isViewOnly(p) ? '' : '<br>');
   }
   function refreshPopups() {
     markers.forEach(function(m){ m.setPopupContent(popupHtml(m.pin)); });
@@ -1009,7 +1051,10 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
     return (btn && btn.getAttribute('data-kind')) || 'all';
   }
   var wholeArea = false;
-  function inBowl(p) { return p.lat >= BOWL.s && p.lat <= BOWL.n && p.lon >= BOWL.w && p.lon <= BOWL.e; }
+  function inBowl(p) {
+    if (p && p.include_in_anchorage_view) return true;
+    return p.lat >= BOWL.s && p.lat <= BOWL.n && p.lon >= BOWL.w && p.lon <= BOWL.e;
+  }
   function fitVisible() {
     if (!map) return;
     var vis = markers.filter(function(m){ return map.hasLayer(m); });
@@ -1076,29 +1121,42 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
     }
     return p && p.url ? p.url : '#';
   }
+  function listCardHtml(p) {
+    var inRoute = routeIds.indexOf(p.id) !== -1;
+    var k = isHome(p) ? 'home' : (p.kind || 'event');
+    var when = p.dates || p.hours || '';
+    var actions = '';
+    if (!p.no_directions && !p.view_only) {
+      actions += '<a class="lights-directions" href="' + directionsUrl(p) + '" rel="noopener" target="_blank">Directions</a>';
+    }
+    if (!p.no_route && !p.view_only) {
+      actions += '<button type="button" class="lights-route-add" data-id="' + escapeHtml(p.id) + '" aria-pressed="' + (inRoute ? 'true' : 'false') + '">'
+        + (inRoute ? 'Remove from route' : 'Add to route') + '</button>';
+    }
+    return '<li class="lights-card" data-kind="' + escapeHtml(k) + '">'
+      + '<b>' + escapeHtml(publicName(p)) + '</b>'
+      + (p.venue ? '<span class="lights-where">' + escapeHtml(p.venue) + '</span>' : '')
+      + (when ? '<div class="lights-pills"><span class="lights-when">' + escapeHtml(when) + '</span></div>' : '')
+      + ((isViewOnly(p) || p.kind === 'landmark') && p.blurb ? '<span class="lights-blurb">' + escapeHtml(p.blurb) + '</span>' : '')
+      + (actions ? '<div class="lights-list-actions">' + actions + '</div>' : '')
+      + (p.stay_url ? '<p class="lights-stayline"><a href="' + escapeHtml(p.stay_url) + '" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p>' : '')
+      + '</li>';
+  }
   function renderPinList() {
     var ul = $('lights-pin-list-items');
     if (!ul) return;
     var origin = currentOrigin();
     var kind = currentKind();
-    var html = '';
-    pins.forEach(function(p){
-      if (!pinMatches(p, origin, kind) || typeof p.lat !== 'number' || typeof p.lon !== 'number') return;
-      var inRoute = routeIds.indexOf(p.id) !== -1;
-      var k = isHome(p) ? 'home' : (p.kind || 'event');
-      var when = p.dates || p.hours || '';
-      html += '<li class="lights-card" data-kind="' + escapeHtml(k) + '">'
-        + '<b>' + escapeHtml(publicName(p)) + '</b>'
-        + (p.venue ? '<span class="lights-where">' + escapeHtml(p.venue) + '</span>' : '')
-        + (when ? '<div class="lights-pills"><span class="lights-when">' + escapeHtml(when) + '</span></div>' : '')
-        + '<div class="lights-list-actions">'
-        + '<a class="lights-directions" href="' + directionsUrl(p) + '" rel="noopener" target="_blank">Directions</a>'
-        + '<button type="button" class="lights-route-add" data-id="' + escapeHtml(p.id) + '" aria-pressed="' + (inRoute ? 'true' : 'false') + '">'
-        + (inRoute ? 'Remove from route' : 'Add to route') + '</button>'
-        + '</div>'
-        + (p.stay_url ? '<p class="lights-stayline"><a href="' + escapeHtml(p.stay_url) + '" rel="sponsored noopener" target="_blank">Making a night of it?<br><span class="lights-stay-link">Places to stay</span>&nbsp;nearby.</a></p>' : '')
-        + '</li>';
+    var vis = pins.filter(function(p){
+      return pinMatches(p, origin, kind) && typeof p.lat === 'number' && typeof p.lon === 'number';
     });
+    var landmarks = vis.filter(function(p){ return p.kind === 'landmark'; });
+    var others = vis.filter(function(p){ return p.kind !== 'landmark'; });
+    var html = '';
+    if (landmarks.length && others.length) html += '<li class="lights-list-kicker" data-kind="landmark"><b>Landmarks</b></li>';
+    landmarks.forEach(function(p){ html += listCardHtml(p); });
+    if (landmarks.length && others.length) html += '<li class="lights-list-kicker"><b>Events and displays</b></li>';
+    others.forEach(function(p){ html += listCardHtml(p); });
     ul.innerHTML = html || '<li>No displays match. Try All at the top of the list.</li>';
   }
   function showMapView() {
@@ -1213,7 +1271,7 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
   if (el && dataEl && typeof L !== 'undefined') {
     map = L.map('lights-map', {scrollWheelZoom: false, attributionControl: true, zoomControl: false});
     L.control.zoom({ position: 'bottomright' }).addTo(map);
-    var popW = Math.max(200, Math.min(290, el.clientWidth - 44));
+    var popW = Math.max(200, Math.min(el.clientWidth < 500 ? 340 : 360, el.clientWidth - 24));
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       maxZoom: 19
@@ -1223,6 +1281,15 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
       return ({ walk:'#FFD36A', drive:'#FF5A5A', parade:'#6EC8FF', event:'#5EF2B5', downtown:'#FF8FAB', landmark:'#C9A0FF' })[p.kind] || '#5EF2B5';
     }
     function pinIcon(p) {
+      if (p.marker === 'star') {
+        return L.divIcon({
+          className: 'lights-pin lights-pin-star',
+          html: '<span class="lights-star-mark" aria-hidden="true">⭐</span>',
+          iconSize: [36, 36],
+          iconAnchor: [18, 18],
+          popupAnchor: [0, -18]
+        });
+      }
       var c = pinColor(p);
       return L.divIcon({
         className: 'lights-pin',
@@ -1234,19 +1301,41 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
     }
     pins.forEach(function(p){
       if (typeof p.lat !== 'number' || typeof p.lon !== 'number') return;
-      var m = L.marker([p.lat, p.lon], {icon: pinIcon(p), title: publicName(p), alt: publicName(p)});
+      var m = L.marker([p.lat, p.lon], {
+        icon: pinIcon(p),
+        title: publicName(p),
+        alt: publicName(p),
+        zIndexOffset: p.marker === 'star' ? 800 : 0
+      });
       m.pin = p;
       m.home = L.latLng(p.lat, p.lon);
-      m.bindPopup(popupHtml(p), {maxWidth: popW, minWidth: Math.min(230, popW), autoPanPaddingTopLeft: L.point(10, 58), autoPanPaddingBottomRight: L.point(10, 30)});
+      if (p.map_label) {
+        var tipEl = L.DomUtil.create('div', 'lights-star-label-inner');
+        tipEl.innerHTML = escapeHtml(p.map_label).replace(': ', ':<br>');
+        m.bindTooltip(tipEl, {
+          permanent: true,
+          direction: 'left',
+          offset: L.point(-10, 0),
+          className: 'lights-star-label',
+          opacity: 1
+        });
+      }
+      m.bindPopup(popupHtml(p), {maxWidth: popW, minWidth: Math.min(230, popW), autoPanPaddingTopLeft: L.point(12, 64), autoPanPaddingBottomRight: L.point(44, 44)});
       m.on('popupopen', function(){
         setPinHash(p.id);
+        document.body.classList.add('lights-popup-open');
+        if (p.map_label && this.closeTooltip) this.closeTooltip();
         var popEl = this.getPopup() && this.getPopup().getElement();
         if (popEl) {
           popEl.className = popEl.className.replace(/\blights-pop-kind-\S+/g, '').trim();
           popEl.classList.add('lights-pop-kind-' + (isHome(p) ? 'home' : (p.kind || 'event')));
         }
       });
-      m.on('popupclose', function(){ if (pinFromUrl() === p.id) setPinHash(''); });
+      m.on('popupclose', function(){
+        document.body.classList.remove('lights-popup-open');
+        if (pinFromUrl() === p.id) setPinHash('');
+        if (p.map_label && this.openTooltip) this.openTooltip();
+      });
       m.addTo(map);
       markers.push(m);
     });
@@ -1514,7 +1603,7 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
     var list = $('lights-top'), wrap = $('lights-top-wrap');
     if (!list) return;
     var ranked = pins.map(function(p){ return { p: p, n: voteCount(p) }; })
-      .filter(function(r){ return r.n > 0; })
+      .filter(function(r){ return r.n > 0 && canVote(r.p); })
       .sort(function(a, b){ return b.n - a.n || publicName(a.p).localeCompare(publicName(b.p)); })
       .slice(0, 5);
     list.innerHTML = ranked.map(function(r){
@@ -1529,7 +1618,7 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
   }
   function toggleVote(id) {
     var p = pinById(id);
-    if (!p) return;
+    if (!p || !canVote(p)) return;
     var on = !myVotes[id];
     if (on) myVotes[id] = Date.now(); else delete myVotes[id];
     saveJson(VOTE_KEY, myVotes);
