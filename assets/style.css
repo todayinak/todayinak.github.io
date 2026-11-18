@@ -866,3 +866,162 @@ html[data-theme="light"] .homepick-lights a{box-shadow:0 1px 0 rgba(16,32,56,.04
   .homepicks a,.homepicks .pick-go{transition:none}
   .homepicks a:hover .pick-go{transform:none}
 }
+
+/* A) Homepage picks carousel: one card at a time, manual only (no auto-advance) */
+.pick-live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.pick-ctrl,.home-picks-carousel .pick-dots{display:none}
+.home-picks-carousel.is-ready{
+  display:grid;grid-template-columns:56px 1fr 56px;grid-template-areas:"card card card" "prev dots next";
+  gap:8px;align-items:center;
+}
+.home-picks-carousel.is-ready .pick-carousel{display:contents}
+.home-picks-carousel.is-ready .pick-viewport{grid-area:card;min-width:0}
+.home-picks-carousel.is-ready .homepicks{display:block}
+.home-picks-carousel.is-ready .pick-ctrl{
+  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  flex:none;box-sizing:border-box;width:100%;min-width:52px;min-height:56px;padding:6px 4px;
+  border:1.5px solid var(--line);border-radius:var(--slab);background:var(--card);
+  color:var(--white);font:700 11px/1 Inter,sans-serif;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.home-picks-carousel.is-ready .pick-prev{grid-area:prev}
+.home-picks-carousel.is-ready .pick-next{grid-area:next}
+.home-picks-carousel.is-ready .pick-ctrl svg{
+  width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2.6;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.home-picks-carousel.is-ready .pick-ctrl:hover{background:var(--card-hover);border-color:var(--green);color:var(--green)}
+.home-picks-carousel.is-ready .pick-ctrl:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.home-picks-carousel.is-ready .pick-dots{display:flex;grid-area:dots;justify-content:center;align-items:center;gap:2px;margin:0}
+.pick-dot{
+  box-sizing:border-box;width:44px;height:44px;padding:0;border:0;background:transparent;
+  display:grid;place-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent;
+}
+.pick-dot::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--faint);border:2px solid var(--line)}
+.pick-dot[aria-current="true"]::after{background:var(--green);border-color:var(--green);width:14px;height:14px}
+.pick-dot:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:50%}
+html[data-theme="bw"] .pick-ctrl,html[data-theme="bw"] .pick-dot{text-decoration:none}
+html[data-theme="light"] .pick-ctrl,html[data-theme="blush"] .pick-ctrl{box-shadow:0 1px 0 rgba(16,32,56,.04)}
+
+/* B) Homepage picks as compact wrapping pills */
+.home-picks-pills{margin:14px 0 8px}
+.homepills{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.homepills li:last-child{grid-column:1 / -1}
+.homepills a{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;width:100%;
+  box-sizing:border-box;min-height:48px;padding:10px 14px;
+  background:var(--card);color:var(--white);text-decoration:none;
+  border:1.5px solid var(--line);border-radius:var(--pillr);
+  font:800 15px/1.2 Montserrat,Inter,sans-serif;
+  -webkit-tap-highlight-color:transparent;
+}
+.homepills a:hover{background:var(--card-hover);border-color:var(--green)}
+.homepills a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.homepills a:active{transform:translateY(1px)}
+.homepills .homepick-lights a{
+  border-color:rgba(232,180,74,.75);
+  box-shadow:0 0 0 1px rgba(232,180,74,.22),0 0 12px rgba(255,184,107,.28);
+}
+html[data-theme="light"] .homepills a,html[data-theme="blush"] .homepills a{box-shadow:0 1px 0 rgba(16,32,56,.04)}
+html[data-theme="light"] .homepills .homepick-lights a{
+  border-color:#9A4E0F;
+  box-shadow:0 1px 0 rgba(16,32,56,.04),0 0 0 1px rgba(154,78,15,.16),0 0 10px rgba(154,78,15,.14);
+}
+html[data-theme="bw"] .homepills a{text-decoration:none;box-shadow:none}
+html[data-theme="bw"] .homepills .homepick-lights a{border-color:#111;border-width:2px;box-shadow:none}
+@media (prefers-reduced-motion:reduce){
+  .homepills a{transition:none}
+  .homepills a:active{transform:none}
+}
+
+/* Compact homepage top (body.home-compact): shorter intro, filters behind a
+   button, Instagram/Invite below the event list, tighter first-screen spacing.
+   Keep 44px tap targets and the existing fonts/theme. */
+.home-compact .hero{padding:12px 0 10px}
+.home-compact .kicker{margin:12px 0 6px}
+.home-compact .hero h1{max-width:none}
+.home-compact .hero h1::after{margin:10px 0 2px}
+.home-compact .range{margin:8px 0 2px}
+.home-compact .hero .updated{margin:6px 0 0;font-size:12.5px}
+.home-compact nav.regions{margin:6px 0 4px}
+.home-compact .region-showing{margin:6px 0 0}
+.home-compact .region-showing.is-default{display:none}
+.home-compact .home-picks-pills{margin:8px 0 0}
+@media (max-width:899px){
+  .home-compact .regionchips{
+    display:flex;flex-wrap:wrap;overflow:visible;gap:6px;
+    margin:0;padding:0 0 2px
+  }
+}
+.home-compact .regionchips .chip{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:8px 10px;font-size:13px;white-space:nowrap
+}
+.home-compact .regionchips .chip,
+.home-compact .filterbtn,
+.home-compact .todaybtn,
+.home-compact .finder .clear,
+.home-compact .finder .chip,
+.home-compact .savedbtn,
+.home-compact .viewbtn,
+.home-compact .hero-actions .btn,
+.home-compact .hero-actions .btn2,
+.home-compact .chips a{
+  box-sizing:border-box;min-height:44px
+}
+.home-compact .extras select{min-height:44px;padding:8px 12px;font-size:16px}
+.home-compact .extras .chk{min-height:44px;align-items:center}
+.home-compact .extras .chk input{width:22px;height:22px}
+#events.home-compact-sec{padding-top:20px}
+.home-compact #events.sec{padding-top:10px;padding-bottom:28px}
+.home-compact #events .eyebrow{display:none}
+.home-compact #events h2{margin-bottom:6px;font-size:clamp(26px,7vw,40px)}
+.home-compact #events .lede-short{margin:0 0 8px;color:var(--gray)}
+.home-compact #events .lede-full{margin:28px 0 0;color:var(--gray)}
+.home-compact .hero-actions{display:flex;gap:8px;margin:18px 0 10px}
+.home-compact .hero-actions .btn,
+.home-compact .hero-actions .btn2{
+  flex:1;display:inline-flex;align-items:center;justify-content:center;
+  width:auto;margin:0;padding:10px 12px;
+  font:800 14px/1.2 Montserrat,Inter,sans-serif;text-align:center
+}
+.home-compact .hero-actions .btn2{margin-top:0}
+.home-compact #events > .chips{margin:8px -20px 0}
+.home-compact .finder{padding:8px 10px 8px;margin:0 0 8px}
+.home-compact .finder > .lbl{margin:0 0 6px;letter-spacing:.1em}
+.home-compact .searchrow{align-items:stretch;flex-wrap:wrap}
+.home-compact .searchrow input{flex:1 1 140px;min-height:44px;padding:10px 14px;font-size:16px}
+@media (max-width:599px){.home-compact .searchrow input{flex:1 1 100%}}
+.home-compact .todaybtn,
+.home-compact .filterbtn{
+  flex:none;display:inline-flex;align-items:center;justify-content:center;
+  margin:0;padding:10px 12px;border-radius:12px;
+  font:800 14px/1 Inter,sans-serif;cursor:pointer;white-space:nowrap;
+  -webkit-tap-highlight-color:transparent
+}
+.home-compact .todaybtn{
+  border:1.5px solid var(--line);background:var(--chip-bg-soft);color:var(--white)
+}
+.home-compact .todaybtn:hover{background:rgba(94,242,181,.12);border-color:var(--green);color:var(--green)}
+.home-compact .todaybtn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.home-compact .todaybtn[aria-pressed="true"],
+.home-compact .todaybtn.is-on{background:var(--green);border-color:var(--green);color:var(--void)}
+.home-compact .todaybtn[aria-pressed="true"]:hover,
+.home-compact .todaybtn.is-on:hover{background:var(--green);color:var(--void)}
+.home-compact .filterbtn{
+  border:1.5px solid var(--green);background:transparent;color:var(--green)
+}
+.home-compact .filterbtn:hover{background:rgba(94,242,181,.12)}
+.home-compact .filterbtn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.home-compact .filterbtn.has-filters,
+.home-compact .filterbtn[aria-expanded="true"]{background:var(--green);color:var(--void);border-color:var(--green)}
+.home-compact .filterbtn.has-filters{box-shadow:0 0 0 2px color-mix(in srgb,var(--green) 40%,transparent)}
+.home-compact .finder .count{margin:8px 0 0;font-size:13.5px}
+.home-compact .filter-panel{margin-top:10px}
+.home-compact .filter-panel .catchips{margin-top:0}
+.home-compact .filter-panel .viewtoggle{margin:12px 0 0}
+.home-compact .filter-panel .extras{margin:12px 0 0}
+.home-compact .filter-panel > .clear{margin:12px 0 0}
+.home-compact #events .evsec:first-of-type,
+.home-compact #evdays .evday:first-child{margin-top:10px}
+.home-compact #evdays .evday{scroll-margin-top:8px}

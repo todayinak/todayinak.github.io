@@ -770,6 +770,7 @@
     });
     if (regionShow) {
       regionShow.innerHTML = 'Showing: <b>' + regionLabel(region) + '</b>';
+      regionShow.classList.toggle('is-default', !region);
     }
   }
   function setRegion(slug, fromUrl) {
@@ -812,9 +813,11 @@
   }
   function dayHeading(iso) {
     var tomorrow = addDays(todayISO, 1);
-    if (iso === todayISO) return 'Today · ' + longDay(iso);
-    if (iso === tomorrow) return 'Tomorrow · ' + longDay(iso);
-    return longDay(iso);
+    // Compact homepage: short date so the heading stays on one phone line.
+    var rest = document.body.classList.contains('home-compact') ? label(iso) : longDay(iso);
+    if (iso === todayISO) return 'Today · ' + rest;
+    if (iso === tomorrow) return 'Tomorrow · ' + rest;
+    return rest;
   }
   function paintDayList() {
     if (calView) {
@@ -980,7 +983,7 @@
   // ---------- search + filters ----------
   function apply() {
     if (isOpenGuide) { applyGuide(); return; }
-    if (calView) { renderCal(); paintRegionUI(); return; }
+    if (calView) { renderCal(); paintRegionUI(); syncFilterToggle(); return; }
     if (calBox) calBox.hidden = true;
     paintDayList();
     var words = hasFinder ? norm(q.value).trim().split(/\s+/).filter(Boolean) : [], d = hasFinder ? day.value : '', a = hasFinder ? age.value : '',
@@ -1042,9 +1045,49 @@
     none.hidden = shown !== 0 || pool === 0 || noSaved || (region && inRegion === 0);
     if (nosaved) nosaved.hidden = !noSaved;
     if (savedBtn) savedBtn.setAttribute('aria-pressed', String(sv));
+    if (count && document.body.classList.contains('home-compact')) {
+      count.hidden = !active && !sv;
+    } else if (count) {
+      count.hidden = false;
+    }
+    syncFilterToggle();
+    syncTodayBtn();
   }
   function refresh() { timePass(); apply(); updateSavedUI(); moon(); }
   function tick() { if (akNow() !== lastKey) refresh(); }
+
+  function filtersAreOn() {
+    var todayHandled = !!document.getElementById('evtoday');
+    return !!(cat || (!todayHandled && whenToday) || (q && norm(q.value).trim()) || (day && day.value) || (age && age.value) || (free && free.checked) || savedView);
+  }
+  function setFiltersOpen(open) {
+    var btn = document.getElementById('evfilters'), panel = document.getElementById('evfilters-panel');
+    if (!finder || !btn) return;
+    finder.classList.toggle('is-open', !!open);
+    btn.setAttribute('aria-expanded', String(!!open));
+    if (panel) panel.hidden = !open;
+  }
+  function syncFilterToggle() {
+    var btn = document.getElementById('evfilters');
+    if (!btn || !finder) return;
+    var open = finder.classList.contains('is-open');
+    btn.setAttribute('aria-expanded', String(open));
+    var panel = document.getElementById('evfilters-panel');
+    if (panel) panel.hidden = !open;
+    var on = filtersAreOn();
+    btn.classList.toggle('has-filters', on);
+    var text = btn.querySelector('.filterbtn-text');
+    if (text) text.textContent = on ? 'Filters on' : 'Filters';
+  }
+  function syncTodayBtn() {
+    var btn = document.getElementById('evtoday');
+    if (!btn) return;
+    var todayChip = chips.filter(function (c) { return c.getAttribute('data-when') === 'today'; })[0];
+    var noneToday = !!(todayChip && todayChip.hidden);
+    btn.hidden = noneToday;
+    btn.setAttribute('aria-pressed', String(!!whenToday && !noneToday));
+    btn.classList.toggle('is-on', !!whenToday && !noneToday);
+  }
 
   if (hasFinder) {
     var reset = function () { q.value = ''; day.value = ''; age.value = ''; free.checked = false; cat = ''; whenToday = false; savedView = false; apply(); };
@@ -1069,23 +1112,37 @@
       apply();
     });
     [age, free].forEach(function (el) { el.addEventListener('change', apply); });
-    document.getElementById('evclear').addEventListener('click', function () { q.value = ''; apply(); q.focus(); });
+    var evclear = document.getElementById('evclear'); if (evclear) evclear.addEventListener('click', function () { q.value = ''; apply(); q.focus(); });
     document.getElementById('evreset').addEventListener('click', function () { reset(); q.focus(); });
     // Links like todayinak.com/#cat-comedy open with that category selected
     var fromHash = function () {
       var m = /^#cat-([a-z]+)$/.exec(location.hash);
-      if (m && chips.some(function (c) { return c.getAttribute('data-sec') === m[1] && !c.hidden; })) { cat = m[1]; whenToday = false; apply(); }
-      if (location.hash === '#today') { whenToday = true; if (day) day.value = ''; savedView = false; if (calView) { calSel = todayISO; calMonth = ym(todayISO); } apply(); finder.scrollIntoView(); }
-      if (location.hash === '#saved') { setSavedView(true); finder.scrollIntoView(); }
+      if (m && chips.some(function (c) { return c.getAttribute('data-sec') === m[1] && !c.hidden; })) { cat = m[1]; whenToday = false; apply(); setFiltersOpen(true); }
+      if (location.hash === '#today') { whenToday = true; if (day) day.value = ''; savedView = false; if (calView) { calSel = todayISO; calMonth = ym(todayISO); } apply(); setFiltersOpen(true); finder.scrollIntoView(); }
+      if (location.hash === '#saved') { setSavedView(true); setFiltersOpen(true); finder.scrollIntoView(); }
       var cm = /^#cal(?:-(\d{4}-\d{2}-\d{2}))?$/.exec(location.hash);
       if (cm) {
         if (cm[1]) { calSel = cm[1]; calMonth = ym(calSel); }
-        setView('cal'); finder.scrollIntoView();
+        setView('cal'); setFiltersOpen(true); finder.scrollIntoView();
       }
     };
     window.addEventListener('hashchange', fromHash);
     finder.hidden = false;
     if (jump) jump.hidden = true;
+    var filterBtn = document.getElementById('evfilters');
+    if (filterBtn) {
+      setFiltersOpen(false);
+      filterBtn.addEventListener('click', function () { setFiltersOpen(!finder.classList.contains('is-open')); });
+    }
+    var todayOnlyBtn = document.getElementById('evtoday');
+    if (todayOnlyBtn) {
+      todayOnlyBtn.addEventListener('click', function () {
+        whenToday = !whenToday;
+        if (whenToday && day) day.value = '';
+        if (calView && whenToday) { calSel = todayISO; calMonth = ym(todayISO); }
+        apply();
+      });
+    }
   }
   if (hasFinder) {
     if (savedBtn) savedBtn.addEventListener('click', function () { setSavedView(!savedView); });
@@ -1107,4 +1164,85 @@
   window.addEventListener('pageshow', tick);
   window.addEventListener('focus', tick);
   window.__tiaRefresh = refresh;   // headless tests only
+})();
+
+/* Homepage picks carousel: manual only, no auto-advance. Safe no-op when the carousel markup is absent. */
+(function () {
+  var root = document.querySelector(".home-picks-carousel");
+  if (!root) return;
+  var slides = [].slice.call(root.querySelectorAll(".homepick"));
+  var prev = root.querySelector(".pick-prev");
+  var next = root.querySelector(".pick-next");
+  var dots = [].slice.call(root.querySelectorAll(".pick-dot"));
+  var viewport = root.querySelector(".pick-viewport") || root;
+  var live = root.querySelector(".pick-live");
+  var n = slides.length;
+  if (!n) return;
+  var i = 0;
+  var swiped = false;
+
+  function show(nextIndex) {
+    i = ((nextIndex % n) + n) % n;
+    slides.forEach(function (s, k) {
+      var on = k === i;
+      s.classList.toggle("is-on", on);
+      s.hidden = !on;
+      var link = s.querySelector("a");
+      if (link) link.tabIndex = on ? 0 : -1;
+    });
+    dots.forEach(function (d, k) {
+      if (k === i) d.setAttribute("aria-current", "true");
+      else d.removeAttribute("aria-current");
+    });
+    var titleEl = slides[i].querySelector("b");
+    var title = titleEl ? titleEl.textContent.trim() : "guide";
+    if (prev) prev.setAttribute("aria-label", "Previous guide");
+    if (next) next.setAttribute("aria-label", "Next guide");
+    if (live) live.textContent = title + ", " + (i + 1) + " of " + n;
+  }
+
+  show(0);
+  root.classList.add("is-ready");
+  if (prev) {
+    prev.hidden = false;
+    prev.addEventListener("click", function () { show(i - 1); });
+  }
+  if (next) {
+    next.hidden = false;
+    next.addEventListener("click", function () { show(i + 1); });
+  }
+  var dotsWrap = root.querySelector(".pick-dots");
+  if (dotsWrap) dotsWrap.hidden = false;
+  dots.forEach(function (d, k) {
+    d.addEventListener("click", function () { show(k); });
+  });
+
+  var x0 = null, y0 = null;
+  viewport.addEventListener("pointerdown", function (ev) {
+    if (ev.pointerType === "mouse" && ev.button !== 0) return;
+    x0 = ev.clientX;
+    y0 = ev.clientY;
+    swiped = false;
+  });
+  viewport.addEventListener("pointerup", function (ev) {
+    if (x0 == null) return;
+    var dx = ev.clientX - x0, dy = ev.clientY - y0;
+    x0 = y0 = null;
+    if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy)) {
+      swiped = true;
+      show(i + (dx < 0 ? 1 : -1));
+    }
+  });
+  viewport.addEventListener("pointercancel", function () { x0 = y0 = null; });
+  viewport.addEventListener("click", function (ev) {
+    if (!swiped) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    swiped = false;
+  }, true);
+
+  root.addEventListener("keydown", function (ev) {
+    if (ev.key === "ArrowLeft") { ev.preventDefault(); show(i - 1); }
+    if (ev.key === "ArrowRight") { ev.preventDefault(); show(i + 1); }
+  });
 })();
