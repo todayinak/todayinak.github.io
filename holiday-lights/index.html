@@ -430,6 +430,19 @@ body.lights-theme-candy a.lights-directions{color:var(--white)}
   min-height:48px;width:100%;box-sizing:border-box
 }
 .leaflet-container a.leaflet-popup-close-button{width:48px;height:48px;font-size:24px;line-height:48px;text-align:center;color:var(--white)}
+/* Keep the card and its close button fully inside the rounded map on phones.
+   Do not use percentage max-width here: Leaflet panes have no width, and
+   percent caps collapse the popup to 0. Pixel caps are applied in JS. */
+#lights-map .leaflet-popup-content-wrapper{box-sizing:border-box;overflow-y:auto;-webkit-overflow-scrolling:touch}
+#lights-map .leaflet-popup-content{
+  margin:12px 14px;padding-right:36px;box-sizing:border-box;
+  overflow-wrap:break-word;word-wrap:break-word
+}
+#lights-map .leaflet-popup-content b,
+#lights-map .leaflet-popup-content span,
+#lights-map .leaflet-popup-content a{overflow-wrap:break-word;word-wrap:break-word}
+#lights-map a.leaflet-popup-close-button{top:0;right:0;padding:0;z-index:1}
+#lights-map .leaflet-popup.lights-pop-clamped .leaflet-popup-tip-container{visibility:hidden}
 .lights-intro{margin:22px 0 28px}
 .lights-jump{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:8px;margin:0 0 16px;padding:0 0 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .lights-jump::-webkit-scrollbar{display:none}
@@ -993,6 +1006,7 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
   }
 
   var map, markers = [];
+  var scheduleClamp = function(){};
   function popupHtml(p) {
     var title = (!isHome(p) && p.name) ? p.name : publicName(p);
     var parts = ['<b>' + escapeHtml(title) + (isNewPin(p) ? ' <span class="lights-new">New this week</span>' : '') + '</b>'];
@@ -1041,6 +1055,7 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
   }
   function refreshPopups() {
     markers.forEach(function(m){ m.setPopupContent(popupHtml(m.pin)); });
+    if (map && map._popup) scheduleClamp(map._popup);
   }
   function currentOrigin() {
     var btn = document.querySelector('#lights-filters-origin .chip[aria-pressed="true"]');
@@ -1271,7 +1286,51 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
   if (el && dataEl && typeof L !== 'undefined') {
     map = L.map('lights-map', {scrollWheelZoom: false, attributionControl: true, zoomControl: false});
     L.control.zoom({ position: 'bottomright' }).addTo(map);
-    var popW = Math.max(200, Math.min(el.clientWidth < 500 ? 340 : 360, el.clientWidth - 24));
+    function popupContentWidth() {
+      var mapW = el.clientWidth || 280;
+      var inset = 16;
+      var chrome = 14 + 14 + 2 + 6; /* content margins + wrapper padding + borders */
+      return Math.max(180, Math.min(mapW < 500 ? 300 : 360, mapW - inset - chrome));
+    }
+    function popupOptions() {
+      var w = popupContentWidth();
+      return { maxWidth: w, minWidth: Math.min(200, w), autoPan: false };
+    }
+    function clampPopupInMap(popup) {
+      var popEl = popup && popup.getElement();
+      if (!popEl || !el) return;
+      var pad = 8;
+      var box = el.getBoundingClientRect();
+      var leftEdge = box.left + el.clientLeft + pad;
+      var topEdge = box.top + el.clientTop + pad;
+      var rightEdge = box.left + el.clientLeft + el.clientWidth - pad;
+      var bottomEdge = box.top + el.clientTop + el.clientHeight - pad;
+      var maxBoxH = bottomEdge - topEdge;
+      var wrapper = popEl.querySelector('.leaflet-popup-content-wrapper');
+      var tip = popEl.querySelector('.leaflet-popup-tip-container');
+      var tipHidden = popEl.classList.contains('lights-pop-clamped');
+      var tipH = (!tipHidden && tip) ? tip.offsetHeight : 0;
+      if (wrapper) {
+        wrapper.style.maxWidth = Math.max(180, (rightEdge - leftEdge)) + 'px';
+        wrapper.style.maxHeight = Math.max(160, maxBoxH - tipH) + 'px';
+        wrapper.style.overflowY = 'auto';
+      }
+      var pr = popEl.getBoundingClientRect();
+      var dx = 0, dy = 0;
+      if (pr.right > rightEdge) dx = rightEdge - pr.right;
+      if (pr.left + dx < leftEdge) dx = leftEdge - pr.left;
+      if (pr.bottom > bottomEdge) dy = bottomEdge - pr.bottom;
+      if (pr.top + dy < topEdge) dy = topEdge - pr.top;
+      if (dx) popEl.style.left = ((parseInt(popEl.style.left, 10) || 0) + Math.round(dx)) + 'px';
+      if (dy) popEl.style.bottom = ((parseInt(popEl.style.bottom, 10) || 0) - Math.round(dy)) + 'px';
+      popEl.classList.toggle('lights-pop-clamped', Math.abs(dx) > 8 || Math.abs(dy) > 8);
+    }
+    scheduleClamp = function(popup) {
+      requestAnimationFrame(function(){
+        clampPopupInMap(popup);
+        requestAnimationFrame(function(){ clampPopupInMap(popup); });
+      });
+    }
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       maxZoom: 19
@@ -1320,16 +1379,18 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
           opacity: 1
         });
       }
-      m.bindPopup(popupHtml(p), {maxWidth: popW, minWidth: Math.min(230, popW), autoPanPaddingTopLeft: L.point(12, 64), autoPanPaddingBottomRight: L.point(44, 44)});
+      m.bindPopup(popupHtml(p), popupOptions());
       m.on('popupopen', function(){
         setPinHash(p.id);
         document.body.classList.add('lights-popup-open');
         if (p.map_label && this.closeTooltip) this.closeTooltip();
-        var popEl = this.getPopup() && this.getPopup().getElement();
+        var popup = this.getPopup();
+        var popEl = popup && popup.getElement();
         if (popEl) {
           popEl.className = popEl.className.replace(/\blights-pop-kind-\S+/g, '').trim();
           popEl.classList.add('lights-pop-kind-' + (isHome(p) ? 'home' : (p.kind || 'event')));
         }
+        if (popup) scheduleClamp(popup);
       });
       m.on('popupclose', function(){
         document.body.classList.remove('lights-popup-open');
@@ -1351,7 +1412,18 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
       }
     });
     map.addControl(new AllCtl());
-    map.on('zoomend', declutter);
+    map.on('zoomend', function(){
+      declutter();
+      if (map._popup) scheduleClamp(map._popup);
+    });
+    window.addEventListener('resize', function(){
+      var w = popupContentWidth();
+      markers.forEach(function(m){
+        var pop = m.getPopup();
+        if (pop) { pop.options.maxWidth = w; pop.options.minWidth = Math.min(200, w); }
+      });
+      if (map && map._popup) { map._popup.update(); scheduleClamp(map._popup); }
+    });
     var initial = function(){
       map.invalidateSize();
       var id = pinFromUrl();
@@ -1615,6 +1687,7 @@ body.lights-page .affil-note a{font-weight:700;color:var(--white)}
   function updateOpenPopup(id) {
     var mk = markerById(id);
     if (mk) mk.setPopupContent(popupHtml(mk.pin));
+    if (map && map._popup) scheduleClamp(map._popup);
   }
   function toggleVote(id) {
     var p = pinById(id);
