@@ -1058,3 +1058,29 @@ html[data-theme="bw"] .homepills .homepick-lights a{border-color:#111;border-wid
 .home-compact #events .evsec:first-of-type,
 .home-compact #evdays .evday:first-child{margin-top:10px}
 .home-compact #evdays .evday{scroll-margin-top:8px}
+
+/* Text-alert waitlist link next to newsletter boxes, and the /text-alerts/ form. */
+.signup-text-link{margin:4px 0 0}
+.signup-text-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 14px;border:1.5px solid var(--line);border-radius:var(--slab);background:transparent;color:var(--gray);font:600 15px/1.2 Inter,system-ui,sans-serif;text-decoration:none;box-sizing:border-box}
+.signup-text-btn svg{width:16px;height:16px;flex:none}
+.signup-text-btn:hover{color:var(--white);border-color:var(--gray)}
+.signup-text-btn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.signup-compact .signup-text-link,.footsignup-slim .signup-text-link{margin:2px 0 0}
+.waitlist-sec{padding-top:8px;padding-bottom:32px}
+.waitlist-box{background:var(--signup-bg,linear-gradient(135deg,#13304A,#1C2350));border:1px solid var(--line);border-radius:22px;padding:28px 22px;max-width:36rem}
+.waitlist-box>p{margin:0 0 16px;color:var(--gray);font:400 18px/1.5 Inter,system-ui,sans-serif;text-wrap:pretty}
+.waitlist-form .field{margin:0 0 16px}
+.waitlist-form label{display:block;font:600 18px/1.3 Inter,system-ui,sans-serif;color:var(--white);margin:0 0 8px}
+.waitlist-form .hint{font:400 16px/1.3 Inter,system-ui,sans-serif;color:var(--faint)}
+.waitlist-form input[type="tel"],.waitlist-form input[type="text"]{
+  font:18px/1.4 Inter,system-ui,sans-serif;padding:16px;border-radius:12px;border:1.5px solid var(--line);
+  background:var(--navy2);color:var(--white);width:100%;max-width:100%;box-sizing:border-box}
+.waitlist-form input:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.waitlist-form button.btn{width:100%;max-width:none;font:800 18px/1 Montserrat,Inter,sans-serif;padding:18px;border:0;cursor:pointer;margin-top:4px}
+.waitlist-form button.btn:disabled{opacity:.7;cursor:wait}
+.waitlist-box>.fine{margin:16px 0 0;font-size:15px;line-height:1.5}
+.waitlist-status{margin:0 0 14px;font:600 17px/1.45 Inter,system-ui,sans-serif;color:var(--white)}
+.waitlist-status.err{color:#FFB4B4}
+.waitlist-thanks{margin:0 0 4px}
+.waitlist-ok{margin:0;color:var(--white);font:600 20px/1.45 Inter,system-ui,sans-serif}
+.waitlist-form .hp{position:absolute;left:-9999px;height:0;width:0;opacity:0;pointer-events:none}
