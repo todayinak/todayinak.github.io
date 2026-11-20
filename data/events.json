@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19",
+ "updated": "2026-11-20",
  "timezone_note": "All times are Alaska time (AKDT through Sat Oct 31, AKST from Sun Nov 1).",
  "disclaimer": "Details can change. Check with the organizer before you go.",
  "events": [
@@ -73,122 +73,6 @@
    "worth_the_drive": true,
    "note": "Shop handmade crafts, holiday gifts and traditional artwork from local Native artists. Thu and Fri, 9 AM–4 PM.",
    "url": "https://www.tananachiefs.org/events/tcc-annual-christmas-bazaar-2/"
-  },
-  {
-   "id": "2026-11-19-5-third-thursday-at-the-anchorage-museum",
-   "date": "2026-11-19",
-   "time": "10 AM",
-   "title": "$5 Third Thursday at the Anchorage Museum",
-   "category": "Arts & Talks",
-   "venue": "Anchorage Museum, 625 C St",
-   "town": "Anchorage",
-   "price": "$5 admission",
-   "ages": "All ages",
-   "start": "10:00",
-   "end": "18:00",
-   "note": "Museum admission drops to $5 every third Thursday, October through April.",
-   "url": "https://www.anchoragemuseum.org/visit/calendar/"
-  },
-  {
-   "id": "2026-11-19-holiday-faux-floral-workshop",
-   "date": "2026-11-19",
-   "time": "6 PM",
-   "title": "Holiday Faux Floral Workshop",
-   "category": "Make & Taste",
-   "venue": "Birch & Bloom, 10950 Mausel St B4",
-   "town": "Eagle River",
-   "price": "$39.19 with fees",
-   "ages": "Ages not listed",
-   "start": "18:00",
-   "end": "20:00",
-   "note": "Build a seasonal faux-flower arrangement in a mug you bring from home.",
-   "url": "https://www.eventbrite.com/e/holiday-faux-floral-arrangement-workshop-tickets-2004867106485"
-  },
-  {
-   "id": "2026-11-19-parlor-in-the-round-season-12",
-   "date": "2026-11-19",
-   "time": "6:30 PM",
-   "title": "Parlor in the Round: Season 12",
-   "category": "Music",
-   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
-   "town": "Anchorage",
-   "price": "$27+",
-   "ages": "All ages",
-   "start": "18:30",
-   "note": "Grace C. Elliot, Khatumu and Shaun Pacarro swap songs and write one live. Main floor 21+ or with a parent; balcony for under 21.",
-   "url": "https://www.beartoothak.com/live-events"
-  },
-  {
-   "id": "2026-11-19-anchorage-wolverines-vs-springfield-jr-blues",
-   "date": "2026-11-19",
-   "time": "7 PM",
-   "title": "Anchorage Wolverines vs. Springfield Jr. Blues",
-   "category": "Sports",
-   "venue": "Sullivan Arena, 1600 Gambell St",
-   "town": "Anchorage",
-   "price": "See ticket page",
-   "ages": "All ages",
-   "start": "19:00",
-   "note": "NAHL junior hockey. Series continues Fri Nov 20 and Sat Nov 21, 7 PM.",
-   "url": "https://tickets.anchoragewolverines.com/events/43506"
-  },
-  {
-   "id": "2026-11-19-celebrating-america250-alaskas-year-of-dreams",
-   "date": "2026-11-19",
-   "time": "7 PM",
-   "title": "Celebrating America250: Alaska's Year of Dreams",
-   "category": "Arts & Talks",
-   "venue": "Anchorage Museum auditorium, 625 C St",
-   "town": "Anchorage",
-   "price": "Free",
-   "ages": "Ages not listed",
-   "start": "19:00",
-   "end": "20:30",
-   "note": "State Historian Katie Ringsmuth recaps Alaska's America250 year. In person (use the 7th Avenue entrance) or online via Crowdcast.",
-   "url": "https://www.cookinlethistoricalsociety.org/lecture-series/celebrating-america250-alaskas-year-of-dreams"
-  },
-  {
-   "id": "2026-11-19-claude-stuart-at-main-street-tap-and-grill",
-   "date": "2026-11-19",
-   "time": "7 PM",
-   "title": "Claude Stuart at Main Street Tap & Grill",
-   "category": "Comedy",
-   "venue": "Main Street Tap & Grill",
-   "town": "Kenai",
-   "price": "$25",
-   "ages": "Ages not listed",
-   "start": "19:00",
-   "end": "21:00",
-   "worth_the_drive": true,
-   "note": "High-energy Last Comic Standing alum. Also Fri Nov 20 in Wasilla.",
-   "url": "https://www.rubberptarmigan.com/events/claude-stuart-main-street-tap-grill-2026"
-  },
-  {
-   "id": "2026-11-19-thursday-night-fights-boxing",
-   "date": "2026-11-19",
-   "time": "7:30 PM",
-   "title": "Thursday Night Fights: Boxing",
-   "category": "Sports",
-   "venue": "Egan Civic & Convention Center, 555 W 5th Ave",
-   "town": "Anchorage",
-   "price": "See ticket page",
-   "ages": "Ages not listed",
-   "start": "19:30",
-   "note": "Doors 6:30 PM.",
-   "url": "https://www.tickpick.com/buy-thursday-night-fights-tickets-william-a-egan-civic-and-convention-center-11-19-26-7pm/8250589/"
-  },
-  {
-   "id": "2026-11-19-uaa-wind-ensemble-folk-songs-and-inspirations",
-   "date": "2026-11-19",
-   "time": "7:30 PM",
-   "title": "UAA Wind Ensemble: Folk Songs and Inspirations",
-   "category": "Music",
-   "venue": "UAA Recital Hall, Fine Arts Building, 3700 Alumni Dr",
-   "town": "Anchorage",
-   "price": "From $13",
-   "ages": "6+",
-   "start": "19:30",
-   "url": "https://centertix.com/events/uaa-wind-ensemble-concert-folk-songs-and-inspirations"
   },
   {
    "id": "2026-11-20-alaska-vintage-holiday-market-and-food-truck-fest",
@@ -325,6 +209,21 @@
    "worth_the_drive": true,
    "note": "Celebrate the re-installation of the Kaag Waan Taan totem pole carved in 1988 by Nathan Jackson and his apprentices.",
    "url": "https://www.uaf.edu/museum/calendar/"
+  },
+  {
+   "id": "2026-11-20-east-high-dance-contempo-dance-is-2026",
+   "date": "2026-11-20",
+   "time": "6 PM",
+   "title": "East High Dance Contempo: DANCE IS 2026",
+   "category": "Theater",
+   "venue": "Bettye Davis East Anchorage High School, 4025 E Northern Lights Blvd",
+   "town": "Anchorage",
+   "price": "$12.51 with fees",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "19:30",
+   "note": "Student dance company show with original choreography from students and guest artists.",
+   "url": "https://www.eventbrite.com/e/east-high-dance-contempo-presents-dance-is-2026-tickets-2003211063215"
   },
   {
    "id": "2026-11-20-aspenyarrow-at-turnagain-brewing",
@@ -464,6 +363,21 @@
    "url": "https://alaskananooks.com/sports/mens-ice-hockey/schedule/2026-27"
   },
   {
+   "id": "2026-11-20-advanced-contra-dance-with-the-dancing-bears",
+   "date": "2026-11-20",
+   "time": "7:15 PM",
+   "title": "Advanced Contra Dance with the Dancing Bears",
+   "category": "Music",
+   "venue": "Spenard Recreation Center, 2020 W 48th Ave",
+   "town": "Anchorage",
+   "price": "Pay what you wish, $10–$25; students $5; kids 12 & under free",
+   "ages": "All ages",
+   "start": "19:15",
+   "end": "22:30",
+   "note": "Live band Fat Weasel with caller Jess Winn. For experienced contra dancers; clean, non-marking indoor shoes only.",
+   "url": "https://www.thedancingbears.org/events/2026-11-20-advanced-dance/"
+  },
+  {
    "id": "2026-11-20-claude-stuart-at-everetts",
    "date": "2026-11-20",
    "time": "7:30 PM",
@@ -526,6 +440,21 @@
    "start": "21:00",
    "note": "Live vocals, comedy and dance every Fri & Sat. Check in by 8:45 PM.",
    "url": "https://madmyrnas.com/diva-variety-show"
+  },
+  {
+   "id": "2026-11-21-st-marys-holiday-bazaar",
+   "date": "2026-11-21",
+   "time": "9 AM",
+   "title": "St. Mary's Holiday Bazaar",
+   "category": "Seasonal",
+   "venue": "St. Mary's Episcopal Church, 4242 Laurel St",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "All ages",
+   "start": "09:00",
+   "end": "15:00",
+   "note": "Annual church holiday bazaar. Last-chance shopping Sun Nov 22, 8:30 AM–noon.",
+   "url": "https://godsview.org/event/st-marys-holiday-bazaar/"
   },
   {
    "id": "2026-11-21-anchorage-waldorf-school-winter-faire",
@@ -591,6 +520,55 @@
    "worth_the_drive": true,
    "note": "Handmade crafts, local vendors and treats. Entry is free.",
    "url": "https://www.explorefairbanks.com/event/ryan-middle-school-holiday-bazaar/12569/"
+  },
+  {
+   "id": "2026-11-21-sneak-peek-holiday-bazaar",
+   "date": "2026-11-21",
+   "time": "Sat from 10 AM; Sun until 4 PM",
+   "title": "Sneak Peek Holiday Bazaar",
+   "category": "Seasonal",
+   "venue": "Historic Palmer Train Depot, 610 S Valley Way",
+   "town": "Palmer",
+   "price": "Free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-22"
+   ],
+   "start": "10:00",
+   "note": "About 16 local vendors (fudge, jellies, Native art, knits, glass) and a DIY holiday photo backdrop.",
+   "url": "https://visitpalmer.com/event/sneak-peek-holiday-bazaar/"
+  },
+  {
+   "id": "2026-11-21-wild-bird-101-class",
+   "date": "2026-11-21",
+   "time": "10 AM",
+   "title": "Wild Bird 101 Class",
+   "category": "Arts & Talks",
+   "venue": "Alaska Mill and Feed Classroom, 1301 E First Ave",
+   "town": "Anchorage",
+   "price": "$10",
+   "ages": "Ages not listed",
+   "start": "10:00",
+   "note": "Beginner class on which birds visit local feeders, which seed to use and which feeders work best. Door opens 15 minutes early.",
+   "url": "https://alaskamillandfeed.com/classes/99906/"
+  },
+  {
+   "id": "2026-11-21-begich-bazaar-2026",
+   "date": "2026-11-21",
+   "time": "Sat 11 AM–5 PM; Sun 11 AM–4 PM",
+   "title": "Begich Bazaar 2026",
+   "category": "Seasonal",
+   "venue": "Begich Middle School, 7440 Creekside Center Dr",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-22"
+   ],
+   "start": "11:00",
+   "end": "17:00",
+   "note": "100+ local vendors, a student-run cafe with espresso, and snacks. PTO fundraiser.",
+   "url": "https://www.begichpto.org/begichbazaar"
   },
   {
    "id": "2026-11-21-celtic-holiday-market",
@@ -668,6 +646,21 @@
    "url": "https://www.eventbrite.com/e/artisan-chocolate-ornament-class-tickets-2000665361954"
   },
   {
+   "id": "2026-11-21-author-signing-kristin-m-anderson-between-maps",
+   "date": "2026-11-21",
+   "time": "12 PM",
+   "title": "Author Signing: Kristin M. Anderson, Between Maps",
+   "category": "Arts & Talks",
+   "venue": "Title Wave Books, 1360 W Northern Lights Blvd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "12:00",
+   "end": "15:00",
+   "note": "Anchorage author signs her debut novel about a solo road trip home to Alaska.",
+   "url": "https://wavebooks.com/events/"
+  },
+  {
    "id": "2026-11-21-juneau-holiday-book-fair",
    "date": "2026-11-21",
    "time": "12 PM",
@@ -698,6 +691,36 @@
    "worth_the_drive": true,
    "note": "Bring a bag of clean, gently used clothes, shoes or accessories to trade. Leftovers will be donated.",
    "url": "https://business.wasillachamber.org/events/details/black-birch-books-ladies-clothing-swap-23864"
+  },
+  {
+   "id": "2026-11-21-uamn-family-day-dinosaurs",
+   "date": "2026-11-21",
+   "time": "12 PM",
+   "title": "UAMN Family Day: Dinosaurs",
+   "category": "Family & Outdoors",
+   "venue": "University of Alaska Museum of the North, 1962 Yukon Dr",
+   "town": "Fairbanks",
+   "price": "Free for ages 17 & under; planetarium shows $5",
+   "ages": "All ages",
+   "start": "12:00",
+   "end": "16:00",
+   "note": "Meet paleontologists, dig for fossils, see dinosaur tracks and do a scavenger hunt. Planetarium dinosaur show at 11 AM, 2 PM and 4 PM.",
+   "url": "https://www.uaf.edu/museum/education/kids-families/family-days/"
+  },
+  {
+   "id": "2026-11-21-where-wild-feels-like-home-jennifer-mccombs-art-show",
+   "date": "2026-11-21",
+   "time": "1 PM",
+   "title": "Where Wild Feels Like Home: Jennifer McCombs Art Show",
+   "category": "Arts & Talks",
+   "venue": "Girdwood Brewing Company, 2700 Alyeska Hwy",
+   "town": "Girdwood",
+   "price": "Price not listed",
+   "ages": "Ages not listed (brewery tasting room)",
+   "start": "13:00",
+   "end": "19:00",
+   "note": "One-day show of new Alaska paintings by a Girdwood artist, with live acoustic music 3–6 PM.",
+   "url": "https://www.activemountaindesign.com/press-media"
   },
   {
    "id": "2026-11-21-alaska-park-science-lectures",
@@ -731,6 +754,21 @@
    "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=20852"
   },
   {
+   "id": "2026-11-21-thanksgiving-herb-and-spice-blending",
+   "date": "2026-11-21",
+   "time": "2 PM",
+   "title": "Thanksgiving Herb and Spice Blending",
+   "category": "Make & Taste",
+   "venue": "Spunky Monkey, 449 W Parks Hwy",
+   "town": "Wasilla",
+   "price": "$45",
+   "ages": "Ages not listed",
+   "start": "14:00",
+   "end": "16:00",
+   "note": "Make three holiday blends (turkey rub, stuffing seasoning, pie spice) and take the jars home.",
+   "url": "https://shop.midnightsunmercantile.com/products/thanksgiving-herb-and-spice-blending-nov-21"
+  },
+  {
    "id": "2026-11-21-youth-civic-fest-celebrating-your-voice",
    "date": "2026-11-21",
    "time": "2 PM",
@@ -744,6 +782,49 @@
    "end": "16:00",
    "note": "Free, nonpartisan drop-in afternoon with the Anchorage Youth Vote mock-election results, games and pizza.",
    "url": "https://www.alaskapublic.org/the-anchorage-weekender/2026-11-19/the-anchorage-weekender-holiday-markets-the-great-alaska-shootout-and-6-more-local-events"
+  },
+  {
+   "id": "2026-11-21-proof-by-david-auburn-midnight-sun-theatre",
+   "date": "2026-11-21",
+   "time": "3 PM & 7 PM",
+   "title": "Proof by David Auburn (Midnight Sun Theatre)",
+   "category": "Theater",
+   "venue": "Jerry Harper Studio, UAA Arts Building, 3700 Alumni Dr",
+   "town": "Anchorage",
+   "price": "$35; $20 first responders; free for seniors 60+ and students",
+   "ages": "Ages not listed",
+   "start": "15:00",
+   "note": "Closing day of the Pulitzer-winning drama. Rated PG-13.",
+   "url": "https://midnightsuntheatre.com/show-2/"
+  },
+  {
+   "id": "2026-11-21-the-best-christmas-pageant-ever-at-act",
+   "date": "2026-11-21",
+   "time": "3 PM",
+   "title": "The Best Christmas Pageant Ever at ACT",
+   "category": "Theater",
+   "venue": "Anchorage Community Theatre, 1133 E 70th Ave",
+   "town": "Anchorage",
+   "price": "$25 adults; $20 seniors 62+/military/students; $15 kids 12 & under",
+   "ages": "All ages",
+   "start": "15:00",
+   "note": "Holiday comedy about the Herdman kids. This weekend's other shows are sold out (wait list at the door); the run continues through Dec 6.",
+   "url": "https://app.arts-people.com/index.php?show=325902"
+  },
+  {
+   "id": "2026-11-21-appalaskan-jess-at-hatcher-pass-lodge",
+   "date": "2026-11-21",
+   "time": "4 PM",
+   "title": "Appalaskan Jess at Hatcher Pass Lodge",
+   "category": "Music",
+   "venue": "Hatcher Pass Lodge, Mile 17.5 Fishhook-Willow Rd",
+   "town": "Palmer",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "16:00",
+   "end": "19:00",
+   "note": "Live music at the lodge in Hatcher Pass. Check road conditions before driving up.",
+   "url": "https://appalaskanjess.com/shows"
   },
   {
    "id": "2026-11-21-asrc-conocophillips-great-alaska-shootout",
@@ -811,6 +892,21 @@
    "url": "https://kbayrecovery.org/event/sober-lounge-intro-to-juggling-with-stephanie-and-chris/"
   },
   {
+   "id": "2026-11-21-st-andrews-day-celebration",
+   "date": "2026-11-21",
+   "time": "6 PM",
+   "title": "St Andrew's Day Celebration",
+   "category": "Other",
+   "venue": "Odd Man Rush Brewing, 10930 Mausel St",
+   "town": "Eagle River",
+   "price": "$20 advance; $25 at the door",
+   "ages": "Ages not listed (brewery tasting room)",
+   "start": "18:00",
+   "end": "20:00",
+   "note": "Learn to curl and sweep with the Palmer Curling Club, with bagpipes from the Anchorage Firefighters Pipe and Drum. Light fare included.",
+   "url": "https://www.alaskanscottish.org/event-details/st-andrews-day-celebration"
+  },
+  {
    "id": "2026-11-21-taste-the-talent",
    "date": "2026-11-21",
    "time": "6 PM",
@@ -872,6 +968,35 @@
    "start": "19:00",
    "note": "Acoustic Americana, songs and stories. Doors 6 PM.",
    "url": "https://www.eventbrite.com/e/palmer-alehouse-unplugged-the-ken-peltier-band-tickets-2004176638276"
+  },
+  {
+   "id": "2026-11-21-reel-rock-20",
+   "date": "2026-11-21",
+   "time": "7 PM",
+   "title": "Reel Rock 20",
+   "category": "Arts & Talks",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$20",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "note": "The climbing film tour's 20th year: four new films, about 2 hours.",
+   "url": "https://beartooththeatre.filmbot.com/movies/reel-rock-20/"
+  },
+  {
+   "id": "2026-11-21-uaf-northern-lights-string-orchestra",
+   "date": "2026-11-21",
+   "time": "7 PM",
+   "title": "UAF Northern Lights String Orchestra",
+   "category": "Music",
+   "venue": "Charles W. Davis Concert Hall, 1708 Tanana Loop",
+   "town": "Fairbanks",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "end": "20:00",
+   "note": "Student and community string orchestra concert.",
+   "url": "https://www.eventbrite.com/e/uaf-northern-lights-string-orchestra-tickets-2004872935921"
   },
   {
    "id": "2026-11-21-abbalaska-at-humpys",
@@ -986,6 +1111,21 @@
    "end": "18:00",
    "note": "An artist-run market for zines, small presses, printmakers and other self-published work.",
    "url": "https://www.anczine.com/"
+  },
+  {
+   "id": "2026-11-22-irish-session-at-turnagain-brewing",
+   "date": "2026-11-22",
+   "time": "3 PM",
+   "title": "Irish Session at Turnagain Brewing",
+   "category": "Music",
+   "venue": "Turnagain Brewing, 7920 King St",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed (brewery tasting room)",
+   "start": "15:00",
+   "end": "17:00",
+   "note": "Traditional Irish music session. Also Sun Dec 6 and Dec 20.",
+   "url": "https://www.turnagainbrewing.com/events"
   },
   {
    "id": "2026-11-22-literary-salon-death-of-the-author",
@@ -2155,6 +2295,20 @@
    "url": "https://www.ciri.com/events/holiday-craft-bazaar/"
   },
   {
+   "id": "2026-12-05-wreath-decorating-class-at-alaska-mill-and-feed",
+   "date": "2026-12-05",
+   "time": "10 AM",
+   "title": "Wreath Decorating Class at Alaska Mill and Feed",
+   "category": "Make & Taste",
+   "venue": "Alaska Mill and Feed Classroom, 1301 E First Ave",
+   "town": "Anchorage",
+   "price": "$45",
+   "ages": "Ages not listed",
+   "start": "10:00",
+   "note": "Holiday wreath decorating class.",
+   "url": "https://alaskamillandfeed.com/classes/"
+  },
+  {
    "id": "2026-12-05-anchorage-international-film-festival-day-at-the-pac",
    "date": "2026-12-05",
    "time": "11 AM, 2 PM & 6 PM",
@@ -2886,5 +3040,5 @@
   }
  ],
  "through": "2026-12-31",
- "last_verified": "2026-11-19"
+ "last_verified": "2026-11-20"
 }
