@@ -135,6 +135,35 @@ nav.regions{margin:8px 0 20px}
 .receipt em{display:block;font-size:12px;color:#6e6a62;margin-top:2px}
 /* signup */
 .signup{background:var(--signup-bg,linear-gradient(135deg,#13304A,#1C2350));border:1px solid var(--line);border-radius:22px;padding:24px 20px}
+.signup h2{font:800 clamp(22px,5.5vw,32px)/1.2 Montserrat,Inter,sans-serif;letter-spacing:-.02em;margin:0 0 8px;color:var(--white)}
+.signup>p{margin:0 0 8px;color:var(--gray);font:400 16px/1.45 Inter,system-ui,sans-serif;text-wrap:pretty}
+.signup .fine{margin:8px 0 0}
+.signup-sec{padding-top:8px;padding-bottom:28px}
+.signup-compact{padding:10px 16px 8px}
+.signup-compact h2{font-size:clamp(18px,4.6vw,24px);line-height:1.15;margin:0 0 4px}
+.signup-compact>p{margin:0 0 4px;font-size:16px;line-height:1.4}
+.signup-compact .fine{margin:4px 0 0}
+.signup-compact .signupembed{margin:6px 0 2px}
+.signup-compact .signupembed iframe{min-height:44px}
+.signup-compact-sec{padding:8px 0 6px}
+.signup-nested{padding-left:0;padding-right:0;max-width:none;margin:6px 0}
+.home-compact .signup-compact-sec{padding:6px 0}
+/* Mid-page signup sits inside #events, so beat .home-compact #events h2 / .sec h2. */
+#events .signup h2,
+.home-compact #events .signup h2,
+.home-compact #events .signup-compact h2{
+  font:800 clamp(18px,4.6vw,24px)/1.15 Montserrat,Inter,sans-serif;
+  letter-spacing:-.02em;
+  margin:0 0 4px;
+  color:var(--white);
+}
+.footsignup .signup-title{font:800 clamp(20px,4.5vw,26px)/1.2 Montserrat,Inter,sans-serif;letter-spacing:-.02em;color:var(--white);margin:0 0 8px}
+.footsignup>p.fine{margin:8px 0 0}
+.footsignup-slim{margin:10px 0 8px;padding:8px 0 2px}
+.footsignup-slim .signup-slim-line{margin:0 0 6px;color:var(--white);font:700 16px/1.35 Inter,system-ui,sans-serif}
+.footsignup-slim .signup-slim-line .k{display:inline;margin:0 .45em 0 0;color:var(--green);font:800 12px/1 Montserrat,Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.footsignup-slim .signupembed{margin:0 0 2px}
+.footsignup-slim .signupembed iframe{min-height:44px}
 .fake{display:flex;flex-direction:column;gap:10px;margin:14px 0 8px}
 .fake input{font:16px Inter;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--navy2);color:var(--gray)}
 .fake button{font:800 16px Montserrat;padding:14px;border:0;border-radius:var(--slab);background:var(--green);color:var(--void);opacity:.55}
@@ -195,6 +224,7 @@ nav.regions{margin:8px 0 20px}
  .catnav{margin:0 0 6px}
  .evgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
  .evgrid .card{margin:0}
+ .evgrid > #email,.evgrid > .signup-sec{grid-column:1/-1}
 }
 @media (max-width:599px){
  .catchips{gap:6px}
@@ -392,6 +422,9 @@ nav.regions{margin:8px 0 20px}
 .footsignup{margin:22px 0 16px;padding:20px 0 4px;border-top:1px solid var(--line)}
 .footsignup>p{margin:0 0 12px;color:var(--gray)}
 .footsignup .eyebrow{margin-bottom:6px;color:var(--green)}
+.footsignup .signup-title{margin-bottom:8px}
+/* Later .footsignup padding/margin would otherwise override the slim rules. */
+.footsignup.footsignup-slim{margin:10px 0 8px;padding:8px 0 2px}
 @media (min-width:700px){
   .plans{grid-template-columns:repeat(3, 1fr);align-items:stretch}
   .evform .fields{grid-template-columns:1fr 1fr}

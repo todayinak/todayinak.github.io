@@ -819,14 +819,65 @@
     if (iso === tomorrow) return 'Tomorrow · ' + rest;
     return rest;
   }
+  function midpageSignup() {
+    var ev = document.getElementById('events');
+    if (!ev) return null;
+    var el = ev.querySelector('#email');
+    return el || null;
+  }
+  function midpageSignupN() {
+    return document.body.classList.contains('home-compact') ? 1 : 3;
+  }
+  function parkHomeSignup() {
+    var slot = midpageSignup();
+    if (!slot) return;
+    var ev = document.getElementById('events');
+    if (!ev) return;
+    var park = document.getElementById('email-park');
+    if (!park) {
+      park = document.createElement('div');
+      park.id = 'email-park';
+      park.hidden = true;
+      ev.appendChild(park);
+    }
+    park.appendChild(slot);
+  }
+  function placeHomeSignupAfterFirstCard(root) {
+    var slot = midpageSignup();
+    if (!slot || !root) return;
+    var visible = root.querySelectorAll('.card.ev:not([hidden])');
+    var cards = visible.length ? visible : root.querySelectorAll('.card.ev');
+    if (!cards.length) { parkHomeSignup(); return; }
+    var target = cards[Math.min(midpageSignupN(), cards.length) - 1];
+    var grid = target.parentNode;
+    if (grid && grid.classList && grid.classList.contains('evgrid')) {
+      var rest = [];
+      while (target.nextSibling) rest.push(grid.removeChild(target.nextSibling));
+      if (grid.nextSibling) grid.parentNode.insertBefore(slot, grid.nextSibling);
+      else grid.parentNode.appendChild(slot);
+      slot.hidden = false;
+      if (rest.length) {
+        var grid2 = document.createElement('div');
+        grid2.className = 'evgrid';
+        rest.forEach(function (n) { grid2.appendChild(n); });
+        if (slot.nextSibling) slot.parentNode.insertBefore(grid2, slot.nextSibling);
+        else slot.parentNode.appendChild(grid2);
+      }
+    } else if (target.parentNode) {
+      target.parentNode.insertBefore(slot, target.nextSibling);
+      slot.hidden = false;
+    }
+  }
   function paintDayList() {
     if (calView) {
       if (dayRoot) dayRoot.hidden = true;
+      parkHomeSignup();
       return;
     }
     var root = ensureDayRoot();
     if (!root || !cards.length) return;
     restoreHomes();
+    parkHomeSignup();
     root.hidden = false;
     root.innerHTML = '';
     var byDay = {}, order = [];
@@ -859,6 +910,7 @@
       sec.appendChild(grid);
       root.appendChild(sec);
     });
+    placeHomeSignupAfterFirstCard(root);
     secs.forEach(function (s) { s.hidden = true; });
     if (jump) jump.hidden = true;   // day list is already in date order; old category/day jump targets are hidden
   }
