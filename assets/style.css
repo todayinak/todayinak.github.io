@@ -61,9 +61,9 @@ nav.regions{margin:8px 0 20px}
 .card{background:var(--card);border:1.5px solid var(--line);border-radius:var(--slab);padding:14px 16px;margin:10px 0}
 .card.drive-card{border-color:rgba(255,184,107,.7)}
 .pills{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.card h4{font-size:19px;font-weight:800;line-height:1.25;margin:10px 0 4px}
-.where{color:var(--gray);margin:0;font-size:14.5px}.where b{color:var(--white);font-weight:600}
-.note{color:var(--faint);font-size:13.5px;margin:3px 0 0}
+.card h4{font-size:20px;font-weight:800;line-height:1.25;margin:10px 0 4px}
+.where{color:var(--gray);margin:0;font-size:15.5px}.where b{color:var(--white);font-weight:600}
+.note{color:var(--faint);font-size:14.5px;margin:3px 0 0}
 .meta{margin-top:10px}
 .more{margin-left:auto;font-weight:600;font-size:14px;text-decoration:none}
 .sub{margin-top:30px}
@@ -136,12 +136,12 @@ nav.regions{margin:8px 0 20px}
 /* signup */
 .signup{background:var(--signup-bg,linear-gradient(135deg,#13304A,#1C2350));border:1px solid var(--line);border-radius:22px;padding:24px 20px}
 .signup h2{font:800 clamp(22px,5.5vw,32px)/1.2 Montserrat,Inter,sans-serif;letter-spacing:-.02em;margin:0 0 8px;color:var(--white)}
-.signup>p{margin:0 0 8px;color:var(--gray);font:400 16px/1.45 Inter,system-ui,sans-serif;text-wrap:pretty}
+.signup>p,.signup .signup-lead{margin:0 0 8px;color:var(--gray);font:400 16px/1.45 Inter,system-ui,sans-serif;text-wrap:pretty}
 .signup .fine{margin:8px 0 0}
 .signup-sec{padding-top:8px;padding-bottom:28px}
 .signup-compact{padding:10px 16px 8px}
 .signup-compact h2{font-size:clamp(18px,4.6vw,24px);line-height:1.15;margin:0 0 4px}
-.signup-compact>p{margin:0 0 4px;font-size:16px;line-height:1.4}
+.signup-compact>p,.signup-compact .signup-lead{margin:0 0 4px;font-size:16px;line-height:1.4}
 .signup-compact .fine{margin:4px 0 0}
 .signup-compact .signupembed{margin:6px 0 2px}
 .signup-compact .signupembed iframe{min-height:44px}
@@ -157,6 +157,72 @@ nav.regions{margin:8px 0 20px}
   margin:0 0 4px;
   color:var(--white);
 }
+/* Signup banner: stacked on phones; two columns on desktop (copy left, embed right). */
+.signup-grid{display:flex;flex-direction:column;gap:0}
+@media (max-width:899px){
+  /* Keep a natural phone order: headline, short line, form, text link, privacy. */
+  .signup .signup-copy,.signup .signup-action,
+  .footsignup:not(.footsignup-slim) .signup-copy,
+  .footsignup:not(.footsignup-slim) .signup-action{display:contents}
+  .signup-grid > .signup-copy h2,
+  .signup-grid > .signup-copy .signup-title{order:1}
+  .signup-grid .signup-lead{order:2}
+  .signup-grid .signupembed,.signup-grid .signupform{order:3}
+  .signup-grid .signup-text-link{order:4}
+  .signup-grid .fine{order:5}
+  .signup-grid .fine + .fine{order:6}
+}
+@media (min-width:900px){
+  .signup-grid{
+    display:grid;grid-template-columns:minmax(16rem,1fr) minmax(18rem,1.15fr);
+    gap:12px 40px;align-items:center
+  }
+  .signup{padding:28px 32px}
+  .signup-compact{padding:24px 28px}
+  .signup h2,
+  #events .signup h2,
+  .home-compact #events .signup h2,
+  .home-compact #events .signup-compact h2{
+    font:800 28px/1.15 Montserrat,Inter,sans-serif;
+    letter-spacing:-.02em;margin:0 0 8px;color:var(--white)
+  }
+  .signup .signup-lead,.signup-copy > p:not(.fine){margin:0;font:400 17px/1.45 Inter,system-ui,sans-serif;color:var(--gray)}
+  .signup .fine,.signup-copy .fine{margin:10px 0 0;font-size:15px}
+  .signup-action{min-width:0}
+  /* Official Beehiiv embed is ~400px; do not stretch it or a white bar fills the column. */
+  .signup-action .signupembed,
+  .signup .signupembed{
+    max-width:28rem;width:100%;margin:0 0 12px
+  }
+  .signup-action .signupform,
+  .signup .signupform{
+    max-width:none;width:100%;margin:0 0 12px
+  }
+  .signup-action .signupembed iframe,
+  .signup .signupembed iframe,
+  .signup-compact .signupembed iframe{min-height:56px;width:100%;max-width:28rem;background:transparent}
+  .signup-action .signupform,
+  .signup-action .signupform-row{
+    display:flex;flex-direction:row;align-items:stretch;gap:10px;max-width:none;margin:0 0 12px
+  }
+  .signup-action .signupform input{
+    flex:1;min-width:0;font:17px Inter;padding:16px 18px;
+    border-radius:12px;border:1.5px solid var(--line);
+    background:var(--navy2);color:var(--white)
+  }
+  .signup-action .signupform button{
+    flex:none;font:800 17px/1 Montserrat;padding:16px 22px;white-space:nowrap
+  }
+  .signup-action .signup-text-link{margin:0}
+  .signup-action .signup-text-btn{font-size:16px;min-height:46px;padding:10px 16px}
+  .footsignup:not(.footsignup-slim) .signup-title{font:800 28px/1.15 Montserrat,Inter,sans-serif;margin:0 0 8px}
+  .footsignup:not(.footsignup-slim) .signup-lead{margin:0;color:var(--gray);font:400 17px/1.45 Inter,system-ui,sans-serif}
+  .footsignup:not(.footsignup-slim) .fine{margin:10px 0 0;font-size:15px}
+  .footsignup-slim .signup-grid{gap:12px 32px}
+  .footsignup-slim .signup-action .signupembed,
+  .footsignup-slim .signup-action .signupform{margin:0 0 8px}
+}
+
 .footsignup .signup-title{font:800 clamp(20px,4.5vw,26px)/1.2 Montserrat,Inter,sans-serif;letter-spacing:-.02em;color:var(--white);margin:0 0 8px}
 .footsignup>p.fine{margin:8px 0 0}
 .footsignup-slim{margin:10px 0 8px;padding:8px 0 2px}
@@ -175,12 +241,13 @@ nav.regions{margin:8px 0 20px}
 .links a{border:1.5px solid var(--line);padding:9px 14px;border-radius:var(--pillr);text-decoration:none;font-weight:600}
 .ph{background:rgba(255,184,107,.15);color:var(--ember);border:1px dashed var(--ember);border-radius:6px;padding:1px 6px;font-weight:600}
 @media (min-width:900px){
- .wrap{max-width:1040px}
+ .wrap{max-width:1280px}
  .btn{display:inline-block}
  .chips{margin:18px 0 0;padding:0;flex-wrap:wrap;overflow:visible}
  .regionchips{flex-wrap:wrap;overflow:visible;margin:0;padding:0 0 6px}
  .kindchips{flex-wrap:wrap;overflow:visible;margin:8px 0 0;padding:0}
- .daygrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+ .daygrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+ .daygrid > :only-child{grid-column:1/-1}
  .daygrid .card{margin:0}
  .trucks .wrap{columns:2;column-gap:16px}
  .trucks .wrap>*:not(.area){column-span:all}
@@ -222,9 +289,23 @@ nav.regions{margin:8px 0 20px}
 .sech .n{font:600 13px Inter;letter-spacing:0;color:var(--gray)}
 @media (min-width:900px){
  .catnav{margin:0 0 6px}
- .evgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+ /* 2 columns keep titles large (~24px) and cards ~600px, in the spirit of a wide, easy-to-read desktop list. */
+ .evgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:12px}
  .evgrid .card{margin:0}
+ .evgrid > :only-child,
  .evgrid > #email,.evgrid > .signup-sec{grid-column:1/-1}
+ /* Event cards: bigger type for older readers. Mobile sizes stay in the base rules. */
+ #events .card.ev{padding:18px 20px}
+ #events .card.ev h4{font-size:24px;font-weight:800;line-height:1.2;margin:12px 0 6px}
+ #events .card.ev .where{font-size:16px}
+ #events .card.ev .note{font-size:15px}
+ #events .more{font:700 16px/1 Inter;padding:0 18px;min-height:46px}
+ .sech{font:800 18px/1.2 Montserrat!important;letter-spacing:.1em;padding:10px 0 8px}
+ .sech .n{font:600 14px Inter;letter-spacing:0;color:var(--gray)}
+ .day{font:800 17px/1 Montserrat}
+ .pill{font-size:14px;padding:6px 12px}
+ .act{font:700 14.5px/1 Inter;min-height:44px;padding:8px 14px}
+ .signup-nested{margin:14px 0 18px}
 }
 @media (max-width:599px){
  .catchips{gap:6px}
@@ -298,6 +379,9 @@ nav.regions{margin:8px 0 20px}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 @media (min-width:900px){
  .btn2{display:inline-flex;width:auto;margin:0 0 0 10px;vertical-align:top;padding:14.5px 22px}
+ /* After the base #events .more / .act rules so desktop type stays large. */
+ #events .more{font:700 16px/1 Inter;padding:0 18px;min-height:46px}
+ .act{font:700 14.5px/1 Inter;min-height:44px;padding:8px 14px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#events .card.ev.flash{animation:none;box-shadow:0 0 0 3px var(--green)}.toast{transition:none}}
 /* long price pills wrap onto a 2nd line inside the card (Safari: min-width:0 + flex-basis so nowrap ancestors can't force overflow) */
@@ -416,9 +500,16 @@ nav.regions{margin:8px 0 20px}
 .signupform{display:flex;flex-direction:column;gap:10px;margin:14px 0 8px}
 .signupform input{font:16px Inter;padding:14px;border-radius:12px;border:1.5px solid var(--line);background:var(--navy2);color:var(--white)}
 .signupform button{font:800 16px Montserrat;padding:14px;border:0;border-radius:var(--slab);background:var(--green);color:var(--void);cursor:pointer}
+.signup-action .signupform-row{
+  display:flex;flex-direction:row;align-items:stretch;gap:8px;
+  max-width:none;width:100%;margin:0 0 10px
+}
+.signup-action .signupform-row input{flex:1;min-width:0}
+.signup-action .signupform-row button{flex:none;white-space:nowrap;padding:14px 16px}
 .signupform button:hover{filter:brightness(1.05)}
 .signupform-row{max-width:28rem}
 .signup .signupform{max-width:28rem}
+.signup-action .signupform,.signup-action .signupform-row{max-width:none;width:100%}
 .footsignup{margin:22px 0 16px;padding:20px 0 4px;border-top:1px solid var(--line)}
 .footsignup>p{margin:0 0 12px;color:var(--gray)}
 .footsignup .eyebrow{margin-bottom:6px;color:var(--green)}
@@ -837,8 +928,12 @@ html[lang="ja"] .mark{font-family:Montserrat,Inter,sans-serif}
 .featured-note{margin:0 0 22px;color:var(--gray);max-width:40rem}
 .featured-note .btn{display:inline-block;margin:0 6px 0 0}
 .signupembed{margin:14px 0 8px;max-width:36rem;width:100%}
-.signup .signupembed{max-width:28rem}
-.signupembed iframe{display:block;width:100%;min-height:48px;border:0;border-radius:12px;background:transparent}
+.signup .signupembed,
+.signup-action .signupembed{
+  max-width:28rem;width:100%;margin:0 0 12px;
+  border-radius:14px;overflow:hidden;background:transparent
+}
+.signupembed iframe{display:block;width:100%;max-width:28rem;min-height:48px;border:0;border-radius:14px;background:transparent}
 .signupembed noscript .fine{margin:8px 0 0}
 
 /* Homepage guide and map picks: large tappable cards for the first screen */

@@ -826,7 +826,13 @@
     return el || null;
   }
   function midpageSignupN() {
-    return document.body.classList.contains('home-compact') ? 1 : 3;
+    // Desktop is a 2-column grid: place the signup after a full row so the
+    // first row is not left with an empty cell. On phones (1 column), the
+    // compact homepage keeps the box after the first card so that card stays
+    // high on the first screen.
+    var desktop = window.matchMedia('(min-width: 900px)').matches;
+    if (desktop) return 2;
+    return document.body.classList.contains('home-compact') ? 1 : 2;
   }
   function parkHomeSignup() {
     var slot = midpageSignup();
@@ -910,7 +916,7 @@
       sec.appendChild(grid);
       root.appendChild(sec);
     });
-    placeHomeSignupAfterFirstCard(root);
+    // Signup is placed after filters hide cards, so it follows a full visible row.
     secs.forEach(function (s) { s.hidden = true; });
     if (jump) jump.hidden = true;   // day list is already in date order; old category/day jump targets are hidden
   }
@@ -1058,12 +1064,14 @@
         s.hidden = n === 0;
         var c = s.querySelector('.sech .n'); if (c) c.textContent = n;
       });
+      placeHomeSignupAfterFirstCard(dayRoot);
     } else {
       secs.forEach(function (s) {
         var n = s.querySelectorAll('.card.ev:not([hidden])').length;
         s.hidden = n === 0;
         var c = s.querySelector('.sech .n'); if (c) c.textContent = n;
       });
+      placeHomeSignupAfterFirstCard(document.getElementById('events'));
     }
     if (running) running.hidden = !running.querySelector('li.run:not([hidden])');
     paintRegionUI();
@@ -1106,6 +1114,13 @@
     syncTodayBtn();
   }
   function refresh() { timePass(); apply(); updateSavedUI(); moon(); }
+  // Re-place the mid-page signup when crossing the 2-column breakpoint.
+  try {
+    var rowMq = window.matchMedia('(min-width: 900px)');
+    var onRowMq = function () { apply(); };
+    if (rowMq.addEventListener) rowMq.addEventListener('change', onRowMq);
+    else if (rowMq.addListener) rowMq.addListener(onRowMq);
+  } catch (err) {}
   function tick() { if (akNow() !== lastKey) refresh(); }
 
   function filtersAreOn() {
