@@ -1179,3 +1179,20 @@ html[data-theme="bw"] .homepills .homepick-lights a{border-color:#111;border-wid
 .waitlist-thanks{margin:0 0 4px}
 .waitlist-ok{margin:0;color:var(--white);font:600 20px/1.45 Inter,system-ui,sans-serif}
 .waitlist-form .hp{position:absolute;left:-9999px;height:0;width:0;opacity:0;pointer-events:none}
+
+
+/* Things to do hub: large, plain cards for easy reading on a desktop and a phone. */
+.hubcards{list-style:none;padding:0;margin:8px 0 28px;display:grid;gap:12px}
+.hubcards a{display:block;background:var(--card);border:1.5px solid var(--line);border-left:8px solid var(--green);border-radius:var(--slab);padding:18px 18px;text-decoration:none;color:inherit}
+.hubcards b{font:800 20px/1.25 Montserrat,Inter,sans-serif;color:var(--white);display:block;margin-bottom:6px}
+.hubcards span{color:var(--gray);font:400 16px/1.5 Inter,system-ui,sans-serif}
+.hubcards a:hover{border-color:var(--green)}
+.hubcards a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+@media (min-width:900px){
+  .hubcards{grid-template-columns:1fr 1fr;gap:16px}
+  .hubcards b{font-size:22px}
+}
+.guide .faq h3{font:800 20px/1.3 Montserrat,Inter,sans-serif;margin:22px 0 8px;color:var(--white)}
+.guide .faq p{margin:0 0 8px;color:var(--gray);font:400 16px/1.5 Inter,system-ui,sans-serif}
+.nf-links{font:600 16px/1.5 Inter,system-ui,sans-serif}
+.nf-links a{margin:0 4px}

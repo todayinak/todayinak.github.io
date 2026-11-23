@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /review/
+Disallow: /preview/
+Disallow: /previews/
+Disallow: /ja/
+Disallow: /lights-preview-
 
 Sitemap: https://todayinak.com/sitemap.xml

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Things to Do in Anchorage · Today in AK</title>
+<meta name="description" content="Things to do in Anchorage, including this weekend (Nov 27–29, 2026): a free, dated calendar of events, plus free things to do, ideas with kids, winter plans, holiday lights and local guides. Times are Alaska time.">
+<meta name='impact-site-verification' value='296fdaff-3c85-4fa4-a2dd-ec15bf39f020'>
+<meta name="google-site-verification" content="R-UyxeZQOgapG3BMBy2vlycc2zH-wJ_AVFE5U5Wilqs">
+<meta name="google-site-verification" content="XUgCnjfqnmBOgDKfXt2SQeZYLD7qbN6veQSigK6uvdg">
+<meta name="theme-color" content="#0D1626" id="theme-color">
+<script>
+(function(){
+  var KEY="tia-theme";
+  var THEMES={aurora:"#0D1626",dark:"#0D1626",light:"#F3F6FB",bw:"#FFFFFF",fireweed:"#1A0B14",blush:"#FBF3F6",glacier:"#071820",sunset:"#1A0E0C"};
+  var NAMES={aurora:"Aurora",light:"Light",bw:"Black & White",fireweed:"Fireweed",blush:"Blush",glacier:"Glacier",sunset:"Sunset"};
+  function known(t){ if(!t) return null; if(t==="dark") return "aurora"; if(t==="pink") return "fireweed"; return THEMES[t] ? t : null; }
+  function preferred(){
+    try{ var s=known(localStorage.getItem(KEY)); if(s) return s; }catch(e){}
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "bw" : "aurora";
+  }
+  function apply(theme){
+    theme=known(theme)||"aurora";
+    document.documentElement.setAttribute("data-theme", theme);
+    var meta=document.getElementById("theme-color");
+    if(meta) meta.setAttribute("content", THEMES[theme]);
+    var btn=document.getElementById("theme-menu");
+    if(btn) btn.setAttribute("aria-label", "Color theme, "+(NAMES[theme]||theme)+" selected. Open to change.");
+    var list=document.getElementById("theme-options");
+    if(list){
+      var opts=list.querySelectorAll("[data-theme-value]");
+      for(var i=0;i<opts.length;i++){
+        var on=opts[i].getAttribute("data-theme-value")===theme;
+        opts[i].setAttribute("aria-selected", on?"true":"false");
+        opts[i].tabIndex=on?0:-1;
+      }
+    }
+  }
+  function save(theme){ try{ localStorage.setItem(KEY, theme); }catch(e){} apply(theme); }
+  apply(preferred());
+  function closeMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=true;
+    btn.setAttribute("aria-expanded","false");
+  }
+  function openMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=false;
+    btn.setAttribute("aria-expanded","true");
+    var sel=list.querySelector('[aria-selected="true"]')||list.querySelector("[data-theme-value]");
+    if(sel) sel.focus();
+  }
+  function wire(){
+    apply(preferred());
+    var root=document.getElementById("theme-picker"), btn=document.getElementById("theme-menu"), list=document.getElementById("theme-options");
+    if(!root||!btn||!list) return;
+    btn.addEventListener("click", function(ev){ ev.stopPropagation(); if(list.hidden) openMenu(); else closeMenu(); });
+    list.addEventListener("click", function(ev){
+      var t=ev.target.closest("[data-theme-value]");
+      if(!t) return;
+      ev.preventDefault();
+      save(t.getAttribute("data-theme-value"));
+      closeMenu();
+      btn.focus();
+    });
+    document.addEventListener("click", function(ev){ if(!root.contains(ev.target)) closeMenu(); });
+    document.addEventListener("keydown", function(ev){
+      if(list.hidden) return;
+      var opts=[].slice.call(list.querySelectorAll("[data-theme-value]"));
+      var i=opts.indexOf(document.activeElement);
+      if(ev.key==="Escape"){ ev.preventDefault(); closeMenu(); btn.focus(); return; }
+      if(ev.key==="ArrowRight"||ev.key==="ArrowDown"){ ev.preventDefault(); opts[(i+1+opts.length)%opts.length].focus(); }
+      if(ev.key==="ArrowLeft"||ev.key==="ArrowUp"){ ev.preventDefault(); opts[(i-1+opts.length)%opts.length].focus(); }
+      if(ev.key==="Home"){ ev.preventDefault(); opts[0].focus(); }
+      if(ev.key==="End"){ ev.preventDefault(); opts[opts.length-1].focus(); }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", wire);
+})();
+</script>
+
+<link rel="canonical" href="https://todayinak.com/things-to-do-in-anchorage/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Today in AK">
+<meta property="og:title" content="Things to Do in Anchorage · Today in AK">
+<meta property="og:description" content="Things to do in Anchorage, including this weekend (Nov 27–29, 2026): a free, dated calendar of events, plus free things to do, ideas with kids, winter plans, holiday lights and local guides. Times are Alaska time.">
+<meta property="og:url" content="https://todayinak.com/things-to-do-in-anchorage/">
+<meta property="og:image" content="https://todayinak.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Things to do in Anchorage, including this weekend.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Things to Do in Anchorage · Today in AK">
+<meta name="twitter:description" content="Things to do in Anchorage, including this weekend (Nov 27–29, 2026): a free, dated calendar of events, plus free things to do, ideas with kids, winter plans, holiday lights and local guides. Times are Alaska time.">
+<meta name="twitter:image" content="https://todayinak.com/assets/og-image.png">
+<!-- Generated by tools/things_to_do_pages.py. Do not hand-edit; edit that file and re-run tools/render.py. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://todayinak.com/things-to-do-in-anchorage/#page","name":"Things to do in Anchorage","description":"Things to do in Anchorage, including this weekend (Nov 27–29, 2026): a free, dated calendar of events, plus free things to do, ideas with kids, winter plans, holiday lights and local guides. Times are Alaska time.","url":"https://todayinak.com/things-to-do-in-anchorage/","isPartOf":{"@type":"WebSite","name":"Today in AK","url":"https://todayinak.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://todayinak.com/"},{"@type":"ListItem","position":2,"name":"Things to do in Anchorage","item":"https://todayinak.com/things-to-do-in-anchorage/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is there to do in Anchorage this weekend?","acceptedAnswer":{"@type":"Answer","text":"See the dated this-weekend list for Friday through Sunday (Nov 27–29, 2026) at https://todayinak.com/this-weekend/."}},{"@type":"Question","name":"Where is the full events calendar?","acceptedAnswer":{"@type":"Answer","text":"The home page at https://todayinak.com/ has this week and the weeks ahead, with a calendar and filters."}}]}]}</script>
+<link rel="preload" href="/assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=ab9ac87d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow"><span class="mark"><i></i>TODAY IN AK</span><div class="brandactions"><div class="theme-picker" id="theme-picker"><button type="button" class="theme-toggle" id="theme-menu" aria-label="Color theme, Aurora selected. Open to change." aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 2.2 17.7c.7-.2 1-1 .6-1.6-.3-.5-.5-1.1-.5-1.7a2.4 2.4 0 0 1 2.4-2.4h1.2A4.1 4.1 0 0 0 21 11.1 9 9 0 0 0 12 3z"/><circle class="dot" cx="8" cy="10" r="1.15"/><circle class="dot" cx="12" cy="7.4" r="1.15"/><circle class="dot" cx="16.2" cy="9.2" r="1.15"/><circle class="dot" cx="9.6" cy="14.2" r="1.15"/></svg></button><div class="theme-menu" id="theme-options" role="listbox" aria-label="Color theme" hidden><p class="theme-menu-label" id="theme-menu-label">Color theme</p><button type="button" role="option" class="theme-swatch" data-theme-value="aurora" aria-label="Aurora" aria-selected="true"><i style="--swatch:#5EF2B5;--swatch-bg:#0D1626"></i><span>Aurora</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="light" aria-label="Light" aria-selected="false" tabindex="-1"><i style="--swatch:#0B6B4C;--swatch-bg:#F3F6FB"></i><span>Light</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="bw" aria-label="Black &amp; White" aria-selected="false" tabindex="-1"><i style="--swatch:#111111;--swatch-bg:#FFFFFF"></i><span>Black &amp; White</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="fireweed" aria-label="Fireweed" aria-selected="false" tabindex="-1"><i style="--swatch:#FF6BA8;--swatch-bg:#1A0B14"></i><span>Fireweed</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="blush" aria-label="Blush" aria-selected="false" tabindex="-1"><i style="--swatch:#A81B58;--swatch-bg:#FBF3F6"></i><span>Blush</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="glacier" aria-label="Glacier" aria-selected="false" tabindex="-1"><i style="--swatch:#7EE0F2;--swatch-bg:#071820"></i><span>Glacier</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="sunset" aria-label="Sunset" aria-selected="false" tabindex="-1"><i style="--swatch:#FF8A5B;--swatch-bg:#1A0E0C"></i><span>Sunset</span></button></div></div><a class="handle" href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">@todayinak</a></div></div>
+    <p class="kicker">Anchorage and nearby towns</p>
+    <h1>Things to do in Anchorage</h1>
+    <p class="hero-q">What&#x27;s going on in Anchorage this weekend, this week, and through the winter?</p>
+    <p class="range">This weekend: Nov 27–29, 2026</p>
+    <nav class="chips" aria-label="Sections"><a href="/">This week</a><a href="/things-to-do-in-anchorage/" aria-current="page">Things to do</a><a href="/this-weekend/">This weekend</a><a href="/free-things-to-do-in-anchorage/">Free</a><a href="/things-to-do-in-anchorage-with-kids/">With kids</a><a href="/winter-things-to-do-in-anchorage/">Winter</a><a href="/holiday-lights/">Holiday lights map</a><a href="/guides/">Guides</a><a href="/#cal">Calendar</a><a href="/submit/">Submit your event</a></nav>
+  </div>
+</header>
+<main>
+<section class="sec wrap guide">
+  <p class="crumbs"><a href="/">Home</a> · Things to do in Anchorage</p>
+  <p class="lede">A simple starting point for things to do in Anchorage and nearby towns. This weekend is <a href="/this-weekend/">Friday through Sunday, Nov 27–29, 2026</a>. The <a href="/">full calendar</a> covers this week and the weeks ahead. Lists below for free events, kids, and winter are built from the same verified events. Details can change. Check with the organizer before you go.</p><p class="updated">Updated Mon Nov 23, 2026 · Last checked Sun Nov 22, 2026 · All times are Alaska time (AKDT through Sat Oct 31, AKST from Sun Nov 1).</p>
+  <ul class="hubcards">
+<li><a href="/this-weekend/"><b>This weekend</b><span>Friday through Sunday, Nov 27–29, 2026. 25 listings on the dated weekend list.</span></a></li><li><a href="/"><b>This week and the weeks ahead</b><span>The full calendar, with search and filters, is on the home page.</span></a></li><li><a href="/free-things-to-do-in-anchorage/"><b>Free things to do in Anchorage</b><span>38 upcoming free listings, from markets to community days.</span></a></li><li><a href="/things-to-do-in-anchorage-with-kids/"><b>Things to do in Anchorage with kids</b><span>57 upcoming listings marked for families or all ages.</span></a></li><li><a href="/winter-things-to-do-in-anchorage/"><b>Winter things to do in Anchorage</b><span>123 upcoming winter listings, plus lights, skating and aurora guides.</span></a></li><li><a href="/holiday-lights/"><b>Holiday lights map</b><span>Lit homes, downtown displays and drive-through lights around town.</span></a></li><li><a href="/guides/northern-lights/"><b>Northern lights near Anchorage</b><span>Spots, forecasts and a plan for cloudy nights.</span></a></li><li><a href="/guides/ice-skating/"><b>Where to ice skate</b><span>Lagoons, ovals, indoor rinks and how to check the ice.</span></a></li><li><a href="/holiday-events/"><b>Christmas and holiday events</b><span>The holiday season calendar, with dates and venues.</span></a></li><li><a href="/december/"><b>Things to do in December</b><span>A month-long list you can plan from now through New Year&#x27;s.</span></a></li><li><a href="/thanksgiving-weekend/"><b>Thanksgiving weekend</b><span>The long weekend around Thanksgiving, with meals and events.</span></a></li><li><a href="/thanksgiving-open/"><b>What&#x27;s open on Thanksgiving?</b><span>Dinners, grocery hours, community meals and turkey trots.</span></a></li>
+</ul>
+<h2>Coming up soon</h2>
+<p class="lede">A few verified picks from the calendar. The full list is on the pages above.</p>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-14-holiday-gift-show-at-dimond-center-hub" data-id="2026-11-14-holiday-gift-show-at-dimond-center" data-sec="seasonal" data-days="2026-11-14 2026-11-15 2026-11-21 2026-11-22 2026-11-28 2026-11-29 2026-12-05 2026-12-06 2026-12-12 2026-12-13 2026-12-19 2026-12-20" data-age="all" data-free="1" data-region="anchorage" data-on="2026-11-28" data-start="10:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 28</span> · Saturdays and Sundays through Dec 20</span></div>
+  <h4>Holiday Gift Show at Dimond Center</h4>
+  <p class="where">Dimond Center, 800 E Dimond Blvd · <b>Anchorage</b></p><p class="note">Unique gifts, crafts and treats in the corridor by Ulta, across from Foot Locker. Sunday mall hours start at noon.</p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://dimondcenter.com/events/" rel="noopener" target="_blank" aria-label="Event details: Holiday Gift Show at Dimond Center (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article><article class="card ev drive-card" id="ev-2026-11-20-alaska-vintage-holiday-market-and-food-truck-fest-hub" data-id="2026-11-20-alaska-vintage-holiday-market-and-food-truck-fest" data-sec="seasonal" data-days="2026-11-20 2026-11-21 2026-11-22 2026-11-27 2026-11-28 2026-11-29" data-age="all" data-region="mat-su" data-on="2026-11-27" data-start="12:00" data-end="18:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · Fri 12–6 PM; Sat 10 AM–6 PM; Sun 10 AM–4 PM</span><span class="pill drive">Worth the drive</span></div>
+  <h4>Alaska Vintage Holiday Market &amp; Food Truck Fest</h4>
+  <p class="where">Raven Hall &amp; Hoskins Building, Alaska State Fairgrounds, 2075 Glenn Hwy · <b>Palmer</b></p><p class="note">Vintage and handmade vendors plus food trucks; back again Fri–Sun, Nov 27–29.</p>
+  <div class="pills meta"><span class="pill">From $5 (12 &amp; under free)</span><span class="pill">All ages</span><a class="more" href="https://alaskavintagemarkets.com/" rel="noopener" target="_blank" aria-label="Event details: Alaska Vintage Holiday Market &amp; Food Truck Fest (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div>
+<section id="email" class="signup-sec signup-compact-sec signup-nested">
+  <div class="signup signup-compact">
+    <div class="signup-grid">
+      <div class="signup-copy">
+        <h2>Get the best Alaska events every Thursday.</h2>
+        <p class="signup-lead">A short, free email with Friday through Sunday picks. Unsubscribe any time.</p>
+        <p class="fine">We'll never sell your address.</p>
+        <p class="fine">Or follow <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">@todayinak</a> on Instagram.</p>
+      </div>
+      <div class="signup-action">
+        <!-- Newsletter embed is the Beehiiv v3 loader. Form id comes from beehiiv_form_id in data/site.json. -->
+    <div class="signupembed" id="signup">
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="2e680f3e-5587-47b9-ac3c-01aea594638c"></script>
+      <noscript><p class="fine">Get the email at <a href="https://todays-newsletter-29fbf8.beehiiv.com" rel="noopener" target="_blank">todays-newsletter-29fbf8.beehiiv.com</a>.</p></noscript>
+    </div>
+        <p class="signup-text-link"><a class="signup-text-btn" href="/text-alerts/">I'd rather get a text <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-25-ken-ludwigs-twas-the-night-before-christmas-hub" data-id="2026-11-25-ken-ludwigs-twas-the-night-before-christmas" data-sec="stage" data-days="2026-11-25 2026-11-27 2026-11-28 2026-11-29 2026-12-04 2026-12-05 2026-12-06 2026-12-11 2026-12-12 2026-12-13 2026-12-18 2026-12-19 2026-12-20" data-age="all" data-region="anchorage" data-on="2026-11-25" data-start="19:00" data-end="20:30">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Nov 25</span> · 7 PM preview; runs through Dec 20</span><span class="pill cat">Theater</span></div>
+  <h4>Ken Ludwig&#x27;s &#x27;Twas the Night Before Christmas</h4>
+  <p class="where">Cyrano&#x27;s Theatre Company, 3800 Debarr Rd · <b>Anchorage</b></p><p class="note">Pay-what-you-can preview Wed Nov 25 at 7 PM; donation appreciated. Then Fri Nov 27–Sun Dec 20: Fridays 7 PM, Saturdays 3 PM and 7 PM, Sundays 3 PM. A one-hour family play with music, plus a character meet-and-greet after. General admission.</p>
+  <div class="pills meta"><span class="pill">$15; pay-what-you-can preview Nov 25</span><span class="pill">All ages</span><a class="more" href="https://www.cyranos.org/tnbc" rel="noopener" target="_blank" aria-label="Event details: Ken Ludwig&#x27;s &#x27;Twas the Night Before Christmas (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article><article class="card ev" id="ev-2026-11-27-crafted-in-alaska-hub" data-id="2026-11-27-crafted-in-alaska" data-sec="seasonal" data-days="2026-11-27 2026-11-28" data-age="all" data-free="1" data-region="anchorage" data-on="2026-11-27" data-start="10:00" data-end="18:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · 10 AM</span></div>
+  <h4>Crafted in Alaska</h4>
+  <p class="where">Anchorage Museum, 625 C St · <b>Anchorage</b></p><p class="note">The museum&#x27;s holiday market of Alaska-made crafts, the Friday and Saturday after Thanksgiving. Admission is free both days.</p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://www.anchoragemuseum.org/visit/calendar/event-details/?id=88fcreq95oocn6fmcg9mai5fog_20261127T180000Z" rel="noopener" target="_blank" aria-label="Event details: Crafted in Alaska (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article><article class="card ev" id="ev-2026-11-27-holiday-bazaar-at-hotel-captain-cook-hub" data-id="2026-11-27-holiday-bazaar-at-hotel-captain-cook" data-sec="seasonal" data-days="2026-11-27 2026-11-28" data-age="all" data-free="1" data-region="anchorage" data-on="2026-11-27" data-start="10:00" data-end="18:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · 10 AM</span></div>
+  <h4>Holiday Bazaar at Hotel Captain Cook</h4>
+  <p class="where">Hotel Captain Cook, Discovery Ballroom, 939 W 5th Ave · <b>Anchorage</b></p><p class="note">Books by local authors, homemade jams, jewelry, paintings and wool goods, with featured artist Rhonda Scott.</p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill">All ages</span><a class="more" href="https://captaincook.com/event/holiday-bazaar-2026/" rel="noopener" target="_blank" aria-label="Event details: Holiday Bazaar at Hotel Captain Cook (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article><article class="card ev" id="ev-2026-11-27-santa-arrives-at-midtown-mall-hub" data-id="2026-11-27-santa-arrives-at-midtown-mall" data-sec="seasonal" data-days="2026-11-27" data-age="all" data-free="1" data-region="anchorage" data-on="2026-11-27" data-start="10:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · 10 AM</span></div>
+  <h4>Santa Arrives at Midtown Mall</h4>
+  <p class="where">Midtown Mall, 600 E Northern Lights Blvd · <b>Anchorage</b></p><p class="note">Santa&#x27;s hours Wed–Sat 10 AM–6 PM, Sun noon–5 PM through Christmas Eve.</p>
+  <div class="pills meta"><span class="pill">Free photos with Santa</span><span class="pill">All ages</span><a class="more" href="https://midtownmall.com/free-portrait-with-santa/" rel="noopener" target="_blank" aria-label="Event details: Santa Arrives at Midtown Mall (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div>
+
+<h2>Common questions</h2>
+<div class="faq">
+  <h3>What is there to do in Anchorage this weekend?</h3>
+  <p>See the dated <a href="/this-weekend/">this weekend</a> list for Friday through Sunday (Nov 27–29, 2026). It updates when we publish, usually Monday and Thursday, so the dates stay current.</p>
+  <h3>Where is the full events calendar?</h3>
+  <p>The <a href="/">home page</a> has this week and the weeks ahead, with a calendar and filters. You can also <a href="/submit/">submit an event</a>.</p>
+  <h3>What is free, or good with kids, in winter?</h3>
+  <p>Those have their own pages: <a href="/free-things-to-do-in-anchorage/">free things to do</a>, <a href="/things-to-do-in-anchorage-with-kids/">things to do with kids</a>, and <a href="/winter-things-to-do-in-anchorage/">winter things to do</a>. Each one is built from the same verified events as the calendar.</p>
+</div>
+
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <span class="mark"><i></i>TODAY IN AK</span>
+    <p>Your Alaska weekend, planned.</p>
+    <div class="footsignup footsignup-slim" id="weekmail">
+    <div class="signup-grid">
+      <p class="signup-slim-line"><span class="k">Weekly email</span> Get the best Alaska events every Thursday.</p>
+      <div class="signup-action">
+        <!-- Newsletter embed is the Beehiiv v3 loader. Form id comes from beehiiv_form_id in data/site.json. -->
+    <div class="signupembed" id="footsignup">
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="2e680f3e-5587-47b9-ac3c-01aea594638c"></script>
+      <noscript><p class="fine">Get the email at <a href="https://todays-newsletter-29fbf8.beehiiv.com" rel="noopener" target="_blank">todays-newsletter-29fbf8.beehiiv.com</a>.</p></noscript>
+    </div>
+        <p class="signup-text-link"><a class="signup-text-btn" href="/text-alerts/">I'd rather get a text <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      </div>
+    </div>
+  </div>
+    <p class="links"><a href="/">This week in Alaska</a><a href="/things-to-do-in-anchorage/">Things to do</a><a href="/this-weekend/">This weekend</a><a href="/guides/">Guides</a><a href="/holiday-events/">Holiday events</a><a href="/holiday-lights/">Holiday lights map</a><a href="/december/">December</a><a href="/thanksgiving-weekend/">Thanksgiving weekend</a><a href="/thanksgiving-open/">What's open on Thanksgiving?</a><a href="/#cal">Calendar</a><a href="/submit/">Submit your event</a><a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Instagram · @todayinak</a><a href="https://www.facebook.com/profile.php?id=61595774151541" rel="noopener" target="_blank">Facebook</a><a href="/text-alerts/">Text-alert waitlist</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a></p>
+    <p><b>Want your event featured?</b> <a href="/submit/">Submit it here</a>, or <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">DM @todayinak on Instagram</a>.</p>
+    <p class="fine">Most listings are free. Featured events are paid placements and are marked as Featured. Details, menus and hours change. Always check with the venue, organizer or truck before you go.</p>
+  </div>
+</footer>
+<script src="/assets/events.js?v=2e8af5cd" defer></script>
+<script data-goatcounter="https://todayinak.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var skip = /(?:^|\.)(instagram\.com|facebook\.com|todayinak\.com)$/i;
+  document.addEventListener("click", function(ev){
+    var a = ev.target.closest && ev.target.closest("a[href]");
+    if (!a || !window.goatcounter || !goatcounter.count) return;
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#" || href.indexOf("mailto:") === 0) return;
+    var host = "";
+    try { host = a.hostname || ""; } catch (err) { return; }
+    if (!host || host === location.hostname) return;
+    if (skip.test(host)) return;
+    var rel = a.getAttribute("rel") || "";
+    var name = a.getAttribute("data-count");
+    if (!name) {
+      name = (/\bsponsored\b/.test(rel) ? "affiliate-" : "out-") + host.replace(/^www\./, "");
+    }
+    goatcounter.count({
+      path: "/click/" + name,
+      title: (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80),
+      event: true
+    });
+  }, true);
+})();
+</script>
+</body>
+</html>
