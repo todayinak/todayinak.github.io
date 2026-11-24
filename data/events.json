@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "timezone_note": "All times are Alaska time (AKDT through Sat Oct 31, AKST from Sun Nov 1).",
  "disclaimer": "Details can change. Check with the organizer before you go.",
  "events": [
@@ -54,24 +54,6 @@
    "url": "https://alaskavintagemarkets.com/"
   },
   {
-   "id": "2026-11-20-alaskas-wild-icons-winter-tour",
-   "date": "2026-11-20",
-   "time": "Fri & Mon 12:30 PM",
-   "title": "Alaska's Wild Icons Winter Tour",
-   "category": "Family & Outdoors",
-   "venue": "Alaska Zoo, 4731 O'Malley Rd",
-   "town": "Anchorage",
-   "price": "Price not listed (tour tickets online)",
-   "ages": "All ages",
-   "extra_dates": [
-    "2026-11-23"
-   ],
-   "start": "12:30",
-   "end": "14:00",
-   "note": "60–75 minute outdoor guided tour of the zoo's big Alaska animals and big cats. Dress warm.",
-   "url": "https://www.alaskazoo.org/event-calendar/2026/11/20/alaskas-wild-icons-winter-tour"
-  },
-  {
    "id": "2026-11-21-panel-breaks-free-comics-workshop",
    "date": "2026-11-21",
    "time": "6 PM",
@@ -90,94 +72,65 @@
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=27pa038rm9e28eperb4hlr4fp8"
   },
   {
-   "id": "2026-11-23-mahj-monday-beginner-american-mahjong-class",
-   "date": "2026-11-23",
-   "time": "1 PM",
-   "title": "Mahj Monday: Beginner American Mahjong Class",
+   "id": "2026-11-24-stained-glass-ornament-workshop",
+   "date": "2026-11-24",
+   "time": "12 PM & 5 PM",
+   "title": "Stained Glass Ornament Workshop",
    "category": "Make & Taste",
-   "venue": "Birch & Bloom, 10950 Mausel St #B4",
+   "venue": "The Warehouse Eagle River Art Center",
    "town": "Eagle River",
-   "price": "$50 ($55.20 with fees)",
-   "ages": "16+",
-   "start": "13:00",
-   "end": "15:00",
-   "note": "Two-hour beginner class covering the tiles, the National Mah Jongg League card, setup and a guided game. Limited to 8 students.",
-   "url": "https://www.eventbrite.com/e/mahj-monday-beginner-american-mahjong-class-tickets-2004342030970"
-  },
-  {
-   "id": "2026-11-23-board-game-night-at-devils-club",
-   "date": "2026-11-23",
-   "time": "6 PM",
-   "title": "Board Game Night at Devil's Club",
-   "category": "Nightlife",
-   "venue": "Devil's Club Brewing Co., 100 N Franklin St",
-   "town": "Juneau",
-   "price": "Free",
-   "ages": "Ages not listed (brewery tasting room)",
-   "start": "18:00",
-   "end": "21:00",
-   "worth_the_drive": true,
-   "note": "Weekly Monday games downstairs; bring your own or use the house collection.",
-   "url": "https://www.traveljuneau.com/event/board-game-night/6139/"
-  },
-  {
-   "id": "2026-11-23-karaoke-mondays-at-odd-man-rush",
-   "date": "2026-11-23",
-   "time": "6 PM",
-   "title": "Karaoke Mondays at Odd Man Rush",
-   "category": "Nightlife",
-   "venue": "Odd Man Rush Brewing, 10930 Mausel St",
-   "town": "Eagle River",
-   "price": "Free",
-   "ages": "Ages not listed (brewery tasting room)",
-   "start": "18:00",
-   "end": "21:00",
-   "url": "https://www.oddmanrushbrewing.com/events"
-  },
-  {
-   "id": "2026-11-23-monday-movies-fjord",
-   "date": "2026-11-23",
-   "time": "6 PM",
-   "title": "Monday Movies: Fjord",
-   "category": "Arts & Talks",
-   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
-   "town": "Anchorage",
-   "price": "$8; $7 seniors, students & kids 12 and under",
-   "ages": "All ages",
-   "start": "18:00",
-   "end": "20:26",
-   "note": "New Cristian Mungiu drama starring Renate Reinsve and Sebastian Stan. Rated R; balcony seats are all ages, under-21s on the main floor need a parent or guardian.",
-   "url": "https://beartooththeatre.filmbot.com/movies/fjord/"
-  },
-  {
-   "id": "2026-11-23-monday-jazz-jam-at-fire-island",
-   "date": "2026-11-23",
-   "time": "6:30 PM",
-   "title": "Monday Jazz Jam at Fire Island",
-   "category": "Music",
-   "venue": "Fire Island Rustic Bakeshop, K Street Market, 718 K St",
-   "town": "Anchorage",
-   "price": "Free; $5 suggested donation",
+   "price": "$55",
    "ages": "Ages not listed",
-   "start": "18:30",
-   "end": "21:30",
-   "note": "Weekly community jazz session hosted by the Alaska Jazz Workshop. Musicians can bring an instrument and sit in.",
-   "url": "https://akjazzworkshop.org/calendar/"
+   "start": "12:00",
+   "end": "20:30",
+   "note": "Beginner-friendly 3.5-hour class with Mary Tyler: cut, foil and solder a holiday stained glass ornament; all supplies included. Two sessions: 12–3:30 PM or 5–8:30 PM.",
+   "url": "https://eagleriverart.com/events/stained-glass-ornament-3/"
+  },
+  {
+   "id": "2026-11-24-planetarium-show-james-webb-space-telescope",
+   "date": "2026-11-24",
+   "time": "4:30 PM",
+   "title": "Planetarium Show: James Webb Space Telescope",
+   "category": "Arts & Talks",
+   "venue": "Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$6 adults, $4 ages 6–12, under 6 free (plus museum admission)",
+   "ages": "All ages",
+   "start": "16:30",
+   "end": "17:00",
+   "note": "30-minute planetarium show on the James Webb Space Telescope.",
+   "url": "https://ancm.ticketapp.org/portal/product/207/event/29a0aa24-6495-4169-911a-64f4cb9e6c82"
   },
   {
    "id": "2026-11-24-conspiracy-of-ravens-friendsgiving",
    "date": "2026-11-24",
    "time": "5:30 PM",
    "title": "Conspiracy of Ravens Friendsgiving",
-   "category": "Other",
-   "venue": "Alice's Champagne Palace, upstairs, 195 E Pioneer Ave",
+   "category": "Seasonal",
+   "venue": "Alice's Champagne Palace (upstairs), 195 E Pioneer Ave",
    "town": "Homer",
    "price": "Price not listed",
    "ages": "Ages not listed",
    "start": "17:30",
+   "end": "19:30",
    "worth_the_drive": true,
    "note": "Pier One Theatre social hour with crafts, snacks and a silent-auction casserole.",
-   "url": "https://www.kbbi.org/community-calendar/event/conspiracy-of-ravens-pier-one-theatre-hosts-a-friendsgiving-event-15-10-2026-18-38-41"
+   "url": "https://pieronetheatre.org/events/conspiracy-of-ravens-friendsgiving"
+  },
+  {
+   "id": "2026-11-24-paint-nite-galaxy-in-the-pines",
+   "date": "2026-11-24",
+   "time": "6 PM",
+   "title": "Paint Nite: Galaxy in the Pines",
+   "category": "Make & Taste",
+   "venue": "Tent City Taphouse, 343 W 6th Ave",
+   "town": "Anchorage",
+   "price": "$42.23",
+   "ages": "21+",
+   "start": "18:00",
+   "end": "20:00",
+   "note": "Beginner-friendly guided paint night; all supplies included.",
+   "url": "https://www.eventbrite.com/e/paint-nite-tent-city-taphouse-anchorage-tickets-1994695324411"
   },
   {
    "id": "2026-11-24-pioneer-park-pickers-music-jam",
@@ -209,6 +162,20 @@
    "end": "21:00",
    "note": "Geeks Who Drink trivia, teams of 2–6. Doors 6:30 PM.",
    "url": "https://www.beartoothak.com/live-events"
+  },
+  {
+   "id": "2026-11-24-trivia-tuesdays-elf-edition",
+   "date": "2026-11-24",
+   "time": "7:30 PM",
+   "title": "Trivia Tuesdays: Elf Edition",
+   "category": "Seasonal",
+   "venue": "Dave & Buster's, 800 E Dimond Blvd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "All ages",
+   "start": "19:30",
+   "note": "Elf-themed trivia night.",
+   "url": "https://www.prekindle.com/event/76491-trivia-tuesdays-elf-edition-anchorage"
   },
   {
    "id": "2026-11-24-jazz-jam-at-the-crystal-saloon",
@@ -1409,7 +1376,7 @@
    "id": "2026-12-10-kage-frees-velvet-hours-grace-e-elliot",
    "date": "2026-12-10",
    "time": "6 PM",
-   "title": "Kage Free's Velvet Hours: Grace E Elliot",
+   "title": "Kage Free's Velvet Hours: Grace C. Elliot",
    "category": "Music",
    "venue": "Penny Royalty, 3005 Spenard Rd",
    "town": "Anchorage",
@@ -1417,7 +1384,7 @@
    "ages": "Ages not listed",
    "start": "18:00",
    "end": "21:00",
-   "note": "Doors 6 PM, show 7–9 PM. Hosted by Kage Free, with Grace E Elliot. Couples buying together get $20 off. Includes 2 drink tokens (3 if you're dressed stylish). Tickets by Venmo, Cash App or Zelle on the event flyer. Sponsored by Fromagio's Artisan Cheese and Birch Brew.",
+   "note": "Doors 6 PM, show 7–9 PM. Hosted by Kage Free, with Grace C. Elliot. Couples buying together get $20 off. Includes 2 drink tokens (3 if you're dressed stylish). Tickets by Venmo, Cash App or Zelle on the event flyer. Sponsored by Fromagio's Artisan Cheese and Birch Brew.",
    "url": "https://www.instagram.com/pennyroyaltyalaska/"
   },
   {
@@ -1928,5 +1895,5 @@
   }
  ],
  "through": "2026-12-31",
- "last_verified": "2026-11-22"
+ "last_verified": "2026-11-23"
 }
