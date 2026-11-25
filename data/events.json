@@ -54,24 +54,6 @@
    "url": "https://alaskavintagemarkets.com/"
   },
   {
-   "id": "2026-11-21-panel-breaks-free-comics-workshop",
-   "date": "2026-11-21",
-   "time": "6 PM",
-   "title": "Panel Breaks: Free Comics Workshop",
-   "category": "Make & Taste",
-   "venue": "Seed Lab, Anchorage Museum, 111 W 6th Ave",
-   "town": "Anchorage",
-   "price": "Free",
-   "ages": "Ages not listed",
-   "extra_dates": [
-    "2026-12-19"
-   ],
-   "start": "18:00",
-   "end": "20:00",
-   "note": "Comic illustrator Tadd Galusha leads a drop-in workshop with demos and portfolio reviews. Also Sat Dec 19.",
-   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=27pa038rm9e28eperb4hlr4fp8"
-  },
-  {
    "id": "2026-11-24-stained-glass-ornament-workshop",
    "date": "2026-11-24",
    "time": "12 PM & 5 PM",
@@ -85,21 +67,6 @@
    "end": "20:30",
    "note": "Beginner-friendly 3.5-hour class with Mary Tyler: cut, foil and solder a holiday stained glass ornament; all supplies included. Two sessions: 12–3:30 PM or 5–8:30 PM.",
    "url": "https://eagleriverart.com/events/stained-glass-ornament-3/"
-  },
-  {
-   "id": "2026-11-24-planetarium-show-james-webb-space-telescope",
-   "date": "2026-11-24",
-   "time": "4:30 PM",
-   "title": "Planetarium Show: James Webb Space Telescope",
-   "category": "Arts & Talks",
-   "venue": "Anchorage Museum, 625 C St",
-   "town": "Anchorage",
-   "price": "$6 adults, $4 ages 6–12, under 6 free (plus museum admission)",
-   "ages": "All ages",
-   "start": "16:30",
-   "end": "17:00",
-   "note": "30-minute planetarium show on the James Webb Space Telescope.",
-   "url": "https://ancm.ticketapp.org/portal/product/207/event/29a0aa24-6495-4169-911a-64f4cb9e6c82"
   },
   {
    "id": "2026-11-24-conspiracy-of-ravens-friendsgiving",
@@ -220,7 +187,7 @@
    "start": "14:30",
    "end": "16:00",
    "note": "Drop-in handprint crafts for kids.",
-   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=20874"
   },
   {
    "id": "2026-11-25-mommy-mingle-at-hoarfrost-distilling",
@@ -237,6 +204,21 @@
    "worth_the_drive": true,
    "note": "Weekly social with mocktails and cocktails. Babies, partners and friends are welcome.",
    "url": "https://www.explorefairbanks.com/event/mommy-mingle-at-hoarfrost-distilling/12655/"
+  },
+  {
+   "id": "2026-11-25-planetarium-show-james-webb-space-telescope",
+   "date": "2026-11-25",
+   "time": "4:30 PM",
+   "title": "Planetarium Show: James Webb Space Telescope",
+   "category": "Arts & Talks",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$6 plus museum admission; $3 for members",
+   "ages": "All ages",
+   "start": "16:30",
+   "end": "17:15",
+   "note": "Live interactive 45-minute planetarium show featuring images from the James Webb Space Telescope.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=coq4jeoohuje0gtl7sshf793h0_20261126T003000Z"
   },
   {
    "id": "2026-11-25-girdwood-community-thanksgiving",
@@ -710,6 +692,21 @@
    "url": "https://captaincook.com/event/photos-with-santa-and-mrs-claus/2026-11-28/"
   },
   {
+   "id": "2026-11-28-alyeska-resort-ski-season-opening-day",
+   "date": "2026-11-28",
+   "time": "10:30 AM",
+   "title": "Alyeska Resort Ski Season Opening Day",
+   "category": "Seasonal",
+   "venue": "Alyeska Resort, 1000 Arlberg Ave",
+   "town": "Girdwood",
+   "price": "See lift ticket page",
+   "ages": "All ages",
+   "start": "10:30",
+   "end": "17:30",
+   "note": "First day of the 2026-27 regular ski season (runs through Apr 25, 2027, weather permitting). Lifts run 10:30 AM–5:30 PM.",
+   "url": "https://www.alyeskaresort.com/wp-content/uploads/2026/09/alyeska-resort-winter-mountain-facts.pdf"
+  },
+  {
    "id": "2026-11-28-comedysportz-and-scared-scriptless-at-the-nave",
    "date": "2026-11-28",
    "time": "6 PM & 8 PM",
@@ -767,21 +764,6 @@
    "url": "https://www.eventbrite.com/e/king-rooster-alice-in-chains-tribute-manic-3-at-the-crystal-saloon-tickets-2004690382900"
   },
   {
-   "id": "2026-11-29-try-a-sewing-machine-at-winter-solstice",
-   "date": "2026-11-29",
-   "time": "11 AM",
-   "title": "Try a Sewing Machine at Winter Solstice",
-   "category": "Make & Taste",
-   "venue": "Winter Solstice Sewing & Crafts, 400 W Potter Dr",
-   "town": "Anchorage",
-   "price": "$10, supplies included, pay in store",
-   "ages": "Ages not listed",
-   "start": "11:00",
-   "end": "17:00",
-   "note": "Drop in, use the shop's machines to make a small project, and take it home.",
-   "url": "https://wintersolsticecrafts.com/event/maker-space-try-out-a-sewing-machine-and-take-a-project-home/"
-  },
-  {
    "id": "2026-11-29-teton-gravity-research-actually-it-is-rocket-science",
    "date": "2026-11-29",
    "time": "5 PM",
@@ -837,7 +819,7 @@
    "start": "16:30",
    "end": "17:30",
    "note": "Ideal for ages 8+ with a caregiver; supplies provided.",
-   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21244"
   },
   {
    "id": "2026-12-01-the-grinch-slime-night-at-birch-and-bloom",
@@ -865,7 +847,7 @@
    "ages": "Ages not listed",
    "start": "18:00",
    "end": "19:00",
-   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=20116"
   },
   {
    "id": "2026-12-02-slow-craft-sessions-sprang",
@@ -908,7 +890,7 @@
    "start": "16:00",
    "end": "18:00",
    "note": "Board, card and video games, or bring your own.",
-   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21291"
   },
   {
    "id": "2026-12-03-brighter-winter-nights",
@@ -977,7 +959,7 @@
    "start": "16:00",
    "end": "17:30",
    "note": "Movie and free popcorn at the library.",
-   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21274"
   },
   {
    "id": "2026-12-04-refuge-coffee-open-mic-night",
@@ -1014,6 +996,41 @@
    "worth_the_drive": true,
    "note": "40+ local Alaskan artists and crafters, food vendors, live entertainment, holiday music and Santa. New venue this year. Look for Moon Muse among the vendors.",
    "url": "https://www.kenaicrewsers.org/christmas-craft-fair"
+  },
+  {
+   "id": "2026-12-04-zoo-lights-december-nights",
+   "date": "2026-12-04",
+   "time": "5–8 PM on open nights",
+   "title": "Zoo Lights (December nights)",
+   "category": "Seasonal",
+   "venue": "Alaska Zoo, 4731 O'Malley Rd",
+   "town": "Anchorage",
+   "price": "$25 ages 16+; $15 ages 15 & under; ages 2 and under free; members 3+ 30% off",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-05",
+    "2026-12-06",
+    "2026-12-11",
+    "2026-12-12",
+    "2026-12-13",
+    "2026-12-18",
+    "2026-12-19",
+    "2026-12-20",
+    "2026-12-21",
+    "2026-12-22",
+    "2026-12-23",
+    "2026-12-24",
+    "2026-12-26",
+    "2026-12-27",
+    "2026-12-28",
+    "2026-12-29",
+    "2026-12-30",
+    "2026-12-31"
+   ],
+   "start": "17:00",
+   "end": "20:00",
+   "note": "Open Fri–Sun Dec 4–6 and Dec 11–13, then nightly Dec 18–Jan 3 except Christmas Day (closed Dec 25). Buy tickets online or at the gate.",
+   "url": "https://www.alaskazoo.org/zoo-lights"
   },
   {
    "id": "2026-12-04-first-friday-at-the-anchorage-museum",
@@ -1230,7 +1247,7 @@
    "ages": "All ages",
    "start": "11:00",
    "note": "Festive pajamas welcome. Recommended for kids 10 and under. Doors 11 AM. Every adult and child needs a ticket.",
-   "url": "https://www.beartoothak.com/live-events"
+   "url": "https://www.eventbrite.com/e/jams-for-fams-pajama-jam-tickets-2002095027121"
   },
   {
    "id": "2026-12-06-gingerbread-house-party",
@@ -1313,7 +1330,7 @@
    "start": "18:00",
    "end": "20:00",
    "note": "Make a zine with Rasmuson Individual Artist Award winner MK.",
-   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=19846"
   },
   {
    "id": "2026-12-08-arctic-entries-plot-twist",
@@ -1420,7 +1437,7 @@
    "end": "18:00",
    "worth_the_drive": true,
    "note": "45+ holiday vendors, quilt raffle and silent auction during Palmer's Colony Christmas.",
-   "url": "https://www.matsuseniors.com/2026-holiday-bazaar-1"
+   "url": "https://www.matsuseniors.com/2026-holiday-bazaar"
   },
   {
    "id": "2026-12-11-an-alaskan-holiday-featuring-the-land-of-the-sweets",
@@ -1733,6 +1750,23 @@
    "url": "https://www.tickettailor.com/events/comedyupnorth/2354352"
   },
   {
+   "id": "2026-12-17-holiday-film-its-a-wonderful-life-pg",
+   "date": "2026-12-17",
+   "time": "Dec 17 6 PM; Dec 23 7 PM",
+   "title": "Holiday Film: It's a Wonderful Life (PG)",
+   "category": "Family & Outdoors",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$8 general; $7 ages 12 & under, seniors 65+, students",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-23"
+   ],
+   "start": "18:00",
+   "note": "Classic holiday screening. Under 21 must sit with a parent or guardian in the main theater.",
+   "url": "https://beartooththeatre.filmbot.com/movies/its-a-wonderful-life-2/"
+  },
+  {
    "id": "2026-12-17-chris-porter-at-the-spur",
    "date": "2026-12-17",
    "time": "7 PM",
@@ -1745,6 +1779,106 @@
    "start": "19:00",
    "worth_the_drive": true,
    "url": "https://www.rubberptarmigan.com/events/chris-porter-the-spur"
+  },
+  {
+   "id": "2026-12-18-planetarium-cartoons-in-the-dome-kiru-and-the-lost-moon",
+   "date": "2026-12-18",
+   "time": "11:30 AM",
+   "title": "Planetarium: Cartoons in the Dome – Kiru & the Lost Moon",
+   "category": "Family & Outdoors",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$6 plus museum admission; $3 for members",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-19",
+    "2026-12-20",
+    "2026-12-22",
+    "2026-12-23",
+    "2026-12-24",
+    "2026-12-26",
+    "2026-12-27",
+    "2026-12-29",
+    "2026-12-30",
+    "2026-12-31"
+   ],
+   "start": "11:30",
+   "note": "BLINK edition full-dome cartoon recommended for ages 2–5 and families. Runs museum-open days Dec 18–31 (closed Mondays and Dec 25).",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=s9f8nv6g7shb4afedb9mg0q3o4_20261218T193000Z"
+  },
+  {
+   "id": "2026-12-18-planetarium-show-saturn-and-beyond",
+   "date": "2026-12-18",
+   "time": "1:30 PM",
+   "title": "Planetarium Show: Saturn & Beyond",
+   "category": "Arts & Talks",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$6 plus museum admission; $3 for members",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-19",
+    "2026-12-20",
+    "2026-12-22",
+    "2026-12-23",
+    "2026-12-24",
+    "2026-12-26",
+    "2026-12-27",
+    "2026-12-29",
+    "2026-12-30",
+    "2026-12-31"
+   ],
+   "start": "13:30",
+   "end": "14:00",
+   "note": "30-minute planetarium show exploring Saturn's rings. Runs museum-open days Dec 18–31 (closed Mondays and Dec 25).",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=kj2h1kes02ga8u892ug35vpdhc_20261218T213000Z"
+  },
+  {
+   "id": "2026-12-18-holiday-film-elf-pg",
+   "date": "2026-12-18",
+   "time": "Dec 18 & 20 4 PM; Dec 24 11:30 AM",
+   "title": "Holiday Film: Elf (PG)",
+   "category": "Family & Outdoors",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$8 general; $7 ages 12 & under, seniors 65+, students",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-20",
+    "2026-12-24"
+   ],
+   "start": "16:00",
+   "note": "Holiday screening at Bear Tooth. Under 21 must sit with a parent or guardian in the main theater.",
+   "url": "https://beartooththeatre.filmbot.com/movies/elf/"
+  },
+  {
+   "id": "2026-12-18-brighter-winter-nights-peak-nightly",
+   "date": "2026-12-18",
+   "time": "4:30–8:30 PM nightly (closed Dec 25)",
+   "title": "Brighter Winter Nights (Peak Nightly)",
+   "category": "Seasonal",
+   "venue": "Alaska Botanical Garden, 4601 Campbell Airstrip Rd",
+   "town": "Anchorage",
+   "price": "$16; members and kids 6 and under free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-19",
+    "2026-12-20",
+    "2026-12-21",
+    "2026-12-22",
+    "2026-12-23",
+    "2026-12-24",
+    "2026-12-26",
+    "2026-12-27",
+    "2026-12-28",
+    "2026-12-29",
+    "2026-12-30",
+    "2026-12-31"
+   ],
+   "start": "16:30",
+   "end": "20:30",
+   "note": "Peak nightly light walk with ice luminarias, fire pits, kicksled trail and model train (closed Christmas Day and New Year's Day). Buy tickets ahead.",
+   "url": "https://www.alaskabg.org/brighter-winter-nights"
   },
   {
    "id": "2026-12-18-winter-solstice-festival",
@@ -1811,6 +1945,41 @@
    "url": "https://centertix.com/events/disco-nutcracker"
   },
   {
+   "id": "2026-12-19-holiday-film-home-alone-pg",
+   "date": "2026-12-19",
+   "time": "1 PM",
+   "title": "Holiday Film: Home Alone (PG)",
+   "category": "Family & Outdoors",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$8 general; $7 ages 12 & under, seniors 65+, students",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-23",
+    "2026-12-26"
+   ],
+   "start": "13:00",
+   "note": "1 PM matinee on Dec 19, Dec 23 and Dec 26. Under 21 must sit with a parent or guardian in the main theater.",
+   "url": "https://beartooththeatre.filmbot.com/movies/home-alone/"
+  },
+  {
+   "id": "2026-12-19-holiday-film-the-muppet-christmas-carol-g",
+   "date": "2026-12-19",
+   "time": "4 PM",
+   "title": "Holiday Film: The Muppet Christmas Carol (G)",
+   "category": "Family & Outdoors",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$8 general; $7 ages 12 & under, seniors 65+, students",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-23"
+   ],
+   "start": "16:00",
+   "note": "4 PM matinee on Dec 19 and Dec 23. Under 21 must sit with a parent or guardian in the main theater.",
+   "url": "https://beartooththeatre.filmbot.com/movies/the-muppet-christmas-carol/"
+  },
+  {
    "id": "2026-12-19-panel-breaks-free-comics-workshop",
    "date": "2026-12-19",
    "time": "6 PM",
@@ -1867,6 +2036,381 @@
    "url": "https://centertix.com/events/anchorage-concert-chorus-family-holiday-pops"
   },
   {
+   "id": "2026-12-21-holiday-film-how-the-grinch-stole-christmas-pg",
+   "date": "2026-12-21",
+   "time": "Dec 21 1 PM; Dec 24 2:30 PM; Dec 26 4 PM",
+   "title": "Holiday Film: How the Grinch Stole Christmas (PG)",
+   "category": "Family & Outdoors",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$8 general; $7 ages 12 & under, seniors 65+, students",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-24",
+    "2026-12-26"
+   ],
+   "start": "13:00",
+   "note": "Under 21 must sit with a parent or guardian in the main theater.",
+   "url": "https://beartooththeatre.filmbot.com/movies/how-the-grinch-stole-christmas/"
+  },
+  {
+   "id": "2026-12-21-menard-ice-arena-public-skate",
+   "date": "2026-12-21",
+   "time": "1–2:15 PM (Sun also 5:30–6:45 PM)",
+   "title": "Menard Ice Arena Public Skate",
+   "category": "Family & Outdoors",
+   "venue": "Curtis C. Menard II Memorial Ice Arena, 1001 S Clapp St",
+   "town": "Wasilla",
+   "price": "$10 skater ($6 seniors/military, $30 family of 4); $5 skate rental",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-26",
+    "2026-12-27",
+    "2026-12-28",
+    "2026-12-30"
+   ],
+   "start": "13:00",
+   "end": "14:15",
+   "worth_the_drive": true,
+   "note": "Holiday-week public skate sessions (closed Dec 23 and Dec 25). Sunday Dec 27 also has an evening skate 5:30–6:45 PM.",
+   "url": "https://www.cityofwasilla.gov/Facilities/Facility/Details/Ice-Arena-1"
+  },
+  {
+   "id": "2026-12-21-craft-club-gingerbread-man-paper-garland",
+   "date": "2026-12-21",
+   "time": "3 PM",
+   "title": "Craft Club: Gingerbread Man Paper Garland",
+   "category": "Make & Taste",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "15:00",
+   "end": "17:00",
+   "note": "Decorate paper gingerbread figures and string garlands in Youth Services.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21256"
+  },
+  {
+   "id": "2026-12-21-holiday-film-miracle-on-34th-street-1947",
+   "date": "2026-12-21",
+   "time": "4 PM",
+   "title": "Holiday Film: Miracle on 34th Street (1947)",
+   "category": "Family & Outdoors",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$8 general; $7 ages 12 & under, seniors 65+, students",
+   "ages": "All ages",
+   "start": "16:00",
+   "note": "Classic 1947 screening. Under 21 must sit with a parent or guardian in the main theater.",
+   "url": "https://beartooththeatre.filmbot.com/movies/miracle-on-34th-street/"
+  },
+  {
+   "id": "2026-12-21-mat-su-happy-run-monday-6-pm",
+   "date": "2026-12-21",
+   "time": "6 PM",
+   "title": "Mat-Su Happy Run (Monday 6 PM)",
+   "category": "Family & Outdoors",
+   "venue": "Aktive Soles Performance Footwear, 642 S Alaska St #100",
+   "town": "Palmer",
+   "price": "Free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-28"
+   ],
+   "start": "18:00",
+   "worth_the_drive": true,
+   "note": "Year-round Monday family fun run/walk in Palmer (strollers welcome). Headlamps and reflective gear required in winter; 7 PM raffle.",
+   "url": "https://www.thematsualaska.com/event/happy-run-2/"
+  },
+  {
+   "id": "2026-12-22-winter-break-camp-arctic-marine-science-ages-7-9",
+   "date": "2026-12-22",
+   "time": "9:30 AM",
+   "title": "Winter Break Camp: Arctic Marine Science (Ages 7–9)",
+   "category": "Family & Outdoors",
+   "venue": "Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$150 (10% discount for members)",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-12-23"
+   ],
+   "start": "09:30",
+   "end": "15:30",
+   "note": "Two-day STEAM winter break camp for ages 7–9. Drop-off starts 8:30 AM, pickup until 4:30 PM. Registration required.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=v3a4u7iihr1lnfjh0g9aaj9968_20261222T163000Z"
+  },
+  {
+   "id": "2026-12-22-holiday-film-the-polar-express-g",
+   "date": "2026-12-22",
+   "time": "1 PM",
+   "title": "Holiday Film: The Polar Express (G)",
+   "category": "Family & Outdoors",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$8 general; $7 ages 12 & under, seniors 65+, students",
+   "ages": "All ages",
+   "start": "13:00",
+   "note": "Afternoon family screening. Under 21 must sit with a parent or guardian in the main theater.",
+   "url": "https://beartooththeatre.filmbot.com/movies/the-polar-express/"
+  },
+  {
+   "id": "2026-12-22-tuesday-crafts-clothespin-toys-at-muldoon-library",
+   "date": "2026-12-22",
+   "time": "4:30 PM",
+   "title": "Tuesday Crafts: Clothespin Toys at Muldoon Library",
+   "category": "Make & Taste",
+   "venue": "Muldoon Library, 1251 Muldoon Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "16:30",
+   "end": "17:30",
+   "note": "Ideal for ages 8+ with a caregiver; all welcome and supplies provided.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21247"
+  },
+  {
+   "id": "2026-12-23-maker-afternoon-at-muldoon-library",
+   "date": "2026-12-23",
+   "time": "2:30 PM",
+   "title": "Maker Afternoon at Muldoon Library",
+   "category": "Make & Taste",
+   "venue": "Muldoon Library, 1251 Muldoon Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "14:30",
+   "end": "16:30",
+   "note": "Drop in to make handmade gifts using library craft supplies.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21252"
+  },
+  {
+   "id": "2026-12-23-squishy-circuits-at-chugiak-eagle-river-library",
+   "date": "2026-12-23",
+   "time": "3 PM",
+   "title": "Squishy Circuits at Chugiak-Eagle River Library",
+   "category": "Family & Outdoors",
+   "venue": "Chugiak-Eagle River Library, 12001 Business Blvd",
+   "town": "Eagle River",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "15:00",
+   "end": "16:00",
+   "note": "STEM hands-on circuit building with Play-Doh; best for ages 8+.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21268"
+  },
+  {
+   "id": "2026-12-24-christmas-eve-at-the-crossing-chugiak-and-anchorage",
+   "date": "2026-12-24",
+   "time": "2:30 & 4 PM (Chugiak); 6:30 PM (Anchorage)",
+   "title": "Christmas Eve at The Crossing (Chugiak & Anchorage)",
+   "category": "Seasonal",
+   "venue": "The Crossing North & South Campuses",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "14:30",
+   "note": "Open Christmas Eve services at North Campus (22208 Birchwood Loop Rd, Chugiak) at 2:30 and 4 PM, and South Campus (7434 Jewel Lake Rd, Anchorage) at 6:30 PM.",
+   "url": "http://crossingak.org/"
+  },
+  {
+   "id": "2026-12-24-game-night-at-gerrish-library",
+   "date": "2026-12-24",
+   "time": "4 PM",
+   "title": "Game Night at Gerrish Library",
+   "category": "Family & Outdoors",
+   "venue": "Scott and Wesley Gerrish Library, 250 Egloff Dr",
+   "town": "Girdwood",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "16:00",
+   "end": "18:00",
+   "note": "Board, card, dice and console games at the Girdwood library.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21294"
+  },
+  {
+   "id": "2026-12-24-mountain-city-church-christmas-eve-candlelight-service",
+   "date": "2026-12-24",
+   "time": "5 PM & 7 PM",
+   "title": "Mountain City Church Christmas Eve Candlelight Service",
+   "category": "Seasonal",
+   "venue": "Mountain City Church, 6401 E Northern Lights Blvd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "17:00",
+   "note": "Open family candlelight Christmas Eve services at 5 PM and 7 PM.",
+   "url": "https://mountaincity.church/events/christmas-eve-service-4/2026-12-24/1/"
+  },
+  {
+   "id": "2026-12-24-lamb-of-god-lutheran-christmas-eve-candlelight-service",
+   "date": "2026-12-24",
+   "time": "6:30 PM",
+   "title": "Lamb of God Lutheran Christmas Eve Candlelight Service",
+   "category": "Seasonal",
+   "venue": "Lamb of God Lutheran Church, 1221 N Church Rd",
+   "town": "Wasilla",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "18:30",
+   "worth_the_drive": true,
+   "note": "Open Christmas Eve candlelight worship service in Wasilla.",
+   "url": "https://www.loglcms.org/events/christmas-eve-candlelight-worship-service/"
+  },
+  {
+   "id": "2026-12-25-christmas-friendship-dinner-community-meal",
+   "date": "2026-12-25",
+   "time": "11 AM",
+   "title": "Christmas Friendship Dinner (Community Meal)",
+   "category": "Seasonal",
+   "venue": "Menard Sports Center, 1001 S Clapp St",
+   "town": "Wasilla",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "11:00",
+   "end": "15:00",
+   "worth_the_drive": true,
+   "note": "Free Christmas Day community dinner open to everyone, with food, entertainment and Santa.",
+   "url": "https://www.thematsualaska.com/event/christmas-friendship-dinner-2/"
+  },
+  {
+   "id": "2026-12-26-ski-your-age-at-birch-hill",
+   "date": "2026-12-26",
+   "time": "10 AM",
+   "title": "Ski Your Age at Birch Hill",
+   "category": "Family & Outdoors",
+   "venue": "Birch Hill Recreation Area, 101 Wilderness Dr",
+   "town": "Fairbanks",
+   "price": "Free (donations benefit FXC youth ski)",
+   "ages": "All ages",
+   "start": "10:00",
+   "end": "15:00",
+   "worth_the_drive": true,
+   "note": "Self-paced community ski (start anytime 10 AM–3 PM) with hot drinks and holiday leftovers at the Ski Center.",
+   "url": "https://www.explorefairbanks.com/event/ski-your-age/12727/"
+  },
+  {
+   "id": "2026-12-27-holiday-film-chronicles-of-narnia-pg",
+   "date": "2026-12-27",
+   "time": "12:30 PM",
+   "title": "Holiday Film: Chronicles of Narnia (PG)",
+   "category": "Family & Outdoors",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "$8 general; $7 ages 12 & under, seniors 65+, students",
+   "ages": "All ages",
+   "start": "12:30",
+   "note": "The Lion, the Witch and the Wardrobe screening. Under 21 must sit with a parent or guardian in the main theater.",
+   "url": "https://beartooththeatre.filmbot.com/movies/the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe/"
+  },
+  {
+   "id": "2026-12-29-winter-break-camp-power-ages-10-12",
+   "date": "2026-12-29",
+   "time": "9:30 AM",
+   "title": "Winter Break Camp: Power (Ages 10–12)",
+   "category": "Family & Outdoors",
+   "venue": "Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$150 (10% discount for members)",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-12-30"
+   ],
+   "start": "09:30",
+   "end": "15:30",
+   "note": "Two-day STEAM winter break camp on renewable energy for ages 10–12. Drop-off 8:30 AM, pickup until 4:30 PM.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=20mddcm0vmb8uh4d37s1dillj8_20261229T163000Z"
+  },
+  {
+   "id": "2026-12-29-build-it-lego-and-makedo-at-chugiak-eagle-river-library",
+   "date": "2026-12-29",
+   "time": "2 PM",
+   "title": "Build It! LEGO & Makedo at Chugiak-Eagle River Library",
+   "category": "Family & Outdoors",
+   "venue": "Chugiak-Eagle River Library, 12001 Business Blvd",
+   "town": "Eagle River",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "14:00",
+   "end": "17:00",
+   "note": "Drop-in building session with LEGO and Makedo cardboard tools.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21265"
+  },
+  {
+   "id": "2026-12-30-winter-break-science-at-loussac-library",
+   "date": "2026-12-30",
+   "time": "2 PM",
+   "title": "Winter Break Science at Loussac Library",
+   "category": "Family & Outdoors",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "14:00",
+   "end": "15:00",
+   "note": "Hands-on Alaska winter wildlife science with BLM Campbell Creek Science Center. Best for ages 6–12.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21236"
+  },
+  {
+   "id": "2026-12-30-family-movie-at-chugiak-eagle-river-library-toy-story-5",
+   "date": "2026-12-30",
+   "time": "3 PM",
+   "title": "Family Movie at Chugiak-Eagle River Library: Toy Story 5",
+   "category": "Family & Outdoors",
+   "venue": "Chugiak-Eagle River Library, 12001 Business Blvd",
+   "town": "Eagle River",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "15:00",
+   "end": "17:00",
+   "note": "Afternoon PG movie screening with coloring and doodling.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21266"
+  },
+  {
+   "id": "2026-12-31-midnight-at-the-library-noon-party-at-gerrish",
+   "date": "2026-12-31",
+   "time": "11 AM",
+   "title": "Midnight at the Library (Noon Party) at Gerrish",
+   "category": "Seasonal",
+   "venue": "Scott and Wesley Gerrish Library, 250 Egloff Dr",
+   "town": "Girdwood",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "11:00",
+   "end": "12:00",
+   "note": "Daytime New Year's music and dancing celebration for families in Girdwood.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21297"
+  },
+  {
+   "id": "2026-12-31-noon-years-eve-dance-party-at-loussac-library",
+   "date": "2026-12-31",
+   "time": "11 AM",
+   "title": "Noon Year's Eve Dance Party at Loussac Library",
+   "category": "Seasonal",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "11:00",
+   "end": "12:15",
+   "note": "Crafts, DJ Spencer Lee dance floor and a noon balloon drop countdown.",
+   "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=20942"
+  },
+  {
+   "id": "2026-12-31-planetarium-show-video-games-in-the-dome",
+   "date": "2026-12-31",
+   "time": "5:30 PM",
+   "title": "Planetarium Show: Video Games in the Dome",
+   "category": "Family & Outdoors",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "Included with museum admission",
+   "ages": "All ages",
+   "start": "17:30",
+   "note": "Multiplayer Kinetarium gaming on the planetarium dome using smartphones.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=t51jbbsr7vebn6flvsg1to4njk"
+  },
+  {
    "id": "2026-12-31-uaa-seawolves-hockey-vs-colorado-college",
    "date": "2026-12-31",
    "time": "6 PM",
@@ -1879,21 +2423,41 @@
    "start": "18:00",
    "note": "New Year's Eve game; military appreciation night.",
    "url": "https://goseawolves.com/calendar.aspx?game_id=8030&sport_id=4"
+  },
+  {
+   "id": "2026-12-31-downtown-anchorage-new-years-eve-celebration",
+   "date": "2026-12-31",
+   "time": "7–9 PM (fireworks 8 PM)",
+   "title": "Downtown Anchorage New Year's Eve Celebration",
+   "category": "Seasonal",
+   "venue": "Chinook Parking Lot, 3rd Ave & E St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "19:00",
+   "end": "21:00",
+   "note": "Anchorage Downtown Partnership's outdoor New Year's Eve celebration with live music and fireworks at 8 PM.",
+   "url": "https://meetmedowntownanchorage.com/december-downtown/"
+  },
+  {
+   "id": "2026-12-31-annual-sparktacular-fireworks-celebration",
+   "date": "2026-12-31",
+   "time": "8 PM",
+   "title": "Annual Sparktacular Fireworks Celebration",
+   "category": "Seasonal",
+   "venue": "UAF West Ridge",
+   "town": "Fairbanks",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "20:00",
+   "worth_the_drive": true,
+   "note": "New Year's Eve fireworks launched from UAF West Ridge at 8 PM (roads/trails near staging close ~7 PM; also livestreamed by UAF).",
+   "url": "https://www.explorefairbanks.com/event/annual-sparktacular-fireworks-celebration/9783/"
   }
  ],
  "running_label": "Running now",
  "running_through": [],
  "mark_your_calendar": [
-  {
-   "date": "Sat Nov 28, 2026",
-   "title": "Alyeska Resort opening day (season runs through Sun Apr 25, 2027, weather permitting)",
-   "town": "Girdwood"
-  },
-  {
-   "date": "Thu Dec 31, 2026",
-   "title": "Downtown New Year's Eve celebration, Chinook Lot (3rd Ave & E St), 7–9 PM, fireworks 8 PM (free)",
-   "town": "Anchorage"
-  },
   {
    "date": "Thu Jan 21 – Sun Jan 31, 2027",
    "title": "Anchorage Folk Festival (free)",
