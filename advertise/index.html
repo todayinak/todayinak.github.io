@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advertise with Today in AK: sponsor the holiday lights map</title>
+<meta name="description" content="Sponsor the Today in AK holiday lights map or a monthly Presented by mention. Prices start at $99. Pay online, or email todayinak@gmail.com.">
+<meta name='impact-site-verification' value='296fdaff-3c85-4fa4-a2dd-ec15bf39f020'>
+<meta name="google-site-verification" content="R-UyxeZQOgapG3BMBy2vlycc2zH-wJ_AVFE5U5Wilqs">
+<meta name="google-site-verification" content="XUgCnjfqnmBOgDKfXt2SQeZYLD7qbN6veQSigK6uvdg">
+<meta name="theme-color" content="#0D1626" id="theme-color">
+<script>
+(function(){
+  var KEY="tia-theme";
+  var THEMES={aurora:"#0D1626",dark:"#0D1626",light:"#F3F6FB",bw:"#FFFFFF",fireweed:"#1A0B14",blush:"#FBF3F6",glacier:"#071820",sunset:"#1A0E0C"};
+  var NAMES={aurora:"Aurora",light:"Light",bw:"Black & White",fireweed:"Fireweed",blush:"Blush",glacier:"Glacier",sunset:"Sunset"};
+  function known(t){ if(!t) return null; if(t==="dark") return "aurora"; if(t==="pink") return "fireweed"; return THEMES[t] ? t : null; }
+  function preferred(){
+    try{ var s=known(localStorage.getItem(KEY)); if(s) return s; }catch(e){}
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "bw" : "aurora";
+  }
+  function apply(theme){
+    theme=known(theme)||"aurora";
+    document.documentElement.setAttribute("data-theme", theme);
+    var meta=document.getElementById("theme-color");
+    if(meta) meta.setAttribute("content", THEMES[theme]);
+    var btn=document.getElementById("theme-menu");
+    if(btn) btn.setAttribute("aria-label", "Color theme, "+(NAMES[theme]||theme)+" selected. Open to change.");
+    var list=document.getElementById("theme-options");
+    if(list){
+      var opts=list.querySelectorAll("[data-theme-value]");
+      for(var i=0;i<opts.length;i++){
+        var on=opts[i].getAttribute("data-theme-value")===theme;
+        opts[i].setAttribute("aria-selected", on?"true":"false");
+        opts[i].tabIndex=on?0:-1;
+      }
+    }
+  }
+  function save(theme){ try{ localStorage.setItem(KEY, theme); }catch(e){} apply(theme); }
+  apply(preferred());
+  function closeMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=true;
+    btn.setAttribute("aria-expanded","false");
+  }
+  function openMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=false;
+    btn.setAttribute("aria-expanded","true");
+    var sel=list.querySelector('[aria-selected="true"]')||list.querySelector("[data-theme-value]");
+    if(sel) sel.focus();
+  }
+  function wire(){
+    apply(preferred());
+    var root=document.getElementById("theme-picker"), btn=document.getElementById("theme-menu"), list=document.getElementById("theme-options");
+    if(!root||!btn||!list) return;
+    btn.addEventListener("click", function(ev){ ev.stopPropagation(); if(list.hidden) openMenu(); else closeMenu(); });
+    list.addEventListener("click", function(ev){
+      var t=ev.target.closest("[data-theme-value]");
+      if(!t) return;
+      ev.preventDefault();
+      save(t.getAttribute("data-theme-value"));
+      closeMenu();
+      btn.focus();
+    });
+    document.addEventListener("click", function(ev){ if(!root.contains(ev.target)) closeMenu(); });
+    document.addEventListener("keydown", function(ev){
+      if(list.hidden) return;
+      var opts=[].slice.call(list.querySelectorAll("[data-theme-value]"));
+      var i=opts.indexOf(document.activeElement);
+      if(ev.key==="Escape"){ ev.preventDefault(); closeMenu(); btn.focus(); return; }
+      if(ev.key==="ArrowRight"||ev.key==="ArrowDown"){ ev.preventDefault(); opts[(i+1+opts.length)%opts.length].focus(); }
+      if(ev.key==="ArrowLeft"||ev.key==="ArrowUp"){ ev.preventDefault(); opts[(i-1+opts.length)%opts.length].focus(); }
+      if(ev.key==="Home"){ ev.preventDefault(); opts[0].focus(); }
+      if(ev.key==="End"){ ev.preventDefault(); opts[opts.length-1].focus(); }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", wire);
+})();
+</script>
+
+<link rel="canonical" href="https://todayinak.com/advertise/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Today in AK">
+<meta property="og:title" content="Advertise with Today in AK: sponsor the holiday lights map">
+<meta property="og:description" content="Sponsor the Today in AK holiday lights map or a monthly Presented by mention. Prices start at $99. Pay online, or email todayinak@gmail.com.">
+<meta property="og:url" content="https://todayinak.com/advertise/">
+<meta property="og:image" content="https://todayinak.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Advertise with Today in AK">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Advertise with Today in AK: sponsor the holiday lights map">
+<meta name="twitter:description" content="Sponsor the Today in AK holiday lights map or a monthly Presented by mention. Prices start at $99. Pay online, or email todayinak@gmail.com.">
+<meta name="twitter:image" content="https://todayinak.com/assets/og-image.png">
+<!-- Generated by tools/guides_pages.py. Do not hand-edit; edit that file and re-run tools/render.py. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Advertise with Today in AK: sponsor the holiday lights map","description":"Sponsor the Today in AK holiday lights map or a monthly Presented by mention. Prices start at $99. Pay online, or email todayinak@gmail.com.","url":"https://todayinak.com/advertise/","isPartOf":{"@type":"WebSite","name":"Today in AK","url":"https://todayinak.com/"}}</script>
+<link rel="preload" href="/assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=ab9ac87d">
+<link rel="icon" href="/favicon.ico" sizes="any">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow"><span class="mark"><i></i>TODAY IN AK</span><div class="brandactions"><div class="theme-picker" id="theme-picker"><button type="button" class="theme-toggle" id="theme-menu" aria-label="Color theme, Aurora selected. Open to change." aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 2.2 17.7c.7-.2 1-1 .6-1.6-.3-.5-.5-1.1-.5-1.7a2.4 2.4 0 0 1 2.4-2.4h1.2A4.1 4.1 0 0 0 21 11.1 9 9 0 0 0 12 3z"/><circle class="dot" cx="8" cy="10" r="1.15"/><circle class="dot" cx="12" cy="7.4" r="1.15"/><circle class="dot" cx="16.2" cy="9.2" r="1.15"/><circle class="dot" cx="9.6" cy="14.2" r="1.15"/></svg></button><div class="theme-menu" id="theme-options" role="listbox" aria-label="Color theme" hidden><p class="theme-menu-label" id="theme-menu-label">Color theme</p><button type="button" role="option" class="theme-swatch" data-theme-value="aurora" aria-label="Aurora" aria-selected="true"><i style="--swatch:#5EF2B5;--swatch-bg:#0D1626"></i><span>Aurora</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="light" aria-label="Light" aria-selected="false" tabindex="-1"><i style="--swatch:#0B6B4C;--swatch-bg:#F3F6FB"></i><span>Light</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="bw" aria-label="Black &amp; White" aria-selected="false" tabindex="-1"><i style="--swatch:#111111;--swatch-bg:#FFFFFF"></i><span>Black &amp; White</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="fireweed" aria-label="Fireweed" aria-selected="false" tabindex="-1"><i style="--swatch:#FF6BA8;--swatch-bg:#1A0B14"></i><span>Fireweed</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="blush" aria-label="Blush" aria-selected="false" tabindex="-1"><i style="--swatch:#A81B58;--swatch-bg:#FBF3F6"></i><span>Blush</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="glacier" aria-label="Glacier" aria-selected="false" tabindex="-1"><i style="--swatch:#7EE0F2;--swatch-bg:#071820"></i><span>Glacier</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="sunset" aria-label="Sunset" aria-selected="false" tabindex="-1"><i style="--swatch:#FF8A5B;--swatch-bg:#1A0E0C"></i><span>Sunset</span></button></div></div><a class="handle" href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">@todayinak</a></div></div>
+    <p class="kicker">Advertise</p>
+    <h1>Sponsor Today in AK</h1>
+    <p class="hero-q">Reach people already looking for something to do.</p>
+    
+    <nav class="chips" aria-label="Sections"><a href="/">This week</a><a href="/holiday-lights/">Lights map</a><a href="/submit/">Submit</a></nav>
+    <p class="updated">Updated Tue Nov 24, 2026 · Alaska time</p>
+  </div>
+</header>
+
+<main>
+<section class="sec wrap guide">
+<style>
+header.hero .updated{display:none}
+.ad-page .ad-lede,.ad-page p,.ad-page li,.ad-page .guidefaq p{
+  font:400 20px/1.45 Inter,sans-serif;color:var(--white)
+}
+.ad-page .ad-lede{margin:0 0 22px;max-width:40rem}
+.ad-page h2{font:800 clamp(26px,6vw,36px)/1.2 Montserrat,Inter,sans-serif;margin:28px 0 14px;color:var(--white)}
+.ad-sub{font:800 22px/1.25 Montserrat,Inter,sans-serif;margin:0 0 12px;color:var(--white)}
+h3.ad-sub{margin-top:28px}
+#offers + .ad-sub, .ad-page #offers + p + .ad-sub{margin-top:0}
+.ad-facts{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:12px}
+.ad-facts li{
+  margin:0;padding:16px 18px;border:1.5px solid var(--line);border-left:6px solid var(--green);
+  border-radius:var(--slab);background:var(--card);color:var(--white);
+  font:400 20px/1.4 Inter,sans-serif
+}
+.ad-facts b{font:800 22px/1.2 Montserrat,Inter,sans-serif;color:var(--green);display:block;margin:0 0 6px}
+.ad-page .plans{margin:8px 0 10px}
+.ad-page .plan{padding:22px 20px}
+.ad-page .plan h3{font:800 24px/1.2 Montserrat,Inter,sans-serif;color:var(--white);margin:0 0 4px}
+.ad-page .plan .eyebrow{color:var(--green)}
+.ad-page .plan .price{font:800 44px/1 Montserrat,Inter,sans-serif;color:var(--green);margin:10px 0 14px}
+.ad-page .plan .price .ad-per{font-size:22px}
+.ad-page .plan>p, .ad-page .plan>p:not(.eyebrow):not(.price):not(.plan-pay){
+  font:400 19px/1.45 Inter,sans-serif;color:#E8EDF6
+}
+.ad-page .plan-pay{margin:18px 0 0}
+.ad-page .plan-pay .btn{
+  display:flex;align-items:center;justify-content:center;width:100%;max-width:22rem;
+  min-height:52px;padding:14px 18px;font:800 18px/1 Montserrat,Inter,sans-serif
+}
+.ad-steps{margin:0 0 28px;padding:0 0 0 1.15em}
+.ad-steps li{margin:0 0 12px;color:var(--white);font:400 20px/1.45 Inter,sans-serif}
+.ad-page .guidefaq{margin:0 0 24px}
+.ad-page .guidefaq details{border:1.5px solid var(--line);border-radius:var(--slab);background:var(--card);margin:0 0 10px;padding:4px 16px}
+.ad-page .guidefaq summary{font:800 20px/1.3 Montserrat,Inter,sans-serif;color:var(--white);padding:14px 0;cursor:pointer}
+.ad-page .guidefaq p{margin:0 0 16px}
+.ad-footnote{margin:18px 0 0;font:400 18px/1.45 Inter,sans-serif;color:#C9D4E8}
+.ad-intro a,.ad-footnote a,.ad-page .guidefaq a,.ad-steps a,.ad-page a{font-weight:700}
+@media (min-width:700px){
+  .ad-page .plans{grid-template-columns:1fr}
+  .ad-page .plans.ad-lights-plans{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:800px){
+  .ad-page .plan-pay .btn{width:auto}
+}
+</style>
+<nav class="chips" aria-label="On this page"><a href="#offers">Offers</a><a href="#how">How it works</a><a href="#faq">Questions</a></nav>
+<div class="ad-page">
+  <p class="ad-lede ad-intro">Today in AK is a free guide to things to do in Anchorage and the Mat‑Su. We send a weekly email, and you can also find us on <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Instagram @todayinak</a> and on our <a href="https://www.facebook.com/profile.php?id=61595774151541" rel="noopener" target="_blank">Facebook Page</a>.</p>
+
+  <h2 id="offers">Sponsor offers</h2>
+
+  <h3 class="ad-sub">Holiday lights map</h3>
+  <p>A rotating logo and link at the top of our <a href="/holiday-lights/">holiday lights map</a>. Up to 6 sponsors, and each one gets equal time. The placement runs through Thursday, Jan 7, 2027.</p>
+  <div class="plans ad-lights-plans">
+    <article class="plan plan-featured">
+      <p class="eyebrow">Logo and link</p>
+      <h3>Lights map sponsor</h3>
+      <p class="price">$99</p>
+      <p>Your logo and a link on the map, through Thursday, Jan 7, 2027.</p>
+      <p class="plan-pay"><a class="btn" href="https://buy.stripe.com/9B6dR9cKA0VgcgV3GMgfu03" rel="sponsored noopener" target="_blank">Pay $99</a></p>
+    </article>
+    <article class="plan plan-plus">
+      <p class="eyebrow">Plus a social mention</p>
+      <h3>Lights map, with shoutout</h3>
+      <p class="price">$129</p>
+      <p>The same map placement, plus a mention in one Instagram Story and in a Facebook Page post about the map.</p>
+      <p class="plan-pay"><a class="btn" href="https://buy.stripe.com/28E9AT9yo47s80F4KQgfu02" rel="sponsored noopener" target="_blank">Pay $129</a></p>
+    </article>
+  </div>
+
+  <h3 class="ad-sub">Presented by, monthly</h3>
+  <div class="plans">
+    <article class="plan plan-featured">
+      <p class="eyebrow">Site and weekly email</p>
+      <h3>Presented by your business</h3>
+      <p class="price">$129 <span class="ad-per">a month</span></p>
+      <p>A Presented by mention with your name on the site and in the weekly email. No long contract. We will set up the wording with you.</p>
+      <p class="plan-pay"><a class="btn" href="mailto:todayinak@gmail.com?subject=Presented%20by%20monthly%20package">Ask about it</a></p>
+    </article>
+  </div>
+
+  <h2 id="how">How it works</h2>
+  <ol class="ad-steps">
+    <li>Choose a placement and pay, or write us about the monthly option.</li>
+    <li>Email your logo and the exact business name to <a href="mailto:todayinak@gmail.com">todayinak@gmail.com</a>.</li>
+    <li>Your placement goes live within a day or two.</li>
+  </ol>
+
+  <h2 id="audience">Who visits</h2>
+  <ul class="ad-facts">
+    <li><b>135 visits</b> to the <a href="/holiday-lights/">holiday lights map</a> in the week of Nov 16 to 22, 2026. It was the most visited page on the site that week. The lights season was just getting started then.</li>
+    <li><b>296 visits</b> to the site overall that same week. That number is for the whole site, not only the map.</li>
+    <li><b>About 81% on a phone</b> About 81% of site visits that week were on a phone.</li>
+    <li><b>Facebook, Google, and ChatGPT</b> People found the site from Facebook, Google, and ChatGPT.</li>
+  </ul>
+
+  <h2 id="faq">Questions</h2>
+  <div class="guidefaq">
+    <details>
+      <summary>Is this advertising?</summary>
+      <p>Sponsorships are paid advertising placements. That is how we keep the guide free to read.</p>
+    </details>
+    <details>
+      <summary>Is there a long contract?</summary>
+      <p>No. The holiday lights map spot runs through Thursday, Jan 7, 2027. The monthly option can stop at the end of a month.</p>
+    </details>
+    <details>
+      <summary>Who can sponsor?</summary>
+      <p>Family-friendly businesses only. If you are unsure whether a placement is a fit, email <a href="mailto:todayinak@gmail.com">todayinak@gmail.com</a> and ask.</p>
+    </details>
+  </div>
+
+  <p class="ad-footnote">Looking to list a single event? A basic listing is free, and Featured listings start at $35, on our <a href="/submit/">submit your event</a> page.</p>
+</div>
+
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="mark"><i></i>TODAY IN AK</span>
+    <p>Your Alaska weekend, planned.</p>
+    <div class="footsignup" id="weekmail">
+    <div class="signup-grid">
+      <div class="signup-copy">
+        <p class="signup-title">Get the best Alaska events every Thursday.</p>
+        <p class="signup-lead">A short, free email with Friday through Sunday picks. Unsubscribe any time.</p>
+        <p class="fine">We'll never sell your address.</p>
+      </div>
+      <div class="signup-action">
+        <!-- Newsletter embed is the Beehiiv v3 loader. Form id comes from beehiiv_form_id in data/site.json. -->
+    <div class="signupembed" id="footsignup">
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="2e680f3e-5587-47b9-ac3c-01aea594638c"></script>
+      <noscript><p class="fine">Get the email at <a href="https://todays-newsletter-29fbf8.beehiiv.com" rel="noopener" target="_blank">todays-newsletter-29fbf8.beehiiv.com</a>.</p></noscript>
+    </div>
+        <p class="signup-text-link"><a class="signup-text-btn" href="/text-alerts/">I'd rather get a text <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      </div>
+    </div>
+  </div>
+    <p class="links"><a href="/">This week in Alaska</a><a href="/things-to-do-in-anchorage/">Things to do</a><a href="/this-weekend/">This weekend</a><a href="/guides/">Guides</a><a href="/holiday-events/">Holiday events</a><a href="/holiday-lights/">Holiday lights map</a><a href="/december/">December</a><a href="/submit/">Submit your event</a><a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Instagram · @todayinak</a><a href="https://www.facebook.com/profile.php?id=61595774151541" rel="noopener" target="_blank">Facebook</a><a href="/text-alerts/">Text-alert waitlist</a><a href="/advertise/">Advertise</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a></p>
+    <p><b>Want to list a single event?</b> <a href="/submit/">Submit it here</a>, or <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">DM @todayinak on Instagram</a>.</p>
+    <p class="fine">Most listings are free. Featured events are paid placements and are marked as Featured. Details, menus and hours change. Always check with the venue, organizer or truck before you go.</p>
+    
+  </div>
+</footer>
+<script data-goatcounter="https://todayinak.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var skip = /(?:^|\.)(instagram\.com|facebook\.com|todayinak\.com)$/i;
+  document.addEventListener("click", function(ev){
+    var a = ev.target.closest && ev.target.closest("a[href]");
+    if (!a || !window.goatcounter || !goatcounter.count) return;
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#" || href.indexOf("mailto:") === 0) return;
+    var host = "";
+    try { host = a.hostname || ""; } catch (err) { return; }
+    if (!host || host === location.hostname) return;
+    if (skip.test(host)) return;
+    var rel = a.getAttribute("rel") || "";
+    var name = a.getAttribute("data-count");
+    if (!name) {
+      name = (/\bsponsored\b/.test(rel) ? "affiliate-" : "out-") + host.replace(/^www\./, "");
+    }
+    goatcounter.count({
+      path: "/click/" + name,
+      title: (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80),
+      event: true
+    });
+  }, true);
+})();
+</script>
+</body>
+</html>

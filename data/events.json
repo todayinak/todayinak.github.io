@@ -254,6 +254,22 @@
    "url": "https://www.visitgirdwood.com/events/community-thanksgiving-alyeska-resort"
   },
   {
+   "id": "2026-11-25-thanksgiving-dessert-auction",
+   "date": "2026-11-25",
+   "time": "5 PM",
+   "title": "Thanksgiving Dessert Auction",
+   "category": "Food & Drink",
+   "venue": "Grace Ridge Brewing",
+   "town": "Homer",
+   "price": "Free to attend; bid on desserts",
+   "ages": "Ages not listed (brewery tasting room)",
+   "start": "17:00",
+   "end": "19:00",
+   "worth_the_drive": true,
+   "note": "Bid on homemade desserts for Thanksgiving. Proceeds support Friends of Kachemak Bay State Parks.",
+   "url": "https://www.kbbi.org/community-calendar/event/thanksgiving-dessert-auction-friends-of-kachemak-bay-state-parks-18-11-2026-13-53-22"
+  },
+  {
    "id": "2026-11-25-geeks-who-drink-trivia-at-odd-man-rush",
    "date": "2026-11-25",
    "time": "6 PM",
@@ -1895,5 +1911,5 @@
   }
  ],
  "through": "2026-12-31",
- "last_verified": "2026-11-23"
+ "last_verified": "2026-11-24"
 }
