@@ -1199,3 +1199,93 @@ html[data-theme="bw"] .homepills .homepick-lights a{border-color:#111;border-wid
 .guide .faq p{margin:0 0 8px;color:var(--gray);font:400 16px/1.5 Inter,system-ui,sans-serif}
 .nf-links{font:600 16px/1.5 Inter,system-ui,sans-serif}
 .nf-links a{margin:0 4px}
+
+/* ---------- 21+ Nights (only used when /21-plus/ and the header link are enabled) ---------- */
+.brandactions a.nav21{color:var(--gray);text-decoration:none;font:600 12.5px/1 Inter,system-ui,sans-serif;letter-spacing:.02em;padding:6px 2px;border-bottom:1.5px dashed var(--line);white-space:nowrap}
+.brandactions a.nav21:hover,.brandactions a.nav21:focus-visible{color:var(--white);border-bottom-color:var(--green)}
+@media (max-width:430px){.brandrow:has(.nav21) .mark{letter-spacing:.14em;white-space:nowrap;font-size:13px;gap:7px}.brandactions{gap:8px}.brandactions .handle{font-size:13px}.brandactions a.nav21{font-size:12px}}
+@media (max-width:370px){.brandrow:has(.nav21) .handle{display:none}}
+body.gate-lock{overflow:hidden}
+.gate21{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(3,4,10,.9)}
+html.gate-on .gate21{display:flex}
+.gate21[hidden]{display:none!important}
+.gate21-box{max-width:440px;width:100%;background:var(--card);border:1.5px solid var(--line);border-radius:var(--slab);padding:30px 24px;text-align:center;box-shadow:0 0 0 1px rgba(61,255,192,.15),0 20px 70px rgba(0,0,0,.6),0 0 60px rgba(150,90,255,.18)}
+.gate21-box h2{font:800 clamp(30px,8vw,38px)/1.1 Montserrat;margin:0 0 10px}
+.gate21-box p{color:var(--gray);margin:0 0 16px;font-size:17px}
+.gate21-box .fine{font-size:13px;color:var(--faint);margin:14px 0 0}
+.gate21-btns{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.gate21-btns .btn{border:0;cursor:pointer;width:100%}
+.gate21-no{background:transparent;border:1.5px solid var(--line);color:var(--white);font:700 16px/1 Inter,system-ui,sans-serif;padding:16px 18px;border-radius:var(--slab);cursor:pointer}
+.gate21-no:hover,.gate21-no:focus-visible{border-color:var(--green)}
+
+/* 21+ Nights pages: own nightlife palette (deep navy/black + neon aurora). Same fonts and layout as the rest of the site. */
+body.n21-page{
+  --void:#04060E;--navy:#070B1B;--navy2:#04060E;--card:#0A1022;--card-hover:#101a38;--line:#252F5C;
+  --green:#3DFFC0;--white:#F6F8FF;--gray:#A5B0D2;--faint:#6B77A0;--ember:#FF8AD8;--teal:#35E0FF;--violet:#A870FF;
+  --pill-bg:#1A2250;--chip-bg:rgba(10,16,34,.8);--chip-bg-soft:rgba(10,16,34,.65);--act-bg:rgba(4,6,14,.8);
+  --hero-a:#04060E;--hero-b:#0A0620;--overlay:rgba(4,6,14,.75);--signup-bg:linear-gradient(135deg,#0B1A3A,#2A1160);
+  background:var(--void);color:var(--white);font-size:17px}
+body.n21-page .hero{background:
+  radial-gradient(90% 60% at 8% -5%,rgba(168,112,255,.38),transparent 60%),
+  radial-gradient(80% 55% at 98% 5%,rgba(53,224,255,.24),transparent 58%),
+  radial-gradient(70% 45% at 45% 30%,rgba(61,255,192,.13),transparent 70%),
+  linear-gradient(180deg,#04060E,#0A0620 75%,#04060E)}
+body.n21-page .hero h1{max-width:14ch}
+body.n21-page .hero h1 .neon{color:var(--green);text-shadow:0 0 22px rgba(61,255,192,.55),0 0 60px rgba(61,255,192,.25)}
+body.n21-page .kicker{color:var(--ember)}
+body.n21-page .range{color:var(--green)}
+body.n21-page .hero-q{font-size:19px;color:var(--white)}
+body.n21-page .mark i{box-shadow:0 0 12px var(--green)}
+.n21-crumbs{margin:20px 0 0;font-size:13.5px;color:var(--faint)}
+.n21-crumbs a{color:var(--gray);text-decoration:none}.n21-crumbs a:hover{color:var(--green)}
+.n21-crumbs span{margin:0 4px}.n21-crumbs b{color:var(--white);font-weight:600}
+body.n21-page .n21-crumbs + .kicker{margin-top:18px}
+body.n21-page .chips a{border-color:var(--line)}
+body.n21-page .chips a[aria-current="page"]{background:var(--green);border-color:var(--green);color:#04060E}
+body.n21-page .n21-tabs{margin-top:20px}
+.n21-intro{font-size:19px;line-height:1.55;color:var(--white);margin:0 0 24px;max-width:46rem}
+.n21-intro b{color:var(--green)}
+body.n21-page .sec h2{font-size:clamp(28px,7vw,40px);margin:34px 0 12px}
+body.n21-page .sec h2.n21-weekh{margin-top:6px}
+body.n21-page .lede{font-size:17px;color:var(--gray)}
+body.n21-page .card{background:linear-gradient(180deg,#0C1530,#080E22);border-color:var(--line);transition:border-color .15s,box-shadow .15s}
+body.n21-page .card:hover{border-color:rgba(61,255,192,.55);box-shadow:0 0 24px rgba(61,255,192,.12)}
+body.n21-page .card h4{font-size:22px}
+body.n21-page .where,body.n21-page .note{font-size:16px}
+body.n21-page .pill.when{background:var(--green);color:#04060E}
+body.n21-page .pill.age{border-color:var(--ember);color:var(--ember)}
+body.n21-page .sech{color:var(--green);border-bottom:0!important;position:relative;padding-bottom:10px}
+body.n21-page .sech::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--green),var(--violet) 55%,transparent)}
+body.n21-page .signup{border-color:rgba(168,112,255,.45);box-shadow:0 0 40px rgba(168,112,255,.15)}
+.n21-sponsor{border:1.5px dashed rgba(168,112,255,.55);border-radius:var(--slab);padding:14px 18px;margin:0 0 8px;text-align:center}
+.n21-sponsor-k{color:var(--faint);font:700 11.5px/1 Inter;letter-spacing:.18em;text-transform:uppercase;margin:0 0 8px}
+.n21-sponsor-slot{font:700 clamp(18px,4.5vw,22px)/1.25 Montserrat;color:var(--gray);margin:0}
+.n21-sponsor-fine{color:var(--faint);font-size:13px;margin:6px 0 0}
+.n21-signup{margin:38px 0 8px}.n21-signup .signup{margin:0}
+.n21-weekly .lede,.n21-hoods .lede{margin-bottom:16px}
+.n21-days,.n21-hoodgrid{display:grid;gap:14px}
+@media (min-width:700px){.n21-days,.n21-hoodgrid{grid-template-columns:1fr 1fr}}
+.n21-day,.n21-hood{background:var(--card);border:1.5px solid var(--line);border-radius:var(--slab);padding:14px 16px}
+.n21-day h3,.n21-hood h3,.n21-faq h3{font:800 16px/1.2 Montserrat;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin:0 0 8px!important}
+.n21-day ul,.n21-hood ul,.n21-subs ul{list-style:none;margin:0;padding:0}
+.n21-day li,.n21-hood li{margin:6px 0;font-size:16px;color:var(--gray)}
+.n21-day li b{color:var(--white);font-weight:700}
+.n21-hood li span{color:var(--faint);font-size:14px}
+.n21-faq h3{margin:18px 0 4px!important;text-transform:none;letter-spacing:0;font-size:19px;color:var(--white)}
+.n21-faq p{margin:0;color:var(--gray)}
+.n21-subs li{margin:8px 0;font-size:18px}
+body.n21-page .n21-later{margin-top:40px}
+.n21-how{margin:34px 0 0;color:var(--gray);border-top:1.5px solid var(--line);padding-top:16px}
+.n21-how summary{cursor:pointer;font-weight:700;color:var(--white)}
+.n21-back{margin:22px 0 0}
+.n21-ctx{padding-top:0;padding-bottom:28px;color:var(--gray);font-size:15.5px}
+body.n21-page .n21-tabs{flex-wrap:wrap;overflow:visible;margin:20px 0 0;padding:0}
+body.n21-page main.n21 .sec{padding-top:26px}
+/* 21+ Nights signup (Kit native form) */
+.n21kit{flex-wrap:wrap}
+.n21kit input{min-height:54px}
+.n21kit button{min-height:54px;background:var(--green);color:#04060E}
+.n21kit input:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
+.n21kit-fine{font-size:15px;line-height:1.5;color:var(--gray)}
+.n21kit-fine a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:560px){.signup-action .n21kit{flex-direction:column}.signup-action .n21kit button{width:100%}}

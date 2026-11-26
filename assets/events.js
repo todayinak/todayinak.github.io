@@ -875,6 +875,7 @@
     }
   }
   function paintDayList() {
+    if (document.body.classList.contains('n21-page')) return;   // 21+ Nights pages keep their static, crawlable day sections
     if (calView) {
       if (dayRoot) dayRoot.hidden = true;
       parkHomeSignup();

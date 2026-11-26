@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anchorage Nightlife This Week: 21+ Comedy, Music &amp; Trivia | Today in AK</title>
+<meta name="description" content="Anchorage nightlife this week: 21+ comedy shows, live music at bars and breweries, trivia nights and late shows in Spenard, downtown and beyond. Updated weekly.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name='impact-site-verification' value='296fdaff-3c85-4fa4-a2dd-ec15bf39f020'>
+<meta name="google-site-verification" content="R-UyxeZQOgapG3BMBy2vlycc2zH-wJ_AVFE5U5Wilqs">
+<meta name="google-site-verification" content="XUgCnjfqnmBOgDKfXt2SQeZYLD7qbN6veQSigK6uvdg">
+<meta name="theme-color" content="#05070F" id="theme-color">
+<script>
+(function(){
+  var KEY="tia-theme";
+  var THEMES={aurora:"#0D1626",dark:"#0D1626",light:"#F3F6FB",bw:"#FFFFFF",fireweed:"#1A0B14",blush:"#FBF3F6",glacier:"#071820",sunset:"#1A0E0C"};
+  var NAMES={aurora:"Aurora",light:"Light",bw:"Black & White",fireweed:"Fireweed",blush:"Blush",glacier:"Glacier",sunset:"Sunset"};
+  function known(t){ if(!t) return null; if(t==="dark") return "aurora"; if(t==="pink") return "fireweed"; return THEMES[t] ? t : null; }
+  function preferred(){
+    try{ var s=known(localStorage.getItem(KEY)); if(s) return s; }catch(e){}
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "bw" : "aurora";
+  }
+  function apply(theme){
+    theme=known(theme)||"aurora";
+    document.documentElement.setAttribute("data-theme", theme);
+    var meta=document.getElementById("theme-color");
+    if(meta) meta.setAttribute("content", THEMES[theme]);
+    var btn=document.getElementById("theme-menu");
+    if(btn) btn.setAttribute("aria-label", "Color theme, "+(NAMES[theme]||theme)+" selected. Open to change.");
+    var list=document.getElementById("theme-options");
+    if(list){
+      var opts=list.querySelectorAll("[data-theme-value]");
+      for(var i=0;i<opts.length;i++){
+        var on=opts[i].getAttribute("data-theme-value")===theme;
+        opts[i].setAttribute("aria-selected", on?"true":"false");
+        opts[i].tabIndex=on?0:-1;
+      }
+    }
+  }
+  function save(theme){ try{ localStorage.setItem(KEY, theme); }catch(e){} apply(theme); }
+  apply(preferred());
+  function closeMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=true;
+    btn.setAttribute("aria-expanded","false");
+  }
+  function openMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=false;
+    btn.setAttribute("aria-expanded","true");
+    var sel=list.querySelector('[aria-selected="true"]')||list.querySelector("[data-theme-value]");
+    if(sel) sel.focus();
+  }
+  function wire(){
+    apply(preferred());
+    var root=document.getElementById("theme-picker"), btn=document.getElementById("theme-menu"), list=document.getElementById("theme-options");
+    if(!root||!btn||!list) return;
+    btn.addEventListener("click", function(ev){ ev.stopPropagation(); if(list.hidden) openMenu(); else closeMenu(); });
+    list.addEventListener("click", function(ev){
+      var t=ev.target.closest("[data-theme-value]");
+      if(!t) return;
+      ev.preventDefault();
+      save(t.getAttribute("data-theme-value"));
+      closeMenu();
+      btn.focus();
+    });
+    document.addEventListener("click", function(ev){ if(!root.contains(ev.target)) closeMenu(); });
+    document.addEventListener("keydown", function(ev){
+      if(list.hidden) return;
+      var opts=[].slice.call(list.querySelectorAll("[data-theme-value]"));
+      var i=opts.indexOf(document.activeElement);
+      if(ev.key==="Escape"){ ev.preventDefault(); closeMenu(); btn.focus(); return; }
+      if(ev.key==="ArrowRight"||ev.key==="ArrowDown"){ ev.preventDefault(); opts[(i+1+opts.length)%opts.length].focus(); }
+      if(ev.key==="ArrowLeft"||ev.key==="ArrowUp"){ ev.preventDefault(); opts[(i-1+opts.length)%opts.length].focus(); }
+      if(ev.key==="Home"){ ev.preventDefault(); opts[0].focus(); }
+      if(ev.key==="End"){ ev.preventDefault(); opts[opts.length-1].focus(); }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", wire);
+})();
+</script>
+
+<script>
+(function(){try{if(localStorage.getItem("tia-21")!=="1"){document.documentElement.classList.add("gate-on");}}catch(e){document.documentElement.classList.add("gate-on");}})();
+</script>
+<link rel="canonical" href="https://todayinak.com/21-plus/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Today in AK">
+<meta property="og:title" content="Anchorage Nightlife This Week: 21+ Comedy, Music &amp; Trivia | Today in AK">
+<meta property="og:description" content="Anchorage nightlife this week: 21+ comedy shows, live music at bars and breweries, trivia nights and late shows in Spenard, downtown and beyond. Updated weekly.">
+<meta property="og:url" content="https://todayinak.com/21-plus/">
+<meta property="og:image" content="https://todayinak.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Today in AK: 21+ Nights in Anchorage.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anchorage Nightlife This Week: 21+ Comedy, Music &amp; Trivia | Today in AK">
+<meta name="twitter:description" content="Anchorage nightlife this week: 21+ comedy shows, live music at bars and breweries, trivia nights and late shows in Spenard, downtown and beyond. Updated weekly.">
+<meta name="twitter:image" content="https://todayinak.com/assets/og-image.png">
+<!-- Generated by tools/twentyone_page.py via tools/render.py. Do not hand-edit. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://todayinak.com/21-plus/#page","name":"21+ Nights in Anchorage","description":"Anchorage nightlife this week: 21+ comedy shows, live music at bars and breweries, trivia nights and late shows in Spenard, downtown and beyond. Updated weekly.","url":"https://todayinak.com/21-plus/","inLanguage":"en-US","dateModified":"2026-11-25","isPartOf":{"@type":"WebSite","name":"Today in AK","url":"https://todayinak.com/"},"about":{"@type":"Place","name":"Anchorage, Alaska"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Today in AK","item":"https://todayinak.com/"},{"@type":"ListItem","position":2,"name":"21+ Nights","item":"https://todayinak.com/21-plus/"}]},{"@type":"ItemList","name":"21+ Nights in Anchorage","numberOfItems":26,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Event","name":"Geeks Who Drink Trivia at Odd Man Rush","startDate":"2026-11-25T18:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Odd Man Rush Brewing, 10930 Mausel St","address":{"@type":"PostalAddress","addressLocality":"Eagle River","addressRegion":"AK","addressCountry":"US","streetAddress":"10930 Mausel St"}},"url":"https://www.oddmanrushbrewing.com/events","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Odd Man Rush Brewing, 10930 Mausel St"},"description":"Geeks Who Drink Trivia at Odd Man Rush at Odd Man Rush Brewing, 10930 Mausel St in Eagle River.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://www.oddmanrushbrewing.com/events"}}},{"@type":"ListItem","position":2,"item":{"@type":"Event","name":"Koot's Comedy Open Mic","startDate":"2026-11-25T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Koot's, 2435 Spenard Rd","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"2435 Spenard Rd"}},"url":"https://koots.com/events","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Koot's, 2435 Spenard Rd"},"endDate":"2026-11-25T22:00:00-09:00","description":"Weekly Wednesday open mic, 7–10 PM.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://koots.com/events"},"typicalAgeRange":"21-"}},{"@type":"ListItem","position":3,"item":{"@type":"Event","name":"Turkey's Last Stand with Jay Straw","startDate":"2026-11-25T21:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Van's Dive Bar, 1027 E 5th Ave","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"1027 E 5th Ave"}},"url":"https://www.facebook.com/vansdivebar/events","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Van's Dive Bar, 1027 E 5th Ave"},"description":"Thanksgiving Eve show."}},{"@type":"ListItem","position":4,"item":{"@type":"Event","name":"30/30 Society Grown Folks Houseparty","startDate":"2026-11-26T20:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"The Aurora Room, 415 E St","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"415 E St"}},"url":"https://www.eventbrite.com/e/3030-society-grown-folks-houseparty-tickets-2004924867249","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"The Aurora Room, 415 E St"},"description":"Thanksgiving night party with DJ Thug Passion, on the top floor of the old Hard Rock Cafe building.","offers":{"@type":"Offer","price":"20","priceCurrency":"USD","url":"https://www.eventbrite.com/e/3030-society-grown-folks-houseparty-tickets-2004924867249"},"typicalAgeRange":"21-"}},{"@type":"ListItem","position":5,"item":{"@type":"Event","name":"H3 Alaska Reggae at Odd Man Rush","startDate":"2026-11-27T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Odd Man Rush Brewing, 10930 Mausel St","address":{"@type":"PostalAddress","addressLocality":"Eagle River","addressRegion":"AK","addressCountry":"US","streetAddress":"10930 Mausel St"}},"url":"https://www.eventbrite.com/e/h3-alaska-reggae-tickets-2003377791905","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Odd Man Rush Brewing, 10930 Mausel St"},"endDate":"2026-11-27T22:00:00-09:00","description":"Local reggae band H3 plays the taproom.","offers":{"@type":"Offer","price":"12.51","priceCurrency":"USD","url":"https://www.eventbrite.com/e/h3-alaska-reggae-tickets-2003377791905"},"typicalAgeRange":"21-"}},{"@type":"ListItem","position":6,"item":{"@type":"Event","name":"Nerdvana Trivia Night","startDate":"2026-11-27T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Whale's Tail, Hotel Captain Cook, 939 W 5th Ave","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"939 W 5th Ave"}},"url":"https://captaincook.com/event/nerdvana-trivia-night-whales-tail/2026-11-27/","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Whale's Tail, Hotel Captain Cook, 939 W 5th Ave"},"description":"Nerdvana Trivia Night at Whale's Tail, Hotel Captain Cook, 939 W 5th Ave in Anchorage."}},{"@type":"ListItem","position":7,"item":{"@type":"Event","name":"R&B Bingo at The Four Eleven","startDate":"2026-11-27T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"The Four Eleven, 411 W 4th Ave","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"411 W 4th Ave"}},"url":"https://www.eventbrite.com/e/beautiful-clay-presents-rb-bingo-tickets-2004531121545","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"The Four Eleven, 411 W 4th Ave"},"description":"Bingo with soul music from DJ Thug Passion, food and prizes.","offers":{"@type":"Offer","price":"55.20","priceCurrency":"USD","url":"https://www.eventbrite.com/e/beautiful-clay-presents-rb-bingo-tickets-2004531121545"}}},{"@type":"ListItem","position":8,"item":{"@type":"Event","name":"The Vintage Retro: 70s Dance Party at 907 Alehouse","startDate":"2026-11-27T19:30:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"907 Alehouse & Grill, 8001 Old Seward Hwy","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"8001 Old Seward Hwy"}},"url":"https://www.thevintageretroband.com/showschedule","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"907 Alehouse & Grill, 8001 Old Seward Hwy"},"endDate":"2026-11-27T23:00:00-09:00","description":"Alaska's 70s band plays Stevie Wonder, KC and the Sunshine Band, Kool and the Gang and more. Bell-bottoms encouraged."}},{"@type":"ListItem","position":9,"item":{"@type":"Event","name":"Fleetwood AK at 907 Alehouse","startDate":"2026-11-28T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"907 Alehouse & Grill, 8001 Old Seward Hwy","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"8001 Old Seward Hwy"}},"url":"https://www.907ale.com/","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"907 Alehouse & Grill, 8001 Old Seward Hwy"},"endDate":"2026-11-28T22:30:00-09:00","description":"Six-piece band playing Fleetwood Mac hits from six decades of rock, pop and blues."}},{"@type":"ListItem","position":10,"item":{"@type":"Event","name":"H3 at Humpy's","startDate":"2026-11-28T20:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Humpy's Great Alaskan Alehouse, 610 W 6th Ave","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"610 W 6th Ave"}},"url":"https://alaskamusic.live/shows/2026-11-28-h3-at-humpys-great-alaskan-alehouse","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Humpy's Great Alaskan Alehouse, 610 W 6th Ave"},"description":"Local reggae band H3 plays downtown."}},{"@type":"ListItem","position":11,"item":{"@type":"Event","name":"The Vintage Retro: 70s Party at the Carousel Lounge","startDate":"2026-11-28T21:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"The Carousel Lounge, 3206 Spenard Rd","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"3206 Spenard Rd"}},"url":"https://www.thevintageretroband.com/showschedule","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"The Carousel Lounge, 3206 Spenard Rd"},"description":"70s hits all night in Spenard.","typicalAgeRange":"21-"}},{"@type":"ListItem","position":12,"item":{"@type":"Event","name":"Fall Craft Nite at Koot's","startDate":"2026-11-29T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Koot's, 2435 Spenard Rd","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"2435 Spenard Rd"}},"url":"https://www.eventbrite.com/e/fall-craft-nite-at-koots-tickets-2003555386094","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Koot's, 2435 Spenard Rd"},"description":"Paint-and-sip night from Lushes-N-Brushes, hosted by IceBeard Comedy. Doors 6:45 PM.","offers":{"@type":"Offer","price":"38","priceCurrency":"USD","url":"https://www.eventbrite.com/e/fall-craft-nite-at-koots-tickets-2003555386094"},"typicalAgeRange":"21-"}},{"@type":"ListItem","position":13,"item":{"@type":"Event","name":"Karaoke Mondays at Odd Man Rush","startDate":"2026-11-30T18:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Odd Man Rush Brewing, 10930 Mausel St","address":{"@type":"PostalAddress","addressLocality":"Eagle River","addressRegion":"AK","addressCountry":"US","streetAddress":"10930 Mausel St"}},"url":"https://www.oddmanrushbrewing.com/events","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Odd Man Rush Brewing, 10930 Mausel St"},"endDate":"2026-11-30T21:00:00-09:00","description":"Karaoke Mondays at Odd Man Rush at Odd Man Rush Brewing, 10930 Mausel St in Eagle River.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://www.oddmanrushbrewing.com/events"}}},{"@type":"ListItem","position":14,"item":{"@type":"Event","name":"Monday Jazz Jam at Fire Island","startDate":"2026-11-30T18:30:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Fire Island Rustic Bakeshop, K Street Market, 718 K St","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"718 K St"}},"url":"https://akjazzworkshop.org/calendar/","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Fire Island Rustic Bakeshop, K Street Market, 718 K St"},"endDate":"2026-11-30T21:30:00-09:00","description":"Weekly community jazz session hosted by the Alaska Jazz Workshop. Musicians can bring an instrument and sit in.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://akjazzworkshop.org/calendar/"}}},{"@type":"ListItem","position":15,"item":{"@type":"Event","name":"Geeks Who Drink Trivia at Odd Man Rush","startDate":"2026-12-02T18:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Odd Man Rush Brewing, 10930 Mausel St","address":{"@type":"PostalAddress","addressLocality":"Eagle River","addressRegion":"AK","addressCountry":"US","streetAddress":"10930 Mausel St"}},"url":"https://www.oddmanrushbrewing.com/events","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Odd Man Rush Brewing, 10930 Mausel St"},"description":"Geeks Who Drink Trivia at Odd Man Rush at Odd Man Rush Brewing, 10930 Mausel St in Eagle River.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://www.oddmanrushbrewing.com/events"}}},{"@type":"ListItem","position":16,"item":{"@type":"Event","name":"Koot's Comedy Open Mic","startDate":"2026-12-02T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Koot's, 2435 Spenard Rd","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"2435 Spenard Rd"}},"url":"https://koots.com/events","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Koot's, 2435 Spenard Rd"},"endDate":"2026-12-02T22:00:00-09:00","description":"Weekly Wednesday open mic, 7–10 PM.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://koots.com/events"},"typicalAgeRange":"21-"}},{"@type":"ListItem","position":17,"item":{"@type":"Event","name":"Power Plant Comedy: Vin Pal at Main Street Tap & Grill","startDate":"2026-12-03T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Main Street Tap & Grill, 10800 Kenai Spur Hwy","address":{"@type":"PostalAddress","addressLocality":"Kenai","addressRegion":"AK","addressCountry":"US","streetAddress":"10800 Kenai Spur Hwy"}},"url":"https://www.eventbrite.com/e/power-plant-comedy-returns-to-main-street-tap-grill-tickets-2005479122040","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Main Street Tap & Grill, 10800 Kenai Spur Hwy"},"endDate":"2026-12-03T20:30:00-09:00","description":"Touring headliner Vin Pal brings stand-up to Kenai.","offers":{"@type":"Offer","price":"28.52","priceCurrency":"USD","url":"https://www.eventbrite.com/e/power-plant-comedy-returns-to-main-street-tap-grill-tickets-2005479122040"},"typicalAgeRange":"21-"}},{"@type":"ListItem","position":18,"item":{"@type":"Event","name":"Don Louis & Band with Jesse James","startDate":"2026-12-05T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"The Aurora Room, 415 E St","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"415 E St"}},"url":"https://www.ericksonevents.com/don-louis-12052026-anchorage/","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"The Aurora Room, 415 E St"},"description":"Texas-raised country artist blending rock, hip-hop and R&B, with Jesse James opening. Doors 6 PM.","typicalAgeRange":"21-"}},{"@type":"ListItem","position":19,"item":{"@type":"Event","name":"Ugly Sweater Party with Good Company","startDate":"2026-12-05T20:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Humpy's Great Alaskan Alehouse, 610 W 6th Ave","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"610 W 6th Ave"}},"url":"https://alaskamusic.live/shows/2026-12-05-ugly-sweater-party","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Humpy's Great Alaskan Alehouse, 610 W 6th Ave"},"description":"Ugly Sweater Party with Good Company at Humpy's Great Alaskan Alehouse, 610 W 6th Ave in Anchorage."}},{"@type":"ListItem","position":20,"item":{"@type":"Event","name":"Vin Pal at Koot's","startDate":"2026-12-05T20:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Koot's, 2435 Spenard Rd","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"2435 Spenard Rd"}},"url":"https://www.rubberptarmigan.com/events/vin-pal-koots","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Koot's, 2435 Spenard Rd"},"description":"Vin Pal at Koot's at Koot's, 2435 Spenard Rd in Anchorage.","offers":{"@type":"Offer","price":"25","priceCurrency":"USD","url":"https://www.rubberptarmigan.com/events/vin-pal-koots"},"typicalAgeRange":"21-"}},{"@type":"ListItem","position":21,"item":{"@type":"Event","name":"Kage Free's Velvet Hours: Grace C. Elliot","startDate":"2026-12-10T18:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Penny Royalty, 3005 Spenard Rd","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"3005 Spenard Rd"}},"url":"https://www.instagram.com/pennyroyaltyalaska/","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Penny Royalty, 3005 Spenard Rd"},"endDate":"2026-12-10T21:00:00-09:00","description":"Doors 6 PM, show 7–9 PM. Hosted by Kage Free, with Grace C. Elliot. Couples buying together get $20 off. Includes 2 drink tokens (3 if you're dressed stylish). Tickets by Venmo, Cash App or Zelle on the event flyer. Sponsored by Fromagio's Artisan Cheese and Birch Brew.","offers":{"@type":"Offer","price":"35","priceCurrency":"USD","url":"https://www.instagram.com/pennyroyaltyalaska/"}}},{"@type":"ListItem","position":22,"item":{"@type":"Event","name":"Vitamin Come(D)y: Shane Torres","startDate":"2026-12-11T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Bear Tooth Theatrepub, 1230 W 27th Ave","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"1230 W 27th Ave"}},"url":"https://www.eventbrite.com/e/vitamin-comedy-shane-torres-tickets-1999063506762","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Bear Tooth Theatrepub, 1230 W 27th Ave"},"endDate":"2026-12-11T21:00:00-09:00","description":"Touring standup headlines Bear Tooth's monthly winter comedy series. Doors 6:30 PM.","typicalAgeRange":"18-"}},{"@type":"ListItem","position":23,"item":{"@type":"Event","name":"Stellar Sagittarius Nights (EDM dance party)","startDate":"2026-12-12T21:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Koot's, 2435 Spenard Rd","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"2435 Spenard Rd"}},"url":"https://alaskamusic.live/shows/2026-12-12-stellar-sagittarius-nights","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Koot's, 2435 Spenard Rd"},"description":"Stellar Sagittarius Nights (EDM dance party) at Koot's, 2435 Spenard Rd in Anchorage.","typicalAgeRange":"21-"}},{"@type":"ListItem","position":24,"item":{"@type":"Event","name":"Cosmic Relief: Shane Mauss & Grace C. Elliot","startDate":"2026-12-13T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"The Aurora Room, 415 E St","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"415 E St"}},"url":"https://www.ericksonevents.com/shane-mauss-grace-elliot-12132026-anchorage/","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"The Aurora Room, 415 E St"},"description":"Science-minded stand-up from Shane Mauss, with Grace C. Elliot opening and closing. Doors 6 PM. Under 21 admitted with a parent or guardian.","offers":{"@type":"Offer","price":"35","priceCurrency":"USD","url":"https://www.ericksonevents.com/shane-mauss-grace-elliot-12132026-anchorage/"},"typicalAgeRange":"21-"}},{"@type":"ListItem","position":25,"item":{"@type":"Event","name":"Comedy Up North: Daniel Franzese","startDate":"2026-12-16T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Main Event, 1041 E 76th Ave #1A","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"1041 E 76th Ave"}},"url":"https://www.tickettailor.com/events/comedyupnorth/2354352","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Main Event, 1041 E 76th Ave #1A"},"endDate":"2026-12-16T21:00:00-09:00","description":"Comedy Up North: Daniel Franzese at Main Event, 1041 E 76th Ave #1A in Anchorage.","offers":{"@type":"Offer","price":"45","priceCurrency":"USD","url":"https://www.tickettailor.com/events/comedyupnorth/2354352"},"typicalAgeRange":"18-"}},{"@type":"ListItem","position":26,"item":{"@type":"Event","name":"The Ugly Christmas Sweater Party with I Like Robots","startDate":"2026-12-19T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Odd Man Rush Brewing, 10930 Mausel St","address":{"@type":"PostalAddress","addressLocality":"Eagle River","addressRegion":"AK","addressCountry":"US","streetAddress":"10930 Mausel St"}},"url":"https://alaskamusic.live/shows/2026-12-19-the-ugly-christmas-sweater-party","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Odd Man Rush Brewing, 10930 Mausel St"},"endDate":"2026-12-19T23:00:00-09:00","description":"The Ugly Christmas Sweater Party with I Like Robots at Odd Man Rush Brewing, 10930 Mausel St in Eagle River."}}]}]}</script>
+<link rel="preload" href="/assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=4b301e6f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+</head>
+<body class="n21-page">
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow"><span class="mark"><i></i>TODAY IN AK</span><div class="brandactions"><a class="nav21" href="/21-plus/">21+ Nights</a><div class="theme-picker" id="theme-picker"><button type="button" class="theme-toggle" id="theme-menu" aria-label="Color theme, Aurora selected. Open to change." aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 2.2 17.7c.7-.2 1-1 .6-1.6-.3-.5-.5-1.1-.5-1.7a2.4 2.4 0 0 1 2.4-2.4h1.2A4.1 4.1 0 0 0 21 11.1 9 9 0 0 0 12 3z"/><circle class="dot" cx="8" cy="10" r="1.15"/><circle class="dot" cx="12" cy="7.4" r="1.15"/><circle class="dot" cx="16.2" cy="9.2" r="1.15"/><circle class="dot" cx="9.6" cy="14.2" r="1.15"/></svg></button><div class="theme-menu" id="theme-options" role="listbox" aria-label="Color theme" hidden><p class="theme-menu-label" id="theme-menu-label">Color theme</p><button type="button" role="option" class="theme-swatch" data-theme-value="aurora" aria-label="Aurora" aria-selected="true"><i style="--swatch:#5EF2B5;--swatch-bg:#0D1626"></i><span>Aurora</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="light" aria-label="Light" aria-selected="false" tabindex="-1"><i style="--swatch:#0B6B4C;--swatch-bg:#F3F6FB"></i><span>Light</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="bw" aria-label="Black &amp; White" aria-selected="false" tabindex="-1"><i style="--swatch:#111111;--swatch-bg:#FFFFFF"></i><span>Black &amp; White</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="fireweed" aria-label="Fireweed" aria-selected="false" tabindex="-1"><i style="--swatch:#FF6BA8;--swatch-bg:#1A0B14"></i><span>Fireweed</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="blush" aria-label="Blush" aria-selected="false" tabindex="-1"><i style="--swatch:#A81B58;--swatch-bg:#FBF3F6"></i><span>Blush</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="glacier" aria-label="Glacier" aria-selected="false" tabindex="-1"><i style="--swatch:#7EE0F2;--swatch-bg:#071820"></i><span>Glacier</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="sunset" aria-label="Sunset" aria-selected="false" tabindex="-1"><i style="--swatch:#FF8A5B;--swatch-bg:#1A0E0C"></i><span>Sunset</span></button></div></div><a class="handle" href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">@todayinak</a></div></div>
+    <nav class="n21-crumbs" aria-label="Breadcrumb"><a href="/">Today in AK</a> <span>/</span> <b>21+ Nights</b></nav>
+    <p class="kicker">21 and over · Anchorage nightlife</p>
+    <h1><span class="neon">21+</span> Nights in Anchorage</h1>
+    <p class="hero-q">Comedy shows, live music, trivia and brewery nights.</p>
+    <p class="range">Wed Nov 25 – Tue Dec 1, 2026</p>
+    <nav class="chips n21-tabs" aria-label="21+ Nights sections"><a href="/21-plus/" aria-current="page">All 21+</a><a href="/21-plus/comedy/">Comedy</a><a href="/21-plus/live-music/">Live music</a><a href="/21-plus/trivia/">Trivia &amp; karaoke</a></nav>
+  </div>
+</header>
+
+<main class="n21">
+<section id="events" class="sec wrap">
+  <p class="n21-intro">Looking for nightlife in Anchorage? <b>21+ Nights</b> is Today in AK’s weekly guide to comedy shows, live music, trivia nights, karaoke, tastings and brewery events at bars and venues in Anchorage, Spenard, Eagle River and the Kenai Peninsula. It uses the same checked event list as the rest of the site and is refreshed every Thursday. Ages and prices are shown as the venue lists them.</p>
+  <aside class="n21-sponsor" aria-label="Presented by">
+  <p class="n21-sponsor-k">Presented by</p>
+  <p class="n21-sponsor-slot">Your bar, brewery or comedy room here</p>
+  <p class="n21-sponsor-fine">One local sponsor a month. <a href="/advertise/">See how it works</a>.</p>
+</aside>
+  <h2 class="n21-weekh">14 21+ events in Anchorage this week</h2>
+  <p class="lede">Wed Nov 25 through Tue Dec 1. Some bars and breweries welcome all ages earlier in the day, so check the venue first. Details can change. Check with the organizer before you go.</p>
+  <section class="evsec" aria-labelledby="h-2026-11-25">
+<h3 class="sech" id="h-2026-11-25">Wednesday, November 25 <span class="n">3</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-25-geeks-who-drink-trivia-at-odd-man-rush" data-id="2026-11-25-geeks-who-drink-trivia-at-odd-man-rush" data-sec="nightlife" data-days="2026-11-25" data-age="other" data-free="1" data-region="eagle-river" data-on="2026-11-25" data-start="18:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Nov 25</span> · 6 PM</span></div>
+  <h4>Geeks Who Drink Trivia at Odd Man Rush</h4>
+  <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Geeks Who Drink Trivia at Odd Man Rush (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-25-koots-comedy-open-mic" data-id="2026-11-25-koots-comedy-open-mic" data-sec="comedy" data-days="2026-11-25" data-age="over21" data-free="1" data-region="anchorage" data-on="2026-11-25" data-start="19:00" data-end="22:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Nov 25</span> · 7 PM</span></div>
+  <h4>Koot&#x27;s Comedy Open Mic</h4>
+  <p class="where">Koot&#x27;s, 2435 Spenard Rd · <b>Anchorage</b></p><p class="note">Weekly Wednesday open mic, 7–10 PM.</p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill age">21+</span><a class="more" href="https://koots.com/events" rel="noopener" target="_blank" aria-label="Event details: Koot&#x27;s Comedy Open Mic (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-25-turkeys-last-stand-with-jay-straw" data-id="2026-11-25-turkeys-last-stand-with-jay-straw" data-sec="music" data-days="2026-11-25" data-age="other" data-region="anchorage" data-on="2026-11-25" data-start="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Nov 25</span> · 9 PM</span></div>
+  <h4>Turkey&#x27;s Last Stand with Jay Straw</h4>
+  <p class="where">Van&#x27;s Dive Bar, 1027 E 5th Ave · <b>Anchorage</b></p><p class="note">Thanksgiving Eve show.</p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.facebook.com/vansdivebar/events" rel="noopener" target="_blank" aria-label="Event details: Turkey&#x27;s Last Stand with Jay Straw (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-11-26">
+<h3 class="sech" id="h-2026-11-26">Thursday, November 26 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-26-30-30-society-grown-folks-houseparty" data-id="2026-11-26-30-30-society-grown-folks-houseparty" data-sec="nightlife" data-days="2026-11-26" data-age="over21" data-region="anchorage" data-on="2026-11-26" data-start="20:00">
+  <div class="pills"><span class="pill when"><span class="wd">Thu Nov 26</span> · 8 PM</span></div>
+  <h4>30/30 Society Grown Folks Houseparty</h4>
+  <p class="where">The Aurora Room, 415 E St · <b>Anchorage</b></p><p class="note">Thanksgiving night party with DJ Thug Passion, on the top floor of the old Hard Rock Cafe building.</p>
+  <div class="pills meta"><span class="pill">$20</span><span class="pill age">21+</span><a class="more" href="https://www.eventbrite.com/e/3030-society-grown-folks-houseparty-tickets-2004924867249" rel="noopener" target="_blank" aria-label="Event details: 30/30 Society Grown Folks Houseparty (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-11-27">
+<h3 class="sech" id="h-2026-11-27">Friday, November 27 <span class="n">4</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-27-h3-alaska-reggae-at-odd-man-rush" data-id="2026-11-27-h3-alaska-reggae-at-odd-man-rush" data-sec="music" data-days="2026-11-27" data-age="over21" data-region="eagle-river" data-on="2026-11-27" data-start="19:00" data-end="22:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · 7 PM</span></div>
+  <h4>H3 Alaska Reggae at Odd Man Rush</h4>
+  <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p><p class="note">Local reggae band H3 plays the taproom.</p>
+  <div class="pills meta"><span class="pill">$12.51 with fees</span><span class="pill age">21+</span><a class="more" href="https://www.eventbrite.com/e/h3-alaska-reggae-tickets-2003377791905" rel="noopener" target="_blank" aria-label="Event details: H3 Alaska Reggae at Odd Man Rush (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-27-nerdvana-trivia-night" data-id="2026-11-27-nerdvana-trivia-night" data-sec="nightlife" data-days="2026-11-27" data-age="other" data-region="anchorage" data-on="2026-11-27" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · 7 PM</span></div>
+  <h4>Nerdvana Trivia Night</h4>
+  <p class="where">Whale&#x27;s Tail, Hotel Captain Cook, 939 W 5th Ave · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://captaincook.com/event/nerdvana-trivia-night-whales-tail/2026-11-27/" rel="noopener" target="_blank" aria-label="Event details: Nerdvana Trivia Night (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-27-r-and-b-bingo-at-the-four-eleven" data-id="2026-11-27-r-and-b-bingo-at-the-four-eleven" data-sec="nightlife" data-days="2026-11-27" data-age="other" data-region="anchorage" data-on="2026-11-27" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · 7 PM</span></div>
+  <h4>R&amp;B Bingo at The Four Eleven</h4>
+  <p class="where">The Four Eleven, 411 W 4th Ave · <b>Anchorage</b></p><p class="note">Bingo with soul music from DJ Thug Passion, food and prizes.</p>
+  <div class="pills meta"><span class="pill">$55.20 with fees</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.eventbrite.com/e/beautiful-clay-presents-rb-bingo-tickets-2004531121545" rel="noopener" target="_blank" aria-label="Event details: R&amp;B Bingo at The Four Eleven (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-27-the-vintage-retro-70s-dance-party-at-907-alehouse" data-id="2026-11-27-the-vintage-retro-70s-dance-party-at-907-alehouse" data-sec="music" data-days="2026-11-27" data-age="other" data-region="anchorage" data-on="2026-11-27" data-start="19:30" data-end="23:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · 7:30 PM</span></div>
+  <h4>The Vintage Retro: 70s Dance Party at 907 Alehouse</h4>
+  <p class="where">907 Alehouse &amp; Grill, 8001 Old Seward Hwy · <b>Anchorage</b></p><p class="note">Alaska&#x27;s 70s band plays Stevie Wonder, KC and the Sunshine Band, Kool and the Gang and more. Bell-bottoms encouraged.</p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.thevintageretroband.com/showschedule" rel="noopener" target="_blank" aria-label="Event details: The Vintage Retro: 70s Dance Party at 907 Alehouse (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-11-28">
+<h3 class="sech" id="h-2026-11-28">Saturday, November 28 <span class="n">3</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-28-fleetwood-ak-at-907-alehouse" data-id="2026-11-28-fleetwood-ak-at-907-alehouse" data-sec="music" data-days="2026-11-28" data-age="other" data-region="anchorage" data-on="2026-11-28" data-start="19:00" data-end="22:30">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 28</span> · 7 PM</span></div>
+  <h4>Fleetwood AK at 907 Alehouse</h4>
+  <p class="where">907 Alehouse &amp; Grill, 8001 Old Seward Hwy · <b>Anchorage</b></p><p class="note">Six-piece band playing Fleetwood Mac hits from six decades of rock, pop and blues.</p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.907ale.com/" rel="noopener" target="_blank" aria-label="Event details: Fleetwood AK at 907 Alehouse (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-28-h3-at-humpys" data-id="2026-11-28-h3-at-humpys" data-sec="music" data-days="2026-11-28" data-age="other" data-region="anchorage" data-on="2026-11-28" data-start="20:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 28</span> · 8 PM</span></div>
+  <h4>H3 at Humpy&#x27;s</h4>
+  <p class="where">Humpy&#x27;s Great Alaskan Alehouse, 610 W 6th Ave · <b>Anchorage</b></p><p class="note">Local reggae band H3 plays downtown.</p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://alaskamusic.live/shows/2026-11-28-h3-at-humpys-great-alaskan-alehouse" rel="noopener" target="_blank" aria-label="Event details: H3 at Humpy&#x27;s (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-28-the-vintage-retro-70s-party-at-the-carousel-lounge" data-id="2026-11-28-the-vintage-retro-70s-party-at-the-carousel-lounge" data-sec="music" data-days="2026-11-28" data-age="over21" data-region="anchorage" data-on="2026-11-28" data-start="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Nov 28</span> · 9 PM</span></div>
+  <h4>The Vintage Retro: 70s Party at the Carousel Lounge</h4>
+  <p class="where">The Carousel Lounge, 3206 Spenard Rd · <b>Anchorage</b></p><p class="note">70s hits all night in Spenard.</p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill age">21+</span><a class="more" href="https://www.thevintageretroband.com/showschedule" rel="noopener" target="_blank" aria-label="Event details: The Vintage Retro: 70s Party at the Carousel Lounge (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-11-29">
+<h3 class="sech" id="h-2026-11-29">Sunday, November 29 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-29-fall-craft-nite-at-koots" data-id="2026-11-29-fall-craft-nite-at-koots" data-sec="food" data-days="2026-11-29" data-age="over21" data-region="anchorage" data-on="2026-11-29" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sun Nov 29</span> · 7 PM</span><span class="pill cat">Make &amp; Taste</span></div>
+  <h4>Fall Craft Nite at Koot&#x27;s</h4>
+  <p class="where">Koot&#x27;s, 2435 Spenard Rd · <b>Anchorage</b></p><p class="note">Paint-and-sip night from Lushes-N-Brushes, hosted by IceBeard Comedy. Doors 6:45 PM.</p>
+  <div class="pills meta"><span class="pill">$38</span><span class="pill age">21+</span><a class="more" href="https://www.eventbrite.com/e/fall-craft-nite-at-koots-tickets-2003555386094" rel="noopener" target="_blank" aria-label="Event details: Fall Craft Nite at Koot&#x27;s (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-11-30">
+<h3 class="sech" id="h-2026-11-30">Monday, November 30 <span class="n">2</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-30-karaoke-mondays-at-odd-man-rush" data-id="2026-11-30-karaoke-mondays-at-odd-man-rush" data-sec="nightlife" data-days="2026-11-30" data-age="other" data-free="1" data-region="eagle-river" data-on="2026-11-30" data-start="18:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Mon Nov 30</span> · 6 PM</span></div>
+  <h4>Karaoke Mondays at Odd Man Rush</h4>
+  <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Karaoke Mondays at Odd Man Rush (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-30-monday-jazz-jam-at-fire-island" data-id="2026-11-30-monday-jazz-jam-at-fire-island" data-sec="music" data-days="2026-11-30" data-age="other" data-free="1" data-region="anchorage" data-on="2026-11-30" data-start="18:30" data-end="21:30">
+  <div class="pills"><span class="pill when"><span class="wd">Mon Nov 30</span> · 6:30 PM</span></div>
+  <h4>Monday Jazz Jam at Fire Island</h4>
+  <p class="where">Fire Island Rustic Bakeshop, K Street Market, 718 K St · <b>Anchorage</b></p><p class="note">Weekly community jazz session hosted by the Alaska Jazz Workshop. Musicians can bring an instrument and sit in.</p>
+  <div class="pills meta"><span class="pill">Free; $5 suggested donation</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://akjazzworkshop.org/calendar/" rel="noopener" target="_blank" aria-label="Event details: Monday Jazz Jam at Fire Island (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+  <section class="n21-signup" id="n21-email" aria-labelledby="n21-email-h">
+  <div class="signup"><div class="signup-grid">
+    <div class="signup-copy">
+      <h2 id="n21-email-h">Get the 21+ Nights email</h2>
+      <p class="signup-lead">A short Thursday email with the week’s comedy, live music, trivia and brewery nights. Separate from the main weekly email. Unsubscribe any time.</p>
+      <p class="fine">We’ll never sell your address.</p>
+    </div>
+    <div class="signup-action"><form class="signupform n21kit" id="n21signup" action="https://app.kit.com/forms/10245415/subscriptions" method="post"><label class="sr-only" for="n21signup-email">Email address</label><input id="n21signup-email" type="email" name="email_address" required placeholder="you@example.com" autocomplete="email" aria-label="Email address"><button type="submit">Get the 21+ email</button></form><p class="fine n21kit-fine">You must be 21 or older. After you sign up, check your inbox to confirm. Trouble with the box? <a href="https://today-in-ak.kit.com/dfec20e453" rel="noopener" target="_blank">Use the sign-up page</a>.</p></div>
+  </div></div>
+</section>
+  <section class="n21-weekly" id="weekly"><h2>Regular weekly nights in Anchorage</h2><p class="lede">These repeat every week. Schedules change, so check with the venue or host.</p><div class="n21-days"><div class="n21-day"><h3>Monday</h3><ul><li><b>6:30–8:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at 907 Alehouse &amp; Grill, Tikahtnu</li></ul></div><div class="n21-day"><h3>Tuesday</h3><ul><li><b>6–8 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at Bear Paw Bar &amp; Grill</li><li><b>7–9 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at Humpy&#x27;s Great Alaskan Alehouse</li><li><b>6:30–8:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at 907 Alehouse &amp; Grill, Old Seward</li><li><b>7:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at The Blue Fox</li><li><b>6:30 PM</b> <a href="https://koots.com/" rel="noopener" target="_blank">Trivia</a> at Koot&#x27;s, Spenard</li></ul></div><div class="n21-day"><h3>Wednesday</h3><ul><li><b>7–9 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at Eddie&#x27;s Sports Bar</li><li><b>6:30–8:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at The Broken Blender</li><li><b>7 PM</b> <a href="https://koots.com/" rel="noopener" target="_blank">Comedy Open Mic</a> at Koot&#x27;s, Spenard</li><li><b>10 PM</b> <a href="https://koots.com/" rel="noopener" target="_blank">Karaoke</a> at Koot&#x27;s, Spenard</li></ul></div><div class="n21-day"><h3>Thursday</h3><ul><li><b>6:30–8:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at 907 Alehouse &amp; Grill, Old Seward</li></ul></div><div class="n21-day"><h3>Friday</h3><ul><li><b>7–9 PM</b> <a href="https://captaincook.com/venue/the-whales-tail/" rel="noopener" target="_blank">Nerdvana Trivia</a> at Whale&#x27;s Tail, Hotel Captain Cook</li></ul></div></div></section>
+  <section class="n21-hoods"><h2>Anchorage nightlife by neighborhood</h2><p class="lede">Where the 21+ events are, from Spenard bars to downtown venues and brewery taprooms north of town.</p><div class="n21-hoodgrid"><div class="n21-hood"><h3>Spenard</h3><ul><li>Koot&#x27;s <span>5 events</span></li><li>Penny Royalty <span>1 event</span></li><li>The Carousel Lounge <span>1 event</span></li></ul></div><div class="n21-hood"><h3>Downtown</h3><ul><li>The Aurora Room <span>3 events</span></li><li>Humpy&#x27;s Great Alaskan Alehouse <span>2 events</span></li><li>The Four Eleven <span>1 event</span></li><li>Van&#x27;s Dive Bar <span>1 event</span></li><li>Whale&#x27;s Tail <span>1 event</span></li></ul></div><div class="n21-hood"><h3>Midtown &amp; South Anchorage</h3><ul><li>907 Alehouse &amp; Grill <span>2 events</span></li><li>Bear Tooth Theatrepub <span>1 event</span></li><li>Fire Island Rustic Bakeshop <span>1 event</span></li><li>Main Event <span>1 event</span></li></ul></div><div class="n21-hood"><h3>Eagle River</h3><ul><li>Odd Man Rush Brewing <span>5 events</span></li></ul></div><div class="n21-hood"><h3>Kenai</h3><ul><li>Main Street Tap &amp; Grill <span>1 event</span></li></ul></div></div></section>
+  <h2 class="n21-later">Coming up: more Anchorage events</h2><section class="evsec" aria-labelledby="h-2026-12-02">
+<h3 class="sech" id="h-2026-12-02">Wednesday, December 2 <span class="n">2</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-12-02-geeks-who-drink-trivia-at-odd-man-rush" data-id="2026-12-02-geeks-who-drink-trivia-at-odd-man-rush" data-sec="nightlife" data-days="2026-12-02" data-age="other" data-free="1" data-region="eagle-river" data-on="2026-12-02" data-start="18:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Dec 2</span> · 6 PM</span></div>
+  <h4>Geeks Who Drink Trivia at Odd Man Rush</h4>
+  <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Geeks Who Drink Trivia at Odd Man Rush (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-12-02-koots-comedy-open-mic" data-id="2026-12-02-koots-comedy-open-mic" data-sec="comedy" data-days="2026-12-02" data-age="over21" data-free="1" data-region="anchorage" data-on="2026-12-02" data-start="19:00" data-end="22:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Dec 2</span> · 7 PM</span></div>
+  <h4>Koot&#x27;s Comedy Open Mic</h4>
+  <p class="where">Koot&#x27;s, 2435 Spenard Rd · <b>Anchorage</b></p><p class="note">Weekly Wednesday open mic, 7–10 PM.</p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill age">21+</span><a class="more" href="https://koots.com/events" rel="noopener" target="_blank" aria-label="Event details: Koot&#x27;s Comedy Open Mic (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-12-03">
+<h3 class="sech" id="h-2026-12-03">Thursday, December 3 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev drive-card" id="ev-2026-12-03-power-plant-comedy-vin-pal-at-main-street-tap-and-grill" data-id="2026-12-03-power-plant-comedy-vin-pal-at-main-street-tap-and-grill" data-sec="comedy" data-days="2026-12-03" data-age="over21" data-region="kenai" data-on="2026-12-03" data-start="19:00" data-end="20:30">
+  <div class="pills"><span class="pill when"><span class="wd">Thu Dec 3</span> · 7 PM</span><span class="pill drive">Worth the drive</span></div>
+  <h4>Power Plant Comedy: Vin Pal at Main Street Tap &amp; Grill</h4>
+  <p class="where">Main Street Tap &amp; Grill, 10800 Kenai Spur Hwy · <b>Kenai</b></p><p class="note">Touring headliner Vin Pal brings stand-up to Kenai.</p>
+  <div class="pills meta"><span class="pill">$28.52 with fees</span><span class="pill age">21+</span><a class="more" href="https://www.eventbrite.com/e/power-plant-comedy-returns-to-main-street-tap-grill-tickets-2005479122040" rel="noopener" target="_blank" aria-label="Event details: Power Plant Comedy: Vin Pal at Main Street Tap &amp; Grill (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-12-05">
+<h3 class="sech" id="h-2026-12-05">Saturday, December 5 <span class="n">3</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-12-05-don-louis-and-band-with-jesse-james" data-id="2026-12-05-don-louis-and-band-with-jesse-james" data-sec="music" data-days="2026-12-05" data-age="over21" data-region="anchorage" data-on="2026-12-05" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Dec 5</span> · 7 PM</span></div>
+  <h4>Don Louis &amp; Band with Jesse James</h4>
+  <p class="where">The Aurora Room, 415 E St · <b>Anchorage</b></p><p class="note">Texas-raised country artist blending rock, hip-hop and R&amp;B, with Jesse James opening. Doors 6 PM.</p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill age">21+</span><a class="more" href="https://www.ericksonevents.com/don-louis-12052026-anchorage/" rel="noopener" target="_blank" aria-label="Event details: Don Louis &amp; Band with Jesse James (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-12-05-ugly-sweater-party-with-good-company" data-id="2026-12-05-ugly-sweater-party-with-good-company" data-sec="music" data-days="2026-12-05" data-age="other" data-region="anchorage" data-on="2026-12-05" data-start="20:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Dec 5</span> · 8 PM</span></div>
+  <h4>Ugly Sweater Party with Good Company</h4>
+  <p class="where">Humpy&#x27;s Great Alaskan Alehouse, 610 W 6th Ave · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://alaskamusic.live/shows/2026-12-05-ugly-sweater-party" rel="noopener" target="_blank" aria-label="Event details: Ugly Sweater Party with Good Company (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-12-05-vin-pal-at-koots" data-id="2026-12-05-vin-pal-at-koots" data-sec="comedy" data-days="2026-12-05" data-age="over21" data-region="anchorage" data-on="2026-12-05" data-start="20:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Dec 5</span> · 8 PM</span></div>
+  <h4>Vin Pal at Koot&#x27;s</h4>
+  <p class="where">Koot&#x27;s, 2435 Spenard Rd · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">$25</span><span class="pill age">21+</span><a class="more" href="https://www.rubberptarmigan.com/events/vin-pal-koots" rel="noopener" target="_blank" aria-label="Event details: Vin Pal at Koot&#x27;s (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-12-10">
+<h3 class="sech" id="h-2026-12-10">Thursday, December 10 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-12-10-kage-frees-velvet-hours-grace-e-elliot" data-id="2026-12-10-kage-frees-velvet-hours-grace-e-elliot" data-sec="music" data-days="2026-12-10" data-age="other" data-region="anchorage" data-on="2026-12-10" data-start="18:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Thu Dec 10</span> · 6 PM</span></div>
+  <h4>Kage Free&#x27;s Velvet Hours: Grace C. Elliot</h4>
+  <p class="where">Penny Royalty, 3005 Spenard Rd · <b>Anchorage</b></p><p class="note">Doors 6 PM, show 7–9 PM. Hosted by Kage Free, with Grace C. Elliot. Couples buying together get $20 off. Includes 2 drink tokens (3 if you&#x27;re dressed stylish). Tickets by Venmo, Cash App or Zelle on the event flyer. Sponsored by Fromagio&#x27;s Artisan Cheese and Birch Brew.</p>
+  <div class="pills meta"><span class="pill">$35 pre-sale, $40 at the door</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.instagram.com/pennyroyaltyalaska/" rel="noopener" target="_blank" aria-label="Event details: Kage Free&#x27;s Velvet Hours: Grace C. Elliot (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-12-11">
+<h3 class="sech" id="h-2026-12-11">Friday, December 11 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-12-11-vitamin-come-d-y-shane-torres" data-id="2026-12-11-vitamin-come-d-y-shane-torres" data-sec="comedy" data-days="2026-12-11" data-age="over21" data-region="anchorage" data-on="2026-12-11" data-start="19:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Dec 11</span> · 7 PM</span></div>
+  <h4>Vitamin Come(D)y: Shane Torres</h4>
+  <p class="where">Bear Tooth Theatrepub, 1230 W 27th Ave · <b>Anchorage</b></p><p class="note">Touring standup headlines Bear Tooth&#x27;s monthly winter comedy series. Doors 6:30 PM.</p>
+  <div class="pills meta"><span class="pill">See ticket page</span><span class="pill age">18+</span><a class="more" href="https://www.eventbrite.com/e/vitamin-comedy-shane-torres-tickets-1999063506762" rel="noopener" target="_blank" aria-label="Event details: Vitamin Come(D)y: Shane Torres (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-12-12">
+<h3 class="sech" id="h-2026-12-12">Saturday, December 12 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-12-12-stellar-sagittarius-nights-edm-dance-party" data-id="2026-12-12-stellar-sagittarius-nights-edm-dance-party" data-sec="nightlife" data-days="2026-12-12" data-age="over21" data-region="anchorage" data-on="2026-12-12" data-start="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Dec 12</span> · 9 PM</span></div>
+  <h4>Stellar Sagittarius Nights (EDM dance party)</h4>
+  <p class="where">Koot&#x27;s, 2435 Spenard Rd · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill age">21+</span><a class="more" href="https://alaskamusic.live/shows/2026-12-12-stellar-sagittarius-nights" rel="noopener" target="_blank" aria-label="Event details: Stellar Sagittarius Nights (EDM dance party) (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-12-13">
+<h3 class="sech" id="h-2026-12-13">Sunday, December 13 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-12-13-cosmic-relief-shane-mauss-and-grace-c-elliot" data-id="2026-12-13-cosmic-relief-shane-mauss-and-grace-c-elliot" data-sec="comedy" data-days="2026-12-13" data-age="over21" data-region="anchorage" data-on="2026-12-13" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sun Dec 13</span> · 7 PM</span></div>
+  <h4>Cosmic Relief: Shane Mauss &amp; Grace C. Elliot</h4>
+  <p class="where">The Aurora Room, 415 E St · <b>Anchorage</b></p><p class="note">Science-minded stand-up from Shane Mauss, with Grace C. Elliot opening and closing. Doors 6 PM. Under 21 admitted with a parent or guardian.</p>
+  <div class="pills meta"><span class="pill">$35 GA plus fees; front tables $90 for 2, $164 for 4</span><span class="pill age">21+</span><a class="more" href="https://www.ericksonevents.com/shane-mauss-grace-elliot-12132026-anchorage/" rel="noopener" target="_blank" aria-label="Event details: Cosmic Relief: Shane Mauss &amp; Grace C. Elliot (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-12-16">
+<h3 class="sech" id="h-2026-12-16">Wednesday, December 16 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-12-16-comedy-up-north-daniel-franzese" data-id="2026-12-16-comedy-up-north-daniel-franzese" data-sec="comedy" data-days="2026-12-16" data-age="over21" data-region="anchorage" data-on="2026-12-16" data-start="19:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Dec 16</span> · 7 PM</span></div>
+  <h4>Comedy Up North: Daniel Franzese</h4>
+  <p class="where">Main Event, 1041 E 76th Ave #1A · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">$45</span><span class="pill age">18+</span><a class="more" href="https://www.tickettailor.com/events/comedyupnorth/2354352" rel="noopener" target="_blank" aria-label="Event details: Comedy Up North: Daniel Franzese (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-12-19">
+<h3 class="sech" id="h-2026-12-19">Saturday, December 19 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-12-19-the-ugly-christmas-sweater-party-with-i-like-robots" data-id="2026-12-19-the-ugly-christmas-sweater-party-with-i-like-robots" data-sec="music" data-days="2026-12-19" data-age="other" data-region="eagle-river" data-on="2026-12-19" data-start="19:00" data-end="23:00">
+  <div class="pills"><span class="pill when"><span class="wd">Sat Dec 19</span> · 7 PM</span></div>
+  <h4>The Ugly Christmas Sweater Party with I Like Robots</h4>
+  <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://alaskamusic.live/shows/2026-12-19-the-ugly-christmas-sweater-party" rel="noopener" target="_blank" aria-label="Event details: The Ugly Christmas Sweater Party with I Like Robots (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+  <section class="n21-faq"><h2>Anchorage nightlife questions</h2><h3>What is there to do in Anchorage at night?</h3><p>Anchorage nightlife centers on live music, comedy, trivia, karaoke and brewery events in Spenard, downtown and Midtown. This page lists the week’s events in one place and links to separate pages for comedy, live music and trivia.</p><h3>Do I need ID?</h3><p>Most of these events are marked 21+, and venues check ID at the door. Some bars and breweries welcome all ages earlier in the day, so confirm the venue’s age policy first.</p><h3>How often is this updated?</h3><p>Every Thursday, using the same checked event list as the rest of Today in AK. Add your own event with the submit form.</p></section>
+  <section class="n21-subs"><h2>Browse 21+ Nights by type</h2><ul><li><a href="/21-plus/comedy/">Comedy shows in Anchorage</a></li><li><a href="/21-plus/live-music/">Live music in Anchorage</a></li><li><a href="/21-plus/trivia/">Trivia and karaoke nights in Anchorage</a></li></ul></section>
+  <details class="n21-how"><summary>How we pick what’s listed</summary>
+    <p>We list events marked 21+ or 18+, plus music, comedy, trivia, karaoke, bingo and tasting nights at bars and breweries. We keep the list to bar, brewery and venue nights, and we skip bar crawls, political events and anything outside that scope. Listings are not an endorsement, and venue age rules always win.</p>
+    <p>Know a night we missed? <a href="/submit/">Submit it here</a>.</p>
+  </details>
+  <p class="n21-back"><a href="/">← Back to the family-friendly guide</a></p>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="mark"><i></i>TODAY IN AK</span>
+    <p>Alaska events, all in one place.</p>
+    <p class="links"><a href="/">This week in Alaska</a><a href="/things-to-do-in-anchorage/">Things to do</a><a href="/this-weekend/">This weekend</a><a href="/guides/">Guides</a><a href="/submit/">Submit your event</a><a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Instagram · @todayinak</a><a href="https://www.facebook.com/profile.php?id=61595774151541" rel="noopener" target="_blank">Facebook</a><a href="/text-alerts/">Text-alert waitlist</a><a href="/advertise/">Advertise</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a><a href="/21-plus/">21+ Nights</a></p>
+    <p><b>Want your event featured?</b> <a href="/submit/">Submit it here</a>, or <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">DM @todayinak on Instagram</a>.</p>
+    <p class="fine">Most listings are free. Featured events are paid placements and are marked as Featured. Details, menus and hours change. Always check with the venue, organizer or truck before you go.</p>
+  </div>
+</footer>
+<div class="gate21" id="gate21" role="dialog" aria-modal="true" aria-labelledby="gate21-h" hidden>
+  <div class="gate21-box">
+    <p class="eyebrow">21+ Nights</p>
+    <h2 id="gate21-h">Are you 21 or older?</h2>
+    <p>These listings are for bars, breweries and late shows.</p>
+    <div class="gate21-btns">
+      <button type="button" class="btn gate21-yes" id="gate21-yes">I’m 21 or older</button>
+      <button type="button" class="gate21-no" id="gate21-no">Take me back</button>
+    </div>
+    <p class="fine">Just a quick click. We don’t ask for ID and nothing is stored on our servers.</p>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<noscript><style>.gate21{display:none!important}</style></noscript>
+<script src="/assets/events.js?v=7c22c473" defer></script>
+<script>
+(function(){
+  var gate=document.getElementById("gate21"); if(!gate) return;
+  var yes=document.getElementById("gate21-yes"), no=document.getElementById("gate21-no");
+  yes.addEventListener("click", function(){
+    try{ localStorage.setItem("tia-21","1"); }catch(e){}
+    document.documentElement.classList.remove("gate-on"); gate.hidden=true; document.body.classList.remove("gate-lock");
+  });
+  no.addEventListener("click", function(){ location.href="/"; });
+  if(document.documentElement.classList.contains("gate-on")){ gate.hidden=false; document.body.classList.add("gate-lock"); yes.focus(); }
+})();
+</script>
+<script data-goatcounter="https://todayinak.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var skip = /(?:^|\.)(instagram\.com|facebook\.com|todayinak\.com)$/i;
+  document.addEventListener("click", function(ev){
+    var a = ev.target.closest && ev.target.closest("a[href]");
+    if (!a || !window.goatcounter || !goatcounter.count) return;
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#" || href.indexOf("mailto:") === 0) return;
+    var host = "";
+    try { host = a.hostname || ""; } catch (err) { return; }
+    if (!host || host === location.hostname) return;
+    if (skip.test(host)) return;
+    var rel = a.getAttribute("rel") || "";
+    var name = a.getAttribute("data-count");
+    if (!name) {
+      name = (/\bsponsored\b/.test(rel) ? "affiliate-" : "out-") + host.replace(/^www\./, "");
+    }
+    goatcounter.count({
+      path: "/click/" + name,
+      title: (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80),
+      event: true
+    });
+  }, true);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anchorage Trivia Nights &amp; Karaoke: Every Night of the Week | Today in AK</title>
+<meta name="description" content="Anchorage trivia nights and karaoke by day of the week: bar trivia, brewery trivia, karaoke and bingo around Anchorage, Spenard and Eagle River. Times and venues.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name='impact-site-verification' value='296fdaff-3c85-4fa4-a2dd-ec15bf39f020'>
+<meta name="google-site-verification" content="R-UyxeZQOgapG3BMBy2vlycc2zH-wJ_AVFE5U5Wilqs">
+<meta name="google-site-verification" content="XUgCnjfqnmBOgDKfXt2SQeZYLD7qbN6veQSigK6uvdg">
+<meta name="theme-color" content="#05070F" id="theme-color">
+<script>
+(function(){
+  var KEY="tia-theme";
+  var THEMES={aurora:"#0D1626",dark:"#0D1626",light:"#F3F6FB",bw:"#FFFFFF",fireweed:"#1A0B14",blush:"#FBF3F6",glacier:"#071820",sunset:"#1A0E0C"};
+  var NAMES={aurora:"Aurora",light:"Light",bw:"Black & White",fireweed:"Fireweed",blush:"Blush",glacier:"Glacier",sunset:"Sunset"};
+  function known(t){ if(!t) return null; if(t==="dark") return "aurora"; if(t==="pink") return "fireweed"; return THEMES[t] ? t : null; }
+  function preferred(){
+    try{ var s=known(localStorage.getItem(KEY)); if(s) return s; }catch(e){}
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "bw" : "aurora";
+  }
+  function apply(theme){
+    theme=known(theme)||"aurora";
+    document.documentElement.setAttribute("data-theme", theme);
+    var meta=document.getElementById("theme-color");
+    if(meta) meta.setAttribute("content", THEMES[theme]);
+    var btn=document.getElementById("theme-menu");
+    if(btn) btn.setAttribute("aria-label", "Color theme, "+(NAMES[theme]||theme)+" selected. Open to change.");
+    var list=document.getElementById("theme-options");
+    if(list){
+      var opts=list.querySelectorAll("[data-theme-value]");
+      for(var i=0;i<opts.length;i++){
+        var on=opts[i].getAttribute("data-theme-value")===theme;
+        opts[i].setAttribute("aria-selected", on?"true":"false");
+        opts[i].tabIndex=on?0:-1;
+      }
+    }
+  }
+  function save(theme){ try{ localStorage.setItem(KEY, theme); }catch(e){} apply(theme); }
+  apply(preferred());
+  function closeMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=true;
+    btn.setAttribute("aria-expanded","false");
+  }
+  function openMenu(){
+    var list=document.getElementById("theme-options"), btn=document.getElementById("theme-menu");
+    if(!list||!btn) return;
+    list.hidden=false;
+    btn.setAttribute("aria-expanded","true");
+    var sel=list.querySelector('[aria-selected="true"]')||list.querySelector("[data-theme-value]");
+    if(sel) sel.focus();
+  }
+  function wire(){
+    apply(preferred());
+    var root=document.getElementById("theme-picker"), btn=document.getElementById("theme-menu"), list=document.getElementById("theme-options");
+    if(!root||!btn||!list) return;
+    btn.addEventListener("click", function(ev){ ev.stopPropagation(); if(list.hidden) openMenu(); else closeMenu(); });
+    list.addEventListener("click", function(ev){
+      var t=ev.target.closest("[data-theme-value]");
+      if(!t) return;
+      ev.preventDefault();
+      save(t.getAttribute("data-theme-value"));
+      closeMenu();
+      btn.focus();
+    });
+    document.addEventListener("click", function(ev){ if(!root.contains(ev.target)) closeMenu(); });
+    document.addEventListener("keydown", function(ev){
+      if(list.hidden) return;
+      var opts=[].slice.call(list.querySelectorAll("[data-theme-value]"));
+      var i=opts.indexOf(document.activeElement);
+      if(ev.key==="Escape"){ ev.preventDefault(); closeMenu(); btn.focus(); return; }
+      if(ev.key==="ArrowRight"||ev.key==="ArrowDown"){ ev.preventDefault(); opts[(i+1+opts.length)%opts.length].focus(); }
+      if(ev.key==="ArrowLeft"||ev.key==="ArrowUp"){ ev.preventDefault(); opts[(i-1+opts.length)%opts.length].focus(); }
+      if(ev.key==="Home"){ ev.preventDefault(); opts[0].focus(); }
+      if(ev.key==="End"){ ev.preventDefault(); opts[opts.length-1].focus(); }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", wire);
+})();
+</script>
+
+<script>
+(function(){try{if(localStorage.getItem("tia-21")!=="1"){document.documentElement.classList.add("gate-on");}}catch(e){document.documentElement.classList.add("gate-on");}})();
+</script>
+<link rel="canonical" href="https://todayinak.com/21-plus/trivia/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Today in AK">
+<meta property="og:title" content="Anchorage Trivia Nights &amp; Karaoke: Every Night of the Week | Today in AK">
+<meta property="og:description" content="Anchorage trivia nights and karaoke by day of the week: bar trivia, brewery trivia, karaoke and bingo around Anchorage, Spenard and Eagle River. Times and venues.">
+<meta property="og:url" content="https://todayinak.com/21-plus/trivia/">
+<meta property="og:image" content="https://todayinak.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Today in AK: 21+ Nights in Anchorage.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anchorage Trivia Nights &amp; Karaoke: Every Night of the Week | Today in AK">
+<meta name="twitter:description" content="Anchorage trivia nights and karaoke by day of the week: bar trivia, brewery trivia, karaoke and bingo around Anchorage, Spenard and Eagle River. Times and venues.">
+<meta name="twitter:image" content="https://todayinak.com/assets/og-image.png">
+<!-- Generated by tools/twentyone_page.py via tools/render.py. Do not hand-edit. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://todayinak.com/21-plus/trivia/#page","name":"Trivia & Karaoke Nights in Anchorage","description":"Anchorage trivia nights and karaoke by day of the week: bar trivia, brewery trivia, karaoke and bingo around Anchorage, Spenard and Eagle River. Times and venues.","url":"https://todayinak.com/21-plus/trivia/","inLanguage":"en-US","dateModified":"2026-11-25","isPartOf":{"@type":"WebSite","name":"Today in AK","url":"https://todayinak.com/"},"about":{"@type":"Place","name":"Anchorage, Alaska"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Today in AK","item":"https://todayinak.com/"},{"@type":"ListItem","position":2,"name":"21+ Nights","item":"https://todayinak.com/21-plus/"},{"@type":"ListItem","position":3,"name":"Trivia & karaoke","item":"https://todayinak.com/21-plus/trivia/"}]},{"@type":"ItemList","name":"Trivia & Karaoke Nights in Anchorage","numberOfItems":5,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Event","name":"Geeks Who Drink Trivia at Odd Man Rush","startDate":"2026-11-25T18:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Odd Man Rush Brewing, 10930 Mausel St","address":{"@type":"PostalAddress","addressLocality":"Eagle River","addressRegion":"AK","addressCountry":"US","streetAddress":"10930 Mausel St"}},"url":"https://www.oddmanrushbrewing.com/events","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Odd Man Rush Brewing, 10930 Mausel St"},"description":"Geeks Who Drink Trivia at Odd Man Rush at Odd Man Rush Brewing, 10930 Mausel St in Eagle River.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://www.oddmanrushbrewing.com/events"}}},{"@type":"ListItem","position":2,"item":{"@type":"Event","name":"Nerdvana Trivia Night","startDate":"2026-11-27T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Whale's Tail, Hotel Captain Cook, 939 W 5th Ave","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"939 W 5th Ave"}},"url":"https://captaincook.com/event/nerdvana-trivia-night-whales-tail/2026-11-27/","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Whale's Tail, Hotel Captain Cook, 939 W 5th Ave"},"description":"Nerdvana Trivia Night at Whale's Tail, Hotel Captain Cook, 939 W 5th Ave in Anchorage."}},{"@type":"ListItem","position":3,"item":{"@type":"Event","name":"R&B Bingo at The Four Eleven","startDate":"2026-11-27T19:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"The Four Eleven, 411 W 4th Ave","address":{"@type":"PostalAddress","addressLocality":"Anchorage","addressRegion":"AK","addressCountry":"US","streetAddress":"411 W 4th Ave"}},"url":"https://www.eventbrite.com/e/beautiful-clay-presents-rb-bingo-tickets-2004531121545","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"The Four Eleven, 411 W 4th Ave"},"description":"Bingo with soul music from DJ Thug Passion, food and prizes.","offers":{"@type":"Offer","price":"55.20","priceCurrency":"USD","url":"https://www.eventbrite.com/e/beautiful-clay-presents-rb-bingo-tickets-2004531121545"}}},{"@type":"ListItem","position":4,"item":{"@type":"Event","name":"Karaoke Mondays at Odd Man Rush","startDate":"2026-11-30T18:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Odd Man Rush Brewing, 10930 Mausel St","address":{"@type":"PostalAddress","addressLocality":"Eagle River","addressRegion":"AK","addressCountry":"US","streetAddress":"10930 Mausel St"}},"url":"https://www.oddmanrushbrewing.com/events","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Odd Man Rush Brewing, 10930 Mausel St"},"endDate":"2026-11-30T21:00:00-09:00","description":"Karaoke Mondays at Odd Man Rush at Odd Man Rush Brewing, 10930 Mausel St in Eagle River.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://www.oddmanrushbrewing.com/events"}}},{"@type":"ListItem","position":5,"item":{"@type":"Event","name":"Geeks Who Drink Trivia at Odd Man Rush","startDate":"2026-12-02T18:00:00-09:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Odd Man Rush Brewing, 10930 Mausel St","address":{"@type":"PostalAddress","addressLocality":"Eagle River","addressRegion":"AK","addressCountry":"US","streetAddress":"10930 Mausel St"}},"url":"https://www.oddmanrushbrewing.com/events","image":"https://todayinak.com/assets/og-image.png","organizer":{"@type":"Organization","name":"Odd Man Rush Brewing, 10930 Mausel St"},"description":"Geeks Who Drink Trivia at Odd Man Rush at Odd Man Rush Brewing, 10930 Mausel St in Eagle River.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://www.oddmanrushbrewing.com/events"}}}]}]}</script>
+<link rel="preload" href="/assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=4b301e6f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+</head>
+<body class="n21-page">
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow"><span class="mark"><i></i>TODAY IN AK</span><div class="brandactions"><a class="nav21" href="/21-plus/">21+ Nights</a><div class="theme-picker" id="theme-picker"><button type="button" class="theme-toggle" id="theme-menu" aria-label="Color theme, Aurora selected. Open to change." aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 2.2 17.7c.7-.2 1-1 .6-1.6-.3-.5-.5-1.1-.5-1.7a2.4 2.4 0 0 1 2.4-2.4h1.2A4.1 4.1 0 0 0 21 11.1 9 9 0 0 0 12 3z"/><circle class="dot" cx="8" cy="10" r="1.15"/><circle class="dot" cx="12" cy="7.4" r="1.15"/><circle class="dot" cx="16.2" cy="9.2" r="1.15"/><circle class="dot" cx="9.6" cy="14.2" r="1.15"/></svg></button><div class="theme-menu" id="theme-options" role="listbox" aria-label="Color theme" hidden><p class="theme-menu-label" id="theme-menu-label">Color theme</p><button type="button" role="option" class="theme-swatch" data-theme-value="aurora" aria-label="Aurora" aria-selected="true"><i style="--swatch:#5EF2B5;--swatch-bg:#0D1626"></i><span>Aurora</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="light" aria-label="Light" aria-selected="false" tabindex="-1"><i style="--swatch:#0B6B4C;--swatch-bg:#F3F6FB"></i><span>Light</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="bw" aria-label="Black &amp; White" aria-selected="false" tabindex="-1"><i style="--swatch:#111111;--swatch-bg:#FFFFFF"></i><span>Black &amp; White</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="fireweed" aria-label="Fireweed" aria-selected="false" tabindex="-1"><i style="--swatch:#FF6BA8;--swatch-bg:#1A0B14"></i><span>Fireweed</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="blush" aria-label="Blush" aria-selected="false" tabindex="-1"><i style="--swatch:#A81B58;--swatch-bg:#FBF3F6"></i><span>Blush</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="glacier" aria-label="Glacier" aria-selected="false" tabindex="-1"><i style="--swatch:#7EE0F2;--swatch-bg:#071820"></i><span>Glacier</span></button><button type="button" role="option" class="theme-swatch" data-theme-value="sunset" aria-label="Sunset" aria-selected="false" tabindex="-1"><i style="--swatch:#FF8A5B;--swatch-bg:#1A0E0C"></i><span>Sunset</span></button></div></div><a class="handle" href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">@todayinak</a></div></div>
+    <nav class="n21-crumbs" aria-label="Breadcrumb"><a href="/">Today in AK</a> <span>/</span> <a href="/21-plus/">21+ Nights</a> <span>/</span> <b>Trivia &amp; karaoke</b></nav>
+    <p class="kicker">21+ Nights · Trivia &amp; karaoke</p>
+    <h1>Trivia &amp; Karaoke Nights in Anchorage</h1>
+    <p class="hero-q">Bar trivia, karaoke and bingo, night by night.</p>
+    <p class="range">Wed Nov 25 – Tue Dec 1, 2026</p>
+    <nav class="chips n21-tabs" aria-label="21+ Nights sections"><a href="/21-plus/">All 21+</a><a href="/21-plus/comedy/">Comedy</a><a href="/21-plus/live-music/">Live music</a><a href="/21-plus/trivia/" aria-current="page">Trivia &amp; karaoke</a></nav>
+  </div>
+</header>
+
+<main class="n21">
+<section id="events" class="sec wrap">
+  <p class="n21-intro">Anchorage trivia nights and karaoke, organized by day of the week. Bar trivia runs most nights across Anchorage, Spenard, Midtown and Eagle River, and this page lists both the one-off events on the Today in AK calendar and the regular weekly nights. Times are as listed by each venue or host, so check before you go.</p>
+  <aside class="n21-sponsor" aria-label="Presented by">
+  <p class="n21-sponsor-k">Presented by</p>
+  <p class="n21-sponsor-slot">Your bar, brewery or comedy room here</p>
+  <p class="n21-sponsor-fine">One local sponsor a month. <a href="/advertise/">See how it works</a>.</p>
+</aside>
+  <h2 class="n21-weekh">4 trivia, karaoke and game nights this week</h2>
+  <p class="lede">Wed Nov 25 through Tue Dec 1. Some bars and breweries welcome all ages earlier in the day, so check the venue first. Details can change. Check with the organizer before you go.</p>
+  <section class="evsec" aria-labelledby="h-2026-11-25">
+<h3 class="sech" id="h-2026-11-25">Wednesday, November 25 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-25-geeks-who-drink-trivia-at-odd-man-rush" data-id="2026-11-25-geeks-who-drink-trivia-at-odd-man-rush" data-sec="nightlife" data-days="2026-11-25" data-age="other" data-free="1" data-region="eagle-river" data-on="2026-11-25" data-start="18:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Nov 25</span> · 6 PM</span></div>
+  <h4>Geeks Who Drink Trivia at Odd Man Rush</h4>
+  <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Geeks Who Drink Trivia at Odd Man Rush (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-11-27">
+<h3 class="sech" id="h-2026-11-27">Friday, November 27 <span class="n">2</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-27-nerdvana-trivia-night" data-id="2026-11-27-nerdvana-trivia-night" data-sec="nightlife" data-days="2026-11-27" data-age="other" data-region="anchorage" data-on="2026-11-27" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · 7 PM</span></div>
+  <h4>Nerdvana Trivia Night</h4>
+  <p class="where">Whale&#x27;s Tail, Hotel Captain Cook, 939 W 5th Ave · <b>Anchorage</b></p>
+  <div class="pills meta"><span class="pill">Price not listed</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://captaincook.com/event/nerdvana-trivia-night-whales-tail/2026-11-27/" rel="noopener" target="_blank" aria-label="Event details: Nerdvana Trivia Night (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="card ev" id="ev-2026-11-27-r-and-b-bingo-at-the-four-eleven" data-id="2026-11-27-r-and-b-bingo-at-the-four-eleven" data-sec="nightlife" data-days="2026-11-27" data-age="other" data-region="anchorage" data-on="2026-11-27" data-start="19:00">
+  <div class="pills"><span class="pill when"><span class="wd">Fri Nov 27</span> · 7 PM</span></div>
+  <h4>R&amp;B Bingo at The Four Eleven</h4>
+  <p class="where">The Four Eleven, 411 W 4th Ave · <b>Anchorage</b></p><p class="note">Bingo with soul music from DJ Thug Passion, food and prizes.</p>
+  <div class="pills meta"><span class="pill">$55.20 with fees</span><span class="pill ghost">Ages not listed</span><a class="more" href="https://www.eventbrite.com/e/beautiful-clay-presents-rb-bingo-tickets-2004531121545" rel="noopener" target="_blank" aria-label="Event details: R&amp;B Bingo at The Four Eleven (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section class="evsec" aria-labelledby="h-2026-11-30">
+<h3 class="sech" id="h-2026-11-30">Monday, November 30 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-11-30-karaoke-mondays-at-odd-man-rush" data-id="2026-11-30-karaoke-mondays-at-odd-man-rush" data-sec="nightlife" data-days="2026-11-30" data-age="other" data-free="1" data-region="eagle-river" data-on="2026-11-30" data-start="18:00" data-end="21:00">
+  <div class="pills"><span class="pill when"><span class="wd">Mon Nov 30</span> · 6 PM</span></div>
+  <h4>Karaoke Mondays at Odd Man Rush</h4>
+  <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Karaoke Mondays at Odd Man Rush (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+  <section class="n21-signup" id="n21-email" aria-labelledby="n21-email-h">
+  <div class="signup"><div class="signup-grid">
+    <div class="signup-copy">
+      <h2 id="n21-email-h">Get the 21+ Nights email</h2>
+      <p class="signup-lead">A short Thursday email with the week’s comedy, live music, trivia and brewery nights. Separate from the main weekly email. Unsubscribe any time.</p>
+      <p class="fine">We’ll never sell your address.</p>
+    </div>
+    <div class="signup-action"><form class="signupform n21kit" id="n21signup" action="https://app.kit.com/forms/10245415/subscriptions" method="post"><label class="sr-only" for="n21signup-email">Email address</label><input id="n21signup-email" type="email" name="email_address" required placeholder="you@example.com" autocomplete="email" aria-label="Email address"><button type="submit">Get the 21+ email</button></form><p class="fine n21kit-fine">You must be 21 or older. After you sign up, check your inbox to confirm. Trouble with the box? <a href="https://today-in-ak.kit.com/dfec20e453" rel="noopener" target="_blank">Use the sign-up page</a>.</p></div>
+  </div></div>
+</section>
+  <section class="n21-weekly" id="weekly"><h2>Anchorage trivia and karaoke by day of the week</h2><p class="lede">These repeat every week. Schedules change, so check with the venue or host.</p><div class="n21-days"><div class="n21-day"><h3>Monday</h3><ul><li><b>6:30–8:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at 907 Alehouse &amp; Grill, Tikahtnu</li></ul></div><div class="n21-day"><h3>Tuesday</h3><ul><li><b>6–8 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at Bear Paw Bar &amp; Grill</li><li><b>7–9 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at Humpy&#x27;s Great Alaskan Alehouse</li><li><b>6:30–8:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at 907 Alehouse &amp; Grill, Old Seward</li><li><b>7:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at The Blue Fox</li><li><b>6:30 PM</b> <a href="https://koots.com/" rel="noopener" target="_blank">Trivia</a> at Koot&#x27;s, Spenard</li></ul></div><div class="n21-day"><h3>Wednesday</h3><ul><li><b>7–9 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at Eddie&#x27;s Sports Bar</li><li><b>6:30–8:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at The Broken Blender</li><li><b>10 PM</b> <a href="https://koots.com/" rel="noopener" target="_blank">Karaoke</a> at Koot&#x27;s, Spenard</li></ul></div><div class="n21-day"><h3>Thursday</h3><ul><li><b>6:30–8:30 PM</b> <a href="https://nerdvanatrivia.com/venues/" rel="noopener" target="_blank">Nerdvana Trivia</a> at 907 Alehouse &amp; Grill, Old Seward</li></ul></div><div class="n21-day"><h3>Friday</h3><ul><li><b>7–9 PM</b> <a href="https://captaincook.com/venue/the-whales-tail/" rel="noopener" target="_blank">Nerdvana Trivia</a> at Whale&#x27;s Tail, Hotel Captain Cook</li></ul></div></div></section>
+  
+  <h2 class="n21-later">Coming up: more Anchorage trivia & karaoke</h2><section class="evsec" aria-labelledby="h-2026-12-02">
+<h3 class="sech" id="h-2026-12-02">Wednesday, December 2 <span class="n">1</span></h3>
+<div class="evgrid">
+<article class="card ev" id="ev-2026-12-02-geeks-who-drink-trivia-at-odd-man-rush" data-id="2026-12-02-geeks-who-drink-trivia-at-odd-man-rush" data-sec="nightlife" data-days="2026-12-02" data-age="other" data-free="1" data-region="eagle-river" data-on="2026-12-02" data-start="18:00">
+  <div class="pills"><span class="pill when"><span class="wd">Wed Dec 2</span> · 6 PM</span></div>
+  <h4>Geeks Who Drink Trivia at Odd Man Rush</h4>
+  <p class="where">Odd Man Rush Brewing, 10930 Mausel St · <b>Eagle River</b></p>
+  <div class="pills meta"><span class="pill">Free</span><span class="pill ghost">Ages not listed (brewery tasting room)</span><a class="more" href="https://www.oddmanrushbrewing.com/events" rel="noopener" target="_blank" aria-label="Event details: Geeks Who Drink Trivia at Odd Man Rush (opens in a new tab)">Event details <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+  <section class="n21-faq"><h2>Anchorage nightlife questions</h2><h3>What night is trivia in Anchorage?</h3><p>Trivia runs most nights, with Tuesday the busiest. See the weekly schedule below, then check the venue before you go.</p><h3>Is trivia free?</h3><p>Most bar trivia is free to play. Venues and hosts set the rules, so check with the host.</p></section>
+  <section class="n21-subs"><h2>More 21+ Nights</h2><ul><li><a href="/21-plus/">All 21+ Nights in Anchorage</a></li><li><a href="/21-plus/comedy/">Comedy Shows in Anchorage</a></li><li><a href="/21-plus/live-music/">Live Music in Anchorage</a></li></ul></section>
+  <details class="n21-how"><summary>How we pick what’s listed</summary>
+    <p>We list events marked 21+ or 18+, plus music, comedy, trivia, karaoke, bingo and tasting nights at bars and breweries. We keep the list to bar, brewery and venue nights, and we skip bar crawls, political events and anything outside that scope. Listings are not an endorsement, and venue age rules always win.</p>
+    <p>Know a night we missed? <a href="/submit/">Submit it here</a>.</p>
+  </details>
+  <p class="n21-back"><a href="/">← Back to the family-friendly guide</a></p>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="mark"><i></i>TODAY IN AK</span>
+    <p>Alaska events, all in one place.</p>
+    <p class="links"><a href="/">This week in Alaska</a><a href="/things-to-do-in-anchorage/">Things to do</a><a href="/this-weekend/">This weekend</a><a href="/guides/">Guides</a><a href="/submit/">Submit your event</a><a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">Instagram · @todayinak</a><a href="https://www.facebook.com/profile.php?id=61595774151541" rel="noopener" target="_blank">Facebook</a><a href="/text-alerts/">Text-alert waitlist</a><a href="/advertise/">Advertise</a><a href="/privacy/">Privacy</a><a href="/affiliate-disclosure/">Affiliate disclosure</a><a href="/21-plus/">21+ Nights</a></p>
+    <p><b>Want your event featured?</b> <a href="/submit/">Submit it here</a>, or <a href="https://www.instagram.com/todayinak/" rel="noopener" target="_blank">DM @todayinak on Instagram</a>.</p>
+    <p class="fine">Most listings are free. Featured events are paid placements and are marked as Featured. Details, menus and hours change. Always check with the venue, organizer or truck before you go.</p>
+  </div>
+</footer>
+<div class="gate21" id="gate21" role="dialog" aria-modal="true" aria-labelledby="gate21-h" hidden>
+  <div class="gate21-box">
+    <p class="eyebrow">21+ Nights</p>
+    <h2 id="gate21-h">Are you 21 or older?</h2>
+    <p>These listings are for bars, breweries and late shows.</p>
+    <div class="gate21-btns">
+      <button type="button" class="btn gate21-yes" id="gate21-yes">I’m 21 or older</button>
+      <button type="button" class="gate21-no" id="gate21-no">Take me back</button>
+    </div>
+    <p class="fine">Just a quick click. We don’t ask for ID and nothing is stored on our servers.</p>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<noscript><style>.gate21{display:none!important}</style></noscript>
+<script src="/assets/events.js?v=7c22c473" defer></script>
+<script>
+(function(){
+  var gate=document.getElementById("gate21"); if(!gate) return;
+  var yes=document.getElementById("gate21-yes"), no=document.getElementById("gate21-no");
+  yes.addEventListener("click", function(){
+    try{ localStorage.setItem("tia-21","1"); }catch(e){}
+    document.documentElement.classList.remove("gate-on"); gate.hidden=true; document.body.classList.remove("gate-lock");
+  });
+  no.addEventListener("click", function(){ location.href="/"; });
+  if(document.documentElement.classList.contains("gate-on")){ gate.hidden=false; document.body.classList.add("gate-lock"); yes.focus(); }
+})();
+</script>
+<script data-goatcounter="https://todayinak.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var skip = /(?:^|\.)(instagram\.com|facebook\.com|todayinak\.com)$/i;
+  document.addEventListener("click", function(ev){
+    var a = ev.target.closest && ev.target.closest("a[href]");
+    if (!a || !window.goatcounter || !goatcounter.count) return;
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#" || href.indexOf("mailto:") === 0) return;
+    var host = "";
+    try { host = a.hostname || ""; } catch (err) { return; }
+    if (!host || host === location.hostname) return;
+    if (skip.test(host)) return;
+    var rel = a.getAttribute("rel") || "";
+    var name = a.getAttribute("data-count");
+    if (!name) {
+      name = (/\bsponsored\b/.test(rel) ? "affiliate-" : "out-") + host.replace(/^www\./, "");
+    }
+    goatcounter.count({
+      path: "/click/" + name,
+      title: (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80),
+      event: true
+    });
+  }, true);
+})();
+</script>
+</body>
+</html>
