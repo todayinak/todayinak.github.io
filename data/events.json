@@ -31,29 +31,6 @@
    "url": "https://dimondcenter.com/events/"
   },
   {
-   "id": "2026-11-20-alaska-vintage-holiday-market-and-food-truck-fest",
-   "date": "2026-11-20",
-   "time": "Fri 12–6 PM; Sat 10 AM–6 PM; Sun 10 AM–4 PM",
-   "title": "Alaska Vintage Holiday Market & Food Truck Fest",
-   "category": "Seasonal",
-   "venue": "Raven Hall & Hoskins Building, Alaska State Fairgrounds, 2075 Glenn Hwy",
-   "town": "Palmer",
-   "price": "From $5 (12 & under free)",
-   "ages": "All ages",
-   "extra_dates": [
-    "2026-11-21",
-    "2026-11-22",
-    "2026-11-27",
-    "2026-11-28",
-    "2026-11-29"
-   ],
-   "start": "12:00",
-   "end": "18:00",
-   "worth_the_drive": true,
-   "note": "Vintage and handmade vendors plus food trucks; back again Fri–Sun, Nov 27–29.",
-   "url": "https://alaskavintagemarkets.com/"
-  },
-  {
    "id": "2026-11-25-weekly-community-storytime-at-the-zoo",
    "date": "2026-11-25",
    "time": "10:30 AM",
@@ -331,6 +308,21 @@
    "url": "https://www.eventbrite.com/e/3030-society-grown-folks-houseparty-tickets-2004924867249"
   },
   {
+   "id": "2026-11-27-alaska-native-heritage-center-black-friday-gallery-sale",
+   "date": "2026-11-27",
+   "time": "10 AM",
+   "title": "Alaska Native Heritage Center Black Friday Gallery Sale",
+   "category": "Seasonal",
+   "venue": "Alaska Native Heritage Center, 8800 Heritage Center Dr",
+   "town": "Anchorage",
+   "price": "Free entry to the sale",
+   "ages": "All ages",
+   "start": "10:00",
+   "end": "16:00",
+   "note": "Shop work by hundreds of Alaska Native artists at Anchorage's only Alaska Native-owned gallery.",
+   "url": "https://www.alaskanative.net/events/"
+  },
+  {
    "id": "2026-11-27-crafted-in-alaska",
    "date": "2026-11-27",
    "time": "10 AM",
@@ -385,6 +377,21 @@
    "url": "https://kenaiartcenter.org/event-kenai-arts-crafts-fair-2026/"
   },
   {
+   "id": "2026-11-27-make-a-card-for-an-elder",
+   "date": "2026-11-27",
+   "time": "10 AM",
+   "title": "Make a Card for an Elder",
+   "category": "Family & Outdoors",
+   "venue": "Art Lab, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "10:00",
+   "end": "18:00",
+   "note": "Drop in and make a holiday card for an Elder in an Anchorage assisted living home.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=ol6v8jqocauir6j8anlfc2b33o"
+  },
+  {
    "id": "2026-11-27-santa-arrives-at-midtown-mall",
    "date": "2026-11-27",
    "time": "10 AM",
@@ -397,6 +404,56 @@
    "start": "10:00",
    "note": "Santa's hours Wed–Sat 10 AM–6 PM, Sun noon–5 PM through Christmas Eve.",
    "url": "https://midtownmall.com/free-portrait-with-santa/"
+  },
+  {
+   "id": "2026-11-27-skinny-raven-black-friday-and-small-business-saturday",
+   "date": "2026-11-27",
+   "time": "10 AM",
+   "title": "Skinny Raven Black Friday & Small Business Saturday",
+   "category": "Seasonal",
+   "venue": "Skinny Raven Sports, 800 H St",
+   "town": "Anchorage",
+   "price": "Free entry",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-28"
+   ],
+   "start": "10:00",
+   "note": "Gear deals plus local artist pop-ups and Kaladi Brothers coffee downtown.",
+   "url": "https://skinnyraven.com/"
+  },
+  {
+   "id": "2026-11-27-small-business-weekend-downtown-shop-hop",
+   "date": "2026-11-27",
+   "time": "Fri–Sun from 10 AM",
+   "title": "Small Business Weekend Downtown Shop Hop",
+   "category": "Seasonal",
+   "venue": "Cabin Fever, 412 G St, and neighboring downtown shops",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-28",
+    "2026-11-29"
+   ],
+   "start": "10:00",
+   "note": "Visit Cabin Fever, Sevigny Studio, The Kobuk and other downtown shops for a chance at a holiday gift bundle.",
+   "url": "https://www.cabinfeveralaska.com/"
+  },
+  {
+   "id": "2026-11-27-christmas-comes-to-kenai",
+   "date": "2026-11-27",
+   "time": "Santa 11 AM–4 PM; parade 6 PM; fireworks 7 PM",
+   "title": "Christmas Comes to Kenai",
+   "category": "Seasonal",
+   "venue": "Kenai Chamber of Commerce & Visitor Center, 11471 Kenai Spur Hwy",
+   "town": "Kenai",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "11:00",
+   "worth_the_drive": true,
+   "note": "Santa and reindeer by fire truck, an Electric Lights Parade on Frontage Road, a bonfire and fireworks set to local radio.",
+   "url": "https://www.kenaichamber.org/"
   },
   {
    "id": "2026-11-27-7th-annual-downtown-anchorage-holiday-market",
@@ -416,6 +473,39 @@
    "end": "18:00",
    "note": "Indoors in the Theater at the downtown pub this year. Local handmade vendors, festive food and drink specials, and visits and photos with Santa.",
    "url": "https://www.49thstatebrewing.com/series/7th-annual-holiday-market/"
+  },
+  {
+   "id": "2026-11-27-alaska-vintage-holiday-market-and-food-truck-fest",
+   "date": "2026-11-27",
+   "time": "Fri 12–6 PM; Sat 10 AM–6 PM; Sun 10 AM–4 PM",
+   "title": "Alaska Vintage Holiday Market & Food Truck Fest",
+   "category": "Seasonal",
+   "venue": "Alaska State Fairgrounds (Raven Hall & Hoskins Building)",
+   "town": "Palmer",
+   "price": "$5 Fri & Sat; free Sun; kids 12 & under free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-28",
+    "2026-11-29"
+   ],
+   "start": "12:00",
+   "note": "Second weekend of vintage, up-cycled and small-business vendors, food trucks, Santa and a reindeer. Enter through the Red Gate.",
+   "url": "https://alaskavintagemarkets.com/"
+  },
+  {
+   "id": "2026-11-27-barbara-lavallee-calendar-signing",
+   "date": "2026-11-27",
+   "time": "12 PM",
+   "title": "Barbara Lavallee Calendar Signing",
+   "category": "Arts & Talks",
+   "venue": "Cabin Fever, 412 G St",
+   "town": "Anchorage",
+   "price": "Free (calendars and books for sale)",
+   "ages": "All ages",
+   "start": "12:00",
+   "end": "15:00",
+   "note": "Alaska artist Barbara Lavallee signs her calendars and the classic picture book Mama, Do You Love Me?",
+   "url": "https://www.cabinfeveralaska.com/celebrating-indigenous-artists-for-alaska-native-native-american-heritage-month-barbara-lavallee-is-coming-back/"
   },
   {
    "id": "2026-11-27-juneau-public-market",
@@ -454,24 +544,40 @@
    "url": "https://centertix.com/events/the-nutcracker-with-eugene-ballet"
   },
   {
-   "id": "2026-11-27-ketchikan-winter-arts-faire",
+   "id": "2026-11-27-planetarium-bella-gaia",
    "date": "2026-11-27",
-   "time": "Fri opening gala 5–8 PM; Sat–Sun daytime booths",
-   "title": "Ketchikan Winter Arts Faire",
-   "category": "Seasonal",
-   "venue": "Ted Ferry Civic Center, Ketchikan",
-   "town": "Ketchikan",
-   "price": "Sat–Sun admission free; Opening Gala price not listed",
-   "ages": "Ages not listed",
+   "time": "2:30 PM",
+   "title": "Planetarium: Bella Gaia",
+   "category": "Arts & Talks",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$6 plus museum admission; $3 members",
+   "ages": "All ages",
    "extra_dates": [
     "2026-11-28",
     "2026-11-29"
    ],
+   "start": "14:30",
+   "note": "Musical journey around Earth built from NASA visuals.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=rj30r6rgo1f52dm3r0d9rcafto_20261129T223000Z"
+  },
+  {
+   "id": "2026-11-27-uaa-and-uaf-mens-basketball-thanksgiving-classic",
+   "date": "2026-11-27",
+   "time": "Fri 5 & 7:15 PM; Sat 3 & 5:15 PM",
+   "title": "UAA & UAF Men's Basketball Thanksgiving Classic",
+   "category": "Sports",
+   "venue": "Alaska Airlines Gymnasium, UAF",
+   "town": "Fairbanks",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-28"
+   ],
    "start": "17:00",
-   "end": "20:00",
    "worth_the_drive": true,
-   "note": "Opening gala Fri 5–8 PM. Sat–Sun daytime booths; exact Sat/Sun hours vary by listing.",
-   "url": "https://www.ketchikanarts.org/events/winter-arts-faire.html"
+   "note": "UAA and UAF each take on Trevecca Nazarene and Davenport over two days.",
+   "url": "https://alaskananooks.com/calendar"
   },
   {
    "id": "2026-11-27-zoo-lights-opening-weekend",
@@ -493,6 +599,24 @@
    "url": "https://www.alaskazoo.org/zoo-lights"
   },
   {
+   "id": "2026-11-27-planetarium-resolution-a-cinephonic-rhapsody",
+   "date": "2026-11-27",
+   "time": "5:30 PM",
+   "title": "Planetarium: Resolution – A Cinephonic Rhapsody",
+   "category": "Arts & Talks",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "Museum admission free during Crafted in Alaska; planetarium ticket required",
+   "ages": "13+",
+   "extra_dates": [
+    "2026-11-28"
+   ],
+   "start": "17:30",
+   "end": "18:30",
+   "note": "45-minute full-dome music film set to The Polyphonic Spree. Recommended for ages 13 and up; loud music and flashing lights.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=8tpmi476iuk89cg5kuhismi7dk_20261128T013000Z"
+  },
+  {
    "id": "2026-11-27-sleeping-lady-twig-art-workshop",
    "date": "2026-11-27",
    "time": "Fri 6 PM–Sat 1 PM",
@@ -505,6 +629,20 @@
    "start": "18:00",
    "note": "Two-session class with artist Holly Goozen making a Sleeping Lady twig piece. Supplies included.",
    "url": "https://www.eventbrite.com/e/sleeping-lady-twig-art-tickets-2004569131233"
+  },
+  {
+   "id": "2026-11-27-engineering-for-mars-kayla-andersen-on-perseverance-and-skyf",
+   "date": "2026-11-27",
+   "time": "6:30 PM",
+   "title": "Engineering for Mars: Kayla Andersen on Perseverance and Skyfall",
+   "category": "Arts & Talks",
+   "venue": "Kaladi Brothers Coffee, 6901 E Tudor Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "18:30",
+   "note": "A NASA/JPL mechanical engineer talks about building the Perseverance rover and the new Skyfall mission.",
+   "url": "https://www.kaladi.com/"
   },
   {
    "id": "2026-11-27-h3-alaska-reggae-at-odd-man-rush",
@@ -534,6 +672,19 @@
    "start": "19:00",
    "note": "Power Plant Comedy with Curtis Dunham, Logan George and Mat Plant.",
    "url": "https://www.rubberptarmigan.com/events/laughing-with-the-lions-comedy-fundraiser-eagle-river-lions-club-house-nov-2026"
+  },
+  {
+   "id": "2026-11-27-nerdvana-trivia-night",
+   "date": "2026-11-27",
+   "time": "7 PM",
+   "title": "Nerdvana Trivia Night",
+   "category": "Nightlife",
+   "venue": "Whale's Tail, Hotel Captain Cook, 939 W 5th Ave",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "url": "https://captaincook.com/event/nerdvana-trivia-night-whales-tail/2026-11-27/"
   },
   {
    "id": "2026-11-27-r-and-b-bingo-at-the-four-eleven",
@@ -566,6 +717,158 @@
    "url": "https://goseawolves.com/calendar.aspx?game_id=8056&sport_id=7"
   },
   {
+   "id": "2026-11-27-the-vintage-retro-70s-dance-party-at-907-alehouse",
+   "date": "2026-11-27",
+   "time": "7:30 PM",
+   "title": "The Vintage Retro: 70s Dance Party at 907 Alehouse",
+   "category": "Music",
+   "venue": "907 Alehouse & Grill, 8001 Old Seward Hwy",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "19:30",
+   "end": "23:00",
+   "note": "Alaska's 70s band plays Stevie Wonder, KC and the Sunshine Band, Kool and the Gang and more. Bell-bottoms encouraged.",
+   "url": "https://www.thevintageretroband.com/showschedule"
+  },
+  {
+   "id": "2026-11-27-mad-myrnas-diva-variety-show",
+   "date": "2026-11-27",
+   "time": "9 PM",
+   "title": "Mad Myrna's Diva Variety Show",
+   "category": "Nightlife",
+   "venue": "Mad Myrna's, 530 E 5th Ave",
+   "town": "Anchorage",
+   "price": "Table reservations from $40",
+   "ages": "21+",
+   "extra_dates": [
+    "2026-11-28"
+   ],
+   "start": "21:00",
+   "note": "Live vocals, comedy and dance every Fri & Sat. Check in by 8:45 PM.",
+   "url": "https://madmyrnas.com/diva-variety-show"
+  },
+  {
+   "id": "2026-11-27-vintage-cooks-at-the-fairview-inn",
+   "date": "2026-11-27",
+   "time": "9 PM",
+   "title": "Vintage Cooks at the Fairview Inn",
+   "category": "Music",
+   "venue": "Fairview Inn, 101 Main St",
+   "town": "Talkeetna",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "21:00",
+   "worth_the_drive": true,
+   "url": "https://alaskamusic.live/shows/2026-11-27-ventage-cooks-at-fairview-inn"
+  },
+  {
+   "id": "2026-11-28-alaska-railroad-aurora-winter-train-northbound",
+   "date": "2026-11-28",
+   "time": "8:30 AM",
+   "title": "Alaska Railroad Aurora Winter Train (northbound)",
+   "category": "Family & Outdoors",
+   "venue": "Anchorage Depot, 411 W 1st Ave",
+   "town": "Anchorage",
+   "price": "From $104 one way to Talkeetna; $265 to Fairbanks",
+   "ages": "All ages",
+   "start": "08:30",
+   "note": "Weekend winter train to Wasilla, Talkeetna and Fairbanks; returns south on Sunday, arriving 8 PM.",
+   "url": "https://www.alaskarailroad.com/ride-a-train/schedules"
+  },
+  {
+   "id": "2026-11-28-wendler-holiday-market",
+   "date": "2026-11-28",
+   "time": "9 AM",
+   "title": "Wendler Holiday Market",
+   "category": "Seasonal",
+   "venue": "Wendler Middle School, 2905 Lake Otis Pkwy",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "09:00",
+   "end": "15:00",
+   "note": "Handmade crafts and local vendors at the school PTA's holiday market.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
+   "id": "2026-11-28-alaska-native-lutheran-church-holiday-bazaar",
+   "date": "2026-11-28",
+   "time": "10 AM",
+   "title": "Alaska Native Lutheran Church Holiday Bazaar",
+   "category": "Seasonal",
+   "venue": "Central Lutheran Church Fellowship Hall, 1420 Cordova St",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "10:00",
+   "end": "16:00",
+   "note": "Two floors of handmade gifts, many from Alaska Native craftspeople, plus a silent auction. Bring cash or check.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
+   "id": "2026-11-28-alaskan-crafted-holiday-market-at-midtown-mall",
+   "date": "2026-11-28",
+   "time": "10 AM",
+   "title": "Alaskan Crafted Holiday Market at Midtown Mall",
+   "category": "Seasonal",
+   "venue": "Midtown Mall, 600 E Northern Lights Blvd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "10:00",
+   "end": "17:00",
+   "note": "Handmade gifts from Alaska artists, crafters and makers, with a new vendor lineup each market.",
+   "url": "https://www.midtownmall.com/"
+  },
+  {
+   "id": "2026-11-28-colony-high-school-christmas-bazaar",
+   "date": "2026-11-28",
+   "time": "10 AM",
+   "title": "Colony High School Christmas Bazaar",
+   "category": "Seasonal",
+   "venue": "Colony High School, 9550 E Bogard Rd",
+   "town": "Palmer",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "10:00",
+   "end": "17:00",
+   "note": "150+ vendors in one of the Valley's biggest holiday bazaars.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
+   "id": "2026-11-28-lego-time-at-loussac",
+   "date": "2026-11-28",
+   "time": "10 AM",
+   "title": "LEGO Time at Loussac",
+   "category": "Family & Outdoors",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "10:00",
+   "end": "17:00",
+   "note": "Drop-in free build time all day.",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
+   "id": "2026-11-28-museum-of-alaska-holiday-market",
+   "date": "2026-11-28",
+   "time": "Sat 10 AM–5 PM; Sun 11 AM–4 PM",
+   "title": "Museum of Alaska Holiday Market",
+   "category": "Seasonal",
+   "venue": "Museum of Alaska, 3800 W Museum Dr",
+   "town": "Wasilla",
+   "price": "$5; kids 5 and under free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-29"
+   ],
+   "start": "10:00",
+   "note": "Holiday gifts from local vendors at the transportation and industry museum.",
+   "url": "https://www.museumofalaska.org/"
+  },
+  {
    "id": "2026-11-28-photos-with-santa-and-mrs-claus-at-hotel-captain-cook",
    "date": "2026-11-28",
    "time": "Saturdays 10 AM; Sun Dec 6 & 13 at noon",
@@ -586,6 +889,39 @@
    "url": "https://captaincook.com/event/photos-with-santa-and-mrs-claus/2026-11-28/"
   },
   {
+   "id": "2026-11-28-talkeetna-holiday-market-with-the-red-shoe-orchestra",
+   "date": "2026-11-28",
+   "time": "Sat & Sun from 10 AM",
+   "title": "Talkeetna Holiday Market with The Red Shoe Orchestra",
+   "category": "Seasonal",
+   "venue": "Sheldon Community Arts Hangar",
+   "town": "Talkeetna",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-11-29"
+   ],
+   "start": "10:00",
+   "worth_the_drive": true,
+   "note": "Holiday market with live music from The Red Shoe Orchestra; a youth choir joins on Sunday.",
+   "url": "https://alaskamusic.live/shows/2026-11-28-holiday-market"
+  },
+  {
+   "id": "2026-11-28-valley-fiber-arts-guild-out-of-the-box-sale",
+   "date": "2026-11-28",
+   "time": "10 AM",
+   "title": "Valley Fiber Arts Guild Out of the Box Sale",
+   "category": "Seasonal",
+   "venue": "Palmer Train Depot, 610 S Valley Way",
+   "town": "Palmer",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "10:00",
+   "end": "16:00",
+   "note": "Handspun yarn, rugs, scarves, mittens, pottery and more made by guild members.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
    "id": "2026-11-28-alyeska-resort-ski-season-opening-day",
    "date": "2026-11-28",
    "time": "10:30 AM",
@@ -599,6 +935,101 @@
    "end": "17:30",
    "note": "First day of the 2026-27 regular ski season (runs through Apr 25, 2027, weather permitting). Lifts run 10:30 AM–5:30 PM.",
    "url": "https://www.alyeskaresort.com/wp-content/uploads/2026/09/alyeska-resort-winter-mountain-facts.pdf"
+  },
+  {
+   "id": "2026-11-28-saturday-morning-storytime-at-muldoon",
+   "date": "2026-11-28",
+   "time": "10:30 AM",
+   "title": "Saturday Morning Storytime at Muldoon",
+   "category": "Family & Outdoors",
+   "venue": "Muldoon Library, 1251 Muldoon Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "10:30",
+   "end": "11:00",
+   "note": "All-ages storytime plus early browsing before the library opens.",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
+   "id": "2026-11-28-planetarium-cartoons-in-the-dome-larry-cat-in-space",
+   "date": "2026-11-28",
+   "time": "11:30 AM",
+   "title": "Planetarium: Cartoons in the Dome – Larry Cat in Space",
+   "category": "Family & Outdoors",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "Museum admission free during Crafted in Alaska; planetarium ticket required",
+   "ages": "All ages",
+   "start": "11:30",
+   "note": "Full-dome cartoon for ages 2–5 about a cat who sneaks onto a moon rocket.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=g2tdbes80l2ba18t8rjjk4pakc_20261128T193000Z"
+  },
+  {
+   "id": "2026-11-28-planetarium-cartoons-in-the-dome-mysteries-of-your-brain",
+   "date": "2026-11-28",
+   "time": "12:30 PM",
+   "title": "Planetarium: Cartoons in the Dome – Mysteries of Your Brain",
+   "category": "Family & Outdoors",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$6 plus museum admission; $3 members",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-29"
+   ],
+   "start": "12:30",
+   "end": "13:00",
+   "note": "Animated brain adventure for kids 5–13.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=93hjqndb88tnv4ego4svs2fqpc_20261129T203000Z"
+  },
+  {
+   "id": "2026-11-28-planetarium-kiuguyat-the-northern-lights",
+   "date": "2026-11-28",
+   "time": "1:30 PM",
+   "title": "Planetarium: Kiuguyat – The Northern Lights",
+   "category": "Arts & Talks",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "$6 plus museum admission; $3 members",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-11-29"
+   ],
+   "start": "13:30",
+   "end": "14:00",
+   "note": "Alaska Native stories, celebrations and science of the northern lights on the dome.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=ua0vsanacr9ku9nkn4lp7ik428_20261129T213000Z"
+  },
+  {
+   "id": "2026-11-28-the-christmas-skating-show",
+   "date": "2026-11-28",
+   "time": "3 PM",
+   "title": "The Christmas Skating Show",
+   "category": "Family & Outdoors",
+   "venue": "Curtis D. Menard Memorial Sports Center, 1001 S Clapp St",
+   "town": "Wasilla",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "15:00",
+   "end": "17:00",
+   "note": "Learn to Skate skaters and the On Ice AK team put on a holiday show, then a free family skate with cookies and hot chocolate.",
+   "url": "https://www.cityofwasilla.gov/240/Menard-Sports-Center"
+  },
+  {
+   "id": "2026-11-28-movie-matinee-at-mountain-view-library",
+   "date": "2026-11-28",
+   "time": "3:30 PM",
+   "title": "Movie Matinee at Mountain View Library",
+   "category": "Family & Outdoors",
+   "venue": "Mountain View Library, 120 Bragaw St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "15:30",
+   "end": "17:30",
+   "note": "Free family movie with concessions.",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
   },
   {
    "id": "2026-11-28-comedysportz-and-scared-scriptless-at-the-nave",
@@ -643,6 +1074,65 @@
    "url": "https://www.rubberptarmigan.com/events/power-plant-comedy-fundraiser-sterling-community-center"
   },
   {
+   "id": "2026-11-28-seward-christmas-tree-lighting",
+   "date": "2026-11-28",
+   "time": "6:30 PM",
+   "title": "Seward Christmas Tree Lighting",
+   "category": "Seasonal",
+   "venue": "Seward City Hall, 410 Adams St",
+   "town": "Seward",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "18:30",
+   "worth_the_drive": true,
+   "note": "Community tree lighting with hot cocoa, cookies and surprise guests.",
+   "url": "https://www.cityofseward.us/"
+  },
+  {
+   "id": "2026-11-28-fleetwood-ak-at-907-alehouse",
+   "date": "2026-11-28",
+   "time": "7 PM",
+   "title": "Fleetwood AK at 907 Alehouse",
+   "category": "Music",
+   "venue": "907 Alehouse & Grill, 8001 Old Seward Hwy",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "end": "22:30",
+   "note": "Six-piece band playing Fleetwood Mac hits from six decades of rock, pop and blues.",
+   "url": "https://www.907ale.com/"
+  },
+  {
+   "id": "2026-11-28-afc-179-alaska-fighting-championship",
+   "date": "2026-11-28",
+   "time": "7:30 PM",
+   "title": "AFC 179: Alaska Fighting Championship",
+   "category": "Sports",
+   "venue": "Sullivan Arena, 1600 Gambell St",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "All ages",
+   "start": "19:30",
+   "end": "22:30",
+   "note": "Pro and amateur MMA, Muay Thai, boxing and bare-knuckle bouts. Doors 6:30 PM. Table seats are in the 21+ area.",
+   "url": "https://alaskafighting.com/"
+  },
+  {
+   "id": "2026-11-28-h3-at-humpys",
+   "date": "2026-11-28",
+   "time": "8 PM",
+   "title": "H3 at Humpy's",
+   "category": "Music",
+   "venue": "Humpy's Great Alaskan Alehouse, 610 W 6th Ave",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "20:00",
+   "note": "Local reggae band H3 plays downtown.",
+   "url": "https://alaskamusic.live/shows/2026-11-28-h3-at-humpys-great-alaskan-alehouse"
+  },
+  {
    "id": "2026-11-28-king-rooster-alice-in-chains-tribute-manic-3",
    "date": "2026-11-28",
    "time": "9 PM",
@@ -656,6 +1146,50 @@
    "end": "23:00",
    "note": "Grunge tribute plus classic hard rock. Doors 8 PM.",
    "url": "https://www.eventbrite.com/e/king-rooster-alice-in-chains-tribute-manic-3-at-the-crystal-saloon-tickets-2004690382900"
+  },
+  {
+   "id": "2026-11-28-leo-ash-band-at-the-fairview-inn",
+   "date": "2026-11-28",
+   "time": "9 PM",
+   "title": "Leo Ash Band at the Fairview Inn",
+   "category": "Music",
+   "venue": "Fairview Inn, 101 Main St",
+   "town": "Talkeetna",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "21:00",
+   "worth_the_drive": true,
+   "url": "https://alaskamusic.live/shows/2026-11-28-leo-ash-band-at-fairview-inn"
+  },
+  {
+   "id": "2026-11-28-the-vintage-retro-70s-party-at-the-carousel-lounge",
+   "date": "2026-11-28",
+   "time": "9 PM",
+   "title": "The Vintage Retro: 70s Party at the Carousel Lounge",
+   "category": "Music",
+   "venue": "The Carousel Lounge, 3206 Spenard Rd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "21+",
+   "start": "21:00",
+   "note": "70s hits all night in Spenard.",
+   "url": "https://www.thevintageretroband.com/showschedule"
+  },
+  {
+   "id": "2026-11-29-grateful-skate-at-soldotna-ice-arena",
+   "date": "2026-11-29",
+   "time": "1 PM",
+   "title": "Grateful Skate at Soldotna Ice Arena",
+   "category": "Family & Outdoors",
+   "venue": "Soldotna Regional Sports Complex, 538 Arena Ave",
+   "town": "Soldotna",
+   "price": "Free with a non-perishable food donation",
+   "ages": "All ages",
+   "start": "13:00",
+   "end": "15:00",
+   "worth_the_drive": true,
+   "note": "Free public skate when you bring a food donation; rentals available.",
+   "url": "https://www.soldotna.org/"
   },
   {
    "id": "2026-11-29-teton-gravity-research-actually-it-is-rocket-science",
@@ -701,6 +1235,35 @@
    "url": "https://www.alaskazoo.org/event-calendar/2026/11/30/alaskas-wild-icons-winter-tour"
   },
   {
+   "id": "2026-11-30-karaoke-mondays-at-odd-man-rush",
+   "date": "2026-11-30",
+   "time": "6 PM",
+   "title": "Karaoke Mondays at Odd Man Rush",
+   "category": "Nightlife",
+   "venue": "Odd Man Rush Brewing, 10930 Mausel St",
+   "town": "Eagle River",
+   "price": "Free",
+   "ages": "Ages not listed (brewery tasting room)",
+   "start": "18:00",
+   "end": "21:00",
+   "url": "https://www.oddmanrushbrewing.com/events"
+  },
+  {
+   "id": "2026-11-30-monday-jazz-jam-at-fire-island",
+   "date": "2026-11-30",
+   "time": "6:30 PM",
+   "title": "Monday Jazz Jam at Fire Island",
+   "category": "Music",
+   "venue": "Fire Island Rustic Bakeshop, K Street Market, 718 K St",
+   "town": "Anchorage",
+   "price": "Free; $5 suggested donation",
+   "ages": "Ages not listed",
+   "start": "18:30",
+   "end": "21:30",
+   "note": "Weekly community jazz session hosted by the Alaska Jazz Workshop. Musicians can bring an instrument and sit in.",
+   "url": "https://akjazzworkshop.org/calendar/"
+  },
+  {
    "id": "2026-12-01-paper-bag-luminaria-craft-at-muldoon-library",
    "date": "2026-12-01",
    "time": "4:30 PM",
@@ -730,6 +1293,95 @@
    "url": "https://www.eventbrite.com/e/the-grinch-slime-night-at-birch-bloom-tickets-2004873777438"
   },
   {
+   "id": "2026-12-01-family-storytime-at-mountain-view-library",
+   "date": "2026-12-01",
+   "time": "6 PM",
+   "title": "Family Storytime at Mountain View Library",
+   "category": "Family & Outdoors",
+   "venue": "Mountain View Library, 120 Bragaw St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "18:00",
+   "end": "18:30",
+   "note": "Evening stories and songs for kids up to kindergarten.",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
+   "id": "2026-12-01-bear-tooth-tuesday-night-trivia",
+   "date": "2026-12-01",
+   "time": "7 PM",
+   "title": "Bear Tooth Tuesday Night Trivia",
+   "category": "Nightlife",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "Free to play",
+   "ages": "All ages",
+   "start": "19:00",
+   "end": "21:00",
+   "note": "Geeks Who Drink trivia, teams of 2–6. Doors 6:30 PM.",
+   "url": "https://www.beartoothak.com/live-events"
+  },
+  {
+   "id": "2026-12-02-family-storytime-at-gerrish-library",
+   "date": "2026-12-02",
+   "time": "10:30 AM",
+   "title": "Family Storytime at Gerrish Library",
+   "category": "Family & Outdoors",
+   "venue": "Scott and Wesley Gerrish Library, 250 Egloff Dr",
+   "town": "Girdwood",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "10:30",
+   "end": "11:30",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
+   "id": "2026-12-02-weekly-community-storytime-at-the-zoo",
+   "date": "2026-12-02",
+   "time": "10:30 AM",
+   "title": "Weekly Community Storytime at the Zoo",
+   "category": "Family & Outdoors",
+   "venue": "Alaska Zoo, 4731 O'Malley Rd",
+   "town": "Anchorage",
+   "price": "Included with zoo admission",
+   "ages": "All ages",
+   "start": "10:30",
+   "end": "11:00",
+   "note": "30-minute animal storybook reading in Gateway Hall; best for ages 4–7.",
+   "url": "https://www.alaskazoo.org/event-calendar/2026/december-2-weekly-community-storytime"
+  },
+  {
+   "id": "2026-12-02-alaska-junior-theater-meet-the-hatter-book-and-craft",
+   "date": "2026-12-02",
+   "time": "4 PM",
+   "title": "Alaska Junior Theater: Meet the Hatter Book & Craft",
+   "category": "Family & Outdoors",
+   "venue": "Muldoon Library, 1251 Muldoon Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "16:00",
+   "end": "17:00",
+   "note": "Actors from Meet the Hatter read a book, lead a craft and answer questions.",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
+   "id": "2026-12-02-great-land-trust-winter-party",
+   "date": "2026-12-02",
+   "time": "5:30 PM",
+   "title": "Great Land Trust Winter Party",
+   "category": "Food & Drink",
+   "venue": "49th State Brewing, 717 W 3rd Ave",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "17:30",
+   "end": "20:00",
+   "note": "Land trust's annual winter party with light snacks, drinks, door prizes and live music.",
+   "url": "https://greatlandtrust.org/"
+  },
+  {
    "id": "2026-12-02-dish-cookbook-club",
    "date": "2026-12-02",
    "time": "6 PM",
@@ -742,6 +1394,51 @@
    "start": "18:00",
    "end": "19:00",
    "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=20116"
+  },
+  {
+   "id": "2026-12-02-geeks-who-drink-trivia-at-odd-man-rush",
+   "date": "2026-12-02",
+   "time": "6 PM",
+   "title": "Geeks Who Drink Trivia at Odd Man Rush",
+   "category": "Nightlife",
+   "venue": "Odd Man Rush Brewing, 10930 Mausel St",
+   "town": "Eagle River",
+   "price": "Free",
+   "ages": "Ages not listed (brewery tasting room)",
+   "start": "18:00",
+   "url": "https://www.oddmanrushbrewing.com/events"
+  },
+  {
+   "id": "2026-12-02-junior-derby-info-and-open-skate-night",
+   "date": "2026-12-02",
+   "time": "6 PM",
+   "title": "Junior Derby Info & Open Skate Night",
+   "category": "Family & Outdoors",
+   "venue": "Borough Community Gym, 350 E Dahlia Ave",
+   "town": "Palmer",
+   "price": "Free",
+   "ages": "7+",
+   "start": "18:00",
+   "end": "19:30",
+   "note": "Kids 7–17 can meet the junior roller derby team, try on gear and skate.",
+   "url": "https://www.matsugov.us/"
+  },
+  {
+   "id": "2026-12-02-northern-aspects-film-festival",
+   "date": "2026-12-02",
+   "time": "6 PM",
+   "title": "Northern Aspects Film Festival",
+   "category": "Arts & Talks",
+   "venue": "Bear Tooth Theatrepub, 1230 W 27th Ave",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-12-03"
+   ],
+   "start": "18:00",
+   "note": "Fifth year of short Alaska ski films from local up-and-comers and established filmmakers.",
+   "url": "https://www.beartoothak.com/"
   },
   {
    "id": "2026-12-02-slow-craft-sessions-sprang",
@@ -759,6 +1456,21 @@
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=sapfpj5cdnlgcak1cu9ah825j4"
   },
   {
+   "id": "2026-12-02-koots-comedy-open-mic",
+   "date": "2026-12-02",
+   "time": "7 PM",
+   "title": "Koot's Comedy Open Mic",
+   "category": "Comedy",
+   "venue": "Koot's, 2435 Spenard Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "21+",
+   "start": "19:00",
+   "end": "22:00",
+   "note": "Weekly Wednesday open mic, 7–10 PM.",
+   "url": "https://koots.com/events"
+  },
+  {
    "id": "2026-12-02-uaa-jazz-ensemble-groove-spectrum",
    "date": "2026-12-02",
    "time": "7:30 PM",
@@ -770,6 +1482,71 @@
    "ages": "6+",
    "start": "19:30",
    "url": "https://centertix.com/events/uaa-jazz-ensemble-groove-spectrum"
+  },
+  {
+   "id": "2026-12-02-open-mic-at-the-fairview-inn",
+   "date": "2026-12-02",
+   "time": "8 PM",
+   "title": "Open Mic at the Fairview Inn",
+   "category": "Music",
+   "venue": "Fairview Inn, 101 Main St",
+   "town": "Talkeetna",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-12-09",
+    "2026-12-16",
+    "2026-12-23",
+    "2026-12-30"
+   ],
+   "start": "20:00",
+   "worth_the_drive": true,
+   "note": "Weekly Wednesday open mic.",
+   "url": "https://alaskamusic.live/shows/2026-12-02-open-mic"
+  },
+  {
+   "id": "2026-12-03-alaska-railroad-hurricane-turn-winter-run",
+   "date": "2026-12-03",
+   "time": "8:30 AM",
+   "title": "Alaska Railroad Hurricane Turn (winter run)",
+   "category": "Family & Outdoors",
+   "venue": "Anchorage Depot, 411 W 1st Ave",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "08:30",
+   "end": "20:00",
+   "note": "Once-a-month flagstop train to Talkeetna and the Hurricane area and back the same day, returning 8 PM.",
+   "url": "https://www.alaskarailroad.com/ride-a-train/schedules"
+  },
+  {
+   "id": "2026-12-03-blink-storytime-in-the-dome",
+   "date": "2026-12-03",
+   "time": "10:30 AM",
+   "title": "Blink: Storytime in the Dome",
+   "category": "Family & Outdoors",
+   "venue": "Thomas Planetarium, Anchorage Museum, 625 C St",
+   "town": "Anchorage",
+   "price": "Included with museum admission",
+   "ages": "All ages",
+   "start": "10:30",
+   "end": "11:30",
+   "note": "Live storyteller under the planetarium dome; best for ages 5 and under.",
+   "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=gin2gn5qldrjvm5mcqqu9c2vfg"
+  },
+  {
+   "id": "2026-12-03-family-storytime-at-chugiak-eagle-river-library",
+   "date": "2026-12-03",
+   "time": "10:30 AM",
+   "title": "Family Storytime at Chugiak-Eagle River Library",
+   "category": "Family & Outdoors",
+   "venue": "Chugiak-Eagle River Library, 12001 Business Blvd #176",
+   "town": "Eagle River",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "10:30",
+   "end": "11:00",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
   },
   {
    "id": "2026-12-03-game-night-at-gerrish-library",
@@ -824,6 +1601,51 @@
    "start": "18:15",
    "note": "Avalanche forecasters talk about the early-season snowpack at Hatcher Pass. Open to everyone.",
    "url": "https://hpavalanche.org/december-state-of-the-snowpack-2/"
+  },
+  {
+   "id": "2026-12-03-power-plant-comedy-vin-pal-at-main-street-tap-and-grill",
+   "date": "2026-12-03",
+   "time": "7 PM",
+   "title": "Power Plant Comedy: Vin Pal at Main Street Tap & Grill",
+   "category": "Comedy",
+   "venue": "Main Street Tap & Grill, 10800 Kenai Spur Hwy",
+   "town": "Kenai",
+   "price": "$28.52 with fees",
+   "ages": "21+",
+   "start": "19:00",
+   "end": "20:30",
+   "worth_the_drive": true,
+   "note": "Touring headliner Vin Pal brings stand-up to Kenai.",
+   "url": "https://www.eventbrite.com/e/power-plant-comedy-returns-to-main-street-tap-grill-tickets-2005479122040"
+  },
+  {
+   "id": "2026-12-03-snow-film-series-ski-for-the-love-double-feature",
+   "date": "2026-12-03",
+   "time": "7 PM",
+   "title": "Snow Film Series: Ski for the Love Double Feature",
+   "category": "Arts & Talks",
+   "venue": "The Sitzmark, 100 Olympic Mountain Loop",
+   "town": "Girdwood",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "note": "Free screenings of Way She Goes (2026) and Yard Sale (2025).",
+   "url": "https://www.alyeskaresort.com/"
+  },
+  {
+   "id": "2026-12-04-providence-employee-bazaar",
+   "date": "2026-12-04",
+   "time": "9 AM",
+   "title": "Providence Employee Bazaar",
+   "category": "Seasonal",
+   "venue": "Providence Alaska Medical Center, 3200 Providence Dr",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "09:00",
+   "end": "16:00",
+   "note": "35th annual handmade bazaar plus a silent auction for the Center for Child Development.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
   },
   {
    "id": "2026-12-04-anhc-holiday-bazaar",
@@ -1062,6 +1884,68 @@
    "url": "https://www.rubberptarmigan.com/events/vin-pal-everetts"
   },
   {
+   "id": "2026-12-04-jerry-wessling-at-the-fairview-inn",
+   "date": "2026-12-04",
+   "time": "9 PM",
+   "title": "Jerry Wessling at the Fairview Inn",
+   "category": "Music",
+   "venue": "Fairview Inn, 101 Main St",
+   "town": "Talkeetna",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "21:00",
+   "worth_the_drive": true,
+   "url": "https://alaskamusic.live/shows/2026-12-04-jerry-wessling-at-fairview-inn"
+  },
+  {
+   "id": "2026-12-05-christ-church-bazaar",
+   "date": "2026-12-05",
+   "time": "9:30 AM",
+   "title": "Christ Church Bazaar",
+   "category": "Seasonal",
+   "venue": "Christ Church, 5101 O'Malley Rd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "09:30",
+   "end": "16:00",
+   "note": "Quilts, Alaskana, jams, baked goods and more made by church crafters.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
+   "id": "2026-12-05-ak-christkindlmarkt",
+   "date": "2026-12-05",
+   "time": "10 AM",
+   "title": "AK Christkindlmarkt",
+   "category": "Seasonal",
+   "venue": "Rilke Schule, 3331 Lake Otis Pkwy",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-06"
+   ],
+   "start": "10:00",
+   "end": "16:00",
+   "note": "German-style holiday market with nutcrackers and ornaments, St. Nikolaus and Krampus, live music and food.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
+   "id": "2026-12-05-bowman-bazaar",
+   "date": "2026-12-05",
+   "time": "10 AM",
+   "title": "Bowman Bazaar",
+   "category": "Seasonal",
+   "venue": "Bowman Elementary School, 11700 Gregory Rd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "10:00",
+   "end": "16:00",
+   "note": "90+ vendors, including youth entrepreneurs.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
    "id": "2026-12-05-ciri-holiday-craft-bazaar",
    "date": "2026-12-05",
    "time": "10 AM",
@@ -1075,6 +1959,37 @@
    "end": "15:00",
    "note": "Thirty-five Alaska Native vendors. Free holiday photos from Photo Emporium.",
    "url": "https://www.ciri.com/events/holiday-craft-bazaar/"
+  },
+  {
+   "id": "2026-12-05-eagle-river-christian-school-christmas-vendor-fair",
+   "date": "2026-12-05",
+   "time": "10 AM",
+   "title": "Eagle River Christian School Christmas Vendor Fair",
+   "category": "Seasonal",
+   "venue": "Eagle River Christian School gym, 10336 E Eagle River Loop Rd",
+   "town": "Eagle River",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "10:00",
+   "end": "15:00",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
+   "id": "2026-12-05-guidos-christmas-collectible-show-and-sale",
+   "date": "2026-12-05",
+   "time": "Sat 10 AM–5 PM; Sun 11 AM–4 PM",
+   "title": "Guido's Christmas Collectible Show and Sale",
+   "category": "Seasonal",
+   "venue": "Guido's Pizza, 549 W International Airport Rd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-12-06"
+   ],
+   "start": "10:00",
+   "note": "60+ tables of antiques, collectibles, toys and Christmas decor.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
   },
   {
    "id": "2026-12-05-wreath-decorating-class-at-alaska-mill-and-feed",
@@ -1104,6 +2019,19 @@
    "url": "https://centertix.com/events/anchorage-international-film-festival"
   },
   {
+   "id": "2026-12-05-artist-trading-card-club-at-muldoon",
+   "date": "2026-12-05",
+   "time": "11:30 AM",
+   "title": "Artist Trading Card Club at Muldoon",
+   "category": "Make & Taste",
+   "venue": "Muldoon Library, 1251 Muldoon Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "11:30",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
    "id": "2026-12-05-meet-the-hatter",
    "date": "2026-12-05",
    "time": "2 PM",
@@ -1115,6 +2043,48 @@
    "ages": "All ages",
    "start": "14:00",
    "url": "https://centertix.com/events/meet-the-hatter"
+  },
+  {
+   "id": "2026-12-05-braden-rollins-jam-night-at-creekbend-cafe",
+   "date": "2026-12-05",
+   "time": "6 PM",
+   "title": "Braden Rollins Jam Night at Creekbend Cafe",
+   "category": "Music",
+   "venue": "Creekbend Cafe, 64777 Second St",
+   "town": "Hope",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "21:00",
+   "worth_the_drive": true,
+   "url": "https://alaskamusic.live/shows/2026-12-05-braden-rollins-of-bwrr-at-creekbend-cafe"
+  },
+  {
+   "id": "2026-12-05-don-louis-and-band-with-jesse-james",
+   "date": "2026-12-05",
+   "time": "7 PM",
+   "title": "Don Louis & Band with Jesse James",
+   "category": "Music",
+   "venue": "The Aurora Room, 415 E St",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "21+",
+   "start": "19:00",
+   "note": "Texas-raised country artist blending rock, hip-hop and R&B, with Jesse James opening. Doors 6 PM.",
+   "url": "https://www.ericksonevents.com/don-louis-12052026-anchorage/"
+  },
+  {
+   "id": "2026-12-05-ugly-sweater-party-with-good-company",
+   "date": "2026-12-05",
+   "time": "8 PM",
+   "title": "Ugly Sweater Party with Good Company",
+   "category": "Music",
+   "venue": "Humpy's Great Alaskan Alehouse, 610 W 6th Ave",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "20:00",
+   "url": "https://alaskamusic.live/shows/2026-12-05-ugly-sweater-party"
   },
   {
    "id": "2026-12-05-vin-pal-at-koots",
@@ -1212,6 +2182,20 @@
    "url": "https://www.facebook.com/events/895446203656612"
   },
   {
+   "id": "2026-12-08-tuesday-crafts-at-muldoon-pony-bead-weaving",
+   "date": "2026-12-08",
+   "time": "4:30 PM",
+   "title": "Tuesday Crafts at Muldoon: Pony Bead Weaving",
+   "category": "Make & Taste",
+   "venue": "Muldoon Library, 1251 Muldoon Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "16:30",
+   "end": "17:30",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
    "id": "2026-12-08-zine-workshop-at-loussac",
    "date": "2026-12-08",
    "time": "6 PM",
@@ -1239,6 +2223,26 @@
    "start": "19:00",
    "note": "Seven Alaskans, seven-minute true stories, plus local music. May contain adult themes.",
    "url": "https://centertix.com/events/arctic-entries-season"
+  },
+  {
+   "id": "2026-12-09-weekly-community-storytime-at-the-zoo",
+   "date": "2026-12-09",
+   "time": "Wednesdays 10:30 AM",
+   "title": "Weekly Community Storytime at the Zoo",
+   "category": "Family & Outdoors",
+   "venue": "Alaska Zoo, 4731 O'Malley Rd",
+   "town": "Anchorage",
+   "price": "Included with zoo admission",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-16",
+    "2026-12-23",
+    "2026-12-30"
+   ],
+   "start": "10:30",
+   "end": "11:00",
+   "note": "30-minute animal storybook reading in Gateway Hall; best for ages 4–7.",
+   "url": "https://www.alaskazoo.org/event-calendar/2026/december-9-weekly-community-storytime"
   },
   {
    "id": "2026-12-09-misfit-gift-exchange",
@@ -1269,6 +2273,19 @@
    "end": "20:30",
    "note": "Doors 6 PM. Learn sewing-machine basics and make a reusable bag.",
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=erbt6vt20edtcqb0e4f1263cjc"
+  },
+  {
+   "id": "2026-12-10-dungeons-and-dragons-at-loussac",
+   "date": "2026-12-10",
+   "time": "5:30 PM",
+   "title": "Dungeons and Dragons at Loussac",
+   "category": "Family & Outdoors",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "17:30",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
   },
   {
    "id": "2026-12-10-scientist-spotlight-alaska-berries",
@@ -1313,6 +2330,24 @@
    "end": "21:00",
    "note": "Doors 6 PM, show 7–9 PM. Hosted by Kage Free, with Grace C. Elliot. Couples buying together get $20 off. Includes 2 drink tokens (3 if you're dressed stylish). Tickets by Venmo, Cash App or Zelle on the event flyer. Sponsored by Fromagio's Artisan Cheese and Birch Brew.",
    "url": "https://www.instagram.com/pennyroyaltyalaska/"
+  },
+  {
+   "id": "2026-12-11-christmas-market-at-kens-garden-center",
+   "date": "2026-12-11",
+   "time": "10 AM",
+   "title": "Christmas Market at Ken's Garden Center",
+   "category": "Seasonal",
+   "venue": "Ken's Garden Center, 4121 Dimond Way",
+   "town": "Wasilla",
+   "price": "Free",
+   "ages": "All ages",
+   "extra_dates": [
+    "2026-12-12"
+   ],
+   "start": "10:00",
+   "end": "17:00",
+   "note": "30+ Alaska vendors, fresh Christmas trees, food trucks and DIY wreath, candle and ornament bars.",
+   "url": "https://www.thematsualaska.com/event/holiday-market-at-kens-greenhouse/"
   },
   {
    "id": "2026-12-11-mat-su-senior-services-holiday-bazaar",
@@ -1444,6 +2479,50 @@
    "url": "https://centertix.com/events/christmas-with-alaska-chamber-singers"
   },
   {
+   "id": "2026-12-12-bad-girls-of-the-north-at-colony-christmas",
+   "date": "2026-12-12",
+   "time": "10 AM",
+   "title": "Bad Girls of the North at Colony Christmas",
+   "category": "Seasonal",
+   "venue": "Hamilton Farm, 375 S Inner Springer Rd",
+   "town": "Palmer",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "10:00",
+   "end": "17:00",
+   "note": "Handmade pottery, clothing, jewelry, prints and gourmet food in a heated barn, with free cocoa and cider.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
+   "id": "2026-12-12-holiday-bazaar-at-anchorage-remade",
+   "date": "2026-12-12",
+   "time": "10 AM",
+   "title": "Holiday Bazaar at Anchorage reMADE",
+   "category": "Seasonal",
+   "venue": "Anchorage reMADE, 13500 Old Seward Hwy",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "10:00",
+   "end": "16:00",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
+   "id": "2026-12-12-the-nave-4th-annual-holiday-market",
+   "date": "2026-12-12",
+   "time": "10:30 AM",
+   "title": "The Nave 4th Annual Holiday Market",
+   "category": "Seasonal",
+   "venue": "The Nave, 3502 Spenard Rd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "10:30",
+   "end": "15:00",
+   "note": "The whole building fills with Alaska Native and Indigenous artists, local makers and food vendors.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
+  },
+  {
    "id": "2026-12-12-colony-christmas-at-the-gateway-visitor-center",
    "date": "2026-12-12",
    "time": "11 AM",
@@ -1456,6 +2535,21 @@
    "start": "11:00",
    "worth_the_drive": true,
    "url": "https://www.facebook.com/events/2375937986544562"
+  },
+  {
+   "id": "2026-12-12-hopes-holiday-bazaar",
+   "date": "2026-12-12",
+   "time": "11 AM",
+   "title": "Hope's Holiday Bazaar",
+   "category": "Seasonal",
+   "venue": "Hope Social Hall",
+   "town": "Hope",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "11:00",
+   "end": "15:00",
+   "worth_the_drive": true,
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
   },
   {
    "id": "2026-12-12-anchorage-music-week-workshop-what-works",
@@ -1488,6 +2582,19 @@
    "url": "https://hpavalanche.org/announcements/"
   },
   {
+   "id": "2026-12-12-puzzle-swap-at-muldoon-library",
+   "date": "2026-12-12",
+   "time": "2:30 PM",
+   "title": "Puzzle Swap at Muldoon Library",
+   "category": "Family & Outdoors",
+   "venue": "Muldoon Library, 1251 Muldoon Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "14:30",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
    "id": "2026-12-12-dark-daze-music-fest-at-the-anchorage-museum",
    "date": "2026-12-12",
    "time": "6:30 PM",
@@ -1500,6 +2607,34 @@
    "start": "18:30",
    "note": "The museum is one venue for this downtown Alaska music festival. Lineup to be announced. Museum-only tickets go on sale in early December.",
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=5h7o4bb8dg79a1r87tledbrk38"
+  },
+  {
+   "id": "2026-12-12-stellar-sagittarius-nights-edm-dance-party",
+   "date": "2026-12-12",
+   "time": "9 PM",
+   "title": "Stellar Sagittarius Nights (EDM dance party)",
+   "category": "Nightlife",
+   "venue": "Koot's, 2435 Spenard Rd",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "21+",
+   "start": "21:00",
+   "url": "https://alaskamusic.live/shows/2026-12-12-stellar-sagittarius-nights"
+  },
+  {
+   "id": "2026-12-13-alternative-gift-market",
+   "date": "2026-12-13",
+   "time": "10 AM",
+   "title": "Alternative Gift Market",
+   "category": "Seasonal",
+   "venue": "First Presbyterian Church, 616 W 10th Ave",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "10:00",
+   "end": "13:30",
+   "note": "Gifts that support local and worldwide charities.",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
   },
   {
    "id": "2026-12-13-christmas-for-the-animals-at-the-alaska-zoo",
@@ -1572,6 +2707,20 @@
    "url": "https://www.eventbrite.com/e/palette-paint-experience-holiday-ornaments-tickets-2004555766258"
   },
   {
+   "id": "2026-12-13-cosmic-relief-shane-mauss-and-grace-c-elliot",
+   "date": "2026-12-13",
+   "time": "7 PM",
+   "title": "Cosmic Relief: Shane Mauss & Grace C. Elliot",
+   "category": "Comedy",
+   "venue": "The Aurora Room, 415 E St",
+   "town": "Anchorage",
+   "price": "$35 GA plus fees; front tables $90 for 2, $164 for 4",
+   "ages": "21+",
+   "start": "19:00",
+   "note": "Science-minded stand-up from Shane Mauss, with Grace C. Elliot opening and closing. Doors 6 PM. Under 21 admitted with a parent or guardian.",
+   "url": "https://www.ericksonevents.com/shane-mauss-grace-elliot-12132026-anchorage/"
+  },
+  {
    "id": "2026-12-14-uaa-womens-basketball-vs-embry-riddle",
    "date": "2026-12-14",
    "time": "7 PM",
@@ -1600,6 +2749,32 @@
    "url": "https://goseawolves.com/calendar.aspx?game_id=8126&sport_id=9"
   },
   {
+   "id": "2026-12-15-pro-craft-inators-at-loussac",
+   "date": "2026-12-15",
+   "time": "6 PM",
+   "title": "Pro-CRAFT-inators at Loussac",
+   "category": "Make & Taste",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
+   "id": "2026-12-16-lego-club-at-chugiak-eagle-river-library",
+   "date": "2026-12-16",
+   "time": "3 PM",
+   "title": "LEGO Club at Chugiak-Eagle River Library",
+   "category": "Family & Outdoors",
+   "venue": "Chugiak-Eagle River Library, 12001 Business Blvd #176",
+   "town": "Eagle River",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "15:00",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
    "id": "2026-12-16-sit-and-knit-with-knitters-of-the-north",
    "date": "2026-12-16",
    "time": "6 PM",
@@ -1613,6 +2788,19 @@
    "end": "20:00",
    "note": "Casual knit, crochet or craft night; beginners welcome. No registration.",
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=jf6bosp3p9s9frloelceq1ffgs"
+  },
+  {
+   "id": "2026-12-16-uaa-womens-basketball-vs-embry-riddle-kids-12-and-under-free",
+   "date": "2026-12-16",
+   "time": "6 PM",
+   "title": "UAA Women's Basketball vs. Embry-Riddle (Kids 12 & under free)",
+   "category": "Sports",
+   "venue": "Alaska Airlines Center, 3550 Providence Dr",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "url": "https://goseawolves.com/calendar"
   },
   {
    "id": "2026-12-16-chris-porter-at-north-pole-alehouse",
@@ -1642,6 +2830,19 @@
    "start": "19:00",
    "end": "21:00",
    "url": "https://www.tickettailor.com/events/comedyupnorth/2354352"
+  },
+  {
+   "id": "2026-12-17-books-board-games-at-loussac",
+   "date": "2026-12-17",
+   "time": "4 PM",
+   "title": "Books + Board Games at Loussac",
+   "category": "Family & Outdoors",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "16:00",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
   },
   {
    "id": "2026-12-17-holiday-film-its-a-wonderful-life-pg",
@@ -1806,6 +3007,22 @@
    "url": "https://centertix.com/events/the-nutcracker-by-anchorage-ballet"
   },
   {
+   "id": "2026-12-18-bunnell-arts-by-air-divine-frequensea-jenny-baker-and-shawn",
+   "date": "2026-12-18",
+   "time": "7 PM",
+   "title": "Bunnell Arts by Air: Divine FrequenSea (Jenny Baker & Shawn Zuke)",
+   "category": "Music",
+   "venue": "Bunnell Street Arts Center, 106 W Bunnell Ave",
+   "town": "Homer",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "end": "20:00",
+   "worth_the_drive": true,
+   "note": "Homer folk-rock duo of originals and covers.",
+   "url": "https://alaskamusic.live/shows/2026-12-18-bunnell-arts-by-air-jenny-baker-shawn-zuke-divine-frequensea"
+  },
+  {
    "id": "2026-12-18-chris-porter-at-alaskaland-theater",
    "date": "2026-12-18",
    "time": "Fri & Sat 7 PM",
@@ -1857,6 +3074,33 @@
    "url": "https://beartooththeatre.filmbot.com/movies/home-alone/"
   },
   {
+   "id": "2026-12-19-snowflake-and-holiday-card-craft-at-gerrish",
+   "date": "2026-12-19",
+   "time": "1 PM",
+   "title": "Snowflake and Holiday Card Craft at Gerrish",
+   "category": "Make & Taste",
+   "venue": "Scott and Wesley Gerrish Library, 250 Egloff Dr",
+   "town": "Girdwood",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "13:00",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
+   "id": "2026-12-19-alaska-jazz-workshop-student-recital-concert",
+   "date": "2026-12-19",
+   "time": "4 PM",
+   "title": "Alaska Jazz Workshop Student Recital Concert",
+   "category": "Music",
+   "venue": "Organic Oasis, 2610 Spenard Rd",
+   "town": "Anchorage",
+   "price": "$5; kids 12 and under free",
+   "ages": "All ages",
+   "start": "16:00",
+   "end": "18:00",
+   "url": "https://akjazzworkshop.org/calendar/"
+  },
+  {
    "id": "2026-12-19-holiday-film-the-muppet-christmas-carol-g",
    "date": "2026-12-19",
    "time": "4 PM",
@@ -1889,6 +3133,36 @@
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=0bodhgsgrtak50fl2u4d7a2oas"
   },
   {
+   "id": "2026-12-19-p-sterchild-and-friends-at-raw-market",
+   "date": "2026-12-19",
+   "time": "6 PM",
+   "title": "Pøsterchild & Friends at Raw Market",
+   "category": "Music",
+   "venue": "Raw Market, 148 Holmgren Pl",
+   "town": "Girdwood",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "23:00",
+   "url": "https://alaskamusic.live/shows/2026-12-19-posterchild-at-raw-market"
+  },
+  {
+   "id": "2026-12-19-the-forest-that-never-sleeps-holiday-party-with-kat-moore",
+   "date": "2026-12-19",
+   "time": "6 PM",
+   "title": "The Forest That Never Sleeps: Holiday Party with Kat Moore",
+   "category": "Music",
+   "venue": "Creekbend Cafe, 64777 Second St",
+   "town": "Hope",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "18:00",
+   "end": "21:00",
+   "worth_the_drive": true,
+   "note": "Holiday party; Christmas sweaters encouraged.",
+   "url": "https://alaskamusic.live/shows/2026-12-19-the-forest-that-never-sleeps"
+  },
+  {
    "id": "2026-12-19-fa-la-la-fabulous-a-holiday-sparkle-cabaret",
    "date": "2026-12-19",
    "time": "7 PM",
@@ -1902,6 +3176,50 @@
    "end": "21:00",
    "note": "Steven Arends, Wendy Byrnes and Annie Goodenough sing holiday standards by candlelight.",
    "url": "https://www.eventbrite.com/e/fa-la-la-fabulous-a-holiday-sparkle-cabaret-tickets-2004588900363"
+  },
+  {
+   "id": "2026-12-19-the-ugly-christmas-sweater-party-with-i-like-robots",
+   "date": "2026-12-19",
+   "time": "7 PM",
+   "title": "The Ugly Christmas Sweater Party with I Like Robots",
+   "category": "Music",
+   "venue": "Odd Man Rush Brewing, 10930 Mausel St",
+   "town": "Eagle River",
+   "price": "Price not listed",
+   "ages": "Ages not listed (brewery tasting room)",
+   "start": "19:00",
+   "end": "23:00",
+   "url": "https://alaskamusic.live/shows/2026-12-19-the-ugly-christmas-sweater-party"
+  },
+  {
+   "id": "2026-12-19-dj-cleo-dance-party-at-the-fairview-inn",
+   "date": "2026-12-19",
+   "time": "9 PM",
+   "title": "DJ Cleo Dance Party at the Fairview Inn",
+   "category": "Nightlife",
+   "venue": "Fairview Inn, 101 Main St",
+   "town": "Talkeetna",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "21:00",
+   "worth_the_drive": true,
+   "url": "https://alaskamusic.live/shows/2026-12-19-dance-party"
+  },
+  {
+   "id": "2026-12-20-last-minute-christmas-vendor-show",
+   "date": "2026-12-20",
+   "time": "Sun 11 AM–5 PM; Mon 10 AM–6 PM",
+   "title": "Last Minute Christmas Vendor Show",
+   "category": "Seasonal",
+   "venue": "Palmer Train Depot, 610 S Valley Way",
+   "town": "Palmer",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "extra_dates": [
+    "2026-12-21"
+   ],
+   "start": "11:00",
+   "url": "https://www.adn.com/holiday-bazaar-guide/"
   },
   {
    "id": "2026-12-20-uaa-womens-basketball-vs-missouri-s-and-t",
@@ -2094,6 +3412,19 @@
    "url": "https://www.anchoragelibrary.org/events/full-calendar?eventId=21268"
   },
   {
+   "id": "2026-12-24-family-christmas-movie-matinee-at-loussac",
+   "date": "2026-12-24",
+   "time": "2 PM",
+   "title": "Family Christmas Movie Matinee at Loussac",
+   "category": "Family & Outdoors",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "14:00",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
    "id": "2026-12-24-christmas-eve-at-the-crossing-chugiak-and-anchorage",
    "date": "2026-12-24",
    "time": "2:30 & 4 PM (Chugiak); 6:30 PM (Anchorage)",
@@ -2184,6 +3515,19 @@
    "url": "https://www.explorefairbanks.com/event/ski-your-age/12727/"
   },
   {
+   "id": "2026-12-26-teen-movie-night-at-loussac",
+   "date": "2026-12-26",
+   "time": "3 PM",
+   "title": "Teen Movie Night at Loussac",
+   "category": "Family & Outdoors",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "15:00",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
    "id": "2026-12-27-holiday-film-chronicles-of-narnia-pg",
    "date": "2026-12-27",
    "time": "12:30 PM",
@@ -2214,6 +3558,32 @@
    "end": "15:30",
    "note": "Two-day STEAM winter break camp on renewable energy for ages 10–12. Drop-off 8:30 AM, pickup until 4:30 PM.",
    "url": "https://www.anchoragemuseum.org/visit/calendar/event-details/?id=20mddcm0vmb8uh4d37s1dillj8_20261229T163000Z"
+  },
+  {
+   "id": "2026-12-29-dinosaur-playtime-at-loussac",
+   "date": "2026-12-29",
+   "time": "11:30 AM",
+   "title": "Dinosaur Playtime at Loussac",
+   "category": "Family & Outdoors",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "All ages",
+   "start": "11:30",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
+  },
+  {
+   "id": "2026-12-29-stampfest-2026-at-muldoon-library",
+   "date": "2026-12-29",
+   "time": "11:30 AM",
+   "title": "StampFest 2026 at Muldoon Library",
+   "category": "Make & Taste",
+   "venue": "Muldoon Library, 1251 Muldoon Rd",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "11:30",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
   },
   {
    "id": "2026-12-29-build-it-lego-and-makedo-at-chugiak-eagle-river-library",
@@ -2347,6 +3717,59 @@
    "worth_the_drive": true,
    "note": "New Year's Eve fireworks launched from UAF West Ridge at 8 PM (roads/trails near staging close ~7 PM; also livestreamed by UAF).",
    "url": "https://www.explorefairbanks.com/event/annual-sparktacular-fireworks-celebration/9783/"
+  },
+  {
+   "id": "2027-01-01-uaa-seawolves-hockey-vs-colorado-college-1st-responders-nigh",
+   "date": "2027-01-01",
+   "time": "3 PM",
+   "title": "UAA Seawolves Hockey vs. Colorado College (1st Responders Night)",
+   "category": "Sports",
+   "venue": "Sullivan Arena, 1600 Gambell St",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "15:00",
+   "url": "https://goseawolves.com/calendar"
+  },
+  {
+   "id": "2027-01-02-uaa-womens-basketball-vs-alaska-fairbanks",
+   "date": "2027-01-02",
+   "time": "7 PM",
+   "title": "UAA Women's Basketball vs. Alaska Fairbanks",
+   "category": "Sports",
+   "venue": "Alaska Airlines Center, 3550 Providence Dr",
+   "town": "Anchorage",
+   "price": "Price not listed",
+   "ages": "Ages not listed",
+   "start": "19:00",
+   "url": "https://goseawolves.com/calendar"
+  },
+  {
+   "id": "2027-01-03-the-little-engine-that-could-with-kat-moore",
+   "date": "2027-01-03",
+   "time": "2 PM & 4 PM",
+   "title": "The Little Engine That Could (with Kat Moore)",
+   "category": "Family & Outdoors",
+   "venue": "UAA Recital Hall, 3700 Alumni Dr",
+   "town": "Anchorage",
+   "price": "From $20",
+   "ages": "All ages",
+   "start": "14:00",
+   "note": "The classic story with projections and original songs by Kat Moore. Practice your train sounds.",
+   "url": "https://centertix.com/events/the-little-engine-that-could"
+  },
+  {
+   "id": "2027-01-04-craft-club-2027-bingo-cards-at-loussac",
+   "date": "2027-01-04",
+   "time": "4 PM",
+   "title": "Craft Club: 2027 Bingo Cards at Loussac",
+   "category": "Make & Taste",
+   "venue": "Z.J. Loussac Library, 3600 Denali St",
+   "town": "Anchorage",
+   "price": "Free",
+   "ages": "Ages not listed",
+   "start": "16:00",
+   "url": "https://www.anchoragelibrary.org/events/classes-schedules/full-calendar/"
   }
  ],
  "running_label": "Running now",
@@ -2368,6 +3791,6 @@
    "town": "Downtown Anchorage"
   }
  ],
- "through": "2026-12-31",
- "last_verified": "2026-11-24"
+ "through": "2027-01-04",
+ "last_verified": "2026-11-25"
 }
