@@ -21,6 +21,8 @@ h1,h2,h3,h4{font-family:Montserrat,Inter,sans-serif;margin:0}
  radial-gradient(70% 40% at 40% 35%,rgba(94,242,181,.10),transparent 70%),
  linear-gradient(180deg,var(--hero-a),var(--hero-b) 70%,var(--hero-a))}
 .brandrow{display:flex;justify-content:space-between;align-items:center}
+.brandline{margin:14px 0 0;font:600 20px/1.35 Inter,system-ui,sans-serif;color:var(--white);max-width:28rem;text-wrap:pretty}
+.hero .brandline + .dial + .kicker{margin-top:22px}
 .handle{color:var(--gray);text-decoration:none;font-weight:600;font-size:14px}
 .kicker{color:var(--green);font:700 12px/1 Inter;letter-spacing:.22em;text-transform:uppercase;margin:36px 0 12px}
 .hero h1{font-weight:900;font-size:clamp(34px,10vw,60px);line-height:.98;letter-spacing:-.02em;max-width:12ch}
@@ -236,6 +238,7 @@ nav.regions{margin:8px 0 20px}
 .fine{color:var(--faint);font-size:13px}
 /* footer */
 .foot{border-top:1px solid var(--line);padding:30px 0 50px;background:var(--void);color:var(--gray);font-size:15px}
+.foot .wrap > .mark + p{color:var(--white);font:600 18px/1.4 Inter,system-ui,sans-serif;margin:12px 0 6px}
 .foot b{color:var(--white)}
 .links{display:flex;flex-wrap:wrap;gap:10px}
 .links a{border:1.5px solid var(--line);padding:9px 14px;border-radius:var(--pillr);text-decoration:none;font-weight:600}
